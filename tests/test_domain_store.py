@@ -41,6 +41,37 @@ class ExpenseStoreInvariantTests(unittest.TestCase):
         history = self.store.history(draft.expense_id)
         self.assertEqual(["approver", "general_manager"], [d["actor_role"] for d in history["decisions"]])
 
+    def test_general_manager_rejects_then_new_revision_requires_both_stages_again(self):
+        draft = self.store.create_draft("alice", "80", "Client meal", "meal-1")
+        submitted = self.store.submit(draft.expense_id)
+        self.store.decide(submitted.expense_id, 1, "bob", "approved", "First stage approved")
+        gm_reject = self.store.decide(submitted.expense_id, 1, "carol", "rejected", "Need attendee list")
+        self.assertEqual("general_manager", gm_reject.actor_role)
+        self.assertEqual(ExpenseStatus.REJECTED, self.store.latest(draft.expense_id).status)
+
+        revised = self.store.revise_rejected(draft.expense_id, "80", "Client meal with attendee list", "meal-2")
+        self.assertEqual(2, revised.revision)
+        self.store.submit(draft.expense_id)
+        self.assertEqual(ExpenseStatus.SUBMITTED, self.store.latest(draft.expense_id).status)
+        self.store.decide(draft.expense_id, 2, "bob", "approved", "First stage approved again")
+        self.assertEqual(ExpenseStatus.MANAGER_PENDING, self.store.latest(draft.expense_id).status)
+
+        history = self.store.history(draft.expense_id)
+        self.assertEqual([1, 2], [r["revision"] for r in history["revisions"]])
+        self.assertEqual([1, 1, 2], [d["revision"] for d in history["decisions"]])
+        self.assertEqual(["approver", "general_manager", "approver"], [d["actor_role"] for d in history["decisions"]])
+
+    def test_final_manager_decision_cannot_target_superseded_revision(self):
+        draft = self.store.create_draft("alice", "60", "Train", "train-1")
+        submitted = self.store.submit(draft.expense_id)
+        self.store.decide(submitted.expense_id, 1, "bob", "approved", "First stage")
+        self.store.decide(submitted.expense_id, 1, "carol", "rejected", "Change receipt")
+        revised = self.store.revise_rejected(draft.expense_id, "61", "Train", "train-2")
+        self.store.submit(revised.expense_id)
+        with self.assertRaises(ValueError):
+            self.store.decide(revised.expense_id, 1, "carol", "approved", "Approve stale revision")
+        self.assertEqual(ExpenseStatus.SUBMITTED, self.store.latest(revised.expense_id).status)
+
     def test_unauthorized_actor_and_wrong_stage_authority_do_not_mutate_state(self):
         draft = self.store.create_draft("alice", "30", "Lunch", "receipt-lunch")
         submitted = self.store.submit(draft.expense_id)
@@ -105,11 +136,13 @@ class ExpenseStoreInvariantTests(unittest.TestCase):
         draft = self.store.create_draft("alice", "9.99", "Coffee", "coffee-1")
         submitted = self.store.submit(draft.expense_id)
         self.store.decide(submitted.expense_id, 1, "bob", "approved", "First stage")
+        self.store.decide(submitted.expense_id, 1, "carol", "approved", "Final stage")
         reopened = ExpenseStore(self.db)
         history = reopened.history(submitted.expense_id)
-        self.assertEqual("manager_pending", history["revisions"][0]["status"])
-        self.assertEqual("bob", history["decisions"][0]["actor"])
-        self.assertEqual("approver", history["decisions"][0]["actor_role"])
+        self.assertEqual("approved", history["revisions"][0]["status"])
+        self.assertEqual(["bob", "carol"], [d["actor"] for d in history["decisions"]])
+        self.assertEqual(["approver", "general_manager"], [d["actor_role"] for d in history["decisions"]])
+        self.assertEqual(ExpenseStatus.APPROVED, reopened.latest(submitted.expense_id).status)
 
 
 if __name__ == "__main__":
