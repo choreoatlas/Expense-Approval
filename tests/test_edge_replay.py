@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import importlib.util
+import sys
 import unittest
 from pathlib import Path
 
@@ -12,6 +13,7 @@ GRAPH_PATH = ROOT / "close_loop" / "edge-retrofit" / "relation-graph.v0.2.json"
 spec = importlib.util.spec_from_file_location("edge_replay", REPLAY_PATH)
 edge_replay = importlib.util.module_from_spec(spec)
 assert spec.loader is not None
+sys.modules[spec.name] = edge_replay
 spec.loader.exec_module(edge_replay)
 RelationGraph = edge_replay.RelationGraph
 
@@ -34,8 +36,6 @@ class EdgeReplayTests(unittest.TestCase):
         self.assertIn(("EL-http", "impact_inspection_required"), by_node)
         self.assertIn(("EL-browser-ui", "impact_inspection_required"), by_node)
 
-        # Downward propagation requests inspection; it does not declare the
-        # implementation invalid before material facts are checked.
         execution_effects = [
             effect.effect for effect in effects if effect.node.startswith("EL-")
         ]
