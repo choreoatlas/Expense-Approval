@@ -1,0 +1,80 @@
+{
+  "schema": "close_loop_relation_graph.v0.1",
+  "subject": "expense-approval-reference",
+  "purpose": "Retrospective relation graph used to replay historically observed CloseLoop propagation without altering accepted main facts.",
+  "accepted_main_revision": "6100d4538d0d5210a1fc9d97d24d2112be2b164f",
+  "accepted_implementation_revision": "c0f01dbf4af0dc9f9201c15f37cf960b925fce0c",
+  "nodes": [
+    {"id":"GN1-v1","kind":"governance_need","ref":"close_loop/attempt-1/model.v0.1.json#GN1"},
+    {"id":"GN1-v2","kind":"governance_need","ref":"close_loop/attempt-1/model.v0.2.json#GN1"},
+    {"id":"FL-draft-submit","kind":"function"},
+    {"id":"FL-authority-safe-review","kind":"function"},
+    {"id":"FL-general-manager-final-approval","kind":"function"},
+    {"id":"FL-reject-revise-resubmit","kind":"function"},
+    {"id":"FL-approval-revision-binding","kind":"function"},
+    {"id":"FL-history","kind":"function"},
+    {"id":"FL-durable","kind":"function"},
+    {"id":"FL-browser","kind":"function"},
+    {"id":"EL-domain-rules","kind":"execution"},
+    {"id":"EL-ledger-store","kind":"execution"},
+    {"id":"EL-http","kind":"execution"},
+    {"id":"EL-browser-ui","kind":"execution"},
+    {"id":"EL-verification-environment","kind":"execution"},
+    {"id":"EV-ci-c0f01","kind":"evidence","ref":"github-actions:34127149458"},
+    {"id":"FJ-c0f01","kind":"function_judgment_set","revision":"c0f01dbf4af0dc9f9201c15f37cf960b925fce0c"},
+    {"id":"GOV-accept-c0f01","kind":"governance_decision","domain":"reference-sample","status":"accepted"},
+    {"id":"ES-reference-sample","kind":"effective_state","domain":"reference-sample"}
+  ],
+  "edges": [
+    {"id":"R001","source":"GN1-v2","target":"GN1-v1","edge_type":"supersedes","actor":"owner","scope":"reference-sample","reason":"Owner added mandatory General Manager final approval","propagation":{"on_source_effective":"target becomes superseded for current planning; history retained"}},
+
+    {"id":"R010","source":"GN1-v2","target":"FL-draft-submit","edge_type":"requires","actor":"owner","scope":"reference-sample","reason":"submission remains required under revised need","propagation":{"on_source_change":"target rejudge if claim semantics are affected"}},
+    {"id":"R011","source":"GN1-v2","target":"FL-authority-safe-review","edge_type":"requires","actor":"owner","scope":"reference-sample","reason":"first-stage authorized approval remains required","propagation":{"on_source_change":"target realign/rejudge"}},
+    {"id":"R012","source":"GN1-v2","target":"FL-general-manager-final-approval","edge_type":"requires","actor":"owner","scope":"reference-sample","reason":"new mandatory final approval capability","propagation":{"on_source_change":"target realign/rejudge"}},
+    {"id":"R013","source":"GN1-v2","target":"FL-reject-revise-resubmit","edge_type":"requires","actor":"owner","scope":"reference-sample","reason":"rejection at either stage must still preserve rework path","propagation":{"on_source_change":"target rejudge if rejection semantics changed"}},
+    {"id":"R014","source":"GN1-v2","target":"FL-approval-revision-binding","edge_type":"requires","actor":"owner","scope":"reference-sample","reason":"both decisions must bind to the exact revision","propagation":{"on_source_change":"target rejudge"}},
+    {"id":"R015","source":"GN1-v2","target":"FL-history","edge_type":"requires","actor":"owner","scope":"reference-sample","reason":"both stage decisions must remain inspectable","propagation":{"on_source_change":"target rejudge"}},
+    {"id":"R016","source":"GN1-v2","target":"FL-durable","edge_type":"requires","actor":"owner","scope":"reference-sample","reason":"revised approved state/history must remain durable","propagation":{"on_source_change":"target rejudge if persisted semantics changed"}},
+    {"id":"R017","source":"GN1-v2","target":"FL-browser","edge_type":"requires","actor":"owner","scope":"reference-sample","reason":"three-role path must be operable in browser","propagation":{"on_source_change":"target realign/rejudge"}},
+
+    {"id":"R020","source":"FL-draft-submit","target":"EL-domain-rules","edge_type":"depends_on","actor":"system-model","scope":"reference-sample","claim":"validation and lifecycle rules","propagation":{"on_target_revision_change":"source becomes stale/rejudge"}},
+    {"id":"R021","source":"FL-draft-submit","target":"EL-ledger-store","edge_type":"depends_on","actor":"system-model","scope":"reference-sample","claim":"draft persistence/edit/submit","propagation":{"on_target_revision_change":"source becomes stale/rejudge"}},
+    {"id":"R022","source":"FL-draft-submit","target":"EL-http","edge_type":"depends_on","actor":"system-model","scope":"reference-sample","claim":"transport path","propagation":{"on_target_revision_change":"source becomes stale/rejudge"}},
+    {"id":"R023","source":"FL-draft-submit","target":"EL-browser-ui","edge_type":"depends_on","actor":"system-model","scope":"reference-sample","claim":"browser edit/submit path","propagation":{"on_target_revision_change":"source becomes stale/rejudge"}},
+
+    {"id":"R030","source":"FL-authority-safe-review","target":"EL-domain-rules","edge_type":"depends_on","actor":"system-model","scope":"reference-sample","claim":"first-stage authority rules","propagation":{"on_target_revision_change":"source becomes stale/rejudge"}},
+    {"id":"R031","source":"FL-authority-safe-review","target":"EL-ledger-store","edge_type":"depends_on","actor":"system-model","scope":"reference-sample","claim":"role storage and decision transition","propagation":{"on_target_revision_change":"source becomes stale/rejudge"}},
+    {"id":"R032","source":"FL-authority-safe-review","target":"EL-http","edge_type":"depends_on","actor":"system-model","scope":"reference-sample","claim":"review API","propagation":{"on_target_revision_change":"source becomes stale/rejudge"}},
+    {"id":"R033","source":"FL-authority-safe-review","target":"EL-browser-ui","edge_type":"depends_on","actor":"system-model","scope":"reference-sample","claim":"review UI","propagation":{"on_target_revision_change":"source becomes stale/rejudge"}},
+
+    {"id":"R040","source":"FL-general-manager-final-approval","target":"EL-domain-rules","edge_type":"depends_on","actor":"system-model","scope":"reference-sample","claim":"manager_pending and GM authority rules","propagation":{"on_target_revision_change":"source becomes stale/rejudge"}},
+    {"id":"R041","source":"FL-general-manager-final-approval","target":"EL-ledger-store","edge_type":"depends_on","actor":"system-model","scope":"reference-sample","claim":"persist staged decision and final transition","propagation":{"on_target_revision_change":"source becomes stale/rejudge"}},
+    {"id":"R042","source":"FL-general-manager-final-approval","target":"EL-http","edge_type":"depends_on","actor":"system-model","scope":"reference-sample","claim":"final review API","propagation":{"on_target_revision_change":"source becomes stale/rejudge"}},
+    {"id":"R043","source":"FL-general-manager-final-approval","target":"EL-browser-ui","edge_type":"depends_on","actor":"system-model","scope":"reference-sample","claim":"GM UI path","propagation":{"on_target_revision_change":"source becomes stale/rejudge"}},
+
+    {"id":"R050","source":"FL-reject-revise-resubmit","target":"EL-domain-rules","edge_type":"depends_on","actor":"system-model","scope":"reference-sample","propagation":{"on_target_revision_change":"source becomes stale/rejudge"}},
+    {"id":"R051","source":"FL-reject-revise-resubmit","target":"EL-ledger-store","edge_type":"depends_on","actor":"system-model","scope":"reference-sample","propagation":{"on_target_revision_change":"source becomes stale/rejudge"}},
+    {"id":"R052","source":"FL-reject-revise-resubmit","target":"EL-http","edge_type":"depends_on","actor":"system-model","scope":"reference-sample","propagation":{"on_target_revision_change":"source becomes stale/rejudge"}},
+    {"id":"R053","source":"FL-reject-revise-resubmit","target":"EL-browser-ui","edge_type":"depends_on","actor":"system-model","scope":"reference-sample","propagation":{"on_target_revision_change":"source becomes stale/rejudge"}},
+
+    {"id":"R060","source":"FL-approval-revision-binding","target":"EL-domain-rules","edge_type":"depends_on","actor":"system-model","scope":"reference-sample","propagation":{"on_target_revision_change":"source becomes stale/rejudge"}},
+    {"id":"R061","source":"FL-approval-revision-binding","target":"EL-ledger-store","edge_type":"depends_on","actor":"system-model","scope":"reference-sample","propagation":{"on_target_revision_change":"source becomes stale/rejudge"}},
+    {"id":"R062","source":"FL-approval-revision-binding","target":"EL-http","edge_type":"depends_on","actor":"system-model","scope":"reference-sample","propagation":{"on_target_revision_change":"source becomes stale/rejudge"}},
+
+    {"id":"R070","source":"FL-history","target":"EL-ledger-store","edge_type":"depends_on","actor":"system-model","scope":"reference-sample","propagation":{"on_target_revision_change":"source becomes stale/rejudge"}},
+    {"id":"R071","source":"FL-history","target":"EL-http","edge_type":"depends_on","actor":"system-model","scope":"reference-sample","propagation":{"on_target_revision_change":"source becomes stale/rejudge"}},
+    {"id":"R072","source":"FL-history","target":"EL-browser-ui","edge_type":"depends_on","actor":"system-model","scope":"reference-sample","propagation":{"on_target_revision_change":"source becomes stale/rejudge"}},
+
+    {"id":"R080","source":"FL-durable","target":"EL-ledger-store","edge_type":"depends_on","actor":"system-model","scope":"reference-sample","propagation":{"on_target_revision_change":"source becomes stale/rejudge"}},
+    {"id":"R081","source":"FL-durable","target":"EL-verification-environment","edge_type":"depends_on","actor":"system-model","scope":"reference-sample","claim":"restart evidence execution","propagation":{"on_target_revision_change":"source evidence becomes stale/rejudge"}},
+
+    {"id":"R090","source":"FL-browser","target":"EL-http","edge_type":"depends_on","actor":"system-model","scope":"reference-sample","propagation":{"on_target_revision_change":"source becomes stale/rejudge"}},
+    {"id":"R091","source":"FL-browser","target":"EL-browser-ui","edge_type":"depends_on","actor":"system-model","scope":"reference-sample","propagation":{"on_target_revision_change":"source becomes stale/rejudge"}},
+    {"id":"R092","source":"FL-browser","target":"EL-verification-environment","edge_type":"depends_on","actor":"system-model","scope":"reference-sample","claim":"Chromium evidence execution","propagation":{"on_target_revision_change":"source evidence becomes stale/rejudge"}},
+
+    {"id":"R100","source":"EV-ci-c0f01","target":"FJ-c0f01","edge_type":"supports","actor":"system-ci","scope":"reference-sample","revision":"c0f01dbf4af0dc9f9201c15f37cf960b925fce0c","claim":"17 revision-bound tests including browser and real process restart passed","limits":"test-defined claims only","propagation":{"on_source_invalidated":"target becomes stale/rejudge"}},
+    {"id":"R110","source":"FJ-c0f01","target":"GOV-accept-c0f01","edge_type":"supports","actor":"function-assessor","scope":"reference-sample","revision":"c0f01dbf4af0dc9f9201c15f37cf960b925fce0c","claim":"eight Functions valid_within_scope and governance-ready","propagation":{"on_source_stale":"target basis becomes stale/rejudge"}},
+    {"id":"R111","source":"GOV-accept-c0f01","target":"FJ-c0f01","edge_type":"references","actor":"owner","scope":"reference-sample","revision":"c0f01dbf4af0dc9f9201c15f37cf960b925fce0c","authority":"Owner Governance acceptance","propagation":{"none":"governance decision records basis without rewriting it"}},
+    {"id":"R120","source":"GOV-accept-c0f01","target":"ES-reference-sample","edge_type":"supports","actor":"owner","scope":"reference-sample","claim":"accepted revision is consumable in reference-sample domain","limits":"does not admit production or broader domains","propagation":{"on_source_stale":"effective state becomes stale/not currently consumable"}}
+  ]
+}
