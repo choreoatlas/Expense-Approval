@@ -19,16 +19,25 @@
         <input id="receipt" placeholder="Receipt reference" required>
         <button type="submit">Create draft</button>
       </form>
+      <button id="edit-btn" disabled>Edit current draft</button>
       <button id="submit-btn" disabled>Submit current expense</button>
       <button id="revise-btn" disabled>Revise rejected expense</button>
     </section>
 
     <section>
-      <h2>Approver</h2>
+      <h2>First-stage approver</h2>
       <input id="approver" placeholder="Approver" value="bob">
-      <input id="reason" placeholder="Decision reason">
-      <button id="approve-btn" disabled>Approve</button>
+      <input id="approver-reason" placeholder="Decision reason">
+      <button id="approve-btn" disabled>Approve first stage</button>
       <button id="reject-btn" disabled>Reject</button>
+    </section>
+
+    <section>
+      <h2>General Manager</h2>
+      <input id="general-manager" placeholder="General Manager" value="carol">
+      <input id="gm-reason" placeholder="General Manager reason">
+      <button id="gm-approve-btn" disabled>Final approve</button>
+      <button id="gm-reject-btn" disabled>Reject</button>
     </section>
 
     <section>
