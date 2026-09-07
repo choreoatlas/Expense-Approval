@@ -8,8 +8,15 @@ from enum import Enum
 class ExpenseStatus(str, Enum):
     DRAFT = "draft"
     SUBMITTED = "submitted"
+    MANAGER_PENDING = "manager_pending"
     REJECTED = "rejected"
     APPROVED = "approved"
+
+
+class ActorRole(str, Enum):
+    EMPLOYEE = "employee"
+    APPROVER = "approver"
+    GENERAL_MANAGER = "general_manager"
 
 
 @dataclass(frozen=True)
@@ -48,7 +55,8 @@ class ExpenseRevision:
 class Decision:
     expense_id: int
     revision: int
-    approver: str
+    actor: str
+    actor_role: str
     outcome: str
     reason: str
 
@@ -58,11 +66,18 @@ def ensure_can_submit(status: ExpenseStatus) -> None:
         raise ValueError("only a draft can be submitted")
 
 
-def ensure_can_review(revision: ExpenseRevision, approver: str) -> None:
-    if revision.status != ExpenseStatus.SUBMITTED:
-        raise ValueError("only a submitted revision can be reviewed")
-    if revision.employee == approver:
+def ensure_can_review(revision: ExpenseRevision, actor: str, role: ActorRole) -> None:
+    if revision.employee == actor:
         raise PermissionError("employee cannot approve or reject their own expense")
+    if revision.status == ExpenseStatus.SUBMITTED:
+        if role != ActorRole.APPROVER:
+            raise PermissionError("first-stage review requires approver authority")
+        return
+    if revision.status == ExpenseStatus.MANAGER_PENDING:
+        if role != ActorRole.GENERAL_MANAGER:
+            raise PermissionError("final review requires general manager authority")
+        return
+    raise ValueError("expense is not awaiting a review decision")
 
 
 def ensure_can_revise_after_rejection(status: ExpenseStatus) -> None:
