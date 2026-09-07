@@ -1,0 +1,66 @@
+{
+  "schema": "expense_approval_close_loop_attempt.v0.2",
+  "supersedes": "model.v0.1.json",
+  "change_basis": "Owner governance change: General Manager approval is required before an expense is fully approved",
+  "subject": {
+    "id": "expense-approval-reference",
+    "commission_ref": "github:issue/1"
+  },
+  "governance_need": {
+    "id": "GN1",
+    "target": "An employee can submit a revisioned expense; an authorized first-stage approver must approve it; then an authorized General Manager must approve the same exact revision before the expense is finally approved, while rejection/revision history remains preserved.",
+    "scope": "single-organization local reference sample",
+    "current": "Attempt-1 implementation exists but the prior one-stage approval target was superseded during development.",
+    "gap": "Re-establish Function validity and evidence under explicit actor roles and mandatory two-stage approval."
+  },
+  "function_loops": [
+    {
+      "id": "FL-draft-submit",
+      "target": "Employee can create/edit a draft and submit a valid immutable expense revision for review."
+    },
+    {
+      "id": "FL-authority-safe-review",
+      "target": "Only an actor with explicit approver authority, who is not the submitter, can perform first-stage approve/reject on the exact submitted revision."
+    },
+    {
+      "id": "FL-general-manager-final-approval",
+      "target": "Only an actor with explicit general_manager authority can perform final approve/reject after first-stage approval, and final approval applies to the same exact revision."
+    },
+    {
+      "id": "FL-reject-revise-resubmit",
+      "target": "A rejection at either review stage can be revised into a new revision and resubmitted while preserving prior revision and decisions."
+    },
+    {
+      "id": "FL-approval-revision-binding",
+      "target": "Neither first-stage nor final approval can float across a changed or superseded expense revision."
+    },
+    {
+      "id": "FL-history",
+      "target": "Expense revisions and both stages of decisions remain inspectable as ordered history with actor role."
+    },
+    {
+      "id": "FL-durable",
+      "target": "Expense, actor-role, revision and decision history survives application/store restart."
+    },
+    {
+      "id": "FL-browser",
+      "target": "Employee, first-stage approver and General Manager can exercise supported paths through a browser UI."
+    }
+  ],
+  "hard_invariants": [
+    "DECISION_REVISION_EXACT_MATCH",
+    "EXPLICIT_ACTOR_ROLE_REQUIRED",
+    "NO_SELF_APPROVAL",
+    "FIRST_STAGE_APPROVAL_IS_NOT_FINAL_APPROVAL",
+    "GENERAL_MANAGER_REQUIRED_FOR_FINAL_APPROVAL",
+    "GENERAL_MANAGER_CANNOT_SKIP_FIRST_STAGE",
+    "REJECTION_PRESERVES_HISTORY",
+    "APPROVAL_DOES_NOT_FLOAT_ACROSS_CONTENT_CHANGE",
+    "INVALID_TRANSITION_DOES_NOT_MUTATE_STATE"
+  ],
+  "stale_effect": {
+    "basis_revision": "665944bcd022c647bfbe43c5562e342e98b7a566",
+    "effect": "approval-related prior Function basis is stale/realign because upstream governance target changed"
+  },
+  "status": "realigned_development_model_no_new_function_or_governance_judgment"
+}

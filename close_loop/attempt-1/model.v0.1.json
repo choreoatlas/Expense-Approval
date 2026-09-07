@@ -1,0 +1,66 @@
+{
+  "schema": "expense_approval_close_loop_attempt.v0.1",
+  "subject": {
+    "id": "expense-approval-reference",
+    "commission_ref": "github:issue/1"
+  },
+  "governance_need": {
+    "id": "GN1",
+    "target": "An employee can submit a revisioned expense for review and an authorized approver can make a decision that applies only to the exact reviewed revision, with rejection/revision history preserved.",
+    "scope": "single-organization local reference sample",
+    "current": "No implementation exists beyond repository initialization.",
+    "gap": "Submission, revision, authority-safe decision, historical traceability, persistence and browser interaction are absent."
+  },
+  "function_loops": [
+    {
+      "id": "FL-draft-submit",
+      "target": "Employee can create/edit a draft and submit a valid immutable expense revision for review.",
+      "current": "not implemented",
+      "gap": "no draft/submission path"
+    },
+    {
+      "id": "FL-authority-safe-review",
+      "target": "Only an authorized approver who is not the submitter can approve or reject the exact submitted revision.",
+      "current": "not implemented",
+      "gap": "no review authority path"
+    },
+    {
+      "id": "FL-reject-revise-resubmit",
+      "target": "A rejected expense can be revised into a new revision and resubmitted while preserving the rejection and prior revision.",
+      "current": "not implemented",
+      "gap": "no revision/rejection lifecycle"
+    },
+    {
+      "id": "FL-approval-revision-binding",
+      "target": "An approval remains attached to the reviewed revision and cannot silently authorize changed approval-relevant content.",
+      "current": "not implemented",
+      "gap": "no binding between decision and revision"
+    },
+    {
+      "id": "FL-history",
+      "target": "Expense revisions, submissions and decisions remain inspectable as an ordered history.",
+      "current": "not implemented",
+      "gap": "no historical trace"
+    },
+    {
+      "id": "FL-durable",
+      "target": "Expense and decision history survives application/store restart.",
+      "current": "not implemented",
+      "gap": "no persistence"
+    },
+    {
+      "id": "FL-browser",
+      "target": "Employee and approver can exercise supported paths through a browser UI.",
+      "current": "not implemented",
+      "gap": "no browser path"
+    }
+  ],
+  "hard_invariants": [
+    "DECISION_REVISION_EXACT_MATCH",
+    "NO_SELF_APPROVAL",
+    "REJECTION_PRESERVES_HISTORY",
+    "APPROVAL_DOES_NOT_FLOAT_ACROSS_CONTENT_CHANGE",
+    "INVALID_TRANSITION_DOES_NOT_MUTATE_STATE"
+  ],
+  "status": "development_model_only_no_function_or_governance_judgment"
+}

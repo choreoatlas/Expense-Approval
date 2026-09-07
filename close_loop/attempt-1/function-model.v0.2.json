@@ -1,0 +1,101 @@
+{
+  "schema": "expense_function_model.v0.2",
+  "subject": "expense-approval-reference",
+  "governance_need_ref": "close_loop/attempt-1/model.v0.2.json#GN1",
+  "basis_revision_before_change": "665944bcd022c647bfbe43c5562e342e98b7a566",
+  "process_correction_ref": "github:issue/1#issuecomment-5571251216",
+  "status": "realigned_function_model_no_function_judgment",
+  "functions": [
+    {
+      "id": "FL-draft-submit",
+      "upstream_governance_need": "GN1",
+      "target_path_type": "employee expense preparation and submission",
+      "current_capability_state": "Draft creation, store edit, PATCH transport and submission exist; browser draft edit was added after the governance change but has not yet been re-evidenced on the corrected Function basis.",
+      "capability_gap": "Need revision-bound evidence for successful draft edit, invalid edit without mutation, and browser execution of edit before submit.",
+      "required_execution_support": ["EL-domain-rules", "EL-ledger-store", "EL-http", "EL-browser-ui", "EL-verification-environment"],
+      "required_evidence": ["draft create", "draft edit success", "invalid draft edit preserves state", "submit exact current revision", "browser edit then submit"],
+      "scope": "local single-organization reference sample",
+      "limits": "No external identity provider or production security claim.",
+      "stale_basis": "Prior incomplete evidence basis at 665944bcd..."
+    },
+    {
+      "id": "FL-authority-safe-review",
+      "upstream_governance_need": "GN1",
+      "target_path_type": "first-stage approval",
+      "current_capability_state": "Explicit local actor-role storage and approver-only first-stage review have been implemented after the Owner change.",
+      "capability_gap": "Need evidence that unassigned actors, employees, and general managers cannot perform first-stage approval; valid approver can approve/reject only the exact submitted revision.",
+      "required_execution_support": ["EL-domain-rules", "EL-ledger-store", "EL-http", "EL-browser-ui", "EL-verification-environment"],
+      "required_evidence": ["authorized approver success", "self-approval denied without mutation", "unassigned actor denied", "wrong-role actor denied", "old revision denied"],
+      "scope": "first-stage review of current submitted revision",
+      "limits": "Local seeded role assignments only; no enterprise IAM claim.",
+      "stale_basis": "Original FL-authority-safe-review assumed one-stage approval and is realigned."
+    },
+    {
+      "id": "FL-general-manager-final-approval",
+      "upstream_governance_need": "GN1",
+      "target_path_type": "final approval",
+      "current_capability_state": "A manager_pending state and general_manager role path have been implemented after the Owner change.",
+      "capability_gap": "Need evidence that final approval cannot occur before first-stage approval, cannot be performed by wrong-role actors, and binds to the same exact revision reviewed at stage one.",
+      "required_execution_support": ["EL-domain-rules", "EL-ledger-store", "EL-http", "EL-browser-ui", "EL-verification-environment"],
+      "required_evidence": ["first-stage approval yields manager_pending not approved", "general manager final approval success", "GM cannot skip first stage", "approver cannot perform final decision", "final decision exact-revision binding"],
+      "scope": "final review after first-stage approval",
+      "limits": "General manager authority is local sample configuration, not organizational IAM.",
+      "stale_basis": "New Function introduced by Owner governance change."
+    },
+    {
+      "id": "FL-reject-revise-resubmit",
+      "upstream_governance_need": "GN1",
+      "target_path_type": "rejection and rework lifecycle",
+      "current_capability_state": "Rejection, new revision creation and resubmission already exist; implementation was extended so either review stage may reject.",
+      "capability_gap": "Need evidence for rejection at both stages, preservation of prior decisions, creation of a new revision, and resubmission from the new revision only.",
+      "required_execution_support": ["EL-domain-rules", "EL-ledger-store", "EL-http", "EL-browser-ui", "EL-verification-environment"],
+      "required_evidence": ["stage-one reject-revise-resubmit", "GM-stage reject-revise-resubmit", "old revision and decisions retained"],
+      "scope": "rejected current revision",
+      "limits": "No workflow delegation or escalation rules."
+    },
+    {
+      "id": "FL-approval-revision-binding",
+      "upstream_governance_need": "GN1",
+      "target_path_type": "decision/revision binding",
+      "current_capability_state": "Store requires decision target to equal latest revision; both stage transitions operate on that revision.",
+      "capability_gap": "Need evidence that neither first-stage nor final approval can target a stale revision and that changed content requires a new revision and fresh approvals.",
+      "required_execution_support": ["EL-domain-rules", "EL-ledger-store", "EL-http", "EL-verification-environment"],
+      "required_evidence": ["old revision decision denied", "revised content has new revision", "prior approval does not float to new revision"],
+      "scope": "approval-relevant expense content",
+      "limits": "Only amount, purpose and receipt_ref are approval-relevant in this sample."
+    },
+    {
+      "id": "FL-history",
+      "upstream_governance_need": "GN1",
+      "target_path_type": "inspectable ordered history",
+      "current_capability_state": "Revision and decision history exist; decisions now include actor and actor_role.",
+      "capability_gap": "Need evidence showing ordered history across two-stage decisions, rejection, revision and resubmission.",
+      "required_execution_support": ["EL-ledger-store", "EL-http", "EL-browser-ui", "EL-verification-environment"],
+      "required_evidence": ["ordered revisions", "ordered stage-one and GM decisions", "actor_role retained", "browser history visibility"],
+      "scope": "single expense history",
+      "limits": "No cross-expense audit dashboard."
+    },
+    {
+      "id": "FL-durable",
+      "upstream_governance_need": "GN1",
+      "target_path_type": "local persistence",
+      "current_capability_state": "SQLite persistence exists for actors, revisions and decisions.",
+      "capability_gap": "Need re-evidence that two-stage decisions, roles and history survive store/application restart.",
+      "required_execution_support": ["EL-ledger-store", "EL-verification-environment"],
+      "required_evidence": ["restart and recover actor roles", "restart and recover both decision stages", "restart and recover revisions/history"],
+      "scope": "local SQLite file persistence",
+      "limits": "No crash consistency, replication or remote durability claim."
+    },
+    {
+      "id": "FL-browser",
+      "upstream_governance_need": "GN1",
+      "target_path_type": "browser user path",
+      "current_capability_state": "Browser UI has been modified to expose draft edit, first-stage review and general-manager final review.",
+      "capability_gap": "Need real Chromium evidence covering employee edit/submit, first-stage approve/reject, general-manager final approve/reject, and visible history.",
+      "required_execution_support": ["EL-http", "EL-browser-ui", "EL-verification-environment"],
+      "required_evidence": ["real browser draft edit", "real browser first-stage decision", "real browser GM final decision", "real browser history"],
+      "scope": "Chromium reference path",
+      "limits": "No cross-browser or accessibility certification."
+    }
+  ]
+}

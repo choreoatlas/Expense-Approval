@@ -1,0 +1,50 @@
+{
+  "schema": "expense_function_evidence_requirements.v0.2",
+  "basis_model": "function-model.v0.2.json",
+  "authority_note": "This file is a derived evidence plan. It cannot narrow or override Function targets in function-model.v0.2.json.",
+  "requirements": [
+    {
+      "function": "FL-draft-submit",
+      "claims": ["valid draft creation", "successful draft edit", "invalid draft edit does not mutate", "submission freezes the current revision for review", "browser edit then submit"],
+      "evidence_refs": ["tests/test_domain_store.py::test_draft_can_be_edited_and_invalid_edit_does_not_mutate", "tests/test_http.py::test_draft_edit_then_two_stage_approval_over_http", "tests/test_browser.py::test_real_browser_reject_revise_resubmit_two_stage_approve"]
+    },
+    {
+      "function": "FL-authority-safe-review",
+      "claims": ["unknown actor cannot review", "General Manager cannot skip first-stage review", "employee cannot review own expense", "authorized approver can approve or reject only the exact current submitted revision", "old revision cannot be reviewed"],
+      "evidence_refs": ["tests/test_domain_store.py", "tests/test_http.py"]
+    },
+    {
+      "function": "FL-general-manager-final-approval",
+      "claims": ["first-stage approval is not final", "approver cannot perform final review", "General Manager can approve the same manager_pending revision to final approved", "General Manager can reject at final stage", "General Manager final decision cannot target a stale revision"],
+      "evidence_refs": ["tests/test_domain_store.py", "tests/test_http.py", "tests/test_browser.py"]
+    },
+    {
+      "function": "FL-reject-revise-resubmit",
+      "claims": ["first-stage rejection remains in history", "General Manager-stage rejection remains in history", "revision increments after either-stage rejection", "new revision must traverse approval stages again", "old revision and decisions remain inspectable"],
+      "evidence_refs": ["tests/test_domain_store.py", "tests/test_http.py", "tests/test_browser.py"]
+    },
+    {
+      "function": "FL-approval-revision-binding",
+      "claims": ["first-stage decision cannot target old revision", "final-stage decision cannot target old revision", "changed content creates a new revision after rejection", "prior approval does not float to a new revision", "both successful approval decisions reference the same exact revision"],
+      "evidence_refs": ["tests/test_domain_store.py", "tests/test_http.py"]
+    },
+    {
+      "function": "FL-history",
+      "claims": ["ordered revisions retained", "ordered stage-one and General Manager decisions retain actor and actor_role", "rejected and approved decisions coexist in history", "history is visible through the browser path"],
+      "evidence_refs": ["tests/test_domain_store.py", "tests/test_browser.py"]
+    },
+    {
+      "function": "FL-durable",
+      "claims": ["actor-role behavior remains available after restart", "both approval-stage decisions survive restart", "revision and decision history survives store reopen", "the application process can be stopped and restarted against the same SQLite file without losing the approved expense history"],
+      "evidence_refs": ["tests/test_domain_store.py", "tests/test_process_restart.py"],
+      "limits": ["does not claim crash consistency, replication, remote durability, backup restore, or production recovery"]
+    },
+    {
+      "function": "FL-browser",
+      "claims": ["real Chromium employee path covers draft edit and submit", "real Chromium first-stage approver path covers approve and reject", "real Chromium General Manager path covers final approve and reject", "real Chromium history inspection shows revisions and decision roles"],
+      "evidence_refs": ["tests/test_browser.py"],
+      "limits": ["Chromium reference flow only; no cross-browser or accessibility certification"]
+    }
+  ],
+  "judgment": "none_until_required_evidence_exists_and_revision_bound_ci_completes"
+}

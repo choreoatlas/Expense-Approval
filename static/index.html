@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Expense Approval</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main>
+    <h1>Expense Approval</h1>
+
+    <section>
+      <h2>Employee</h2>
+      <form id="create-form">
+        <input id="employee" placeholder="Employee" value="alice" required>
+        <input id="amount" placeholder="Amount" required>
+        <input id="purpose" placeholder="Purpose" required>
+        <input id="receipt" placeholder="Receipt reference" required>
+        <button type="submit">Create draft</button>
+      </form>
+      <button id="edit-btn" disabled>Edit current draft</button>
+      <button id="submit-btn" disabled>Submit current expense</button>
+      <button id="revise-btn" disabled>Revise rejected expense</button>
+    </section>
+
+    <section>
+      <h2>First-stage approver</h2>
+      <input id="approver" placeholder="Approver" value="bob">
+      <input id="approver-reason" placeholder="Decision reason">
+      <button id="approve-btn" disabled>Approve first stage</button>
+      <button id="reject-btn" disabled>Reject</button>
+    </section>
+
+    <section>
+      <h2>General Manager</h2>
+      <input id="general-manager" placeholder="General Manager" value="carol">
+      <input id="gm-reason" placeholder="General Manager reason">
+      <button id="gm-approve-btn" disabled>Final approve</button>
+      <button id="gm-reject-btn" disabled>Reject</button>
+    </section>
+
+    <section>
+      <h2>Current expense</h2>
+      <pre id="current">None</pre>
+    </section>
+
+    <section>
+      <h2>History</h2>
+      <button id="history-btn" disabled>Refresh history</button>
+      <pre id="history">None</pre>
+    </section>
+
+    <p id="message" role="status"></p>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
