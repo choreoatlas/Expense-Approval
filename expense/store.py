@@ -3,7 +3,7 @@ from __future__ import annotations
 import sqlite3
 from pathlib import Path
 
-from .domain import Decision, ExpenseContent, ExpenseRevision, ExpenseStatus, ensure_can_review, ensure_can_revise_after_rejection, ensure_can_submit
+from .domain import ActorRole, Decision, ExpenseContent, ExpenseRevision, ExpenseStatus, ensure_can_review, ensure_can_revise_after_rejection, ensure_can_submit
 
 
 class ExpenseStore:
@@ -21,6 +21,10 @@ class ExpenseStore:
         with self._connect() as conn:
             conn.executescript(
                 """
+                CREATE TABLE IF NOT EXISTS actors (
+                    name TEXT PRIMARY KEY,
+                    role TEXT NOT NULL
+                );
                 CREATE TABLE IF NOT EXISTS expenses (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                     employee TEXT NOT NULL
@@ -39,19 +43,38 @@ class ExpenseStore:
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                     expense_id INTEGER NOT NULL,
                     revision INTEGER NOT NULL,
-                    approver TEXT NOT NULL,
+                    actor TEXT NOT NULL,
+                    actor_role TEXT NOT NULL,
                     outcome TEXT NOT NULL,
                     reason TEXT NOT NULL,
                     FOREIGN KEY (expense_id, revision) REFERENCES revisions(expense_id, revision)
                 );
                 """
             )
+            conn.execute("INSERT OR IGNORE INTO actors(name, role) VALUES (?,?)", ("bob", ActorRole.APPROVER.value))
+            conn.execute("INSERT OR IGNORE INTO actors(name, role) VALUES (?,?)", ("carol", ActorRole.GENERAL_MANAGER.value))
+
+    def _actor_role(self, actor: str) -> ActorRole:
+        with self._connect() as conn:
+            row = conn.execute("SELECT role FROM actors WHERE name=?", (actor,)).fetchone()
+        if row is None:
+            raise PermissionError("actor has no assigned approval authority")
+        return ActorRole(row["role"])
+
+    def _ensure_employee_actor(self, employee: str) -> None:
+        with self._connect() as conn:
+            row = conn.execute("SELECT role FROM actors WHERE name=?", (employee,)).fetchone()
+            if row is None:
+                conn.execute("INSERT INTO actors(name, role) VALUES (?,?)", (employee, ActorRole.EMPLOYEE.value))
+            elif row["role"] != ActorRole.EMPLOYEE.value:
+                raise PermissionError("approval authority actor cannot be used as employee")
 
     def create_draft(self, employee: str, amount: str, purpose: str, receipt_ref: str) -> ExpenseRevision:
         employee = employee.strip()
         if not employee:
             raise ValueError("employee is required")
         content = ExpenseContent.validated(amount, purpose, receipt_ref)
+        self._ensure_employee_actor(employee)
         with self._connect() as conn:
             cur = conn.execute("INSERT INTO expenses(employee) VALUES (?)", (employee,))
             expense_id = cur.lastrowid
@@ -106,11 +129,11 @@ class ExpenseStore:
             )
         return self.get_revision(expense_id, current.revision)
 
-    def decide(self, expense_id: int, revision: int, approver: str, outcome: str, reason: str) -> Decision:
-        approver = approver.strip()
+    def decide(self, expense_id: int, revision: int, actor: str, outcome: str, reason: str) -> Decision:
+        actor = actor.strip()
         reason = reason.strip()
-        if not approver:
-            raise ValueError("approver is required")
+        if not actor:
+            raise ValueError("decision actor is required")
         if outcome not in {"approved", "rejected"}:
             raise ValueError("outcome must be approved or rejected")
         if not reason:
@@ -118,18 +141,27 @@ class ExpenseStore:
         target = self.get_revision(expense_id, revision)
         current = self.latest(expense_id)
         if current.revision != revision:
-            raise ValueError("decision must target the current submitted revision")
-        ensure_can_review(target, approver)
+            raise ValueError("decision must target the current expense revision")
+        role = self._actor_role(actor)
+        ensure_can_review(target, actor, role)
+
+        if outcome == "rejected":
+            next_status = ExpenseStatus.REJECTED
+        elif role == ActorRole.APPROVER:
+            next_status = ExpenseStatus.MANAGER_PENDING
+        else:
+            next_status = ExpenseStatus.APPROVED
+
         with self._connect() as conn:
             conn.execute(
-                "INSERT INTO decisions(expense_id, revision, approver, outcome, reason) VALUES (?,?,?,?,?)",
-                (expense_id, revision, approver, outcome, reason),
+                "INSERT INTO decisions(expense_id, revision, actor, actor_role, outcome, reason) VALUES (?,?,?,?,?,?)",
+                (expense_id, revision, actor, role.value, outcome, reason),
             )
             conn.execute(
                 "UPDATE revisions SET status=? WHERE expense_id=? AND revision=?",
-                (outcome, expense_id, revision),
+                (next_status.value, expense_id, revision),
             )
-        return Decision(expense_id, revision, approver, outcome, reason)
+        return Decision(expense_id, revision, actor, role.value, outcome, reason)
 
     def revise_rejected(self, expense_id: int, amount: str, purpose: str, receipt_ref: str) -> ExpenseRevision:
         current = self.latest(expense_id)
@@ -150,7 +182,7 @@ class ExpenseStore:
                 (expense_id,),
             ).fetchall()
             decisions = conn.execute(
-                "SELECT expense_id, revision, approver, outcome, reason FROM decisions WHERE expense_id=? ORDER BY id",
+                "SELECT expense_id, revision, actor, actor_role, outcome, reason FROM decisions WHERE expense_id=? ORDER BY id",
                 (expense_id,),
             ).fetchall()
         if not revisions:
