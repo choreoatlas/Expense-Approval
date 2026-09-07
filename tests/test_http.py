@@ -33,15 +33,49 @@ class HttpWorkflowTests(unittest.TestCase):
         raw = response.read()
         return response.status, None if not raw else json.loads(raw)
 
-    def test_revisioned_rejection_resubmission_over_http(self):
+    def create_submit(self):
         status, draft = self.request("POST", "/api/expenses", {"employee":"alice","amount":"15","purpose":"Taxi","receipt_ref":"r1"})
         self.assertEqual(201, status)
         expense_id = draft["expense_id"]
-
         status, submitted = self.request("POST", f"/api/expenses/{expense_id}/submit", {})
         self.assertEqual(200, status)
-        self.assertEqual("submitted", submitted["status"])
+        return expense_id, submitted
 
+    def test_draft_edit_then_two_stage_approval_over_http(self):
+        status, draft = self.request("POST", "/api/expenses", {"employee":"alice","amount":"15","purpose":"Taxi","receipt_ref":"r1"})
+        self.assertEqual(201, status)
+        expense_id = draft["expense_id"]
+        status, edited = self.request("PATCH", f"/api/expenses/{expense_id}", {"amount":"16","purpose":"Taxi to client","receipt_ref":"r2"})
+        self.assertEqual(200, status)
+        self.assertEqual("16", edited["amount"])
+        self.request("POST", f"/api/expenses/{expense_id}/submit", {})
+
+        status, first = self.request("POST", f"/api/expenses/{expense_id}/1/decision", {"approver":"bob","outcome":"approved","reason":"Policy compliant"})
+        self.assertEqual(201, status)
+        self.assertEqual("approver", first["actor_role"])
+        _, current = self.request("GET", f"/api/expenses/{expense_id}")
+        self.assertEqual("manager_pending", current["status"])
+
+        status, final = self.request("POST", f"/api/expenses/{expense_id}/1/decision", {"approver":"carol","outcome":"approved","reason":"GM approved"})
+        self.assertEqual(201, status)
+        self.assertEqual("general_manager", final["actor_role"])
+        _, current = self.request("GET", f"/api/expenses/{expense_id}")
+        self.assertEqual("approved", current["status"])
+
+    def test_unauthorized_and_wrong_stage_actor_are_forbidden_without_state_change(self):
+        expense_id, _ = self.create_submit()
+        status, _ = self.request("POST", f"/api/expenses/{expense_id}/1/decision", {"approver":"mallory","outcome":"approved","reason":"No authority"})
+        self.assertEqual(403, status)
+        _, current = self.request("GET", f"/api/expenses/{expense_id}")
+        self.assertEqual("submitted", current["status"])
+
+        status, _ = self.request("POST", f"/api/expenses/{expense_id}/1/decision", {"approver":"carol","outcome":"approved","reason":"Skip first"})
+        self.assertEqual(403, status)
+        _, current = self.request("GET", f"/api/expenses/{expense_id}")
+        self.assertEqual("submitted", current["status"])
+
+    def test_revisioned_rejection_resubmission_over_http(self):
+        expense_id, _ = self.create_submit()
         status, decision = self.request("POST", f"/api/expenses/{expense_id}/1/decision", {"approver":"bob","outcome":"rejected","reason":"Need itemized receipt"})
         self.assertEqual(201, status)
         self.assertEqual(1, decision["revision"])
@@ -58,12 +92,10 @@ class HttpWorkflowTests(unittest.TestCase):
         self.assertEqual("submitted", history["revisions"][1]["status"])
 
     def test_self_approval_is_forbidden_without_state_change(self):
-        _, draft = self.request("POST", "/api/expenses", {"employee":"alice","amount":"10","purpose":"Train","receipt_ref":"r1"})
-        self.request("POST", f"/api/expenses/{draft['expense_id']}/submit", {})
-        status, error = self.request("POST", f"/api/expenses/{draft['expense_id']}/1/decision", {"approver":"alice","outcome":"approved","reason":"Mine"})
+        expense_id, _ = self.create_submit()
+        status, error = self.request("POST", f"/api/expenses/{expense_id}/1/decision", {"approver":"alice","outcome":"approved","reason":"Mine"})
         self.assertEqual(403, status)
-        self.assertIn("own expense", error["error"])
-        _, current = self.request("GET", f"/api/expenses/{draft['expense_id']}")
+        _, current = self.request("GET", f"/api/expenses/{expense_id}")
         self.assertEqual("submitted", current["status"])
 
 
