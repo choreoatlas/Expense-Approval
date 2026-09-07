@@ -74,6 +74,42 @@ class BrowserWorkflowTests(unittest.TestCase):
             self.assertIn('"outcome": "approved"', history_text)
             browser.close()
 
+    def test_real_browser_general_manager_rejects_and_employee_can_revise(self):
+        with sync_playwright() as p:
+            browser = p.chromium.launch()
+            page = browser.new_page()
+            page.goto(self.base)
+
+            page.fill("#amount", "90")
+            page.fill("#purpose", "Client workshop")
+            page.fill("#receipt", "workshop-v1")
+            page.click("button[type=submit]")
+            page.wait_for_function("() => document.querySelector('#current').textContent.includes('draft')")
+            page.click("#submit-btn")
+            page.wait_for_function("() => document.querySelector('#current').textContent.includes('submitted')")
+
+            page.fill("#approver-reason", "First stage approved")
+            page.click("#approve-btn")
+            page.wait_for_function("() => document.querySelector('#current').textContent.includes('manager_pending')")
+
+            page.fill("#gm-reason", "Need attendee names")
+            page.click("#gm-reject-btn")
+            page.wait_for_function("() => document.querySelector('#current').textContent.includes('rejected')")
+
+            page.fill("#purpose", "Client workshop with attendee names")
+            page.fill("#receipt", "workshop-v2")
+            page.click("#revise-btn")
+            page.wait_for_function("() => document.querySelector('#current').textContent.includes('revision\\\": 2')")
+            self.assertTrue(page.locator("#submit-btn").is_enabled())
+
+            page.click("#history-btn")
+            page.wait_for_function("() => document.querySelector('#history').textContent.includes('Need attendee names')")
+            history_text = page.locator("#history").text_content()
+            self.assertIn('"actor_role": "general_manager"', history_text)
+            self.assertIn('"outcome": "rejected"', history_text)
+            self.assertIn('"revision": 2', history_text)
+            browser.close()
+
 
 if __name__ == "__main__":
     unittest.main()
