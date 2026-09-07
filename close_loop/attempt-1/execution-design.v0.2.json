@@ -1,0 +1,38 @@
+{
+  "schema": "expense_execution_design.v0.2",
+  "supersedes": "execution-design.v0.1.json",
+  "execution_loops": [
+    {
+      "id": "EL-domain-rules",
+      "boundary": "Expense validation, lifecycle states, actor roles, stage authority and revision invariants",
+      "owned_paths": ["expense/domain.py"],
+      "supports": ["FL-draft-submit", "FL-authority-safe-review", "FL-general-manager-final-approval", "FL-reject-revise-resubmit", "FL-approval-revision-binding"]
+    },
+    {
+      "id": "EL-ledger-store",
+      "boundary": "SQLite persistence for actors, expenses, numbered revisions, staged decisions and history",
+      "owned_paths": ["expense/store.py"],
+      "supports": ["FL-draft-submit", "FL-authority-safe-review", "FL-general-manager-final-approval", "FL-reject-revise-resubmit", "FL-approval-revision-binding", "FL-history", "FL-durable"]
+    },
+    {
+      "id": "EL-http",
+      "boundary": "HTTP transport for draft editing, lifecycle, staged decisions and history",
+      "owned_paths": ["expense/http.py", "app.py"],
+      "supports": ["FL-draft-submit", "FL-authority-safe-review", "FL-general-manager-final-approval", "FL-reject-revise-resubmit", "FL-history", "FL-browser"]
+    },
+    {
+      "id": "EL-browser-ui",
+      "boundary": "Browser interaction for employee, first-stage approver and General Manager workflows",
+      "owned_paths": ["static/index.html", "static/app.js", "static/styles.css"],
+      "supports": ["FL-draft-submit", "FL-authority-safe-review", "FL-general-manager-final-approval", "FL-browser"]
+    },
+    {
+      "id": "EL-verification-environment",
+      "boundary": "CI runtime, Python test execution, Playwright and Chromium provisioning",
+      "owned_paths": [".github/workflows/ci.yml", "requirements-dev.txt"],
+      "supports": ["evidence generation for all tested Function claims"]
+    }
+  ],
+  "change_note": "Owner governance change created a new Function dependency for mandatory General Manager final approval and strengthened actor-role authority semantics.",
+  "status": "realigned_design_no_function_judgment"
+}
