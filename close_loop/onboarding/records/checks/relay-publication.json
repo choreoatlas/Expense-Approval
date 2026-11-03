@@ -1,0 +1,9 @@
+{
+  "source_sha": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+  "source_tree": "a08a4629a990a708af56a11efa292a41c2b6cf14",
+  "remote_branch": "codex/expense-final-approval-onboarding",
+  "remote_readback_equal": true,
+  "parent": "6100d4538d0d5210a1fc9d97d24d2112be2b164f",
+  "ci": [],
+  "observed_at": "2026-11-03T13:01:36.040322+00:00"
+}

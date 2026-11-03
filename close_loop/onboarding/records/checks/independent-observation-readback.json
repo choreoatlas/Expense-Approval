@@ -1,0 +1,390 @@
+[
+  {
+    "basis": "A",
+    "run_id": "expense-issue3-relay-A-57fa2b3",
+    "source": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+    "required_witnesses_missing": {
+      "FC-final-sequence": [],
+      "FC-final-authority": [],
+      "FC-final-revision": [],
+      "FC-final-rework-history": [],
+      "FC-final-invalid-nonmutation": [],
+      "FC-final-browser": [],
+      "FC-final-restart": []
+    },
+    "denials": [
+      {
+        "id": "api-main.gm-before-first",
+        "status": 403,
+        "error": "first-stage review requires approver authority",
+        "full_table_snapshots_unchanged": true
+      },
+      {
+        "id": "api-main.unknown-final",
+        "status": 403,
+        "error": "actor has no assigned approval authority",
+        "full_table_snapshots_unchanged": true
+      },
+      {
+        "id": "api-main.employee-final",
+        "status": 403,
+        "error": "employee cannot approve or reject their own expense",
+        "full_table_snapshots_unchanged": true
+      },
+      {
+        "id": "api-main.approver-final",
+        "status": 403,
+        "error": "final review requires general manager authority",
+        "full_table_snapshots_unchanged": true
+      },
+      {
+        "id": "api-main.bad-outcome",
+        "status": 400,
+        "error": "outcome must be approved or rejected",
+        "full_table_snapshots_unchanged": true
+      },
+      {
+        "id": "api-main.empty-reason",
+        "status": 400,
+        "error": "decision reason is required",
+        "full_table_snapshots_unchanged": true
+      },
+      {
+        "id": "api-main.repeated-final",
+        "status": 400,
+        "error": "expense is not awaiting a review decision",
+        "full_table_snapshots_unchanged": true
+      },
+      {
+        "id": "api-main.edit-approved",
+        "status": 400,
+        "error": "only a draft can be edited",
+        "full_table_snapshots_unchanged": true
+      },
+      {
+        "id": "api-main.revise-approved",
+        "status": 400,
+        "error": "only a rejected expense can be revised",
+        "full_table_snapshots_unchanged": true
+      },
+      {
+        "id": "api-gm-rework.stale-final",
+        "status": 400,
+        "error": "decision must target the current expense revision",
+        "full_table_snapshots_unchanged": true
+      },
+      {
+        "id": "api-gm-rework.gm-before-new-first",
+        "status": 403,
+        "error": "first-stage review requires approver authority",
+        "full_table_snapshots_unchanged": true
+      },
+      {
+        "id": "api-first-rework.stale-final",
+        "status": 400,
+        "error": "decision must target the current expense revision",
+        "full_table_snapshots_unchanged": true
+      },
+      {
+        "id": "api-first-rework.gm-before-new-first",
+        "status": 403,
+        "error": "first-stage review requires approver authority",
+        "full_table_snapshots_unchanged": true
+      }
+    ],
+    "browser_steps": [
+      [
+        "create",
+        1,
+        "draft"
+      ],
+      [
+        "edit",
+        1,
+        "draft"
+      ],
+      [
+        "submit",
+        1,
+        "submitted"
+      ],
+      [
+        "first-reject",
+        1,
+        "rejected"
+      ],
+      [
+        "first-revise",
+        2,
+        "draft"
+      ],
+      [
+        "first-resubmit",
+        2,
+        "submitted"
+      ],
+      [
+        "first-approve-r2",
+        2,
+        "manager_pending"
+      ],
+      [
+        "gm-reject",
+        2,
+        "rejected"
+      ],
+      [
+        "gm-revise",
+        3,
+        "draft"
+      ],
+      [
+        "gm-resubmit",
+        3,
+        "submitted"
+      ],
+      [
+        "first-approve-r3",
+        3,
+        "manager_pending"
+      ],
+      [
+        "final-approve-r3",
+        3,
+        "approved"
+      ]
+    ],
+    "browser_decisions": [
+      [
+        1,
+        "bob",
+        "approver",
+        "rejected"
+      ],
+      [
+        2,
+        "bob",
+        "approver",
+        "approved"
+      ],
+      [
+        2,
+        "carol",
+        "general_manager",
+        "rejected"
+      ],
+      [
+        3,
+        "bob",
+        "approver",
+        "approved"
+      ],
+      [
+        3,
+        "carol",
+        "general_manager",
+        "approved"
+      ]
+    ],
+    "restart_current_equal": true,
+    "restart_history_equal": true,
+    "restart_all_tables_equal": true,
+    "different_process_pids": true,
+    "cleanup": true,
+    "scope": "Observation readback only; separate explicit assessments follow"
+  },
+  {
+    "basis": "B",
+    "run_id": "ci-41640672264-1",
+    "source": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+    "required_witnesses_missing": {
+      "FC-final-sequence": [],
+      "FC-final-authority": [],
+      "FC-final-revision": [],
+      "FC-final-rework-history": [],
+      "FC-final-invalid-nonmutation": [],
+      "FC-final-browser": [],
+      "FC-final-restart": []
+    },
+    "denials": [
+      {
+        "id": "api-main.gm-before-first",
+        "status": 403,
+        "error": "first-stage review requires approver authority",
+        "full_table_snapshots_unchanged": true
+      },
+      {
+        "id": "api-main.unknown-final",
+        "status": 403,
+        "error": "actor has no assigned approval authority",
+        "full_table_snapshots_unchanged": true
+      },
+      {
+        "id": "api-main.employee-final",
+        "status": 403,
+        "error": "employee cannot approve or reject their own expense",
+        "full_table_snapshots_unchanged": true
+      },
+      {
+        "id": "api-main.approver-final",
+        "status": 403,
+        "error": "final review requires general manager authority",
+        "full_table_snapshots_unchanged": true
+      },
+      {
+        "id": "api-main.bad-outcome",
+        "status": 400,
+        "error": "outcome must be approved or rejected",
+        "full_table_snapshots_unchanged": true
+      },
+      {
+        "id": "api-main.empty-reason",
+        "status": 400,
+        "error": "decision reason is required",
+        "full_table_snapshots_unchanged": true
+      },
+      {
+        "id": "api-main.repeated-final",
+        "status": 400,
+        "error": "expense is not awaiting a review decision",
+        "full_table_snapshots_unchanged": true
+      },
+      {
+        "id": "api-main.edit-approved",
+        "status": 400,
+        "error": "only a draft can be edited",
+        "full_table_snapshots_unchanged": true
+      },
+      {
+        "id": "api-main.revise-approved",
+        "status": 400,
+        "error": "only a rejected expense can be revised",
+        "full_table_snapshots_unchanged": true
+      },
+      {
+        "id": "api-gm-rework.stale-final",
+        "status": 400,
+        "error": "decision must target the current expense revision",
+        "full_table_snapshots_unchanged": true
+      },
+      {
+        "id": "api-gm-rework.gm-before-new-first",
+        "status": 403,
+        "error": "first-stage review requires approver authority",
+        "full_table_snapshots_unchanged": true
+      },
+      {
+        "id": "api-first-rework.stale-final",
+        "status": 400,
+        "error": "decision must target the current expense revision",
+        "full_table_snapshots_unchanged": true
+      },
+      {
+        "id": "api-first-rework.gm-before-new-first",
+        "status": 403,
+        "error": "first-stage review requires approver authority",
+        "full_table_snapshots_unchanged": true
+      }
+    ],
+    "browser_steps": [
+      [
+        "create",
+        1,
+        "draft"
+      ],
+      [
+        "edit",
+        1,
+        "draft"
+      ],
+      [
+        "submit",
+        1,
+        "submitted"
+      ],
+      [
+        "first-reject",
+        1,
+        "rejected"
+      ],
+      [
+        "first-revise",
+        2,
+        "draft"
+      ],
+      [
+        "first-resubmit",
+        2,
+        "submitted"
+      ],
+      [
+        "first-approve-r2",
+        2,
+        "manager_pending"
+      ],
+      [
+        "gm-reject",
+        2,
+        "rejected"
+      ],
+      [
+        "gm-revise",
+        3,
+        "draft"
+      ],
+      [
+        "gm-resubmit",
+        3,
+        "submitted"
+      ],
+      [
+        "first-approve-r3",
+        3,
+        "manager_pending"
+      ],
+      [
+        "final-approve-r3",
+        3,
+        "approved"
+      ]
+    ],
+    "browser_decisions": [
+      [
+        1,
+        "bob",
+        "approver",
+        "rejected"
+      ],
+      [
+        2,
+        "bob",
+        "approver",
+        "approved"
+      ],
+      [
+        2,
+        "carol",
+        "general_manager",
+        "rejected"
+      ],
+      [
+        3,
+        "bob",
+        "approver",
+        "approved"
+      ],
+      [
+        3,
+        "carol",
+        "general_manager",
+        "approved"
+      ]
+    ],
+    "restart_current_equal": true,
+    "restart_history_equal": true,
+    "restart_all_tables_equal": true,
+    "different_process_pids": true,
+    "cleanup": true,
+    "scope": "Observation readback only; separate explicit assessments follow"
+  }
+]

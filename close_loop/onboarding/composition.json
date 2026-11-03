@@ -1,0 +1,44 @@
+{
+  "format": "expense.final-approval-composition-declaration.v0.1",
+  "task_semantics": "condition-assessment pilot",
+  "function_id": "FL-general-manager-final-approval",
+  "required_conditions_ref": "close_loop/onboarding/conditions.json#/required_conditions",
+  "required_assessment_cardinality": "exactly one explicit actor-authored assessment per required condition per selected-function/basis snapshot; distinct run-A and run-B sets retain their own seven assessments and are not one fourteen-assessment set",
+  "declaration_order": "This file and conditions.json must be frozen and hashed before observations; assessments and path_state follow review of those observations.",
+  "owner": {
+    "repository": "choreoatlas/close_loop_management",
+    "commit": "9156f6d4bb9f26e9c6fc8db9a685d5d9b79b42e8",
+    "module": "scripts.a1_first_current_genesis_semantic_closure_v0_3_1",
+    "function": "compose_condition_states",
+    "scope": "Pure state combination only, after independent complete-condition/cardinality and basis review; not the full A1 package validator."
+  },
+  "validation_policy": {
+    "assessment_scope_contract": {
+      "material_scope_limitations": [
+        "Local single-organization reference sample",
+        "Seeded roles, sequential requests, local SQLite and Chromium",
+        "No current Governance/admission/downstream authority"
+      ]
+    }
+  },
+  "relation_owner": {
+    "repository": "choreoatlas/close_loop_management",
+    "commit": "9156f6d4bb9f26e9c6fc8db9a685d5d9b79b42e8",
+    "module": "close_loop_v2.relation_effective_state_resolver_v0_1",
+    "functions": [
+      "resolve_relation_change_effect_v0_1",
+      "resolve_stale_rejudge_state_v0_1"
+    ],
+    "limits": "Pure normalized-relation calculation only; it does not discover current revisions, traverse the graph, judge a new result or write relations."
+  },
+  "basis_change_plan": {
+    "assessment_depends_on_execution_evidence": "rejudge_on_target_change",
+    "path_composes_assessment": "stale_on_target_change",
+    "unchanged_control": "The same legal dependency with an unchanged target revision remains current.",
+    "history": "Keep old observations, assessments and path result; read a second real run before authoring new assessment revisions.",
+    "separate_business_revision": "Expense business revision 1→2 exercises the application; platform execution/evidence basis revision change is a separate proof."
+  },
+  "authority_effect": "none",
+  "pilot_mode_change": false,
+  "composition_rule": "function_condition_composition.v0.2: first establish complete required-set/cardinality and bound judgments independently; call the original owner precedence calculation; all valid assessments with retained material scope limitations yield scope_limited. The calculation is not itself a judgment."
+}

@@ -1,0 +1,137 @@
+{
+  "format": "expense.onboarding-object-map.v0.1",
+  "subject": "expense-approval-reference",
+  "subject_ref": "repository:github:choreoatlas/Expense-Approval",
+  "governance_need_ref": "close_loop/attempt-1/model.v0.2.json#/governance_need",
+  "scope": "single-organization local reference sample",
+  "selected_function": "FL-general-manager-final-approval",
+  "definitions": {
+    "model": {
+      "path": "close_loop/attempt-1/model.v0.2.json",
+      "sha256": "c33f1b831877caba42cd2ac800dedf5744a57f221b76ebd21dc0751fbd943456"
+    },
+    "functions": {
+      "path": "close_loop/attempt-1/function-model.v0.2.json",
+      "sha256": "c8dfefa7b80ce0791ef637c139c90a18d68cfedcf169eddc87debb3c7149fb84"
+    },
+    "execution": {
+      "path": "close_loop/attempt-1/execution-design.v0.2.json",
+      "sha256": "333eb4382f868ada119ff00c39cc01d6483f436630beba5658f705ecd06d47ca"
+    }
+  },
+  "execution_carriers": [
+    {
+      "id": "EL-domain-rules",
+      "definition_ref": "close_loop/attempt-1/execution-design.v0.2.json#/execution_loops/0",
+      "owned_paths": [
+        "expense/domain.py"
+      ],
+      "boundary": "Expense validation, lifecycle states, actor roles, stage authority and revision invariants"
+    },
+    {
+      "id": "EL-ledger-store",
+      "definition_ref": "close_loop/attempt-1/execution-design.v0.2.json#/execution_loops/1",
+      "owned_paths": [
+        "expense/store.py"
+      ],
+      "boundary": "SQLite persistence for actors, expenses, numbered revisions, staged decisions and history"
+    },
+    {
+      "id": "EL-http",
+      "definition_ref": "close_loop/attempt-1/execution-design.v0.2.json#/execution_loops/2",
+      "owned_paths": [
+        "expense/http.py",
+        "app.py"
+      ],
+      "boundary": "HTTP transport for draft editing, lifecycle, staged decisions and history"
+    },
+    {
+      "id": "EL-browser-ui",
+      "definition_ref": "close_loop/attempt-1/execution-design.v0.2.json#/execution_loops/3",
+      "owned_paths": [
+        "static/index.html",
+        "static/app.js",
+        "static/styles.css"
+      ],
+      "boundary": "Browser interaction for employee, first-stage approver and General Manager workflows"
+    },
+    {
+      "id": "EL-verification-environment",
+      "definition_ref": "close_loop/attempt-1/execution-design.v0.2.json#/execution_loops/4",
+      "owned_paths": [
+        ".github/workflows/ci.yml",
+        "requirements-dev.txt"
+      ],
+      "boundary": "CI runtime, Python test execution, Playwright and Chromium provisioning"
+    }
+  ],
+  "function_paths": [
+    {
+      "id": "FL-draft-submit",
+      "definition_ref": "close_loop/attempt-1/function-model.v0.2.json#/functions/0",
+      "original_scope": "local single-organization reference sample",
+      "original_limits": "No external identity provider or production security claim.",
+      "onboarding_status": "historical_definition_not_rejudged_in_this_pilot"
+    },
+    {
+      "id": "FL-authority-safe-review",
+      "definition_ref": "close_loop/attempt-1/function-model.v0.2.json#/functions/1",
+      "original_scope": "first-stage review of current submitted revision",
+      "original_limits": "Local seeded role assignments only; no enterprise IAM claim.",
+      "onboarding_status": "historical_definition_not_rejudged_in_this_pilot"
+    },
+    {
+      "id": "FL-general-manager-final-approval",
+      "definition_ref": "close_loop/attempt-1/function-model.v0.2.json#/functions/2",
+      "original_scope": "final review after first-stage approval",
+      "original_limits": "General manager authority is local sample configuration, not organizational IAM.",
+      "onboarding_status": "selected_for_condition_assessment_pilot"
+    },
+    {
+      "id": "FL-reject-revise-resubmit",
+      "definition_ref": "close_loop/attempt-1/function-model.v0.2.json#/functions/3",
+      "original_scope": "rejected current revision",
+      "original_limits": "No workflow delegation or escalation rules.",
+      "onboarding_status": "historical_definition_not_rejudged_in_this_pilot"
+    },
+    {
+      "id": "FL-approval-revision-binding",
+      "definition_ref": "close_loop/attempt-1/function-model.v0.2.json#/functions/4",
+      "original_scope": "approval-relevant expense content",
+      "original_limits": "Only amount, purpose and receipt_ref are approval-relevant in this sample.",
+      "onboarding_status": "historical_definition_not_rejudged_in_this_pilot"
+    },
+    {
+      "id": "FL-history",
+      "definition_ref": "close_loop/attempt-1/function-model.v0.2.json#/functions/5",
+      "original_scope": "single expense history",
+      "original_limits": "No cross-expense audit dashboard.",
+      "onboarding_status": "historical_definition_not_rejudged_in_this_pilot"
+    },
+    {
+      "id": "FL-durable",
+      "definition_ref": "close_loop/attempt-1/function-model.v0.2.json#/functions/6",
+      "original_scope": "local SQLite file persistence",
+      "original_limits": "No crash consistency, replication or remote durability claim.",
+      "onboarding_status": "historical_definition_not_rejudged_in_this_pilot"
+    },
+    {
+      "id": "FL-browser",
+      "definition_ref": "close_loop/attempt-1/function-model.v0.2.json#/functions/7",
+      "original_scope": "Chromium reference path",
+      "original_limits": "No cross-browser or accessibility certification.",
+      "onboarding_status": "historical_definition_not_rejudged_in_this_pilot"
+    }
+  ],
+  "identity_boundaries": [
+    "expense_id + expense_revision identifies application business data, not a platform Loop",
+    "employee/approver/general_manager are local application roles, not Controller or governance authority",
+    "product_git_revision, execution_record_revision, assessment_basis_revision and expense_revision have separate meanings"
+  ],
+  "historical_acceptance": {
+    "pointer": "https://github.com/choreoatlas/Expense-Approval/issues/1#issuecomment-5571375864",
+    "revision": "c0f01dbf4af0dc9f9201c15f37cf960b925fce0c",
+    "governance_domain": "reference-sample",
+    "limits": "Preserved original acceptance only; no new canonical/A1 admission or current consumption permission"
+  }
+}

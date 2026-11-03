@@ -1,0 +1,729 @@
+{
+  "authority_effect": "none",
+  "cases": [
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-sequence/EL-domain-rules/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-domain-rules",
+        "edge_id": "candidate-edge:expense3:FC-final-sequence:EL-domain-rules",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-domain-rules",
+        "source_id": "assessment:expense3:FC-final-sequence",
+        "source_revision": "sha256:bba00c7a27edde9ace6a31cbf2b45350c4bcaab389b8761e133f8fe186ce9b92",
+        "target_id": "EL-domain-rules",
+        "target_revision": "sha256:1d19739a6b1bddfe70dad6600aba477d1beca801ae57c545f7427196f6ee8572"
+      },
+      "source_revision": "sha256:bba00c7a27edde9ace6a31cbf2b45350c4bcaab389b8761e133f8fe186ce9b92",
+      "target_current_revision": "sha256:8207f1f92ee637bc1e9cd75c921b619752ed081ab8b102045dfb9ad270ec8cd3"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-sequence/EL-ledger-store/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-ledger-store",
+        "edge_id": "candidate-edge:expense3:FC-final-sequence:EL-ledger-store",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-ledger-store",
+        "source_id": "assessment:expense3:FC-final-sequence",
+        "source_revision": "sha256:bba00c7a27edde9ace6a31cbf2b45350c4bcaab389b8761e133f8fe186ce9b92",
+        "target_id": "EL-ledger-store",
+        "target_revision": "sha256:88b852c01b009650e91935422f485aba00647da513563d9cb1d3baf61d2c86db"
+      },
+      "source_revision": "sha256:bba00c7a27edde9ace6a31cbf2b45350c4bcaab389b8761e133f8fe186ce9b92",
+      "target_current_revision": "sha256:7374b5146d0f6219e5189d990cd25e7247cb274360a4346e9c85b5d860b91268"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-sequence/EL-http/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-http",
+        "edge_id": "candidate-edge:expense3:FC-final-sequence:EL-http",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-http",
+        "source_id": "assessment:expense3:FC-final-sequence",
+        "source_revision": "sha256:bba00c7a27edde9ace6a31cbf2b45350c4bcaab389b8761e133f8fe186ce9b92",
+        "target_id": "EL-http",
+        "target_revision": "sha256:b24b9ac9328023b337a7034b50a76a9a2de34867c6be1741654d1bacba254251"
+      },
+      "source_revision": "sha256:bba00c7a27edde9ace6a31cbf2b45350c4bcaab389b8761e133f8fe186ce9b92",
+      "target_current_revision": "sha256:2ec3a3db8ec5a4e7c46c8d6dcd24ab8dd08ae7af70badb02e169bdf218218829"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-sequence/EL-verification-environment/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-verification-environment",
+        "edge_id": "candidate-edge:expense3:FC-final-sequence:EL-verification-environment",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-verification-environment",
+        "source_id": "assessment:expense3:FC-final-sequence",
+        "source_revision": "sha256:bba00c7a27edde9ace6a31cbf2b45350c4bcaab389b8761e133f8fe186ce9b92",
+        "target_id": "EL-verification-environment",
+        "target_revision": "sha256:1e2eb97d9e6e8602f6b53b509b8d8182590c319481092ffb57e3a02eb9be6e96"
+      },
+      "source_revision": "sha256:bba00c7a27edde9ace6a31cbf2b45350c4bcaab389b8761e133f8fe186ce9b92",
+      "target_current_revision": "sha256:c362780b2a5c10b0fd723dbb3f85b3f3bf7097c0569cad8139aceb16a2441074"
+    },
+    {
+      "expected_state": "stale",
+      "id": "FC-final-sequence/composition-changed-assessment",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "edge_id": "candidate-edge:expense3:path:FC-final-sequence",
+        "edge_type": "composes",
+        "limits": "Candidate replay only; no relation writes",
+        "propagation_rule": "stale_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "source_id": "function-result:expense3:FL-general-manager-final-approval",
+        "source_revision": "sha256:ea6044f18f1765a6ad830b4ef19673d28356a065d4dcda62904360ad662c31b9",
+        "target_id": "assessment:expense3:FC-final-sequence",
+        "target_revision": "sha256:bba00c7a27edde9ace6a31cbf2b45350c4bcaab389b8761e133f8fe186ce9b92"
+      },
+      "source_revision": "sha256:ea6044f18f1765a6ad830b4ef19673d28356a065d4dcda62904360ad662c31b9",
+      "target_current_revision": "sha256:868c77e4d6486cb5055bd0d278d80f058b32fc7b3b2fd96406c0f00cd980362c"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-authority/EL-domain-rules/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-domain-rules",
+        "edge_id": "candidate-edge:expense3:FC-final-authority:EL-domain-rules",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-domain-rules",
+        "source_id": "assessment:expense3:FC-final-authority",
+        "source_revision": "sha256:605c9248166c931fac7e493542d43c05600da0126d98be7e06a2180b40d50333",
+        "target_id": "EL-domain-rules",
+        "target_revision": "sha256:1d19739a6b1bddfe70dad6600aba477d1beca801ae57c545f7427196f6ee8572"
+      },
+      "source_revision": "sha256:605c9248166c931fac7e493542d43c05600da0126d98be7e06a2180b40d50333",
+      "target_current_revision": "sha256:8207f1f92ee637bc1e9cd75c921b619752ed081ab8b102045dfb9ad270ec8cd3"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-authority/EL-ledger-store/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-ledger-store",
+        "edge_id": "candidate-edge:expense3:FC-final-authority:EL-ledger-store",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-ledger-store",
+        "source_id": "assessment:expense3:FC-final-authority",
+        "source_revision": "sha256:605c9248166c931fac7e493542d43c05600da0126d98be7e06a2180b40d50333",
+        "target_id": "EL-ledger-store",
+        "target_revision": "sha256:88b852c01b009650e91935422f485aba00647da513563d9cb1d3baf61d2c86db"
+      },
+      "source_revision": "sha256:605c9248166c931fac7e493542d43c05600da0126d98be7e06a2180b40d50333",
+      "target_current_revision": "sha256:7374b5146d0f6219e5189d990cd25e7247cb274360a4346e9c85b5d860b91268"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-authority/EL-http/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-http",
+        "edge_id": "candidate-edge:expense3:FC-final-authority:EL-http",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-http",
+        "source_id": "assessment:expense3:FC-final-authority",
+        "source_revision": "sha256:605c9248166c931fac7e493542d43c05600da0126d98be7e06a2180b40d50333",
+        "target_id": "EL-http",
+        "target_revision": "sha256:b24b9ac9328023b337a7034b50a76a9a2de34867c6be1741654d1bacba254251"
+      },
+      "source_revision": "sha256:605c9248166c931fac7e493542d43c05600da0126d98be7e06a2180b40d50333",
+      "target_current_revision": "sha256:2ec3a3db8ec5a4e7c46c8d6dcd24ab8dd08ae7af70badb02e169bdf218218829"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-authority/EL-verification-environment/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-verification-environment",
+        "edge_id": "candidate-edge:expense3:FC-final-authority:EL-verification-environment",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-verification-environment",
+        "source_id": "assessment:expense3:FC-final-authority",
+        "source_revision": "sha256:605c9248166c931fac7e493542d43c05600da0126d98be7e06a2180b40d50333",
+        "target_id": "EL-verification-environment",
+        "target_revision": "sha256:1e2eb97d9e6e8602f6b53b509b8d8182590c319481092ffb57e3a02eb9be6e96"
+      },
+      "source_revision": "sha256:605c9248166c931fac7e493542d43c05600da0126d98be7e06a2180b40d50333",
+      "target_current_revision": "sha256:c362780b2a5c10b0fd723dbb3f85b3f3bf7097c0569cad8139aceb16a2441074"
+    },
+    {
+      "expected_state": "stale",
+      "id": "FC-final-authority/composition-changed-assessment",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "edge_id": "candidate-edge:expense3:path:FC-final-authority",
+        "edge_type": "composes",
+        "limits": "Candidate replay only; no relation writes",
+        "propagation_rule": "stale_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "source_id": "function-result:expense3:FL-general-manager-final-approval",
+        "source_revision": "sha256:ea6044f18f1765a6ad830b4ef19673d28356a065d4dcda62904360ad662c31b9",
+        "target_id": "assessment:expense3:FC-final-authority",
+        "target_revision": "sha256:605c9248166c931fac7e493542d43c05600da0126d98be7e06a2180b40d50333"
+      },
+      "source_revision": "sha256:ea6044f18f1765a6ad830b4ef19673d28356a065d4dcda62904360ad662c31b9",
+      "target_current_revision": "sha256:ca0ac946e6b68388b533abed4a7b1d78533c87d0928eb399614d5889c705abf7"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-revision/EL-domain-rules/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-domain-rules",
+        "edge_id": "candidate-edge:expense3:FC-final-revision:EL-domain-rules",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-domain-rules",
+        "source_id": "assessment:expense3:FC-final-revision",
+        "source_revision": "sha256:be261c7eaed9dd83e36a0f504d3fd941cc5a5fd35ec4a8ee656cae2de082679e",
+        "target_id": "EL-domain-rules",
+        "target_revision": "sha256:1d19739a6b1bddfe70dad6600aba477d1beca801ae57c545f7427196f6ee8572"
+      },
+      "source_revision": "sha256:be261c7eaed9dd83e36a0f504d3fd941cc5a5fd35ec4a8ee656cae2de082679e",
+      "target_current_revision": "sha256:8207f1f92ee637bc1e9cd75c921b619752ed081ab8b102045dfb9ad270ec8cd3"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-revision/EL-ledger-store/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-ledger-store",
+        "edge_id": "candidate-edge:expense3:FC-final-revision:EL-ledger-store",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-ledger-store",
+        "source_id": "assessment:expense3:FC-final-revision",
+        "source_revision": "sha256:be261c7eaed9dd83e36a0f504d3fd941cc5a5fd35ec4a8ee656cae2de082679e",
+        "target_id": "EL-ledger-store",
+        "target_revision": "sha256:88b852c01b009650e91935422f485aba00647da513563d9cb1d3baf61d2c86db"
+      },
+      "source_revision": "sha256:be261c7eaed9dd83e36a0f504d3fd941cc5a5fd35ec4a8ee656cae2de082679e",
+      "target_current_revision": "sha256:7374b5146d0f6219e5189d990cd25e7247cb274360a4346e9c85b5d860b91268"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-revision/EL-http/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-http",
+        "edge_id": "candidate-edge:expense3:FC-final-revision:EL-http",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-http",
+        "source_id": "assessment:expense3:FC-final-revision",
+        "source_revision": "sha256:be261c7eaed9dd83e36a0f504d3fd941cc5a5fd35ec4a8ee656cae2de082679e",
+        "target_id": "EL-http",
+        "target_revision": "sha256:b24b9ac9328023b337a7034b50a76a9a2de34867c6be1741654d1bacba254251"
+      },
+      "source_revision": "sha256:be261c7eaed9dd83e36a0f504d3fd941cc5a5fd35ec4a8ee656cae2de082679e",
+      "target_current_revision": "sha256:2ec3a3db8ec5a4e7c46c8d6dcd24ab8dd08ae7af70badb02e169bdf218218829"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-revision/EL-verification-environment/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-verification-environment",
+        "edge_id": "candidate-edge:expense3:FC-final-revision:EL-verification-environment",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-verification-environment",
+        "source_id": "assessment:expense3:FC-final-revision",
+        "source_revision": "sha256:be261c7eaed9dd83e36a0f504d3fd941cc5a5fd35ec4a8ee656cae2de082679e",
+        "target_id": "EL-verification-environment",
+        "target_revision": "sha256:1e2eb97d9e6e8602f6b53b509b8d8182590c319481092ffb57e3a02eb9be6e96"
+      },
+      "source_revision": "sha256:be261c7eaed9dd83e36a0f504d3fd941cc5a5fd35ec4a8ee656cae2de082679e",
+      "target_current_revision": "sha256:c362780b2a5c10b0fd723dbb3f85b3f3bf7097c0569cad8139aceb16a2441074"
+    },
+    {
+      "expected_state": "stale",
+      "id": "FC-final-revision/composition-changed-assessment",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "edge_id": "candidate-edge:expense3:path:FC-final-revision",
+        "edge_type": "composes",
+        "limits": "Candidate replay only; no relation writes",
+        "propagation_rule": "stale_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "source_id": "function-result:expense3:FL-general-manager-final-approval",
+        "source_revision": "sha256:ea6044f18f1765a6ad830b4ef19673d28356a065d4dcda62904360ad662c31b9",
+        "target_id": "assessment:expense3:FC-final-revision",
+        "target_revision": "sha256:be261c7eaed9dd83e36a0f504d3fd941cc5a5fd35ec4a8ee656cae2de082679e"
+      },
+      "source_revision": "sha256:ea6044f18f1765a6ad830b4ef19673d28356a065d4dcda62904360ad662c31b9",
+      "target_current_revision": "sha256:b51679c7ae2fb046e069d566f2ca2945e298ebf9b17120423834baf27605efaa"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-rework-history/EL-domain-rules/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-domain-rules",
+        "edge_id": "candidate-edge:expense3:FC-final-rework-history:EL-domain-rules",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-domain-rules",
+        "source_id": "assessment:expense3:FC-final-rework-history",
+        "source_revision": "sha256:4aff7e4cc9c337271ad6e55a7b807584554b7b6e001226d0069fc8a05217296d",
+        "target_id": "EL-domain-rules",
+        "target_revision": "sha256:1d19739a6b1bddfe70dad6600aba477d1beca801ae57c545f7427196f6ee8572"
+      },
+      "source_revision": "sha256:4aff7e4cc9c337271ad6e55a7b807584554b7b6e001226d0069fc8a05217296d",
+      "target_current_revision": "sha256:8207f1f92ee637bc1e9cd75c921b619752ed081ab8b102045dfb9ad270ec8cd3"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-rework-history/EL-ledger-store/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-ledger-store",
+        "edge_id": "candidate-edge:expense3:FC-final-rework-history:EL-ledger-store",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-ledger-store",
+        "source_id": "assessment:expense3:FC-final-rework-history",
+        "source_revision": "sha256:4aff7e4cc9c337271ad6e55a7b807584554b7b6e001226d0069fc8a05217296d",
+        "target_id": "EL-ledger-store",
+        "target_revision": "sha256:88b852c01b009650e91935422f485aba00647da513563d9cb1d3baf61d2c86db"
+      },
+      "source_revision": "sha256:4aff7e4cc9c337271ad6e55a7b807584554b7b6e001226d0069fc8a05217296d",
+      "target_current_revision": "sha256:7374b5146d0f6219e5189d990cd25e7247cb274360a4346e9c85b5d860b91268"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-rework-history/EL-http/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-http",
+        "edge_id": "candidate-edge:expense3:FC-final-rework-history:EL-http",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-http",
+        "source_id": "assessment:expense3:FC-final-rework-history",
+        "source_revision": "sha256:4aff7e4cc9c337271ad6e55a7b807584554b7b6e001226d0069fc8a05217296d",
+        "target_id": "EL-http",
+        "target_revision": "sha256:b24b9ac9328023b337a7034b50a76a9a2de34867c6be1741654d1bacba254251"
+      },
+      "source_revision": "sha256:4aff7e4cc9c337271ad6e55a7b807584554b7b6e001226d0069fc8a05217296d",
+      "target_current_revision": "sha256:2ec3a3db8ec5a4e7c46c8d6dcd24ab8dd08ae7af70badb02e169bdf218218829"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-rework-history/EL-verification-environment/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-verification-environment",
+        "edge_id": "candidate-edge:expense3:FC-final-rework-history:EL-verification-environment",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-verification-environment",
+        "source_id": "assessment:expense3:FC-final-rework-history",
+        "source_revision": "sha256:4aff7e4cc9c337271ad6e55a7b807584554b7b6e001226d0069fc8a05217296d",
+        "target_id": "EL-verification-environment",
+        "target_revision": "sha256:1e2eb97d9e6e8602f6b53b509b8d8182590c319481092ffb57e3a02eb9be6e96"
+      },
+      "source_revision": "sha256:4aff7e4cc9c337271ad6e55a7b807584554b7b6e001226d0069fc8a05217296d",
+      "target_current_revision": "sha256:c362780b2a5c10b0fd723dbb3f85b3f3bf7097c0569cad8139aceb16a2441074"
+    },
+    {
+      "expected_state": "stale",
+      "id": "FC-final-rework-history/composition-changed-assessment",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "edge_id": "candidate-edge:expense3:path:FC-final-rework-history",
+        "edge_type": "composes",
+        "limits": "Candidate replay only; no relation writes",
+        "propagation_rule": "stale_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "source_id": "function-result:expense3:FL-general-manager-final-approval",
+        "source_revision": "sha256:ea6044f18f1765a6ad830b4ef19673d28356a065d4dcda62904360ad662c31b9",
+        "target_id": "assessment:expense3:FC-final-rework-history",
+        "target_revision": "sha256:4aff7e4cc9c337271ad6e55a7b807584554b7b6e001226d0069fc8a05217296d"
+      },
+      "source_revision": "sha256:ea6044f18f1765a6ad830b4ef19673d28356a065d4dcda62904360ad662c31b9",
+      "target_current_revision": "sha256:d55fba0f38b3a7a20934ab1266dfc02fc24b6539cb21ed3839e32ac12d47a476"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-invalid-nonmutation/EL-domain-rules/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-domain-rules",
+        "edge_id": "candidate-edge:expense3:FC-final-invalid-nonmutation:EL-domain-rules",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-domain-rules",
+        "source_id": "assessment:expense3:FC-final-invalid-nonmutation",
+        "source_revision": "sha256:683d3b9acf82179fd822c53054ece97b4c313cc022f33df31d97ff90abc3d33c",
+        "target_id": "EL-domain-rules",
+        "target_revision": "sha256:1d19739a6b1bddfe70dad6600aba477d1beca801ae57c545f7427196f6ee8572"
+      },
+      "source_revision": "sha256:683d3b9acf82179fd822c53054ece97b4c313cc022f33df31d97ff90abc3d33c",
+      "target_current_revision": "sha256:8207f1f92ee637bc1e9cd75c921b619752ed081ab8b102045dfb9ad270ec8cd3"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-invalid-nonmutation/EL-ledger-store/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-ledger-store",
+        "edge_id": "candidate-edge:expense3:FC-final-invalid-nonmutation:EL-ledger-store",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-ledger-store",
+        "source_id": "assessment:expense3:FC-final-invalid-nonmutation",
+        "source_revision": "sha256:683d3b9acf82179fd822c53054ece97b4c313cc022f33df31d97ff90abc3d33c",
+        "target_id": "EL-ledger-store",
+        "target_revision": "sha256:88b852c01b009650e91935422f485aba00647da513563d9cb1d3baf61d2c86db"
+      },
+      "source_revision": "sha256:683d3b9acf82179fd822c53054ece97b4c313cc022f33df31d97ff90abc3d33c",
+      "target_current_revision": "sha256:7374b5146d0f6219e5189d990cd25e7247cb274360a4346e9c85b5d860b91268"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-invalid-nonmutation/EL-http/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-http",
+        "edge_id": "candidate-edge:expense3:FC-final-invalid-nonmutation:EL-http",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-http",
+        "source_id": "assessment:expense3:FC-final-invalid-nonmutation",
+        "source_revision": "sha256:683d3b9acf82179fd822c53054ece97b4c313cc022f33df31d97ff90abc3d33c",
+        "target_id": "EL-http",
+        "target_revision": "sha256:b24b9ac9328023b337a7034b50a76a9a2de34867c6be1741654d1bacba254251"
+      },
+      "source_revision": "sha256:683d3b9acf82179fd822c53054ece97b4c313cc022f33df31d97ff90abc3d33c",
+      "target_current_revision": "sha256:2ec3a3db8ec5a4e7c46c8d6dcd24ab8dd08ae7af70badb02e169bdf218218829"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-invalid-nonmutation/EL-verification-environment/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-verification-environment",
+        "edge_id": "candidate-edge:expense3:FC-final-invalid-nonmutation:EL-verification-environment",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-verification-environment",
+        "source_id": "assessment:expense3:FC-final-invalid-nonmutation",
+        "source_revision": "sha256:683d3b9acf82179fd822c53054ece97b4c313cc022f33df31d97ff90abc3d33c",
+        "target_id": "EL-verification-environment",
+        "target_revision": "sha256:1e2eb97d9e6e8602f6b53b509b8d8182590c319481092ffb57e3a02eb9be6e96"
+      },
+      "source_revision": "sha256:683d3b9acf82179fd822c53054ece97b4c313cc022f33df31d97ff90abc3d33c",
+      "target_current_revision": "sha256:c362780b2a5c10b0fd723dbb3f85b3f3bf7097c0569cad8139aceb16a2441074"
+    },
+    {
+      "expected_state": "stale",
+      "id": "FC-final-invalid-nonmutation/composition-changed-assessment",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "edge_id": "candidate-edge:expense3:path:FC-final-invalid-nonmutation",
+        "edge_type": "composes",
+        "limits": "Candidate replay only; no relation writes",
+        "propagation_rule": "stale_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "source_id": "function-result:expense3:FL-general-manager-final-approval",
+        "source_revision": "sha256:ea6044f18f1765a6ad830b4ef19673d28356a065d4dcda62904360ad662c31b9",
+        "target_id": "assessment:expense3:FC-final-invalid-nonmutation",
+        "target_revision": "sha256:683d3b9acf82179fd822c53054ece97b4c313cc022f33df31d97ff90abc3d33c"
+      },
+      "source_revision": "sha256:ea6044f18f1765a6ad830b4ef19673d28356a065d4dcda62904360ad662c31b9",
+      "target_current_revision": "sha256:55111d4f4af3cd32ba00799ba3c207030f122307695a88b3f649d43fb162fb07"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-browser/EL-domain-rules/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-domain-rules",
+        "edge_id": "candidate-edge:expense3:FC-final-browser:EL-domain-rules",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-domain-rules",
+        "source_id": "assessment:expense3:FC-final-browser",
+        "source_revision": "sha256:96acc9224e83108965cad8aee574d435cf6126027b1cf38b97d5d7c56a9b109a",
+        "target_id": "EL-domain-rules",
+        "target_revision": "sha256:1d19739a6b1bddfe70dad6600aba477d1beca801ae57c545f7427196f6ee8572"
+      },
+      "source_revision": "sha256:96acc9224e83108965cad8aee574d435cf6126027b1cf38b97d5d7c56a9b109a",
+      "target_current_revision": "sha256:8207f1f92ee637bc1e9cd75c921b619752ed081ab8b102045dfb9ad270ec8cd3"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-browser/EL-ledger-store/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-ledger-store",
+        "edge_id": "candidate-edge:expense3:FC-final-browser:EL-ledger-store",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-ledger-store",
+        "source_id": "assessment:expense3:FC-final-browser",
+        "source_revision": "sha256:96acc9224e83108965cad8aee574d435cf6126027b1cf38b97d5d7c56a9b109a",
+        "target_id": "EL-ledger-store",
+        "target_revision": "sha256:88b852c01b009650e91935422f485aba00647da513563d9cb1d3baf61d2c86db"
+      },
+      "source_revision": "sha256:96acc9224e83108965cad8aee574d435cf6126027b1cf38b97d5d7c56a9b109a",
+      "target_current_revision": "sha256:7374b5146d0f6219e5189d990cd25e7247cb274360a4346e9c85b5d860b91268"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-browser/EL-http/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-http",
+        "edge_id": "candidate-edge:expense3:FC-final-browser:EL-http",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-http",
+        "source_id": "assessment:expense3:FC-final-browser",
+        "source_revision": "sha256:96acc9224e83108965cad8aee574d435cf6126027b1cf38b97d5d7c56a9b109a",
+        "target_id": "EL-http",
+        "target_revision": "sha256:b24b9ac9328023b337a7034b50a76a9a2de34867c6be1741654d1bacba254251"
+      },
+      "source_revision": "sha256:96acc9224e83108965cad8aee574d435cf6126027b1cf38b97d5d7c56a9b109a",
+      "target_current_revision": "sha256:2ec3a3db8ec5a4e7c46c8d6dcd24ab8dd08ae7af70badb02e169bdf218218829"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-browser/EL-browser-ui/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-browser-ui",
+        "edge_id": "candidate-edge:expense3:FC-final-browser:EL-browser-ui",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-browser-ui",
+        "source_id": "assessment:expense3:FC-final-browser",
+        "source_revision": "sha256:96acc9224e83108965cad8aee574d435cf6126027b1cf38b97d5d7c56a9b109a",
+        "target_id": "EL-browser-ui",
+        "target_revision": "sha256:0603fe8acfb73db99b4cd6e9b430be1b5455df306b146272cb7c84ac6f62fb41"
+      },
+      "source_revision": "sha256:96acc9224e83108965cad8aee574d435cf6126027b1cf38b97d5d7c56a9b109a",
+      "target_current_revision": "sha256:7bc38db347b4be3b1f2a73dde8d05ebb67909a41eea874d954df2adfd259b205"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-browser/EL-verification-environment/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-verification-environment",
+        "edge_id": "candidate-edge:expense3:FC-final-browser:EL-verification-environment",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-verification-environment",
+        "source_id": "assessment:expense3:FC-final-browser",
+        "source_revision": "sha256:96acc9224e83108965cad8aee574d435cf6126027b1cf38b97d5d7c56a9b109a",
+        "target_id": "EL-verification-environment",
+        "target_revision": "sha256:1e2eb97d9e6e8602f6b53b509b8d8182590c319481092ffb57e3a02eb9be6e96"
+      },
+      "source_revision": "sha256:96acc9224e83108965cad8aee574d435cf6126027b1cf38b97d5d7c56a9b109a",
+      "target_current_revision": "sha256:c362780b2a5c10b0fd723dbb3f85b3f3bf7097c0569cad8139aceb16a2441074"
+    },
+    {
+      "expected_state": "stale",
+      "id": "FC-final-browser/composition-changed-assessment",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "edge_id": "candidate-edge:expense3:path:FC-final-browser",
+        "edge_type": "composes",
+        "limits": "Candidate replay only; no relation writes",
+        "propagation_rule": "stale_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "source_id": "function-result:expense3:FL-general-manager-final-approval",
+        "source_revision": "sha256:ea6044f18f1765a6ad830b4ef19673d28356a065d4dcda62904360ad662c31b9",
+        "target_id": "assessment:expense3:FC-final-browser",
+        "target_revision": "sha256:96acc9224e83108965cad8aee574d435cf6126027b1cf38b97d5d7c56a9b109a"
+      },
+      "source_revision": "sha256:ea6044f18f1765a6ad830b4ef19673d28356a065d4dcda62904360ad662c31b9",
+      "target_current_revision": "sha256:bfbce586948041f1e60e557c234dcb0d311415c820068b19a77685d5b74e4e9b"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-restart/EL-domain-rules/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-domain-rules",
+        "edge_id": "candidate-edge:expense3:FC-final-restart:EL-domain-rules",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-domain-rules",
+        "source_id": "assessment:expense3:FC-final-restart",
+        "source_revision": "sha256:3a4a15730ccee024153ab794ac08e6e330d6264ff4ef8f369e67b6b19e039d87",
+        "target_id": "EL-domain-rules",
+        "target_revision": "sha256:1d19739a6b1bddfe70dad6600aba477d1beca801ae57c545f7427196f6ee8572"
+      },
+      "source_revision": "sha256:3a4a15730ccee024153ab794ac08e6e330d6264ff4ef8f369e67b6b19e039d87",
+      "target_current_revision": "sha256:8207f1f92ee637bc1e9cd75c921b619752ed081ab8b102045dfb9ad270ec8cd3"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-restart/EL-ledger-store/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-ledger-store",
+        "edge_id": "candidate-edge:expense3:FC-final-restart:EL-ledger-store",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-ledger-store",
+        "source_id": "assessment:expense3:FC-final-restart",
+        "source_revision": "sha256:3a4a15730ccee024153ab794ac08e6e330d6264ff4ef8f369e67b6b19e039d87",
+        "target_id": "EL-ledger-store",
+        "target_revision": "sha256:88b852c01b009650e91935422f485aba00647da513563d9cb1d3baf61d2c86db"
+      },
+      "source_revision": "sha256:3a4a15730ccee024153ab794ac08e6e330d6264ff4ef8f369e67b6b19e039d87",
+      "target_current_revision": "sha256:7374b5146d0f6219e5189d990cd25e7247cb274360a4346e9c85b5d860b91268"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-restart/EL-http/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-http",
+        "edge_id": "candidate-edge:expense3:FC-final-restart:EL-http",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-http",
+        "source_id": "assessment:expense3:FC-final-restart",
+        "source_revision": "sha256:3a4a15730ccee024153ab794ac08e6e330d6264ff4ef8f369e67b6b19e039d87",
+        "target_id": "EL-http",
+        "target_revision": "sha256:b24b9ac9328023b337a7034b50a76a9a2de34867c6be1741654d1bacba254251"
+      },
+      "source_revision": "sha256:3a4a15730ccee024153ab794ac08e6e330d6264ff4ef8f369e67b6b19e039d87",
+      "target_current_revision": "sha256:2ec3a3db8ec5a4e7c46c8d6dcd24ab8dd08ae7af70badb02e169bdf218218829"
+    },
+    {
+      "expected_state": "requires_rejudge",
+      "id": "FC-final-restart/EL-verification-environment/changed-basis",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "basis_record_ref": "expense-issue3-relay-A-57fa2b3/EL-verification-environment",
+        "edge_id": "candidate-edge:expense3:FC-final-restart:EL-verification-environment",
+        "edge_type": "depends_on",
+        "limits": "Candidate selected execution-loop basis context only; not a canonical edge or live current-state query",
+        "propagation_rule": "rejudge_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "selected_new_basis_record_ref": "ci-41640672264-1/EL-verification-environment",
+        "source_id": "assessment:expense3:FC-final-restart",
+        "source_revision": "sha256:3a4a15730ccee024153ab794ac08e6e330d6264ff4ef8f369e67b6b19e039d87",
+        "target_id": "EL-verification-environment",
+        "target_revision": "sha256:1e2eb97d9e6e8602f6b53b509b8d8182590c319481092ffb57e3a02eb9be6e96"
+      },
+      "source_revision": "sha256:3a4a15730ccee024153ab794ac08e6e330d6264ff4ef8f369e67b6b19e039d87",
+      "target_current_revision": "sha256:c362780b2a5c10b0fd723dbb3f85b3f3bf7097c0569cad8139aceb16a2441074"
+    },
+    {
+      "expected_state": "stale",
+      "id": "FC-final-restart/composition-changed-assessment",
+      "relation": {
+        "actor": "agent:codex:expense3:controller-function-assessor",
+        "edge_id": "candidate-edge:expense3:path:FC-final-restart",
+        "edge_type": "composes",
+        "limits": "Candidate replay only; no relation writes",
+        "propagation_rule": "stale_on_target_change",
+        "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+        "source_id": "function-result:expense3:FL-general-manager-final-approval",
+        "source_revision": "sha256:ea6044f18f1765a6ad830b4ef19673d28356a065d4dcda62904360ad662c31b9",
+        "target_id": "assessment:expense3:FC-final-restart",
+        "target_revision": "sha256:3a4a15730ccee024153ab794ac08e6e330d6264ff4ef8f369e67b6b19e039d87"
+      },
+      "source_revision": "sha256:ea6044f18f1765a6ad830b4ef19673d28356a065d4dcda62904360ad662c31b9",
+      "target_current_revision": "sha256:baa09e93c283908e9106b5dbd0b3ad2c013475df7ed0401c2025d700e339d06b"
+    },
+    {
+      "expected_state": "revalidated",
+      "id": "unchanged-condition-definition-control",
+      "relation": {
+        "edge_id": "candidate-edge:expense3:unchanged-condition",
+        "edge_type": "depends_on",
+        "propagation_rule": "rejudge_on_target_change",
+        "source_id": "assessment:expense3:FC-final-sequence",
+        "source_revision": "sha256:bba00c7a27edde9ace6a31cbf2b45350c4bcaab389b8761e133f8fe186ce9b92",
+        "target_id": "FC-final-sequence",
+        "target_revision": "sha256:0c2897408ababf5ca637931da4f538fc60395bd474c8639202aa05848580e76d"
+      },
+      "source_revision": "sha256:bba00c7a27edde9ace6a31cbf2b45350c4bcaab389b8761e133f8fe186ce9b92",
+      "target_current_revision": "sha256:0c2897408ababf5ca637931da4f538fc60395bd474c8639202aa05848580e76d"
+    }
+  ],
+  "execution_basis_identity": "Stable existing EL carrier identity, with each selected actual run record as that loop's basis revision",
+  "operation": "change_effects",
+  "replay_semantics": "Offline effect replay using two real event bases; selected B is explicit context, not global current state"
+}

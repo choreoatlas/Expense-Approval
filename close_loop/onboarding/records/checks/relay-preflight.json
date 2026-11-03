@@ -1,0 +1,15 @@
+{
+  "mode": "implementation relay",
+  "scope": "Expense source only; issue3 first source stage",
+  "exact_identity_ready": true,
+  "scope_ready": true,
+  "semantic_boundary_ready": true,
+  "change_ready": true,
+  "execution_topology": "Fresh Python venv -> unittest fixtures / observer -> owned temporary SQLite files and loopback ephemeral HTTP -> real Chromium; app restart uses explicit same owned file and separately tracked processes. No target/shared DB.",
+  "resource_lifecycle_ready": true,
+  "db_connection_identity_ready": "SQLite paths constructed only below each TemporaryDirectory; read snapshots use mode=ro on that existing path",
+  "transaction_fixture_order_ready": "Existing ExpenseStore commits request writes; observation snapshots begin a read-only SQLite transaction after synchronous HTTP completion",
+  "failure_order_rehearsed": "Wrong source revision/dirty tracked bytes reject before DB allocation; existing output rejects before observation; actual role and stale-revision negatives run after correct pending/submitted setup",
+  "validation_commands_vetted": true,
+  "cleanup_plan_ready": "HTTP/browser/app contexts finally-close; TemporaryDirectory removes owned DB files; publication preserves existing output and removes its partial file"
+}

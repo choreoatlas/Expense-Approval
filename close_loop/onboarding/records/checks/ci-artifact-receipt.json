@@ -1,0 +1,26 @@
+{
+  "artifact": {
+    "id": 13233051334,
+    "node_id": "MDg6QXJ0aWZhY3QxMzIzMzA1MTMzNA==",
+    "name": "expense-final-approval-41640672264-1",
+    "size_in_bytes": 10819,
+    "url": "https://api.github.com/repos/choreoatlas/Expense-Approval/actions/artifacts/13233051334",
+    "archive_download_url": "https://api.github.com/repos/choreoatlas/Expense-Approval/actions/artifacts/13233051334/zip",
+    "expired": false,
+    "digest": "sha256:0e5185b5dd4f3469d31140bafc8596c0cbc1ea1cc52a8635ae0b98988290361a",
+    "created_at": "2026-11-03T13:02:16Z",
+    "updated_at": "2026-11-03T13:02:16Z",
+    "expires_at": "2027-02-01T13:01:36Z",
+    "workflow_run": {
+      "id": 41640672264,
+      "repository_id": 1360234962,
+      "head_repository_id": 1360234962,
+      "head_branch": "codex/expense-final-approval-onboarding",
+      "head_sha": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8"
+    }
+  },
+  "downloaded_zip_bytes": 10819,
+  "zip_sha256": "0e5185b5dd4f3469d31140bafc8596c0cbc1ea1cc52a8635ae0b98988290361a",
+  "json_bytes": 219849,
+  "json_sha256": "e134715854cb90e17c34075ddb3a4a754f464495f2cd81e37b59339810643d32"
+}

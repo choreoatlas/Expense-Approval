@@ -1,0 +1,27 @@
+{
+  "argv": [
+    "/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/envs/expense/bin/python",
+    "-m",
+    "close_loop.onboarding.observe",
+    "--product-revision",
+    "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+    "--run-id",
+    "expense-issue3-relay-A-57fa2b3",
+    "--output",
+    "/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/evidence/relay-observation-A.json"
+  ],
+  "cwd": "/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/repos/expense",
+  "environment_keys": [
+    "HOME",
+    "PATH",
+    "PLAYWRIGHT_BROWSERS_PATH",
+    "PYTHONDONTWRITEBYTECODE",
+    "PYTHONNOUSERSITE",
+    "TMPDIR"
+  ],
+  "started_at": "2026-11-03T13:00:20.031450+00:00",
+  "ended_at": "2026-11-03T13:00:22.514627+00:00",
+  "seconds": 2.483,
+  "exit_code": 0,
+  "source_sha": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8"
+}

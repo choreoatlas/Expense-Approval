@@ -1,0 +1,665 @@
+{
+  "authority_effect": "none",
+  "operation": "change_effects",
+  "output": {
+    "cases": [
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-sequence:EL-domain-rules",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-sequence/EL-domain-rules/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-sequence:EL-ledger-store",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-sequence/EL-ledger-store/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-sequence:EL-http",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-sequence/EL-http/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-sequence:EL-verification-environment",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-sequence/EL-verification-environment/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation makes the bound basis stale",
+          "rejudge_required": false,
+          "relation_ref": "candidate-edge:expense3:path:FC-final-sequence",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-sequence/composition-changed-assessment",
+        "state_output": "stale"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-authority:EL-domain-rules",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-authority/EL-domain-rules/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-authority:EL-ledger-store",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-authority/EL-ledger-store/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-authority:EL-http",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-authority/EL-http/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-authority:EL-verification-environment",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-authority/EL-verification-environment/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation makes the bound basis stale",
+          "rejudge_required": false,
+          "relation_ref": "candidate-edge:expense3:path:FC-final-authority",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-authority/composition-changed-assessment",
+        "state_output": "stale"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-revision:EL-domain-rules",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-revision/EL-domain-rules/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-revision:EL-ledger-store",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-revision/EL-ledger-store/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-revision:EL-http",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-revision/EL-http/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-revision:EL-verification-environment",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-revision/EL-verification-environment/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation makes the bound basis stale",
+          "rejudge_required": false,
+          "relation_ref": "candidate-edge:expense3:path:FC-final-revision",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-revision/composition-changed-assessment",
+        "state_output": "stale"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-rework-history:EL-domain-rules",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-rework-history/EL-domain-rules/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-rework-history:EL-ledger-store",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-rework-history/EL-ledger-store/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-rework-history:EL-http",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-rework-history/EL-http/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-rework-history:EL-verification-environment",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-rework-history/EL-verification-environment/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation makes the bound basis stale",
+          "rejudge_required": false,
+          "relation_ref": "candidate-edge:expense3:path:FC-final-rework-history",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-rework-history/composition-changed-assessment",
+        "state_output": "stale"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-invalid-nonmutation:EL-domain-rules",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-invalid-nonmutation/EL-domain-rules/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-invalid-nonmutation:EL-ledger-store",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-invalid-nonmutation/EL-ledger-store/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-invalid-nonmutation:EL-http",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-invalid-nonmutation/EL-http/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-invalid-nonmutation:EL-verification-environment",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-invalid-nonmutation/EL-verification-environment/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation makes the bound basis stale",
+          "rejudge_required": false,
+          "relation_ref": "candidate-edge:expense3:path:FC-final-invalid-nonmutation",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-invalid-nonmutation/composition-changed-assessment",
+        "state_output": "stale"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-browser:EL-domain-rules",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-browser/EL-domain-rules/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-browser:EL-ledger-store",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-browser/EL-ledger-store/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-browser:EL-http",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-browser/EL-http/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-browser:EL-browser-ui",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-browser/EL-browser-ui/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-browser:EL-verification-environment",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-browser/EL-verification-environment/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation makes the bound basis stale",
+          "rejudge_required": false,
+          "relation_ref": "candidate-edge:expense3:path:FC-final-browser",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-browser/composition-changed-assessment",
+        "state_output": "stale"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-restart:EL-domain-rules",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-restart/EL-domain-rules/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-restart:EL-ledger-store",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-restart/EL-ledger-store/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-restart:EL-http",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-restart/EL-http/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation requires rejudge",
+          "rejudge_required": true,
+          "relation_ref": "candidate-edge:expense3:FC-final-restart:EL-verification-environment",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-restart/EL-verification-environment/changed-basis",
+        "state_output": "requires_rejudge"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": true,
+          "issues": [],
+          "reason": "target revision changed; relation makes the bound basis stale",
+          "rejudge_required": false,
+          "relation_ref": "candidate-edge:expense3:path:FC-final-restart",
+          "relation_state": "stale",
+          "stale_basis": true
+        },
+        "id": "FC-final-restart/composition-changed-assessment",
+        "state_output": "stale"
+      },
+      {
+        "effect": {
+          "applicable": true,
+          "historical_evidence": false,
+          "issues": [],
+          "reason": "target revision is unchanged; relation remains current",
+          "rejudge_required": false,
+          "relation_ref": "candidate-edge:expense3:unchanged-condition",
+          "relation_state": null,
+          "stale_basis": false
+        },
+        "id": "unchanged-condition-definition-control",
+        "state_output": "revalidated"
+      }
+    ]
+  },
+  "owner_revision": "9156f6d4bb9f26e9c6fc8db9a685d5d9b79b42e8",
+  "prohibited_operation_events": [],
+  "request_sha256": "59195b7ba74f7c854ea5fe093cff654bb1a23066b78761ebf618b3c0c458e244",
+  "scope": "existing pure owner calculation only; no new judgment or mutation",
+  "source_origins": [
+    {
+      "bytes": 878,
+      "git_blob": "8310608703af79c46c4568af61f42f0fbeef6911",
+      "module": "close_loop_contract_core",
+      "path": "close_loop_contract_core/__init__.py",
+      "sha256": "de68dc9a8ba0a9ea77d8f320eab84018b0fe73e7a761b75cbec2708d04b4b03d"
+    },
+    {
+      "bytes": 946,
+      "git_blob": "6a44399ac4d9b15e8fa68952e83a3a6366fb2e7d",
+      "module": "close_loop_contract_core.constants",
+      "path": "close_loop_contract_core/constants.py",
+      "sha256": "42dea5c94b609ea80ed04de2d7e07dd00b0d8c926d3250328a998f7ea4f0a1e5"
+    },
+    {
+      "bytes": 1558,
+      "git_blob": "5f38b325437c55aaa0948310bb1e3234087db7d0",
+      "module": "close_loop_contract_core.digest",
+      "path": "close_loop_contract_core/digest.py",
+      "sha256": "5fd6c5fba70160e79a0d5f5de2fbbb9ff3271410c820fc6f13dbcbd0c520c123"
+    },
+    {
+      "bytes": 3854,
+      "git_blob": "1cbaed4517e880cb61774ad75719ae9382a3c62c",
+      "module": "close_loop_contract_core.fixture_contract",
+      "path": "close_loop_contract_core/fixture_contract.py",
+      "sha256": "b776cc9e097098f6831f4dc2840acc04b21fdfd672b0b8d16ee645c4c372d470"
+    },
+    {
+      "bytes": 2897,
+      "git_blob": "63d59dfcd0ad84abb3dcff27a597ef7c8897576e",
+      "module": "close_loop_contract_core.issue_codes",
+      "path": "close_loop_contract_core/issue_codes.py",
+      "sha256": "28a13a5cbc8d7db73c8d68273ec9987fff47328366e0ae074b35a8d0a3e22b8c"
+    },
+    {
+      "bytes": 234,
+      "git_blob": "368dddb3e8599cc8def3ffe02b0b2c7d4747f016",
+      "module": "close_loop_contract_core.models",
+      "path": "close_loop_contract_core/models.py",
+      "sha256": "40fd3450d9dd6c4c9aef3942985ff3f172bfb5c47c71ba2acc92fab5f46d9e08"
+    },
+    {
+      "bytes": 263,
+      "git_blob": "8487188a0d92bb550ee42e541916510c55f02bd7",
+      "module": "close_loop_contract_core.revision",
+      "path": "close_loop_contract_core/revision.py",
+      "sha256": "3f2d6ee8eb6873dda141faab4c236b5caa55f9b88a74300678a0596c45f07cff"
+    },
+    {
+      "bytes": 2176,
+      "git_blob": "5bfe950f144f4a869f9e38911601a7f018fe762a",
+      "module": "close_loop_contract_core.serialize",
+      "path": "close_loop_contract_core/serialize.py",
+      "sha256": "0bb4fedb7517a40ea44b390eb6d5f6bac36f91923f8f019a3fd05cbdd1276211"
+    },
+    {
+      "bytes": 18832,
+      "git_blob": "ee59e199438f00e8386b892a26d1192d2a72aefe",
+      "module": "close_loop_contract_core.validators",
+      "path": "close_loop_contract_core/validators.py",
+      "sha256": "a726069acfa306aa21591a6ad376f8bd49b294332084071bffab82a4cda03a64"
+    },
+    {
+      "bytes": 38473,
+      "git_blob": "66718ef180d6725ef448dfa3e9caa7bed6fd3f65",
+      "module": "close_loop_v2",
+      "path": "close_loop_v2/__init__.py",
+      "sha256": "c0d0746fb53d52e5db4a8edbec3e843b497ee4ac3b9be6d2082d13890f12125b"
+    },
+    {
+      "bytes": 42927,
+      "git_blob": "a065f7a05992ce090a832005e1474135f4833df9",
+      "module": "close_loop_v2.function_loop_domain",
+      "path": "close_loop_v2/function_loop_domain.py",
+      "sha256": "f5a63b16ba7b57ae701d319844571a2107412e2256213866d7de3273056bdd60"
+    },
+    {
+      "bytes": 22185,
+      "git_blob": "62829f59afee8612d03a2c46d0a54d229080ed3b",
+      "module": "close_loop_v2.governance_loop_domain",
+      "path": "close_loop_v2/governance_loop_domain.py",
+      "sha256": "b3a09c7ab7c19bec9d550a1e74ad28e8a52cdfe94ff21adca577ca893b765174"
+    },
+    {
+      "bytes": 31671,
+      "git_blob": "f9c46b9076aadf8986b586d14d842b32be2a1bfb",
+      "module": "close_loop_v2.loop_discipline",
+      "path": "close_loop_v2/loop_discipline.py",
+      "sha256": "5dc6bf6c7feabf77ab3475fb63c094817e61b29626753a3857e0e704581213dc"
+    },
+    {
+      "bytes": 72980,
+      "git_blob": "1f26140f9bef68090ec0d539e928d0fe20f7bcf9",
+      "module": "close_loop_v2.relation_effective_state_resolver_v0_1",
+      "path": "close_loop_v2/relation_effective_state_resolver_v0_1.py",
+      "sha256": "4e81f13c86e9a0b0bbc221dce25c9723d9ba958b835c10ef210dd14c6f29ac52"
+    },
+    {
+      "bytes": 27399,
+      "git_blob": "95a78354f9fcfcbbfa4e4ccad9b9f01e581738a4",
+      "module": "close_loop_v2.shared_semantic_projections",
+      "path": "close_loop_v2/shared_semantic_projections.py",
+      "sha256": "b5dd7af94133c8cad56f187194b10e06e15b8d423e66c7523401f19b94039939"
+    },
+    {
+      "bytes": 52,
+      "git_blob": "ef7f02036f54c4823280d6b106a6f88e34922017",
+      "module": "scripts",
+      "path": "scripts/__init__.py",
+      "sha256": "bdc5e0461ad0f7ee44156f75137f5fe504bc677e54e68b5fff350c5e9f4ce878"
+    },
+    {
+      "bytes": 24351,
+      "git_blob": "af84003eb5b0b324a32c336187171bf31f551aef",
+      "module": "scripts.a1_first_current_genesis_semantic_closure_v0_3_1",
+      "path": "scripts/a1_first_current_genesis_semantic_closure_v0_3_1.py",
+      "sha256": "83d0ae1bd6c526f43bddb04d0cf9c37c3baae8f00b36994f2fb7a7244f225d41"
+    },
+    {
+      "bytes": 36,
+      "git_blob": "8527c3ee8305f38e9d08631a662e05d89b807a3b",
+      "module": "tools",
+      "path": "tools/__init__.py",
+      "sha256": "0ab1ba5f7f0edd4846beeaa29cad36a89f3289bdad2eb96a0c971fa2026d0dce"
+    },
+    {
+      "bytes": 16016,
+      "git_blob": "06f922278078bf3a28e98f29af2712230f4f25b9",
+      "module": "tools.semantic_contract.validate_reconciliation_v0_1",
+      "path": "tools/semantic_contract/validate_reconciliation_v0_1.py",
+      "sha256": "00f93bd3f975250c77d4f1eaef05ea19297ed786fa4849ca62eb1b259f7bab9c"
+    }
+  ]
+}
