@@ -1,0 +1,767 @@
+{
+  "format": "expense.loop-boundary-design-trial.v0.1",
+  "status": "proposed_not_adopted",
+  "subject": "expense-approval-reference",
+  "purpose": "Try bounded Execution and Function responsibilities for the existing Expense development object.",
+  "artifact_kind": "design_document_not_a_runtime_contract",
+  "authority_effect": "none",
+  "source_bindings": {
+    "repository": "choreoatlas/Expense-Approval",
+    "observed_on": "2026-11-03",
+    "trial_branch": "codex/expense-loop-boundary-trial",
+    "trial_parent_commit": "40b4d763f85d6b8be38f682afaae262b47acfa97",
+    "observed_main_commit": "6100d4538d0d5210a1fc9d97d24d2112be2b164f",
+    "source_pr": "https://github.com/choreoatlas/Expense-Approval/pull/4",
+    "original_model_manifest": "https://github.com/choreoatlas/close_loop_management/blob/e035bfc4d0292706a9f18fe745b5f3a0e8a7e072/authority/original_close_loop_model/v0.1/CONTENT_MANIFEST.json",
+    "original_model_sections": [
+      "main model 4, 5.1-5.2, 6.1-6.2",
+      "Execution v0.2 3",
+      "Function v0.2 3, 7-8",
+      "Relation Protocol v0.1 8"
+    ],
+    "requirement_change": "https://github.com/choreoatlas/Expense-Approval/issues/1#issuecomment-5571183600",
+    "historical_acceptance": {
+      "decision": "https://github.com/choreoatlas/Expense-Approval/issues/1#issuecomment-5571375864",
+      "implementation_revision": "c0f01dbf4af0dc9f9201c15f37cf960b925fce0c",
+      "governance_domain": "reference-sample"
+    },
+    "existing_model": "close_loop/attempt-1/model.v0.2.json",
+    "existing_functions": "close_loop/attempt-1/function-model.v0.2.json",
+    "existing_execution_design": "close_loop/attempt-1/execution-design.v0.2.json",
+    "existing_evidence_plan": "close_loop/attempt-1/evidence-requirements.v0.2.json",
+    "frozen_observation_source": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8"
+  },
+  "interpretation": {
+    "target": "A local single-organization browser Expense system with authorized first-stage and General Manager decisions on the same current revision, rejection/revision history, and normal local restart recovery.",
+    "historical_context": "Existing model current/gap fields describe realignment before historical rejudge; they are not a present unresolved-feature list.",
+    "original_definitions": "Retained without supersession or status transfer. Proposed IDs below are local to this trial.",
+    "existing_readers": "Continue using existing five-carrier/eight-Function definitions. This trial is not wired into onboarding, assessments, replay or platform consumers.",
+    "condition_assessment": "No new condition-assessment pilot task, assessment set, composition result or path judgment is created.",
+    "scope": [
+      "one local organization",
+      "named local business actors",
+      "SQLite file",
+      "Chromium reference flows",
+      "normal application restart against the same SQLite file"
+    ],
+    "limits": [
+      "no payment or accounting integration",
+      "receipt reference string only",
+      "no enterprise IAM or production security claim",
+      "no crash consistency, replication, backup recovery or remote durability claim",
+      "no cross-browser or accessibility certification"
+    ]
+  },
+  "execution_loops": [
+    {
+      "id": "E1",
+      "name": "Expense business ledger core",
+      "kind": "product_carrier",
+      "implementation_entity": "Expense domain and SQLite application core",
+      "boundary": "Content validation, local role rules, state transitions, current revision checks, decisions, new revisions and business history persistence.",
+      "maintained_paths": [
+        "expense/domain.py",
+        "expense/store.py"
+      ],
+      "inputs": [
+        "validated operation arguments from the service"
+      ],
+      "outputs": [
+        "expense revisions",
+        "staged decisions",
+        "history query data",
+        "typed business errors"
+      ],
+      "excludes": [
+        "HTTP routing",
+        "browser controls",
+        "Function judgments",
+        "platform governance"
+      ],
+      "note": "Domain and Store remain separate internal modules within one proposed carrier; no physical refactor is proposed."
+    },
+    {
+      "id": "E2",
+      "name": "Local application service",
+      "kind": "product_carrier",
+      "implementation_entity": "HTTP application and process entry",
+      "boundary": "API transport, JSON mapping, errors, static resource delivery, server and database-path assembly, and process lifecycle.",
+      "maintained_paths": [
+        "expense/http.py",
+        "app.py"
+      ],
+      "inputs": [
+        "HTTP requests",
+        "CLI arguments"
+      ],
+      "outputs": [
+        "HTTP responses",
+        "running local service"
+      ],
+      "excludes": [
+        "redefining approval rules",
+        "business history ownership",
+        "browser interaction state"
+      ],
+      "implementation_dependencies": [
+        "E1"
+      ]
+    },
+    {
+      "id": "E3",
+      "name": "Browser interaction client",
+      "kind": "product_carrier",
+      "implementation_entity": "Same-origin browser application",
+      "boundary": "Forms, user actions, current-state presentation, request handling and history display.",
+      "maintained_paths": [
+        "static/index.html",
+        "static/app.js",
+        "static/styles.css"
+      ],
+      "inputs": [
+        "user actions",
+        "E2 responses"
+      ],
+      "outputs": [
+        "E2 requests",
+        "visible state and history"
+      ],
+      "excludes": [
+        "authoritative role checks",
+        "server state transitions",
+        "platform governance authority"
+      ],
+      "implementation_dependencies": [
+        "E2"
+      ]
+    },
+    {
+      "id": "E4",
+      "name": "Verification and raw observation tools",
+      "kind": "development_support_carrier",
+      "implementation_entity": "Test, CI and raw application observation tooling",
+      "boundary": "Verification environment, temporary resources, driving core/HTTP/browser/restart scenarios, and preserving raw observations.",
+      "maintained_paths": [
+        "tests/test_domain_store.py",
+        "tests/test_http.py",
+        "tests/test_browser.py",
+        "tests/test_process_restart.py",
+        "tests/test_onboarding_observer.py",
+        ".github/workflows/ci.yml",
+        "requirements-dev.txt",
+        "close_loop/onboarding/observe.py"
+      ],
+      "inputs": [
+        "selected source revision",
+        "declared scenario",
+        "temporary runtime configuration"
+      ],
+      "outputs": [
+        "execution records",
+        "original test/runner output references",
+        "raw application observations"
+      ],
+      "excludes": [
+        "Function validity",
+        "condition assessments",
+        "governance decisions",
+        "CEB acquisition/validation algorithms"
+      ],
+      "implementation_dependencies": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "note": "Test expectations trace to the relevant Function contract; maintenance of test code here does not move judgment ownership into the runner."
+    },
+    {
+      "id": "E5",
+      "name": "CloseLoop handoff and frozen replay tools",
+      "kind": "development_support_carrier",
+      "implementation_entity": "Project-owned source profile, owner bindings and public-entry replay adapter",
+      "boundary": "Project declarations, source/owner bindings, material restoration and invocation of existing platform public interfaces.",
+      "maintained_paths": [
+        "close_loop/onboarding/profile.json",
+        "close_loop/onboarding/objects.json",
+        "close_loop/onboarding/conditions.json",
+        "close_loop/onboarding/composition.json",
+        "close_loop/onboarding/owners.json",
+        "close_loop/onboarding/replay.py"
+      ],
+      "inputs": [
+        "project definitions",
+        "E4 material references",
+        "frozen inventory",
+        "pinned platform interfaces"
+      ],
+      "outputs": [
+        "project handoff inputs",
+        "restored frozen inputs",
+        "public-interface invocation/replay reports"
+      ],
+      "excludes": [
+        "duplicating platform algorithms",
+        "authoring judgments from replay",
+        "changing frozen records",
+        "business approval semantics"
+      ],
+      "material_references": [
+        "close_loop/onboarding/records/"
+      ],
+      "note": "Everything under records/, including runner/*.py, remains historical frozen material, not newly activated implementation code. E5 is not evidence that a business Function is valid.",
+      "maintenance_boundary": "Physical maintenance of conditions/composition files covers format, bindings and references only. Their semantic criteria remain with the relevant Function authors; preservation of records does not transfer truth ownership."
+    }
+  ],
+  "shared_contracts": [
+    {
+      "id": "S-REVISION",
+      "meaning": "Submission, decisions, revisions and displayed history preserve exact business revision meaning; product Git and execution/evidence revisions remain separate."
+    },
+    {
+      "id": "S-HISTORY",
+      "meaning": "Submitted/reviewed revisions and decisions remain traceable. Ordinary draft editing is not silently expanded into a full edit-event journal."
+    },
+    {
+      "id": "S-NO-MUTATION",
+      "meaning": "An invalid operation does not change the business state that its path promises to preserve."
+    },
+    {
+      "id": "S-BROWSER",
+      "meaning": "Required user-visible actions are available through the original Chromium reference path; test execution itself is not the capability."
+    },
+    {
+      "id": "S-RESTART",
+      "meaning": "Normal local application restart against the same SQLite file preserves the relevant actors, revisions, states, decisions and query behavior."
+    }
+  ],
+  "function_loops": [
+    {
+      "id": "F1",
+      "name": "Expense preparation and submission",
+      "upstream_need": "Existing GN1: present a definite expense revision for authorized review.",
+      "target": "An employee can create and edit legal draft content and submit the current draft revision for review.",
+      "input": "Employee identity within the declared local-actor model and expense content.",
+      "output": "A submitted expense revision with definite approval-relevant content.",
+      "owns": "Draft/content and submission capability contract, its gap and scoped path judgment.",
+      "excludes": [
+        "approval decisions",
+        "creating a new revision after rejection",
+        "history-query capability"
+      ],
+      "conditions": [
+        {
+          "id": "F1-C1",
+          "requirement": "Employee and amount/purpose/receipt_ref satisfy the inherited input and actor contract."
+        },
+        {
+          "id": "F1-C2",
+          "requirement": "Legal drafts can be edited; invalid edits and invalid submissions preserve business state.",
+          "shared_refs": [
+            "S-NO-MUTATION"
+          ]
+        },
+        {
+          "id": "F1-C3",
+          "requirement": "Only the current draft can be submitted; expense identity, revision and submitted content are exact.",
+          "shared_refs": [
+            "S-REVISION"
+          ]
+        },
+        {
+          "id": "F1-C4",
+          "requirement": "Submitted approval-relevant content cannot be edited in place; prior submitted/reviewed revisions and decisions are retained.",
+          "shared_refs": [
+            "S-REVISION",
+            "S-HISTORY"
+          ]
+        },
+        {
+          "id": "F1-C5",
+          "requirement": "The employee can create, edit and submit through the browser, including visible invalid-operation handling.",
+          "shared_refs": [
+            "S-BROWSER"
+          ]
+        },
+        {
+          "id": "F1-C6",
+          "requirement": "Normal restart preserves the actor, current revision, submitted content and state produced by this path.",
+          "shared_refs": [
+            "S-RESTART"
+          ]
+        }
+      ],
+      "product_support": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "verification_support": [
+        "E4"
+      ],
+      "current_capability_state": {
+        "basis_kind": "source_inspection_not_new_validity",
+        "basis_commit": "40b4d763f85d6b8be38f682afaae262b47acfa97",
+        "description": "Baseline E1/E2/E3 implement local draft creation/edit and submission; historical results remain at their original revisions."
+      },
+      "capability_gap": {
+        "kind": "design_questions_not_confirmed_missing_features",
+        "description": "Clarify caller/own-expense and concurrent edit/submit obligations before claiming those boundary cases.",
+        "question_refs": [
+          "Q-ACTOR-CONTEXT",
+          "Q-CONCURRENCY"
+        ]
+      },
+      "feedback_boundary": "A condition/evidence gap leads to a bounded support, repair or clarification request to the relevant Execution carrier. Its implementation facts remain with that carrier; a new judgment needs its own basis."
+    },
+    {
+      "id": "F2",
+      "name": "Two-stage authorized decision",
+      "upstream_need": "Existing GN1: final approval requires authorized first-stage and General Manager decisions on the same current revision.",
+      "target": "The current submitted revision traverses authorized first-stage and final review, or is rejected at either stage.",
+      "input": "Current submitted or manager_pending revision, local review actor, outcome and reason.",
+      "output": "An ordered decision chain and corresponding manager_pending, rejected or approved business state.",
+      "owns": "Review policy, stage order, decision/revision binding and scoped approval capability judgment.",
+      "excludes": [
+        "expense content editing",
+        "new revision creation",
+        "history-query capability"
+      ],
+      "conditions": [
+        {
+          "id": "F2-C1",
+          "requirement": "First-stage review accepts only the current submitted revision and an explicit approver who is not the submitter."
+        },
+        {
+          "id": "F2-C2",
+          "requirement": "First-stage approval yields manager_pending, never final approved."
+        },
+        {
+          "id": "F2-C3",
+          "requirement": "Final review requires general_manager authority, completed first-stage approval and the same exact current revision.",
+          "shared_refs": [
+            "S-REVISION"
+          ]
+        },
+        {
+          "id": "F2-C4",
+          "requirement": "Either review stage may reject; actor, role, outcome, reason, revision and order remain traceable.",
+          "shared_refs": [
+            "S-HISTORY"
+          ]
+        },
+        {
+          "id": "F2-C5",
+          "requirement": "Wrong actor/role, self-review, skipped stage, stale revision, duplicate or invalid decisions do not alter the promised business state.",
+          "shared_refs": [
+            "S-NO-MUTATION",
+            "S-REVISION"
+          ]
+        },
+        {
+          "id": "F2-C6",
+          "requirement": "Final approved content cannot be silently changed while retaining its prior approval.",
+          "shared_refs": [
+            "S-REVISION"
+          ]
+        },
+        {
+          "id": "F2-C7",
+          "requirement": "Browser paths support initial and final approval/rejection and make the intermediate/final distinction visible.",
+          "shared_refs": [
+            "S-BROWSER"
+          ]
+        },
+        {
+          "id": "F2-C8",
+          "requirement": "Normal restart preserves review roles, stage state, both decision stages and their exact revision bindings.",
+          "shared_refs": [
+            "S-RESTART"
+          ]
+        }
+      ],
+      "product_support": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "verification_support": [
+        "E4"
+      ],
+      "current_capability_state": {
+        "basis_kind": "source_inspection_not_new_validity",
+        "basis_commit": "40b4d763f85d6b8be38f682afaae262b47acfa97",
+        "description": "Baseline implements approver and general_manager stages, role checks, current-revision checks and persisted decisions."
+      },
+      "capability_gap": {
+        "kind": "design_questions_not_confirmed_missing_features",
+        "description": "The old final-review pilot does not judge this combined F2. Same-expense concurrent decision obligations remain a proposed investigation.",
+        "question_refs": [
+          "Q-CONCURRENCY",
+          "Q-ACTOR-CONTEXT"
+        ]
+      },
+      "feedback_boundary": "A condition/evidence gap leads to a bounded support, repair or clarification request to the relevant Execution carrier. Its implementation facts remain with that carrier; a new judgment needs its own basis."
+    },
+    {
+      "id": "F3",
+      "name": "New draft after rejection",
+      "upstream_need": "Existing GN1: rejection can be answered without erasing previous facts or carrying old approvals forward.",
+      "target": "A rejection at either stage can produce a legal new draft revision under the same expense.",
+      "input": "The current rejected revision and revised content.",
+      "output": "A new draft revision with old revisions and decisions preserved.",
+      "owns": "Rework eligibility, revision creation, reset of approval applicability and the new-draft handoff contract.",
+      "excludes": [
+        "resubmission implementation owned by F1",
+        "review implementation owned by F2"
+      ],
+      "conditions": [
+        {
+          "id": "F3-C1",
+          "requirement": "Only the current rejected revision may be revised; rejection from either stage is supported."
+        },
+        {
+          "id": "F3-C2",
+          "requirement": "Legal revised content creates a new increasing revision under the same expense, in draft state.",
+          "shared_refs": [
+            "S-REVISION"
+          ]
+        },
+        {
+          "id": "F3-C3",
+          "requirement": "Old content and decisions remain; the new draft inherits no effective approval.",
+          "shared_refs": [
+            "S-REVISION",
+            "S-HISTORY"
+          ]
+        },
+        {
+          "id": "F3-C4",
+          "requirement": "Invalid or repeated revision requests do not mutate prior business state or create extra revisions.",
+          "shared_refs": [
+            "S-NO-MUTATION"
+          ]
+        },
+        {
+          "id": "F3-C5",
+          "requirement": "The browser can create the new draft after either-stage rejection and hand it to F1.",
+          "shared_refs": [
+            "S-BROWSER"
+          ]
+        },
+        {
+          "id": "F3-C6",
+          "requirement": "Normal restart preserves new/old revisions and the rejected decision basis.",
+          "shared_refs": [
+            "S-RESTART"
+          ]
+        }
+      ],
+      "handoff": "F3 ends at the new draft. The original revise-and-resubmit promise also requires I1/I2: F1 resubmission followed by both F2 review stages.",
+      "product_support": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "verification_support": [
+        "E4"
+      ],
+      "current_capability_state": {
+        "basis_kind": "source_inspection_not_new_validity",
+        "basis_commit": "40b4d763f85d6b8be38f682afaae262b47acfa97",
+        "description": "Baseline creates a new draft after a rejected revision and retains old revisions/decisions; existing I1/I2 source scenarios are historical."
+      },
+      "capability_gap": {
+        "kind": "design_questions_not_confirmed_missing_features",
+        "description": "Review I1/I2 responsibility coverage and clarify simultaneous/repeated revision obligations; this trial establishes no new execution gap finding.",
+        "question_refs": [
+          "Q-CONCURRENCY",
+          "Q-ACTOR-CONTEXT"
+        ]
+      },
+      "feedback_boundary": "A condition/evidence gap leads to a bounded support, repair or clarification request to the relevant Execution carrier. Its implementation facts remain with that carrier; a new judgment needs its own basis."
+    },
+    {
+      "id": "F4",
+      "name": "Traceable history reading",
+      "upstream_need": "Existing GN1: users can inspect versions and authorized decisions, including rejected history.",
+      "target": "The user can inspect the correct expense's revisions and ordered decisions with their revision, actor, role, outcome and reason.",
+      "input": "Expense identity.",
+      "output": "A consistent read-only history view.",
+      "owns": "History query, ordering, relation presentation and user-visible inspection capability.",
+      "excludes": [
+        "producing or rewriting revisions/decisions",
+        "silently resolving the open status-history granularity question"
+      ],
+      "conditions": [
+        {
+          "id": "F4-C1",
+          "requirement": "The queried expense and version/decision ordering are correct, without fabricated or cross-expense facts.",
+          "shared_refs": [
+            "S-REVISION"
+          ]
+        },
+        {
+          "id": "F4-C2",
+          "requirement": "Decisions retain their revision, actor, role, outcome and reason; rejected history coexists with later revisions.",
+          "shared_refs": [
+            "S-HISTORY"
+          ]
+        },
+        {
+          "id": "F4-C3",
+          "requirement": "Valid and invalid history queries do not modify business state.",
+          "shared_refs": [
+            "S-NO-MUTATION"
+          ]
+        },
+        {
+          "id": "F4-C4",
+          "requirement": "The browser exposes versions, role-attributed decisions and their relationships for inspection.",
+          "shared_refs": [
+            "S-BROWSER"
+          ]
+        },
+        {
+          "id": "F4-C5",
+          "requirement": "The relevant history and query behavior remain available after normal restart.",
+          "shared_refs": [
+            "S-RESTART"
+          ]
+        }
+      ],
+      "product_support": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "verification_support": [
+        "E4"
+      ],
+      "current_capability_state": {
+        "basis_kind": "source_inspection_not_new_validity",
+        "basis_commit": "40b4d763f85d6b8be38f682afaae262b47acfa97",
+        "description": "Baseline exposes ordered revisions/decisions through the store, HTTP history route and browser."
+      },
+      "capability_gap": {
+        "kind": "design_questions_not_confirmed_missing_features",
+        "description": "Clarify full status-history granularity and caller/read scope; do not infer an event journal or authenticated ownership from the code.",
+        "question_refs": [
+          "Q-HISTORY",
+          "Q-ACTOR-CONTEXT"
+        ]
+      },
+      "feedback_boundary": "A condition/evidence gap leads to a bounded support, repair or clarification request to the relevant Execution carrier. Its implementation facts remain with that carrier; a new judgment needs its own basis."
+    }
+  ],
+  "interaction_scenarios": [
+    {
+      "id": "I1",
+      "purpose": "Preserve first-stage reject/revise/resubmit coverage.",
+      "sequence": [
+        "F1 submit",
+        "F2 first-stage rejection",
+        "F3 new draft",
+        "F1 resubmit",
+        "F2 both approval stages",
+        "F4 inspect old and new history"
+      ]
+    },
+    {
+      "id": "I2",
+      "purpose": "Preserve final-stage reject/revise/resubmit and reset coverage.",
+      "sequence": [
+        "F1 submit",
+        "F2 initial approval and GM rejection",
+        "F3 new draft",
+        "F1 resubmit",
+        "F2 requires both stages again",
+        "F4 inspect all decisions"
+      ]
+    },
+    {
+      "id": "I3",
+      "purpose": "Check each path's own invalid-operation and no-mutation obligations.",
+      "sequence": [
+        "F1 invalid input/edit/submit",
+        "F2 wrong role/stage/revision or duplicate decision",
+        "F3 invalid/repeated revision",
+        "F4 invalid query"
+      ]
+    },
+    {
+      "id": "I4",
+      "purpose": "Preserve the old normal-restart capability across declared checkpoints.",
+      "sequence": [
+        "restart and recover submitted state",
+        "restart and recover pending/final decisions and roles",
+        "restart and recover rejected/new revision handoff",
+        "query matching history after restart"
+      ]
+    }
+  ],
+  "original_coverage_mapping": [
+    {
+      "original_function": "FL-draft-submit",
+      "proposed_functions": [
+        "F1"
+      ],
+      "condition_refs": [
+        "F1-C1",
+        "F1-C2",
+        "F1-C3",
+        "F1-C4",
+        "F1-C5",
+        "F1-C6"
+      ]
+    },
+    {
+      "original_function": "FL-authority-safe-review",
+      "proposed_functions": [
+        "F2"
+      ],
+      "condition_refs": [
+        "F2-C1",
+        "F2-C2",
+        "F2-C4",
+        "F2-C5",
+        "F2-C7",
+        "F2-C8"
+      ]
+    },
+    {
+      "original_function": "FL-general-manager-final-approval",
+      "proposed_functions": [
+        "F2"
+      ],
+      "condition_refs": [
+        "F2-C3",
+        "F2-C4",
+        "F2-C5",
+        "F2-C6",
+        "F2-C7",
+        "F2-C8"
+      ]
+    },
+    {
+      "original_function": "FL-reject-revise-resubmit",
+      "proposed_functions": [
+        "F3",
+        "F1",
+        "F2"
+      ],
+      "interaction_refs": [
+        "I1",
+        "I2"
+      ]
+    },
+    {
+      "original_function": "FL-approval-revision-binding",
+      "proposed_functions": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "shared_refs": [
+        "S-REVISION"
+      ]
+    },
+    {
+      "original_function": "FL-history",
+      "proposed_functions": [
+        "F4",
+        "F1",
+        "F2",
+        "F3"
+      ],
+      "shared_refs": [
+        "S-HISTORY"
+      ],
+      "question_refs": [
+        "Q-HISTORY"
+      ]
+    },
+    {
+      "original_function": "FL-browser",
+      "proposed_functions": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "shared_refs": [
+        "S-BROWSER"
+      ],
+      "interaction_refs": [
+        "I1",
+        "I2"
+      ]
+    },
+    {
+      "original_function": "FL-durable",
+      "proposed_functions": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "shared_refs": [
+        "S-RESTART"
+      ],
+      "interaction_refs": [
+        "I4"
+      ]
+    }
+  ],
+  "relation_design": {
+    "status": "proposed_patterns_not_written_relation_facts",
+    "principle": "Bounded objects, many-to-many references, distinct fact ownership and per-path judgments.",
+    "pattern": "A Function record F may composes/supports/depends_on an Execution record E: source is F and target is E. Target support flows upward conceptually; it is not the typed-edge direction.",
+    "required_binding": "Any adopted relation must specify real source/target records and revisions, actor, scope, limits, reason/evidence and propagation rule.",
+    "change_handling": "Follow the adopted typed relation and relevant basis change; do not mark every path stale because any file or project node changed.",
+    "judgment_boundary": "Shared evidence or conditions never create one shared global path_state. New F2 cannot inherit the old final-approval pilot result."
+  },
+  "open_questions": [
+    {
+      "id": "Q-HISTORY",
+      "question": "Does commissioned full status history require an event journal for every state transition, beyond stored revision states and ordered decisions?",
+      "basis_paths": [
+        "expense/store.py"
+      ],
+      "disposition": "Retain the original wording and historical acceptance. Clarify the next contract before claiming complete event-history coverage."
+    },
+    {
+      "id": "Q-CONCURRENCY",
+      "question": "Which simultaneous requests on one expense must the reference sample handle atomically?",
+      "basis_paths": [
+        "expense/store.py",
+        "expense/http.py"
+      ],
+      "disposition": "Reads/checks precede some write transactions while HTTP is threaded. This is an unexecuted code-risk observation, not a defect verdict or revoked historical acceptance."
+    },
+    {
+      "id": "Q-ACTOR-CONTEXT",
+      "question": "How does the original employee-own-expense requirement apply to caller-supplied names and API requests without authenticated caller context?",
+      "basis_paths": [
+        "expense/http.py",
+        "expense/store.py"
+      ],
+      "disposition": "Keep the local named-actor limit and original requirement explicit; do not silently equate role lookup with authenticated ownership or add enterprise IAM."
+    }
+  ],
+  "review_criteria": [
+    "Each active implementation path in maintained_paths has one proposed maintenance owner; shared use is an explicit dependency.",
+    "All eight original Function identities retain a visible coverage mapping with original scope/limits and no judgment transfer.",
+    "F3-to-F1-to-F2 preserves the full rejected/revise/resubmit requirement.",
+    "Browser and normal-restart conditions remain mandatory where applicable, not optional evidence labels.",
+    "Open requirements and code risks remain explicit without invented current validity.",
+    "Existing source, frozen evidence, model, consumers and pilot mode remain unchanged."
+  ],
+  "evolution_plan": {
+    "execution": "For a later authorized carrier change, retain implementation entity/boundary, changed scope, source revision, execution/evidence references and reproduction limits.",
+    "function": "Compare each path's target and current capability, request the affected support, then judge on explicit revision-bound evidence. Keep prior findings and repair responses.",
+    "cross_path": "Use real typed relations to determine which dependent records need rejudge; sharing a carrier does not mandate all-path rejudge.",
+    "governance": "Retain the existing target and historical reference-sample decision. A new applicable decision, if needed, belongs to the authorized governance actor, not this trial or a helper.",
+    "next_action": "Review the proposed boundaries, inherited requirement coverage and open questions before any adapter adoption or new implementation task."
+  }
+}
