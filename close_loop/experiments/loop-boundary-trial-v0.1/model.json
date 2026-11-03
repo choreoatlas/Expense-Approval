@@ -238,6 +238,8 @@
     {
       "id": "F1",
       "name": "Expense preparation and submission",
+      "scope": "Local single-organization draft preparation and submission of the current expense revision, including its declared browser and normal-restart conditions.",
+      "limits": "No external identity provider or production security claim; the original local-actor trust question remains explicit.",
       "upstream_need": "Existing GN1: present a definite expense revision for authorized review.",
       "target": "An employee can create and edit legal draft content and submit the current draft revision for review.",
       "input": "Employee identity within the declared local-actor model and expense content.",
@@ -316,6 +318,8 @@
     {
       "id": "F2",
       "name": "Two-stage authorized decision",
+      "scope": "First-stage and General Manager review of the same current local expense revision, including either-stage rejection.",
+      "limits": "Seeded local role assignments, not organizational IAM; concurrency coverage is unresolved.",
       "upstream_need": "Existing GN1: final approval requires authorized first-stage and General Manager decisions on the same current revision.",
       "target": "The current submitted revision traverses authorized first-stage and final review, or is rejected at either stage.",
       "input": "Current submitted or manager_pending revision, local review actor, outcome and reason.",
@@ -405,6 +409,8 @@
     {
       "id": "F3",
       "name": "New draft after rejection",
+      "scope": "New draft creation from the current revision rejected at either review stage, with explicit F1/F2 handoff coverage.",
+      "limits": "No workflow delegation or escalation rules; does not own F1 submission or F2 decisions.",
       "upstream_need": "Existing GN1: rejection can be answered without erasing previous facts or carrying old approvals forward.",
       "target": "A rejection at either stage can produce a legal new draft revision under the same expense.",
       "input": "The current rejected revision and revised content.",
@@ -483,6 +489,8 @@
     {
       "id": "F4",
       "name": "Traceable history reading",
+      "scope": "Read-only history for one expense through the local API and Chromium UI, including normal-restart availability.",
+      "limits": "No cross-expense audit dashboard; full status-event granularity and caller-read scope require clarification.",
       "upstream_need": "Existing GN1: users can inspect versions and authorized decisions, including rejected history.",
       "target": "The user can inspect the correct expense's revisions and ordered decisions with their revision, actor, role, outcome and reason.",
       "input": "Expense identity.",
@@ -612,7 +620,10 @@
         "F1-C4",
         "F1-C5",
         "F1-C6"
-      ]
+      ],
+      "original_definition_ref": "close_loop/attempt-1/function-model.v0.2.json#/functions/0",
+      "original_scope": "local single-organization reference sample",
+      "original_limits": "No external identity provider or production security claim."
     },
     {
       "original_function": "FL-authority-safe-review",
@@ -626,7 +637,10 @@
         "F2-C5",
         "F2-C7",
         "F2-C8"
-      ]
+      ],
+      "original_definition_ref": "close_loop/attempt-1/function-model.v0.2.json#/functions/1",
+      "original_scope": "first-stage review of current submitted revision",
+      "original_limits": "Local seeded role assignments only; no enterprise IAM claim."
     },
     {
       "original_function": "FL-general-manager-final-approval",
@@ -640,7 +654,10 @@
         "F2-C6",
         "F2-C7",
         "F2-C8"
-      ]
+      ],
+      "original_definition_ref": "close_loop/attempt-1/function-model.v0.2.json#/functions/2",
+      "original_scope": "final review after first-stage approval",
+      "original_limits": "General manager authority is local sample configuration, not organizational IAM."
     },
     {
       "original_function": "FL-reject-revise-resubmit",
@@ -652,7 +669,10 @@
       "interaction_refs": [
         "I1",
         "I2"
-      ]
+      ],
+      "original_definition_ref": "close_loop/attempt-1/function-model.v0.2.json#/functions/3",
+      "original_scope": "rejected current revision",
+      "original_limits": "No workflow delegation or escalation rules."
     },
     {
       "original_function": "FL-approval-revision-binding",
@@ -664,7 +684,10 @@
       ],
       "shared_refs": [
         "S-REVISION"
-      ]
+      ],
+      "original_definition_ref": "close_loop/attempt-1/function-model.v0.2.json#/functions/4",
+      "original_scope": "approval-relevant expense content",
+      "original_limits": "Only amount, purpose and receipt_ref are approval-relevant in this sample."
     },
     {
       "original_function": "FL-history",
@@ -679,7 +702,10 @@
       ],
       "question_refs": [
         "Q-HISTORY"
-      ]
+      ],
+      "original_definition_ref": "close_loop/attempt-1/function-model.v0.2.json#/functions/5",
+      "original_scope": "single expense history",
+      "original_limits": "No cross-expense audit dashboard."
     },
     {
       "original_function": "FL-browser",
@@ -695,7 +721,10 @@
       "interaction_refs": [
         "I1",
         "I2"
-      ]
+      ],
+      "original_definition_ref": "close_loop/attempt-1/function-model.v0.2.json#/functions/7",
+      "original_scope": "Chromium reference path",
+      "original_limits": "No cross-browser or accessibility certification."
     },
     {
       "original_function": "FL-durable",
@@ -710,7 +739,10 @@
       ],
       "interaction_refs": [
         "I4"
-      ]
+      ],
+      "original_definition_ref": "close_loop/attempt-1/function-model.v0.2.json#/functions/6",
+      "original_scope": "local SQLite file persistence",
+      "original_limits": "No crash consistency, replication or remote durability claim."
     }
   ],
   "relation_design": {
