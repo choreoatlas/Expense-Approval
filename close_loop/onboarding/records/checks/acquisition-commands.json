@@ -1,0 +1,33 @@
+[
+  {
+    "name": "ceb-live-deliver",
+    "argv": [
+      "/private/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/envs/platform/bin/python",
+      "-I",
+      "-B",
+      "-c",
+      "import runpy,sys;sys.path.insert(0,sys.argv[1]);sys.argv=['workload_candidate']+sys.argv[2:];runpy.run_module('close_loop_evidence_builder.workload_candidate',run_name='__main__')",
+      "/private/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/repos/ceb",
+      "deliver",
+      "--profile",
+      "/private/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/inputs/profile.json",
+      "--request",
+      "/private/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/inputs/acquisition-request.json",
+      "--delivery",
+      "/private/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/outputs/source-delivery.json"
+    ],
+    "cwd": "/private/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0",
+    "environment_keys": [
+      "GITHUB_TOKEN",
+      "HOME",
+      "PATH",
+      "PYTHONDONTWRITEBYTECODE",
+      "PYTHONNOUSERSITE",
+      "TMPDIR"
+    ],
+    "started_at": "2026-11-03T13:03:58.354285+00:00",
+    "ended_at": "2026-11-03T13:04:25.700728+00:00",
+    "seconds": 27.347,
+    "exit_code": 1
+  }
+]

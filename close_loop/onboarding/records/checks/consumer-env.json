@@ -1,0 +1,1 @@
+{"python": "3.11.15 (main, Mar  3 2026, 00:52:57) [Clang 21.0.0 (clang-2100.0.123.102)]", "distribution": "close-loop-commercial-v1", "requires": null, "packages": [["close-loop-commercial-v1", "0.1.0"], ["pip", "26.1"], ["setuptools", "82.0.1"]]}

@@ -1,0 +1,70 @@
+{
+  "result": [
+    {
+      "code": "malformed_input",
+      "path": "ValueError"
+    }
+  ],
+  "exception_locations": [
+    {
+      "file": "shared_contract_core_loader_v0_1.py",
+      "function": "_reject_symlink_components",
+      "line": 94,
+      "type": "ValueError"
+    },
+    {
+      "file": "shared_contract_core_loader_v0_1.py",
+      "function": "_verify_vendored_shared_contract_core",
+      "line": 254,
+      "type": "ValueError"
+    },
+    {
+      "file": "shared_contract_core_loader_v0_1.py",
+      "function": "verify_vendored_shared_contract_core",
+      "line": 323,
+      "type": "ValueError"
+    },
+    {
+      "file": "shared_contract_core_loader_v0_1.py",
+      "function": "_load_verified_shared_contract_core_uncached",
+      "line": 419,
+      "type": "ValueError"
+    },
+    {
+      "file": "shared_contract_core_loader_v0_1.py",
+      "function": "_load_verified_shared_contract_core",
+      "line": 464,
+      "type": "ValueError"
+    },
+    {
+      "file": "shared_contract_core_loader_v0_1.py",
+      "function": "load_verified_shared_contract_core",
+      "line": 469,
+      "type": "ValueError"
+    },
+    {
+      "file": "workload_candidate_contract.py",
+      "function": "boundary",
+      "line": 99,
+      "type": "ValueError"
+    },
+    {
+      "file": "workload_candidate_contract.py",
+      "function": "validate_inputs",
+      "line": 112,
+      "type": "ValueError"
+    },
+    {
+      "file": "workload_candidate_validation.py",
+      "function": "_validate",
+      "line": 90,
+      "type": "ValueError"
+    },
+    {
+      "file": "workload_candidate_validation.py",
+      "function": "validate_delivery",
+      "line": 190,
+      "type": "ValueError"
+    }
+  ]
+}

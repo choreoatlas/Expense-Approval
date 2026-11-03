@@ -1,0 +1,71 @@
+{
+  "statement": {
+    "assessor": "agent:codex:expense3:controller-function-assessor",
+    "basis": {
+      "candidate_sha256": "17b5f7c9e56154f9524f31be0295cd3fa1dc8b50cfa4f9673db52f488dc663fd",
+      "evidence_refs": [
+        "observations-B.json#sha256=e134715854cb90e17c34075ddb3a4a754f464495f2cd81e37b59339810643d32",
+        "https://github.com/choreoatlas/Expense-Approval/actions/runs/41640672264"
+      ],
+      "execution_records": [
+        {
+          "ref": "ci-41640672264-1/EL-ledger-store",
+          "revision": "sha256:7374b5146d0f6219e5189d990cd25e7247cb274360a4346e9c85b5d860b91268"
+        },
+        {
+          "ref": "ci-41640672264-1/EL-verification-environment",
+          "revision": "sha256:c362780b2a5c10b0fd723dbb3f85b3f3bf7097c0569cad8139aceb16a2441074"
+        }
+      ],
+      "material_sha256": "b497540b4a716104dd308b8361b73ad05978a6f26f09494db34efe5ea7ff3da8",
+      "product_commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+      "profile_sha256": "dc017cde4c5134fc4eadcbff4fb3010b8a84b83b5cff45e499e652a91f2466f2",
+      "slice_ids": [
+        "model",
+        "function-model",
+        "execution-design",
+        "evidence-requirements",
+        "workflow",
+        "requirements",
+        "objects",
+        "store-source",
+        "application-entry",
+        "domain-store-tests",
+        "restart-tests"
+      ]
+    },
+    "function_id": "FL-durable",
+    "historical_acceptance_ref": "https://github.com/choreoatlas/Expense-Approval/issues/1#issuecomment-5571375864",
+    "judgment_id": "inspection-statement:expense3:FL-durable",
+    "limits": [
+      "No crash consistency, replication or remote durability claim.",
+      "Current outer scope is assembly inspection, not replacement of the original Function scope",
+      "No new Governance/admission/effective-state/downstream permission",
+      "Only the selected final-review Function has a new candidate assessment set"
+    ],
+    "original_path_definition": {
+      "capability_gap": "Need re-evidence that two-stage decisions, roles and history survive store/application restart.",
+      "current_capability_state": "SQLite persistence exists for actors, revisions and decisions.",
+      "id": "FL-durable",
+      "limits": "No crash consistency, replication or remote durability claim.",
+      "required_evidence": [
+        "restart and recover actor roles",
+        "restart and recover both decision stages",
+        "restart and recover revisions/history"
+      ],
+      "required_execution_support": [
+        "EL-ledger-store",
+        "EL-verification-environment"
+      ],
+      "scope": "local SQLite file persistence",
+      "target_path_type": "local persistence",
+      "upstream_governance_need": "GN1"
+    },
+    "reason": "This original Function definition and historical scope are preserved. The new source/CI material is available, but this Function is explicitly not rejudged by this inspection.",
+    "revision": "authored-expense3-inspection-v0.1",
+    "scope": "Expense source and explicit judgment inspection; final-review pilot result attached within its original scope",
+    "scope_interpretation": "The outer scope describes only this common assembly/inspection; original_path_definition.scope is unchanged",
+    "state": "not_rejudged",
+    "target_path_ref": "repository:github:choreoatlas/Expense-Approval:function:FL-durable"
+  }
+}

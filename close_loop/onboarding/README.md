@@ -106,8 +106,15 @@ not an authentication claim by the observer.
    Preserve original path contracts/scopes as original context. A common
    **assembly/inspection** scope must not replace the original Function scope.
 
-The complete local/CI run evidence, authored assessments and integration
-artifacts are delivered separately with immutable source/digest locators.
+The [recorded local/CI runs, explicit assessments and three-repository
+handoff](records/README.md) are now preserved with their original source/digest
+bindings. The [manifest](records/MANIFEST.json) restores relative logical
+filenames, including the original raw observation A/B files. The
+[offline replayer](replay.py) materializes those inputs and invokes original
+owners; it reproduces frozen calculations and bytes, without authoring new
+judgments. Producer source `57fa2b3551a0e8f9243241cb2604d03ca09b19d8` remains
+distinct from later artifact-only commits.
+
 The observer and profile do not establish source authenticity, current
 Governance acceptance, canonical/DB admission, effective state, production
 readiness or downstream permission. No target DB, canonical/relation write,

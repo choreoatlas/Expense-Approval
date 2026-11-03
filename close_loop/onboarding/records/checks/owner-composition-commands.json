@@ -1,0 +1,54 @@
+[
+  {
+    "name": "owner-compose-A",
+    "argv": [
+      "/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/envs/platform/bin/python",
+      "-I",
+      "-B",
+      "/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/invoke_management_owner.py",
+      "--source",
+      "/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/management-owner-snapshot",
+      "--input",
+      "/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/inputs/composition-input-A.json",
+      "--output",
+      "/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/outputs/composition-owner-A.json"
+    ],
+    "environment_keys": [
+      "HOME",
+      "PATH",
+      "PYTHONDONTWRITEBYTECODE",
+      "PYTHONNOUSERSITE",
+      "TMPDIR"
+    ],
+    "cwd": "/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0",
+    "started_at": "2026-11-03T13:06:24.226468+00:00",
+    "seconds": 0.18755329097621143,
+    "exit_code": 0
+  },
+  {
+    "name": "owner-compose-B",
+    "argv": [
+      "/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/envs/platform/bin/python",
+      "-I",
+      "-B",
+      "/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/invoke_management_owner.py",
+      "--source",
+      "/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/management-owner-snapshot",
+      "--input",
+      "/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/inputs/composition-input-B.json",
+      "--output",
+      "/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/outputs/composition-owner-B.json"
+    ],
+    "environment_keys": [
+      "HOME",
+      "PATH",
+      "PYTHONDONTWRITEBYTECODE",
+      "PYTHONNOUSERSITE",
+      "TMPDIR"
+    ],
+    "cwd": "/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0",
+    "started_at": "2026-11-03T13:06:24.513076+00:00",
+    "seconds": 0.1379515000153333,
+    "exit_code": 0
+  }
+]

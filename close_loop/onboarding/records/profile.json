@@ -1,0 +1,563 @@
+{
+  "schema": "ceb.candidate-workload.v0.1",
+  "version": "0.1",
+  "profile_id": "expense-final-approval-source-0.1",
+  "provenance_ref": "github:choreoatlas/Expense-Approval/issues/3",
+  "subject": "expense-approval-reference",
+  "subject_ref": "repository:github:choreoatlas/Expense-Approval",
+  "governance_domain": "reference-sample",
+  "producer_repository": "choreoatlas/CloseLoop_Evidence_Builder",
+  "target_repository": "choreoatlas/Expense-Approval",
+  "functions": [
+    "FL-draft-submit",
+    "FL-authority-safe-review",
+    "FL-general-manager-final-approval",
+    "FL-reject-revise-resubmit",
+    "FL-approval-revision-binding",
+    "FL-history",
+    "FL-durable",
+    "FL-browser"
+  ],
+  "slices": [
+    {
+      "id": "model",
+      "source_path": "close_loop/attempt-1/model.v0.2.json",
+      "claim": "Observe pinned Expense source bytes: close_loop/attempt-1/model.v0.2.json",
+      "method": "GitHub API read; original CEB Git blob and SHA-256 verification",
+      "scope": "source visibility at independently selected product commit",
+      "limits": [
+        "Source visibility does not execute the path",
+        "CI job success does not itself judge a Function"
+      ],
+      "what_it_proves": [
+        "Exact source bytes at the requested product commit/tree"
+      ],
+      "what_it_does_not_prove": [
+        "Function validity",
+        "Governance acceptance",
+        "Per-test execution or coverage"
+      ]
+    },
+    {
+      "id": "function-model",
+      "source_path": "close_loop/attempt-1/function-model.v0.2.json",
+      "claim": "Observe pinned Expense source bytes: close_loop/attempt-1/function-model.v0.2.json",
+      "method": "GitHub API read; original CEB Git blob and SHA-256 verification",
+      "scope": "source visibility at independently selected product commit",
+      "limits": [
+        "Source visibility does not execute the path",
+        "CI job success does not itself judge a Function"
+      ],
+      "what_it_proves": [
+        "Exact source bytes at the requested product commit/tree"
+      ],
+      "what_it_does_not_prove": [
+        "Function validity",
+        "Governance acceptance",
+        "Per-test execution or coverage"
+      ]
+    },
+    {
+      "id": "execution-design",
+      "source_path": "close_loop/attempt-1/execution-design.v0.2.json",
+      "claim": "Observe pinned Expense source bytes: close_loop/attempt-1/execution-design.v0.2.json",
+      "method": "GitHub API read; original CEB Git blob and SHA-256 verification",
+      "scope": "source visibility at independently selected product commit",
+      "limits": [
+        "Source visibility does not execute the path",
+        "CI job success does not itself judge a Function"
+      ],
+      "what_it_proves": [
+        "Exact source bytes at the requested product commit/tree"
+      ],
+      "what_it_does_not_prove": [
+        "Function validity",
+        "Governance acceptance",
+        "Per-test execution or coverage"
+      ]
+    },
+    {
+      "id": "evidence-requirements",
+      "source_path": "close_loop/attempt-1/evidence-requirements.v0.2.json",
+      "claim": "Observe pinned Expense source bytes: close_loop/attempt-1/evidence-requirements.v0.2.json",
+      "method": "GitHub API read; original CEB Git blob and SHA-256 verification",
+      "scope": "source visibility at independently selected product commit",
+      "limits": [
+        "Source visibility does not execute the path",
+        "CI job success does not itself judge a Function"
+      ],
+      "what_it_proves": [
+        "Exact source bytes at the requested product commit/tree"
+      ],
+      "what_it_does_not_prove": [
+        "Function validity",
+        "Governance acceptance",
+        "Per-test execution or coverage"
+      ]
+    },
+    {
+      "id": "domain-source",
+      "source_path": "expense/domain.py",
+      "claim": "Observe pinned Expense source bytes: expense/domain.py",
+      "method": "GitHub API read; original CEB Git blob and SHA-256 verification",
+      "scope": "source visibility at independently selected product commit",
+      "limits": [
+        "Source visibility does not execute the path",
+        "CI job success does not itself judge a Function"
+      ],
+      "what_it_proves": [
+        "Exact source bytes at the requested product commit/tree"
+      ],
+      "what_it_does_not_prove": [
+        "Function validity",
+        "Governance acceptance",
+        "Per-test execution or coverage"
+      ]
+    },
+    {
+      "id": "store-source",
+      "source_path": "expense/store.py",
+      "claim": "Observe pinned Expense source bytes: expense/store.py",
+      "method": "GitHub API read; original CEB Git blob and SHA-256 verification",
+      "scope": "source visibility at independently selected product commit",
+      "limits": [
+        "Source visibility does not execute the path",
+        "CI job success does not itself judge a Function"
+      ],
+      "what_it_proves": [
+        "Exact source bytes at the requested product commit/tree"
+      ],
+      "what_it_does_not_prove": [
+        "Function validity",
+        "Governance acceptance",
+        "Per-test execution or coverage"
+      ]
+    },
+    {
+      "id": "http-source",
+      "source_path": "expense/http.py",
+      "claim": "Observe pinned Expense source bytes: expense/http.py",
+      "method": "GitHub API read; original CEB Git blob and SHA-256 verification",
+      "scope": "source visibility at independently selected product commit",
+      "limits": [
+        "Source visibility does not execute the path",
+        "CI job success does not itself judge a Function"
+      ],
+      "what_it_proves": [
+        "Exact source bytes at the requested product commit/tree"
+      ],
+      "what_it_does_not_prove": [
+        "Function validity",
+        "Governance acceptance",
+        "Per-test execution or coverage"
+      ]
+    },
+    {
+      "id": "application-entry",
+      "source_path": "app.py",
+      "claim": "Observe pinned Expense source bytes: app.py",
+      "method": "GitHub API read; original CEB Git blob and SHA-256 verification",
+      "scope": "source visibility at independently selected product commit",
+      "limits": [
+        "Source visibility does not execute the path",
+        "CI job success does not itself judge a Function"
+      ],
+      "what_it_proves": [
+        "Exact source bytes at the requested product commit/tree"
+      ],
+      "what_it_does_not_prove": [
+        "Function validity",
+        "Governance acceptance",
+        "Per-test execution or coverage"
+      ]
+    },
+    {
+      "id": "browser-source",
+      "source_path": "static/app.js",
+      "claim": "Observe pinned Expense source bytes: static/app.js",
+      "method": "GitHub API read; original CEB Git blob and SHA-256 verification",
+      "scope": "source visibility at independently selected product commit",
+      "limits": [
+        "Source visibility does not execute the path",
+        "CI job success does not itself judge a Function"
+      ],
+      "what_it_proves": [
+        "Exact source bytes at the requested product commit/tree"
+      ],
+      "what_it_does_not_prove": [
+        "Function validity",
+        "Governance acceptance",
+        "Per-test execution or coverage"
+      ]
+    },
+    {
+      "id": "browser-html",
+      "source_path": "static/index.html",
+      "claim": "Observe pinned Expense source bytes: static/index.html",
+      "method": "GitHub API read; original CEB Git blob and SHA-256 verification",
+      "scope": "source visibility at independently selected product commit",
+      "limits": [
+        "Source visibility does not execute the path",
+        "CI job success does not itself judge a Function"
+      ],
+      "what_it_proves": [
+        "Exact source bytes at the requested product commit/tree"
+      ],
+      "what_it_does_not_prove": [
+        "Function validity",
+        "Governance acceptance",
+        "Per-test execution or coverage"
+      ]
+    },
+    {
+      "id": "browser-styles",
+      "source_path": "static/styles.css",
+      "claim": "Observe pinned Expense source bytes: static/styles.css",
+      "method": "GitHub API read; original CEB Git blob and SHA-256 verification",
+      "scope": "source visibility at independently selected product commit",
+      "limits": [
+        "Source visibility does not execute the path",
+        "CI job success does not itself judge a Function"
+      ],
+      "what_it_proves": [
+        "Exact source bytes at the requested product commit/tree"
+      ],
+      "what_it_does_not_prove": [
+        "Function validity",
+        "Governance acceptance",
+        "Per-test execution or coverage"
+      ]
+    },
+    {
+      "id": "domain-store-tests",
+      "source_path": "tests/test_domain_store.py",
+      "claim": "Observe pinned Expense source bytes: tests/test_domain_store.py",
+      "method": "GitHub API read; original CEB Git blob and SHA-256 verification",
+      "scope": "source visibility at independently selected product commit",
+      "limits": [
+        "Source visibility does not execute the path",
+        "CI job success does not itself judge a Function"
+      ],
+      "what_it_proves": [
+        "Exact source bytes at the requested product commit/tree"
+      ],
+      "what_it_does_not_prove": [
+        "Function validity",
+        "Governance acceptance",
+        "Per-test execution or coverage"
+      ]
+    },
+    {
+      "id": "http-tests",
+      "source_path": "tests/test_http.py",
+      "claim": "Observe pinned Expense source bytes: tests/test_http.py",
+      "method": "GitHub API read; original CEB Git blob and SHA-256 verification",
+      "scope": "source visibility at independently selected product commit",
+      "limits": [
+        "Source visibility does not execute the path",
+        "CI job success does not itself judge a Function"
+      ],
+      "what_it_proves": [
+        "Exact source bytes at the requested product commit/tree"
+      ],
+      "what_it_does_not_prove": [
+        "Function validity",
+        "Governance acceptance",
+        "Per-test execution or coverage"
+      ]
+    },
+    {
+      "id": "browser-tests",
+      "source_path": "tests/test_browser.py",
+      "claim": "Observe pinned Expense source bytes: tests/test_browser.py",
+      "method": "GitHub API read; original CEB Git blob and SHA-256 verification",
+      "scope": "source visibility at independently selected product commit",
+      "limits": [
+        "Source visibility does not execute the path",
+        "CI job success does not itself judge a Function"
+      ],
+      "what_it_proves": [
+        "Exact source bytes at the requested product commit/tree"
+      ],
+      "what_it_does_not_prove": [
+        "Function validity",
+        "Governance acceptance",
+        "Per-test execution or coverage"
+      ]
+    },
+    {
+      "id": "restart-tests",
+      "source_path": "tests/test_process_restart.py",
+      "claim": "Observe pinned Expense source bytes: tests/test_process_restart.py",
+      "method": "GitHub API read; original CEB Git blob and SHA-256 verification",
+      "scope": "source visibility at independently selected product commit",
+      "limits": [
+        "Source visibility does not execute the path",
+        "CI job success does not itself judge a Function"
+      ],
+      "what_it_proves": [
+        "Exact source bytes at the requested product commit/tree"
+      ],
+      "what_it_does_not_prove": [
+        "Function validity",
+        "Governance acceptance",
+        "Per-test execution or coverage"
+      ]
+    },
+    {
+      "id": "workflow",
+      "source_path": ".github/workflows/ci.yml",
+      "claim": "Observe pinned Expense source bytes: .github/workflows/ci.yml",
+      "method": "GitHub API read; original CEB Git blob and SHA-256 verification",
+      "scope": "source visibility at independently selected product commit",
+      "limits": [
+        "Source visibility does not execute the path",
+        "CI job success does not itself judge a Function"
+      ],
+      "what_it_proves": [
+        "Exact source bytes at the requested product commit/tree"
+      ],
+      "what_it_does_not_prove": [
+        "Function validity",
+        "Governance acceptance",
+        "Per-test execution or coverage"
+      ]
+    },
+    {
+      "id": "requirements",
+      "source_path": "requirements-dev.txt",
+      "claim": "Observe pinned Expense source bytes: requirements-dev.txt",
+      "method": "GitHub API read; original CEB Git blob and SHA-256 verification",
+      "scope": "source visibility at independently selected product commit",
+      "limits": [
+        "Source visibility does not execute the path",
+        "CI job success does not itself judge a Function"
+      ],
+      "what_it_proves": [
+        "Exact source bytes at the requested product commit/tree"
+      ],
+      "what_it_does_not_prove": [
+        "Function validity",
+        "Governance acceptance",
+        "Per-test execution or coverage"
+      ]
+    },
+    {
+      "id": "objects",
+      "source_path": "close_loop/onboarding/objects.json",
+      "claim": "Observe pinned Expense source bytes: close_loop/onboarding/objects.json",
+      "method": "GitHub API read; original CEB Git blob and SHA-256 verification",
+      "scope": "source visibility at independently selected product commit",
+      "limits": [
+        "Source visibility does not execute the path",
+        "CI job success does not itself judge a Function"
+      ],
+      "what_it_proves": [
+        "Exact source bytes at the requested product commit/tree"
+      ],
+      "what_it_does_not_prove": [
+        "Function validity",
+        "Governance acceptance",
+        "Per-test execution or coverage"
+      ]
+    },
+    {
+      "id": "conditions",
+      "source_path": "close_loop/onboarding/conditions.json",
+      "claim": "Observe pinned Expense source bytes: close_loop/onboarding/conditions.json",
+      "method": "GitHub API read; original CEB Git blob and SHA-256 verification",
+      "scope": "source visibility at independently selected product commit",
+      "limits": [
+        "Source visibility does not execute the path",
+        "CI job success does not itself judge a Function"
+      ],
+      "what_it_proves": [
+        "Exact source bytes at the requested product commit/tree"
+      ],
+      "what_it_does_not_prove": [
+        "Function validity",
+        "Governance acceptance",
+        "Per-test execution or coverage"
+      ]
+    },
+    {
+      "id": "composition",
+      "source_path": "close_loop/onboarding/composition.json",
+      "claim": "Observe pinned Expense source bytes: close_loop/onboarding/composition.json",
+      "method": "GitHub API read; original CEB Git blob and SHA-256 verification",
+      "scope": "source visibility at independently selected product commit",
+      "limits": [
+        "Source visibility does not execute the path",
+        "CI job success does not itself judge a Function"
+      ],
+      "what_it_proves": [
+        "Exact source bytes at the requested product commit/tree"
+      ],
+      "what_it_does_not_prove": [
+        "Function validity",
+        "Governance acceptance",
+        "Per-test execution or coverage"
+      ]
+    },
+    {
+      "id": "observer",
+      "source_path": "close_loop/onboarding/observe.py",
+      "claim": "Observe pinned Expense source bytes: close_loop/onboarding/observe.py",
+      "method": "GitHub API read; original CEB Git blob and SHA-256 verification",
+      "scope": "source visibility at independently selected product commit",
+      "limits": [
+        "Source visibility does not execute the path",
+        "CI job success does not itself judge a Function"
+      ],
+      "what_it_proves": [
+        "Exact source bytes at the requested product commit/tree"
+      ],
+      "what_it_does_not_prove": [
+        "Function validity",
+        "Governance acceptance",
+        "Per-test execution or coverage"
+      ]
+    }
+  ],
+  "coverage": {
+    "FL-draft-submit": [
+      "model",
+      "function-model",
+      "execution-design",
+      "evidence-requirements",
+      "workflow",
+      "requirements",
+      "objects",
+      "domain-source",
+      "store-source",
+      "http-source",
+      "application-entry",
+      "browser-source",
+      "browser-html",
+      "browser-styles",
+      "domain-store-tests",
+      "http-tests",
+      "browser-tests"
+    ],
+    "FL-authority-safe-review": [
+      "model",
+      "function-model",
+      "execution-design",
+      "evidence-requirements",
+      "workflow",
+      "requirements",
+      "objects",
+      "domain-source",
+      "store-source",
+      "http-source",
+      "application-entry",
+      "domain-store-tests",
+      "http-tests",
+      "browser-tests"
+    ],
+    "FL-general-manager-final-approval": [
+      "model",
+      "function-model",
+      "execution-design",
+      "evidence-requirements",
+      "workflow",
+      "requirements",
+      "objects",
+      "domain-source",
+      "store-source",
+      "http-source",
+      "application-entry",
+      "browser-source",
+      "browser-html",
+      "browser-styles",
+      "domain-store-tests",
+      "http-tests",
+      "browser-tests",
+      "restart-tests",
+      "conditions",
+      "composition",
+      "observer"
+    ],
+    "FL-reject-revise-resubmit": [
+      "model",
+      "function-model",
+      "execution-design",
+      "evidence-requirements",
+      "workflow",
+      "requirements",
+      "objects",
+      "domain-source",
+      "store-source",
+      "http-source",
+      "domain-store-tests",
+      "http-tests",
+      "browser-tests"
+    ],
+    "FL-approval-revision-binding": [
+      "model",
+      "function-model",
+      "execution-design",
+      "evidence-requirements",
+      "workflow",
+      "requirements",
+      "objects",
+      "domain-source",
+      "store-source",
+      "http-source",
+      "domain-store-tests",
+      "http-tests"
+    ],
+    "FL-history": [
+      "model",
+      "function-model",
+      "execution-design",
+      "evidence-requirements",
+      "workflow",
+      "requirements",
+      "objects",
+      "store-source",
+      "http-source",
+      "browser-source",
+      "domain-store-tests",
+      "http-tests",
+      "browser-tests"
+    ],
+    "FL-durable": [
+      "model",
+      "function-model",
+      "execution-design",
+      "evidence-requirements",
+      "workflow",
+      "requirements",
+      "objects",
+      "store-source",
+      "application-entry",
+      "domain-store-tests",
+      "restart-tests"
+    ],
+    "FL-browser": [
+      "model",
+      "function-model",
+      "execution-design",
+      "evidence-requirements",
+      "workflow",
+      "requirements",
+      "objects",
+      "http-source",
+      "application-entry",
+      "browser-source",
+      "browser-html",
+      "browser-styles",
+      "browser-tests"
+    ]
+  },
+  "authority_boundary": {
+    "non_authority": true,
+    "not_production_truth": true,
+    "formal_import_allowed": false,
+    "admission_effect": "none",
+    "db_write_allowed": false,
+    "upload_performed": false,
+    "official_apply_run": false
+  }
+}

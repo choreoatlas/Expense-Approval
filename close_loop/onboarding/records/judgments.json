@@ -1,0 +1,1303 @@
+{
+  "judgments": [
+    {
+      "assessor": "agent:codex:expense3:controller-function-assessor",
+      "basis": {
+        "candidate_sha256": "17b5f7c9e56154f9524f31be0295cd3fa1dc8b50cfa4f9673db52f488dc663fd",
+        "evidence_refs": [
+          "observations-B.json#sha256=e134715854cb90e17c34075ddb3a4a754f464495f2cd81e37b59339810643d32",
+          "https://github.com/choreoatlas/Expense-Approval/actions/runs/41640672264"
+        ],
+        "execution_records": [
+          {
+            "ref": "ci-41640672264-1/EL-domain-rules",
+            "revision": "sha256:8207f1f92ee637bc1e9cd75c921b619752ed081ab8b102045dfb9ad270ec8cd3"
+          },
+          {
+            "ref": "ci-41640672264-1/EL-ledger-store",
+            "revision": "sha256:7374b5146d0f6219e5189d990cd25e7247cb274360a4346e9c85b5d860b91268"
+          },
+          {
+            "ref": "ci-41640672264-1/EL-http",
+            "revision": "sha256:2ec3a3db8ec5a4e7c46c8d6dcd24ab8dd08ae7af70badb02e169bdf218218829"
+          },
+          {
+            "ref": "ci-41640672264-1/EL-browser-ui",
+            "revision": "sha256:7bc38db347b4be3b1f2a73dde8d05ebb67909a41eea874d954df2adfd259b205"
+          },
+          {
+            "ref": "ci-41640672264-1/EL-verification-environment",
+            "revision": "sha256:c362780b2a5c10b0fd723dbb3f85b3f3bf7097c0569cad8139aceb16a2441074"
+          }
+        ],
+        "material_sha256": "b497540b4a716104dd308b8361b73ad05978a6f26f09494db34efe5ea7ff3da8",
+        "product_commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+        "profile_sha256": "dc017cde4c5134fc4eadcbff4fb3010b8a84b83b5cff45e499e652a91f2466f2",
+        "slice_ids": [
+          "model",
+          "function-model",
+          "execution-design",
+          "evidence-requirements",
+          "workflow",
+          "requirements",
+          "objects",
+          "domain-source",
+          "store-source",
+          "http-source",
+          "application-entry",
+          "browser-source",
+          "browser-html",
+          "browser-styles",
+          "domain-store-tests",
+          "http-tests",
+          "browser-tests"
+        ]
+      },
+      "function_id": "FL-draft-submit",
+      "judgment_id": "inspection-statement:expense3:FL-draft-submit",
+      "limits": [
+        "No external identity provider or production security claim.",
+        "Current outer scope is assembly inspection, not replacement of the original Function scope",
+        "No new Governance/admission/effective-state/downstream permission",
+        "Only the selected final-review Function has a new candidate assessment set"
+      ],
+      "original": {
+        "statement": {
+          "assessor": "agent:codex:expense3:controller-function-assessor",
+          "basis": {
+            "candidate_sha256": "17b5f7c9e56154f9524f31be0295cd3fa1dc8b50cfa4f9673db52f488dc663fd",
+            "evidence_refs": [
+              "observations-B.json#sha256=e134715854cb90e17c34075ddb3a4a754f464495f2cd81e37b59339810643d32",
+              "https://github.com/choreoatlas/Expense-Approval/actions/runs/41640672264"
+            ],
+            "execution_records": [
+              {
+                "ref": "ci-41640672264-1/EL-domain-rules",
+                "revision": "sha256:8207f1f92ee637bc1e9cd75c921b619752ed081ab8b102045dfb9ad270ec8cd3"
+              },
+              {
+                "ref": "ci-41640672264-1/EL-ledger-store",
+                "revision": "sha256:7374b5146d0f6219e5189d990cd25e7247cb274360a4346e9c85b5d860b91268"
+              },
+              {
+                "ref": "ci-41640672264-1/EL-http",
+                "revision": "sha256:2ec3a3db8ec5a4e7c46c8d6dcd24ab8dd08ae7af70badb02e169bdf218218829"
+              },
+              {
+                "ref": "ci-41640672264-1/EL-browser-ui",
+                "revision": "sha256:7bc38db347b4be3b1f2a73dde8d05ebb67909a41eea874d954df2adfd259b205"
+              },
+              {
+                "ref": "ci-41640672264-1/EL-verification-environment",
+                "revision": "sha256:c362780b2a5c10b0fd723dbb3f85b3f3bf7097c0569cad8139aceb16a2441074"
+              }
+            ],
+            "material_sha256": "b497540b4a716104dd308b8361b73ad05978a6f26f09494db34efe5ea7ff3da8",
+            "product_commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+            "profile_sha256": "dc017cde4c5134fc4eadcbff4fb3010b8a84b83b5cff45e499e652a91f2466f2",
+            "slice_ids": [
+              "model",
+              "function-model",
+              "execution-design",
+              "evidence-requirements",
+              "workflow",
+              "requirements",
+              "objects",
+              "domain-source",
+              "store-source",
+              "http-source",
+              "application-entry",
+              "browser-source",
+              "browser-html",
+              "browser-styles",
+              "domain-store-tests",
+              "http-tests",
+              "browser-tests"
+            ]
+          },
+          "function_id": "FL-draft-submit",
+          "historical_acceptance_ref": "https://github.com/choreoatlas/Expense-Approval/issues/1#issuecomment-5571375864",
+          "judgment_id": "inspection-statement:expense3:FL-draft-submit",
+          "limits": [
+            "No external identity provider or production security claim.",
+            "Current outer scope is assembly inspection, not replacement of the original Function scope",
+            "No new Governance/admission/effective-state/downstream permission",
+            "Only the selected final-review Function has a new candidate assessment set"
+          ],
+          "original_path_definition": {
+            "capability_gap": "Need revision-bound evidence for successful draft edit, invalid edit without mutation, and browser execution of edit before submit.",
+            "current_capability_state": "Draft creation, store edit, PATCH transport and submission exist; browser draft edit was added after the governance change but has not yet been re-evidenced on the corrected Function basis.",
+            "id": "FL-draft-submit",
+            "limits": "No external identity provider or production security claim.",
+            "required_evidence": [
+              "draft create",
+              "draft edit success",
+              "invalid draft edit preserves state",
+              "submit exact current revision",
+              "browser edit then submit"
+            ],
+            "required_execution_support": [
+              "EL-domain-rules",
+              "EL-ledger-store",
+              "EL-http",
+              "EL-browser-ui",
+              "EL-verification-environment"
+            ],
+            "scope": "local single-organization reference sample",
+            "stale_basis": "Prior incomplete evidence basis at 665944bcd...",
+            "target_path_type": "employee expense preparation and submission",
+            "upstream_governance_need": "GN1"
+          },
+          "reason": "This original Function definition and historical scope are preserved. The new source/CI material is available, but this Function is explicitly not rejudged by this inspection.",
+          "revision": "authored-expense3-inspection-v0.1",
+          "scope": "Expense source and explicit judgment inspection; final-review pilot result attached within its original scope",
+          "scope_interpretation": "The outer scope describes only this common assembly/inspection; original_path_definition.scope is unchanged",
+          "state": "not_rejudged",
+          "target_path_ref": "repository:github:choreoatlas/Expense-Approval:function:FL-draft-submit"
+        }
+      },
+      "provenance": {
+        "bytes_base64": "ewogICJzdGF0ZW1lbnQiOiB7CiAgICAiYXNzZXNzb3IiOiAiYWdlbnQ6Y29kZXg6ZXhwZW5zZTM6Y29udHJvbGxlci1mdW5jdGlvbi1hc3Nlc3NvciIsCiAgICAiYmFzaXMiOiB7CiAgICAgICJjYW5kaWRhdGVfc2hhMjU2IjogIjE3YjVmN2M5ZTU2MTU0Zjk1MjRmMzFiZTAyOTVjZDNmYTFkYzhiNTBjZmE0Zjk2NzNkYjUyZjQ4OGRjNjYzZmQiLAogICAgICAiZXZpZGVuY2VfcmVmcyI6IFsKICAgICAgICAib2JzZXJ2YXRpb25zLUIuanNvbiNzaGEyNTY9ZTEzNDcxNTg1NGNiOTBlMTdjMzQwNzVkZGIzYTRhNzU0ZjQ2NDQ5NWYyY2Q4MWUzN2I1OTMzOTgxMDY0M2QzMiIsCiAgICAgICAgImh0dHBzOi8vZ2l0aHViLmNvbS9jaG9yZW9hdGxhcy9FeHBlbnNlLUFwcHJvdmFsL2FjdGlvbnMvcnVucy80MTY0MDY3MjI2NCIKICAgICAgXSwKICAgICAgImV4ZWN1dGlvbl9yZWNvcmRzIjogWwogICAgICAgIHsKICAgICAgICAgICJyZWYiOiAiY2ktNDE2NDA2NzIyNjQtMS9FTC1kb21haW4tcnVsZXMiLAogICAgICAgICAgInJldmlzaW9uIjogInNoYTI1Njo4MjA3ZjFmOTJlZTYzN2JjMWU5Y2Q3NWM5MjFiNjE5NzUyZWQwODFhYjhiMTAyMDQ1ZGZiOWFkMjcwZWM4Y2QzIgogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgInJlZiI6ICJjaS00MTY0MDY3MjI2NC0xL0VMLWxlZGdlci1zdG9yZSIsCiAgICAgICAgICAicmV2aXNpb24iOiAic2hhMjU2OjczNzRiNTE0NmQwZjYyMTllNTE4OWQ5OTBjZDI1ZTcyNDdjYjI3NDM2MGE0MzQ2ZTljODViNWQ4NjBiOTEyNjgiCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAicmVmIjogImNpLTQxNjQwNjcyMjY0LTEvRUwtaHR0cCIsCiAgICAgICAgICAicmV2aXNpb24iOiAic2hhMjU2OjJlYzNhM2RiOGVjNWE0ZTdjNDZjOGQ2ZGNkMjRhYjhkZDA4YWU3YWY3MGJhZGIwMmUxNjliZGYyMTgyMTg4MjkiCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAicmVmIjogImNpLTQxNjQwNjcyMjY0LTEvRUwtYnJvd3Nlci11aSIsCiAgICAgICAgICAicmV2aXNpb24iOiAic2hhMjU2OjdiYzM4ZGIzNDdiNGJlM2IxZjJhNzNkZGU4ZDA1ZWJiNjc5MDlhNDFlZWE4NzRkOTU0ZGYyYWRmZDI1OWIyMDUiCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAicmVmIjogImNpLTQxNjQwNjcyMjY0LTEvRUwtdmVyaWZpY2F0aW9uLWVudmlyb25tZW50IiwKICAgICAgICAgICJyZXZpc2lvbiI6ICJzaGEyNTY6YzM2Mjc4MGIyYTVjMTBiMGZkNzIzZGJiM2Y4NWIzZjNiZjcwOTdjMDU2OWNhZDgxMzlhY2ViMTZhMjQ0MTA3NCIKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJtYXRlcmlhbF9zaGEyNTYiOiAiYjQ5NzU0MGI0YTcxNjEwNGRkMzA4YjgzNjFiNzNhZDA1OTc4YTZmMjZmMDk0OTRkYjM0ZWZlNWVhN2ZmM2RhOCIsCiAgICAgICJwcm9kdWN0X2NvbW1pdCI6ICI1N2ZhMmIzNTUxYTBlOGY5MjQzMjQxY2IyNjA0ZDAzY2EwOWIxOWQ4IiwKICAgICAgInByb2ZpbGVfc2hhMjU2IjogImRjMDE3Y2RlNGM1MTM0ZmM0ZWFkY2JmZjRmYjMwMTBiOGE4NGI4M2I1Y2ZmNDVlNDk5ZTY1MmE5MWYyNDY2ZjIiLAogICAgICAic2xpY2VfaWRzIjogWwogICAgICAgICJtb2RlbCIsCiAgICAgICAgImZ1bmN0aW9uLW1vZGVsIiwKICAgICAgICAiZXhlY3V0aW9uLWRlc2lnbiIsCiAgICAgICAgImV2aWRlbmNlLXJlcXVpcmVtZW50cyIsCiAgICAgICAgIndvcmtmbG93IiwKICAgICAgICAicmVxdWlyZW1lbnRzIiwKICAgICAgICAib2JqZWN0cyIsCiAgICAgICAgImRvbWFpbi1zb3VyY2UiLAogICAgICAgICJzdG9yZS1zb3VyY2UiLAogICAgICAgICJodHRwLXNvdXJjZSIsCiAgICAgICAgImFwcGxpY2F0aW9uLWVudHJ5IiwKICAgICAgICAiYnJvd3Nlci1zb3VyY2UiLAogICAgICAgICJicm93c2VyLWh0bWwiLAogICAgICAgICJicm93c2VyLXN0eWxlcyIsCiAgICAgICAgImRvbWFpbi1zdG9yZS10ZXN0cyIsCiAgICAgICAgImh0dHAtdGVzdHMiLAogICAgICAgICJicm93c2VyLXRlc3RzIgogICAgICBdCiAgICB9LAogICAgImZ1bmN0aW9uX2lkIjogIkZMLWRyYWZ0LXN1Ym1pdCIsCiAgICAiaGlzdG9yaWNhbF9hY2NlcHRhbmNlX3JlZiI6ICJodHRwczovL2dpdGh1Yi5jb20vY2hvcmVvYXRsYXMvRXhwZW5zZS1BcHByb3ZhbC9pc3N1ZXMvMSNpc3N1ZWNvbW1lbnQtNTU3MTM3NTg2NCIsCiAgICAianVkZ21lbnRfaWQiOiAiaW5zcGVjdGlvbi1zdGF0ZW1lbnQ6ZXhwZW5zZTM6RkwtZHJhZnQtc3VibWl0IiwKICAgICJsaW1pdHMiOiBbCiAgICAgICJObyBleHRlcm5hbCBpZGVudGl0eSBwcm92aWRlciBvciBwcm9kdWN0aW9uIHNlY3VyaXR5IGNsYWltLiIsCiAgICAgICJDdXJyZW50IG91dGVyIHNjb3BlIGlzIGFzc2VtYmx5IGluc3BlY3Rpb24sIG5vdCByZXBsYWNlbWVudCBvZiB0aGUgb3JpZ2luYWwgRnVuY3Rpb24gc2NvcGUiLAogICAgICAiTm8gbmV3IEdvdmVybmFuY2UvYWRtaXNzaW9uL2VmZmVjdGl2ZS1zdGF0ZS9kb3duc3RyZWFtIHBlcm1pc3Npb24iLAogICAgICAiT25seSB0aGUgc2VsZWN0ZWQgZmluYWwtcmV2aWV3IEZ1bmN0aW9uIGhhcyBhIG5ldyBjYW5kaWRhdGUgYXNzZXNzbWVudCBzZXQiCiAgICBdLAogICAgIm9yaWdpbmFsX3BhdGhfZGVmaW5pdGlvbiI6IHsKICAgICAgImNhcGFiaWxpdHlfZ2FwIjogIk5lZWQgcmV2aXNpb24tYm91bmQgZXZpZGVuY2UgZm9yIHN1Y2Nlc3NmdWwgZHJhZnQgZWRpdCwgaW52YWxpZCBlZGl0IHdpdGhvdXQgbXV0YXRpb24sIGFuZCBicm93c2VyIGV4ZWN1dGlvbiBvZiBlZGl0IGJlZm9yZSBzdWJtaXQuIiwKICAgICAgImN1cnJlbnRfY2FwYWJpbGl0eV9zdGF0ZSI6ICJEcmFmdCBjcmVhdGlvbiwgc3RvcmUgZWRpdCwgUEFUQ0ggdHJhbnNwb3J0IGFuZCBzdWJtaXNzaW9uIGV4aXN0OyBicm93c2VyIGRyYWZ0IGVkaXQgd2FzIGFkZGVkIGFmdGVyIHRoZSBnb3Zlcm5hbmNlIGNoYW5nZSBidXQgaGFzIG5vdCB5ZXQgYmVlbiByZS1ldmlkZW5jZWQgb24gdGhlIGNvcnJlY3RlZCBGdW5jdGlvbiBiYXNpcy4iLAogICAgICAiaWQiOiAiRkwtZHJhZnQtc3VibWl0IiwKICAgICAgImxpbWl0cyI6ICJObyBleHRlcm5hbCBpZGVudGl0eSBwcm92aWRlciBvciBwcm9kdWN0aW9uIHNlY3VyaXR5IGNsYWltLiIsCiAgICAgICJyZXF1aXJlZF9ldmlkZW5jZSI6IFsKICAgICAgICAiZHJhZnQgY3JlYXRlIiwKICAgICAgICAiZHJhZnQgZWRpdCBzdWNjZXNzIiwKICAgICAgICAiaW52YWxpZCBkcmFmdCBlZGl0IHByZXNlcnZlcyBzdGF0ZSIsCiAgICAgICAgInN1Ym1pdCBleGFjdCBjdXJyZW50IHJldmlzaW9uIiwKICAgICAgICAiYnJvd3NlciBlZGl0IHRoZW4gc3VibWl0IgogICAgICBdLAogICAgICAicmVxdWlyZWRfZXhlY3V0aW9uX3N1cHBvcnQiOiBbCiAgICAgICAgIkVMLWRvbWFpbi1ydWxlcyIsCiAgICAgICAgIkVMLWxlZGdlci1zdG9yZSIsCiAgICAgICAgIkVMLWh0dHAiLAogICAgICAgICJFTC1icm93c2VyLXVpIiwKICAgICAgICAiRUwtdmVyaWZpY2F0aW9uLWVudmlyb25tZW50IgogICAgICBdLAogICAgICAic2NvcGUiOiAibG9jYWwgc2luZ2xlLW9yZ2FuaXphdGlvbiByZWZlcmVuY2Ugc2FtcGxlIiwKICAgICAgInN0YWxlX2Jhc2lzIjogIlByaW9yIGluY29tcGxldGUgZXZpZGVuY2UgYmFzaXMgYXQgNjY1OTQ0YmNkLi4uIiwKICAgICAgInRhcmdldF9wYXRoX3R5cGUiOiAiZW1wbG95ZWUgZXhwZW5zZSBwcmVwYXJhdGlvbiBhbmQgc3VibWlzc2lvbiIsCiAgICAgICJ1cHN0cmVhbV9nb3Zlcm5hbmNlX25lZWQiOiAiR04xIgogICAgfSwKICAgICJyZWFzb24iOiAiVGhpcyBvcmlnaW5hbCBGdW5jdGlvbiBkZWZpbml0aW9uIGFuZCBoaXN0b3JpY2FsIHNjb3BlIGFyZSBwcmVzZXJ2ZWQuIFRoZSBuZXcgc291cmNlL0NJIG1hdGVyaWFsIGlzIGF2YWlsYWJsZSwgYnV0IHRoaXMgRnVuY3Rpb24gaXMgZXhwbGljaXRseSBub3QgcmVqdWRnZWQgYnkgdGhpcyBpbnNwZWN0aW9uLiIsCiAgICAicmV2aXNpb24iOiAiYXV0aG9yZWQtZXhwZW5zZTMtaW5zcGVjdGlvbi12MC4xIiwKICAgICJzY29wZSI6ICJFeHBlbnNlIHNvdXJjZSBhbmQgZXhwbGljaXQganVkZ21lbnQgaW5zcGVjdGlvbjsgZmluYWwtcmV2aWV3IHBpbG90IHJlc3VsdCBhdHRhY2hlZCB3aXRoaW4gaXRzIG9yaWdpbmFsIHNjb3BlIiwKICAgICJzY29wZV9pbnRlcnByZXRhdGlvbiI6ICJUaGUgb3V0ZXIgc2NvcGUgZGVzY3JpYmVzIG9ubHkgdGhpcyBjb21tb24gYXNzZW1ibHkvaW5zcGVjdGlvbjsgb3JpZ2luYWxfcGF0aF9kZWZpbml0aW9uLnNjb3BlIGlzIHVuY2hhbmdlZCIsCiAgICAic3RhdGUiOiAibm90X3JlanVkZ2VkIiwKICAgICJ0YXJnZXRfcGF0aF9yZWYiOiAicmVwb3NpdG9yeTpnaXRodWI6Y2hvcmVvYXRsYXMvRXhwZW5zZS1BcHByb3ZhbDpmdW5jdGlvbjpGTC1kcmFmdC1zdWJtaXQiCiAgfQp9Cg==",
+        "kind": "authored",
+        "pointer": "/statement",
+        "ref": "authoring/FL-draft-submit.json",
+        "revision": "authored-expense3-inspection-v0.1",
+        "sha256": "043aa697982580df44e63ae0ff769554b2e5b27e84fa9c849362513d96e29f74"
+      },
+      "reason": "This original Function definition and historical scope are preserved. The new source/CI material is available, but this Function is explicitly not rejudged by this inspection.",
+      "revision": "authored-expense3-inspection-v0.1",
+      "scope": "Expense source and explicit judgment inspection; final-review pilot result attached within its original scope",
+      "state": "not_rejudged",
+      "target_path_ref": "repository:github:choreoatlas/Expense-Approval:function:FL-draft-submit"
+    },
+    {
+      "assessor": "agent:codex:expense3:controller-function-assessor",
+      "basis": {
+        "candidate_sha256": "17b5f7c9e56154f9524f31be0295cd3fa1dc8b50cfa4f9673db52f488dc663fd",
+        "evidence_refs": [
+          "observations-B.json#sha256=e134715854cb90e17c34075ddb3a4a754f464495f2cd81e37b59339810643d32",
+          "https://github.com/choreoatlas/Expense-Approval/actions/runs/41640672264"
+        ],
+        "execution_records": [
+          {
+            "ref": "ci-41640672264-1/EL-domain-rules",
+            "revision": "sha256:8207f1f92ee637bc1e9cd75c921b619752ed081ab8b102045dfb9ad270ec8cd3"
+          },
+          {
+            "ref": "ci-41640672264-1/EL-ledger-store",
+            "revision": "sha256:7374b5146d0f6219e5189d990cd25e7247cb274360a4346e9c85b5d860b91268"
+          },
+          {
+            "ref": "ci-41640672264-1/EL-http",
+            "revision": "sha256:2ec3a3db8ec5a4e7c46c8d6dcd24ab8dd08ae7af70badb02e169bdf218218829"
+          },
+          {
+            "ref": "ci-41640672264-1/EL-browser-ui",
+            "revision": "sha256:7bc38db347b4be3b1f2a73dde8d05ebb67909a41eea874d954df2adfd259b205"
+          },
+          {
+            "ref": "ci-41640672264-1/EL-verification-environment",
+            "revision": "sha256:c362780b2a5c10b0fd723dbb3f85b3f3bf7097c0569cad8139aceb16a2441074"
+          }
+        ],
+        "material_sha256": "b497540b4a716104dd308b8361b73ad05978a6f26f09494db34efe5ea7ff3da8",
+        "product_commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+        "profile_sha256": "dc017cde4c5134fc4eadcbff4fb3010b8a84b83b5cff45e499e652a91f2466f2",
+        "slice_ids": [
+          "model",
+          "function-model",
+          "execution-design",
+          "evidence-requirements",
+          "workflow",
+          "requirements",
+          "objects",
+          "domain-source",
+          "store-source",
+          "http-source",
+          "application-entry",
+          "domain-store-tests",
+          "http-tests",
+          "browser-tests"
+        ]
+      },
+      "function_id": "FL-authority-safe-review",
+      "judgment_id": "inspection-statement:expense3:FL-authority-safe-review",
+      "limits": [
+        "Local seeded role assignments only; no enterprise IAM claim.",
+        "Current outer scope is assembly inspection, not replacement of the original Function scope",
+        "No new Governance/admission/effective-state/downstream permission",
+        "Only the selected final-review Function has a new candidate assessment set"
+      ],
+      "original": {
+        "statement": {
+          "assessor": "agent:codex:expense3:controller-function-assessor",
+          "basis": {
+            "candidate_sha256": "17b5f7c9e56154f9524f31be0295cd3fa1dc8b50cfa4f9673db52f488dc663fd",
+            "evidence_refs": [
+              "observations-B.json#sha256=e134715854cb90e17c34075ddb3a4a754f464495f2cd81e37b59339810643d32",
+              "https://github.com/choreoatlas/Expense-Approval/actions/runs/41640672264"
+            ],
+            "execution_records": [
+              {
+                "ref": "ci-41640672264-1/EL-domain-rules",
+                "revision": "sha256:8207f1f92ee637bc1e9cd75c921b619752ed081ab8b102045dfb9ad270ec8cd3"
+              },
+              {
+                "ref": "ci-41640672264-1/EL-ledger-store",
+                "revision": "sha256:7374b5146d0f6219e5189d990cd25e7247cb274360a4346e9c85b5d860b91268"
+              },
+              {
+                "ref": "ci-41640672264-1/EL-http",
+                "revision": "sha256:2ec3a3db8ec5a4e7c46c8d6dcd24ab8dd08ae7af70badb02e169bdf218218829"
+              },
+              {
+                "ref": "ci-41640672264-1/EL-browser-ui",
+                "revision": "sha256:7bc38db347b4be3b1f2a73dde8d05ebb67909a41eea874d954df2adfd259b205"
+              },
+              {
+                "ref": "ci-41640672264-1/EL-verification-environment",
+                "revision": "sha256:c362780b2a5c10b0fd723dbb3f85b3f3bf7097c0569cad8139aceb16a2441074"
+              }
+            ],
+            "material_sha256": "b497540b4a716104dd308b8361b73ad05978a6f26f09494db34efe5ea7ff3da8",
+            "product_commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+            "profile_sha256": "dc017cde4c5134fc4eadcbff4fb3010b8a84b83b5cff45e499e652a91f2466f2",
+            "slice_ids": [
+              "model",
+              "function-model",
+              "execution-design",
+              "evidence-requirements",
+              "workflow",
+              "requirements",
+              "objects",
+              "domain-source",
+              "store-source",
+              "http-source",
+              "application-entry",
+              "domain-store-tests",
+              "http-tests",
+              "browser-tests"
+            ]
+          },
+          "function_id": "FL-authority-safe-review",
+          "historical_acceptance_ref": "https://github.com/choreoatlas/Expense-Approval/issues/1#issuecomment-5571375864",
+          "judgment_id": "inspection-statement:expense3:FL-authority-safe-review",
+          "limits": [
+            "Local seeded role assignments only; no enterprise IAM claim.",
+            "Current outer scope is assembly inspection, not replacement of the original Function scope",
+            "No new Governance/admission/effective-state/downstream permission",
+            "Only the selected final-review Function has a new candidate assessment set"
+          ],
+          "original_path_definition": {
+            "capability_gap": "Need evidence that unassigned actors, employees, and general managers cannot perform first-stage approval; valid approver can approve/reject only the exact submitted revision.",
+            "current_capability_state": "Explicit local actor-role storage and approver-only first-stage review have been implemented after the Owner change.",
+            "id": "FL-authority-safe-review",
+            "limits": "Local seeded role assignments only; no enterprise IAM claim.",
+            "required_evidence": [
+              "authorized approver success",
+              "self-approval denied without mutation",
+              "unassigned actor denied",
+              "wrong-role actor denied",
+              "old revision denied"
+            ],
+            "required_execution_support": [
+              "EL-domain-rules",
+              "EL-ledger-store",
+              "EL-http",
+              "EL-browser-ui",
+              "EL-verification-environment"
+            ],
+            "scope": "first-stage review of current submitted revision",
+            "stale_basis": "Original FL-authority-safe-review assumed one-stage approval and is realigned.",
+            "target_path_type": "first-stage approval",
+            "upstream_governance_need": "GN1"
+          },
+          "reason": "This original Function definition and historical scope are preserved. The new source/CI material is available, but this Function is explicitly not rejudged by this inspection.",
+          "revision": "authored-expense3-inspection-v0.1",
+          "scope": "Expense source and explicit judgment inspection; final-review pilot result attached within its original scope",
+          "scope_interpretation": "The outer scope describes only this common assembly/inspection; original_path_definition.scope is unchanged",
+          "state": "not_rejudged",
+          "target_path_ref": "repository:github:choreoatlas/Expense-Approval:function:FL-authority-safe-review"
+        }
+      },
+      "provenance": {
+        "bytes_base64": "ewogICJzdGF0ZW1lbnQiOiB7CiAgICAiYXNzZXNzb3IiOiAiYWdlbnQ6Y29kZXg6ZXhwZW5zZTM6Y29udHJvbGxlci1mdW5jdGlvbi1hc3Nlc3NvciIsCiAgICAiYmFzaXMiOiB7CiAgICAgICJjYW5kaWRhdGVfc2hhMjU2IjogIjE3YjVmN2M5ZTU2MTU0Zjk1MjRmMzFiZTAyOTVjZDNmYTFkYzhiNTBjZmE0Zjk2NzNkYjUyZjQ4OGRjNjYzZmQiLAogICAgICAiZXZpZGVuY2VfcmVmcyI6IFsKICAgICAgICAib2JzZXJ2YXRpb25zLUIuanNvbiNzaGEyNTY9ZTEzNDcxNTg1NGNiOTBlMTdjMzQwNzVkZGIzYTRhNzU0ZjQ2NDQ5NWYyY2Q4MWUzN2I1OTMzOTgxMDY0M2QzMiIsCiAgICAgICAgImh0dHBzOi8vZ2l0aHViLmNvbS9jaG9yZW9hdGxhcy9FeHBlbnNlLUFwcHJvdmFsL2FjdGlvbnMvcnVucy80MTY0MDY3MjI2NCIKICAgICAgXSwKICAgICAgImV4ZWN1dGlvbl9yZWNvcmRzIjogWwogICAgICAgIHsKICAgICAgICAgICJyZWYiOiAiY2ktNDE2NDA2NzIyNjQtMS9FTC1kb21haW4tcnVsZXMiLAogICAgICAgICAgInJldmlzaW9uIjogInNoYTI1Njo4MjA3ZjFmOTJlZTYzN2JjMWU5Y2Q3NWM5MjFiNjE5NzUyZWQwODFhYjhiMTAyMDQ1ZGZiOWFkMjcwZWM4Y2QzIgogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgInJlZiI6ICJjaS00MTY0MDY3MjI2NC0xL0VMLWxlZGdlci1zdG9yZSIsCiAgICAgICAgICAicmV2aXNpb24iOiAic2hhMjU2OjczNzRiNTE0NmQwZjYyMTllNTE4OWQ5OTBjZDI1ZTcyNDdjYjI3NDM2MGE0MzQ2ZTljODViNWQ4NjBiOTEyNjgiCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAicmVmIjogImNpLTQxNjQwNjcyMjY0LTEvRUwtaHR0cCIsCiAgICAgICAgICAicmV2aXNpb24iOiAic2hhMjU2OjJlYzNhM2RiOGVjNWE0ZTdjNDZjOGQ2ZGNkMjRhYjhkZDA4YWU3YWY3MGJhZGIwMmUxNjliZGYyMTgyMTg4MjkiCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAicmVmIjogImNpLTQxNjQwNjcyMjY0LTEvRUwtYnJvd3Nlci11aSIsCiAgICAgICAgICAicmV2aXNpb24iOiAic2hhMjU2OjdiYzM4ZGIzNDdiNGJlM2IxZjJhNzNkZGU4ZDA1ZWJiNjc5MDlhNDFlZWE4NzRkOTU0ZGYyYWRmZDI1OWIyMDUiCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAicmVmIjogImNpLTQxNjQwNjcyMjY0LTEvRUwtdmVyaWZpY2F0aW9uLWVudmlyb25tZW50IiwKICAgICAgICAgICJyZXZpc2lvbiI6ICJzaGEyNTY6YzM2Mjc4MGIyYTVjMTBiMGZkNzIzZGJiM2Y4NWIzZjNiZjcwOTdjMDU2OWNhZDgxMzlhY2ViMTZhMjQ0MTA3NCIKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJtYXRlcmlhbF9zaGEyNTYiOiAiYjQ5NzU0MGI0YTcxNjEwNGRkMzA4YjgzNjFiNzNhZDA1OTc4YTZmMjZmMDk0OTRkYjM0ZWZlNWVhN2ZmM2RhOCIsCiAgICAgICJwcm9kdWN0X2NvbW1pdCI6ICI1N2ZhMmIzNTUxYTBlOGY5MjQzMjQxY2IyNjA0ZDAzY2EwOWIxOWQ4IiwKICAgICAgInByb2ZpbGVfc2hhMjU2IjogImRjMDE3Y2RlNGM1MTM0ZmM0ZWFkY2JmZjRmYjMwMTBiOGE4NGI4M2I1Y2ZmNDVlNDk5ZTY1MmE5MWYyNDY2ZjIiLAogICAgICAic2xpY2VfaWRzIjogWwogICAgICAgICJtb2RlbCIsCiAgICAgICAgImZ1bmN0aW9uLW1vZGVsIiwKICAgICAgICAiZXhlY3V0aW9uLWRlc2lnbiIsCiAgICAgICAgImV2aWRlbmNlLXJlcXVpcmVtZW50cyIsCiAgICAgICAgIndvcmtmbG93IiwKICAgICAgICAicmVxdWlyZW1lbnRzIiwKICAgICAgICAib2JqZWN0cyIsCiAgICAgICAgImRvbWFpbi1zb3VyY2UiLAogICAgICAgICJzdG9yZS1zb3VyY2UiLAogICAgICAgICJodHRwLXNvdXJjZSIsCiAgICAgICAgImFwcGxpY2F0aW9uLWVudHJ5IiwKICAgICAgICAiZG9tYWluLXN0b3JlLXRlc3RzIiwKICAgICAgICAiaHR0cC10ZXN0cyIsCiAgICAgICAgImJyb3dzZXItdGVzdHMiCiAgICAgIF0KICAgIH0sCiAgICAiZnVuY3Rpb25faWQiOiAiRkwtYXV0aG9yaXR5LXNhZmUtcmV2aWV3IiwKICAgICJoaXN0b3JpY2FsX2FjY2VwdGFuY2VfcmVmIjogImh0dHBzOi8vZ2l0aHViLmNvbS9jaG9yZW9hdGxhcy9FeHBlbnNlLUFwcHJvdmFsL2lzc3Vlcy8xI2lzc3VlY29tbWVudC01NTcxMzc1ODY0IiwKICAgICJqdWRnbWVudF9pZCI6ICJpbnNwZWN0aW9uLXN0YXRlbWVudDpleHBlbnNlMzpGTC1hdXRob3JpdHktc2FmZS1yZXZpZXciLAogICAgImxpbWl0cyI6IFsKICAgICAgIkxvY2FsIHNlZWRlZCByb2xlIGFzc2lnbm1lbnRzIG9ubHk7IG5vIGVudGVycHJpc2UgSUFNIGNsYWltLiIsCiAgICAgICJDdXJyZW50IG91dGVyIHNjb3BlIGlzIGFzc2VtYmx5IGluc3BlY3Rpb24sIG5vdCByZXBsYWNlbWVudCBvZiB0aGUgb3JpZ2luYWwgRnVuY3Rpb24gc2NvcGUiLAogICAgICAiTm8gbmV3IEdvdmVybmFuY2UvYWRtaXNzaW9uL2VmZmVjdGl2ZS1zdGF0ZS9kb3duc3RyZWFtIHBlcm1pc3Npb24iLAogICAgICAiT25seSB0aGUgc2VsZWN0ZWQgZmluYWwtcmV2aWV3IEZ1bmN0aW9uIGhhcyBhIG5ldyBjYW5kaWRhdGUgYXNzZXNzbWVudCBzZXQiCiAgICBdLAogICAgIm9yaWdpbmFsX3BhdGhfZGVmaW5pdGlvbiI6IHsKICAgICAgImNhcGFiaWxpdHlfZ2FwIjogIk5lZWQgZXZpZGVuY2UgdGhhdCB1bmFzc2lnbmVkIGFjdG9ycywgZW1wbG95ZWVzLCBhbmQgZ2VuZXJhbCBtYW5hZ2VycyBjYW5ub3QgcGVyZm9ybSBmaXJzdC1zdGFnZSBhcHByb3ZhbDsgdmFsaWQgYXBwcm92ZXIgY2FuIGFwcHJvdmUvcmVqZWN0IG9ubHkgdGhlIGV4YWN0IHN1Ym1pdHRlZCByZXZpc2lvbi4iLAogICAgICAiY3VycmVudF9jYXBhYmlsaXR5X3N0YXRlIjogIkV4cGxpY2l0IGxvY2FsIGFjdG9yLXJvbGUgc3RvcmFnZSBhbmQgYXBwcm92ZXItb25seSBmaXJzdC1zdGFnZSByZXZpZXcgaGF2ZSBiZWVuIGltcGxlbWVudGVkIGFmdGVyIHRoZSBPd25lciBjaGFuZ2UuIiwKICAgICAgImlkIjogIkZMLWF1dGhvcml0eS1zYWZlLXJldmlldyIsCiAgICAgICJsaW1pdHMiOiAiTG9jYWwgc2VlZGVkIHJvbGUgYXNzaWdubWVudHMgb25seTsgbm8gZW50ZXJwcmlzZSBJQU0gY2xhaW0uIiwKICAgICAgInJlcXVpcmVkX2V2aWRlbmNlIjogWwogICAgICAgICJhdXRob3JpemVkIGFwcHJvdmVyIHN1Y2Nlc3MiLAogICAgICAgICJzZWxmLWFwcHJvdmFsIGRlbmllZCB3aXRob3V0IG11dGF0aW9uIiwKICAgICAgICAidW5hc3NpZ25lZCBhY3RvciBkZW5pZWQiLAogICAgICAgICJ3cm9uZy1yb2xlIGFjdG9yIGRlbmllZCIsCiAgICAgICAgIm9sZCByZXZpc2lvbiBkZW5pZWQiCiAgICAgIF0sCiAgICAgICJyZXF1aXJlZF9leGVjdXRpb25fc3VwcG9ydCI6IFsKICAgICAgICAiRUwtZG9tYWluLXJ1bGVzIiwKICAgICAgICAiRUwtbGVkZ2VyLXN0b3JlIiwKICAgICAgICAiRUwtaHR0cCIsCiAgICAgICAgIkVMLWJyb3dzZXItdWkiLAogICAgICAgICJFTC12ZXJpZmljYXRpb24tZW52aXJvbm1lbnQiCiAgICAgIF0sCiAgICAgICJzY29wZSI6ICJmaXJzdC1zdGFnZSByZXZpZXcgb2YgY3VycmVudCBzdWJtaXR0ZWQgcmV2aXNpb24iLAogICAgICAic3RhbGVfYmFzaXMiOiAiT3JpZ2luYWwgRkwtYXV0aG9yaXR5LXNhZmUtcmV2aWV3IGFzc3VtZWQgb25lLXN0YWdlIGFwcHJvdmFsIGFuZCBpcyByZWFsaWduZWQuIiwKICAgICAgInRhcmdldF9wYXRoX3R5cGUiOiAiZmlyc3Qtc3RhZ2UgYXBwcm92YWwiLAogICAgICAidXBzdHJlYW1fZ292ZXJuYW5jZV9uZWVkIjogIkdOMSIKICAgIH0sCiAgICAicmVhc29uIjogIlRoaXMgb3JpZ2luYWwgRnVuY3Rpb24gZGVmaW5pdGlvbiBhbmQgaGlzdG9yaWNhbCBzY29wZSBhcmUgcHJlc2VydmVkLiBUaGUgbmV3IHNvdXJjZS9DSSBtYXRlcmlhbCBpcyBhdmFpbGFibGUsIGJ1dCB0aGlzIEZ1bmN0aW9uIGlzIGV4cGxpY2l0bHkgbm90IHJlanVkZ2VkIGJ5IHRoaXMgaW5zcGVjdGlvbi4iLAogICAgInJldmlzaW9uIjogImF1dGhvcmVkLWV4cGVuc2UzLWluc3BlY3Rpb24tdjAuMSIsCiAgICAic2NvcGUiOiAiRXhwZW5zZSBzb3VyY2UgYW5kIGV4cGxpY2l0IGp1ZGdtZW50IGluc3BlY3Rpb247IGZpbmFsLXJldmlldyBwaWxvdCByZXN1bHQgYXR0YWNoZWQgd2l0aGluIGl0cyBvcmlnaW5hbCBzY29wZSIsCiAgICAic2NvcGVfaW50ZXJwcmV0YXRpb24iOiAiVGhlIG91dGVyIHNjb3BlIGRlc2NyaWJlcyBvbmx5IHRoaXMgY29tbW9uIGFzc2VtYmx5L2luc3BlY3Rpb247IG9yaWdpbmFsX3BhdGhfZGVmaW5pdGlvbi5zY29wZSBpcyB1bmNoYW5nZWQiLAogICAgInN0YXRlIjogIm5vdF9yZWp1ZGdlZCIsCiAgICAidGFyZ2V0X3BhdGhfcmVmIjogInJlcG9zaXRvcnk6Z2l0aHViOmNob3Jlb2F0bGFzL0V4cGVuc2UtQXBwcm92YWw6ZnVuY3Rpb246RkwtYXV0aG9yaXR5LXNhZmUtcmV2aWV3IgogIH0KfQo=",
+        "kind": "authored",
+        "pointer": "/statement",
+        "ref": "authoring/FL-authority-safe-review.json",
+        "revision": "authored-expense3-inspection-v0.1",
+        "sha256": "b7ec20bd7622d9c92c6dde4dbf981fb9ccd67572ad56cb2aae49a9e83f842890"
+      },
+      "reason": "This original Function definition and historical scope are preserved. The new source/CI material is available, but this Function is explicitly not rejudged by this inspection.",
+      "revision": "authored-expense3-inspection-v0.1",
+      "scope": "Expense source and explicit judgment inspection; final-review pilot result attached within its original scope",
+      "state": "not_rejudged",
+      "target_path_ref": "repository:github:choreoatlas/Expense-Approval:function:FL-authority-safe-review"
+    },
+    {
+      "assessor": "agent:codex:expense3:controller-function-assessor",
+      "basis": {
+        "candidate_sha256": "17b5f7c9e56154f9524f31be0295cd3fa1dc8b50cfa4f9673db52f488dc663fd",
+        "evidence_refs": [
+          "observations-B.json#sha256=e134715854cb90e17c34075ddb3a4a754f464495f2cd81e37b59339810643d32",
+          "https://github.com/choreoatlas/Expense-Approval/actions/runs/41640672264"
+        ],
+        "execution_records": [
+          {
+            "ref": "ci-41640672264-1/EL-domain-rules",
+            "revision": "sha256:8207f1f92ee637bc1e9cd75c921b619752ed081ab8b102045dfb9ad270ec8cd3"
+          },
+          {
+            "ref": "ci-41640672264-1/EL-ledger-store",
+            "revision": "sha256:7374b5146d0f6219e5189d990cd25e7247cb274360a4346e9c85b5d860b91268"
+          },
+          {
+            "ref": "ci-41640672264-1/EL-http",
+            "revision": "sha256:2ec3a3db8ec5a4e7c46c8d6dcd24ab8dd08ae7af70badb02e169bdf218218829"
+          },
+          {
+            "ref": "ci-41640672264-1/EL-browser-ui",
+            "revision": "sha256:7bc38db347b4be3b1f2a73dde8d05ebb67909a41eea874d954df2adfd259b205"
+          },
+          {
+            "ref": "ci-41640672264-1/EL-verification-environment",
+            "revision": "sha256:c362780b2a5c10b0fd723dbb3f85b3f3bf7097c0569cad8139aceb16a2441074"
+          }
+        ],
+        "material_sha256": "b497540b4a716104dd308b8361b73ad05978a6f26f09494db34efe5ea7ff3da8",
+        "product_commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+        "profile_sha256": "dc017cde4c5134fc4eadcbff4fb3010b8a84b83b5cff45e499e652a91f2466f2",
+        "slice_ids": [
+          "model",
+          "function-model",
+          "execution-design",
+          "evidence-requirements",
+          "workflow",
+          "requirements",
+          "objects",
+          "domain-source",
+          "store-source",
+          "http-source",
+          "application-entry",
+          "browser-source",
+          "browser-html",
+          "browser-styles",
+          "domain-store-tests",
+          "http-tests",
+          "browser-tests",
+          "restart-tests",
+          "conditions",
+          "composition",
+          "observer"
+        ]
+      },
+      "function_id": "FL-general-manager-final-approval",
+      "judgment_id": "inspection-statement:expense3:FL-general-manager-final-approval",
+      "limits": [
+        "General manager authority is local sample configuration, not organizational IAM.",
+        "Current outer scope is assembly inspection, not replacement of the original Function scope",
+        "No new Governance/admission/effective-state/downstream permission",
+        "Only the selected final-review Function has a new candidate assessment set"
+      ],
+      "original": {
+        "statement": {
+          "assessor": "agent:codex:expense3:controller-function-assessor",
+          "basis": {
+            "candidate_sha256": "17b5f7c9e56154f9524f31be0295cd3fa1dc8b50cfa4f9673db52f488dc663fd",
+            "evidence_refs": [
+              "observations-B.json#sha256=e134715854cb90e17c34075ddb3a4a754f464495f2cd81e37b59339810643d32",
+              "https://github.com/choreoatlas/Expense-Approval/actions/runs/41640672264"
+            ],
+            "execution_records": [
+              {
+                "ref": "ci-41640672264-1/EL-domain-rules",
+                "revision": "sha256:8207f1f92ee637bc1e9cd75c921b619752ed081ab8b102045dfb9ad270ec8cd3"
+              },
+              {
+                "ref": "ci-41640672264-1/EL-ledger-store",
+                "revision": "sha256:7374b5146d0f6219e5189d990cd25e7247cb274360a4346e9c85b5d860b91268"
+              },
+              {
+                "ref": "ci-41640672264-1/EL-http",
+                "revision": "sha256:2ec3a3db8ec5a4e7c46c8d6dcd24ab8dd08ae7af70badb02e169bdf218218829"
+              },
+              {
+                "ref": "ci-41640672264-1/EL-browser-ui",
+                "revision": "sha256:7bc38db347b4be3b1f2a73dde8d05ebb67909a41eea874d954df2adfd259b205"
+              },
+              {
+                "ref": "ci-41640672264-1/EL-verification-environment",
+                "revision": "sha256:c362780b2a5c10b0fd723dbb3f85b3f3bf7097c0569cad8139aceb16a2441074"
+              }
+            ],
+            "material_sha256": "b497540b4a716104dd308b8361b73ad05978a6f26f09494db34efe5ea7ff3da8",
+            "product_commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+            "profile_sha256": "dc017cde4c5134fc4eadcbff4fb3010b8a84b83b5cff45e499e652a91f2466f2",
+            "slice_ids": [
+              "model",
+              "function-model",
+              "execution-design",
+              "evidence-requirements",
+              "workflow",
+              "requirements",
+              "objects",
+              "domain-source",
+              "store-source",
+              "http-source",
+              "application-entry",
+              "browser-source",
+              "browser-html",
+              "browser-styles",
+              "domain-store-tests",
+              "http-tests",
+              "browser-tests",
+              "restart-tests",
+              "conditions",
+              "composition",
+              "observer"
+            ]
+          },
+          "function_id": "FL-general-manager-final-approval",
+          "historical_acceptance_ref": "https://github.com/choreoatlas/Expense-Approval/issues/1#issuecomment-5571375864",
+          "judgment_id": "inspection-statement:expense3:FL-general-manager-final-approval",
+          "limits": [
+            "General manager authority is local sample configuration, not organizational IAM.",
+            "Current outer scope is assembly inspection, not replacement of the original Function scope",
+            "No new Governance/admission/effective-state/downstream permission",
+            "Only the selected final-review Function has a new candidate assessment set"
+          ],
+          "original_path_definition": {
+            "capability_gap": "Need evidence that final approval cannot occur before first-stage approval, cannot be performed by wrong-role actors, and binds to the same exact revision reviewed at stage one.",
+            "current_capability_state": "A manager_pending state and general_manager role path have been implemented after the Owner change.",
+            "id": "FL-general-manager-final-approval",
+            "limits": "General manager authority is local sample configuration, not organizational IAM.",
+            "required_evidence": [
+              "first-stage approval yields manager_pending not approved",
+              "general manager final approval success",
+              "GM cannot skip first stage",
+              "approver cannot perform final decision",
+              "final decision exact-revision binding"
+            ],
+            "required_execution_support": [
+              "EL-domain-rules",
+              "EL-ledger-store",
+              "EL-http",
+              "EL-browser-ui",
+              "EL-verification-environment"
+            ],
+            "scope": "final review after first-stage approval",
+            "stale_basis": "New Function introduced by Owner governance change.",
+            "target_path_type": "final approval",
+            "upstream_governance_need": "GN1"
+          },
+          "reason": "The separately authored seven-condition candidate result is attached verbatim with its own final-review scope, limitations and basis. The outer state denotes an available referenced pilot result, not a new canonical path_state or the assembler's judgment.",
+          "referenced_pilot_result": {
+            "actor": "agent:codex:expense3:controller-function-assessor",
+            "allowed": false,
+            "assessment_refs": [
+              {
+                "id": "assessment:expense3:FC-final-sequence",
+                "revision": "sha256:868c77e4d6486cb5055bd0d278d80f058b32fc7b3b2fd96406c0f00cd980362c"
+              },
+              {
+                "id": "assessment:expense3:FC-final-authority",
+                "revision": "sha256:ca0ac946e6b68388b533abed4a7b1d78533c87d0928eb399614d5889c705abf7"
+              },
+              {
+                "id": "assessment:expense3:FC-final-revision",
+                "revision": "sha256:b51679c7ae2fb046e069d566f2ca2945e298ebf9b17120423834baf27605efaa"
+              },
+              {
+                "id": "assessment:expense3:FC-final-rework-history",
+                "revision": "sha256:d55fba0f38b3a7a20934ab1266dfc02fc24b6539cb21ed3839e32ac12d47a476"
+              },
+              {
+                "id": "assessment:expense3:FC-final-invalid-nonmutation",
+                "revision": "sha256:55111d4f4af3cd32ba00799ba3c207030f122307695a88b3f649d43fb162fb07"
+              },
+              {
+                "id": "assessment:expense3:FC-final-browser",
+                "revision": "sha256:bfbce586948041f1e60e557c234dcb0d311415c820068b19a77685d5b74e4e9b"
+              },
+              {
+                "id": "assessment:expense3:FC-final-restart",
+                "revision": "sha256:baa09e93c283908e9106b5dbd0b3ad2c013475df7ed0401c2025d700e339d06b"
+              }
+            ],
+            "authority_effect": "none",
+            "basis_snapshot": "B",
+            "complete_condition_set_reviewed": true,
+            "composition_declaration_sha256": "341bd418fb0d4c2dbbf2d84be7147e2e5c3f1acec36ed36d552c310e6a242302",
+            "composition_input": "composition-input-B.json",
+            "composition_owner_output": "composition-owner-B.json",
+            "currentness": "not_checked",
+            "function_id": "FL-general-manager-final-approval",
+            "limits": [
+              "Seeded local roles; no enterprise IAM/security claim",
+              "Sequential reference behavior; no concurrent/crash consistency claim",
+              "Local SQLite restart only; no replication or backup recovery claim",
+              "Chromium only; no cross-browser/accessibility claim",
+              "Candidate Function judgment only; no new Governance acceptance or consumption permission"
+            ],
+            "one_assessment_per_condition_for_this_basis": true,
+            "path_state": "scope_limited",
+            "pilot_mode_change": false,
+            "record_kind": "explicit candidate Function result; documentation pilot only",
+            "result_id": "function-result:expense3:FL-general-manager-final-approval",
+            "result_revision": "sha256:48d8f59a06e5c7b12fce27a59cfc54ffbbf035ba995dce9b04f85d59dac664d3",
+            "scope": "final review after first-stage approval in the local single-organization reference sample",
+            "source_commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+            "upstream_governance_need": "GN1"
+          },
+          "revision": "authored-expense3-inspection-v0.1",
+          "scope": "Expense source and explicit judgment inspection; final-review pilot result attached within its original scope",
+          "scope_interpretation": "The outer scope describes only this common assembly/inspection; original_path_definition.scope is unchanged",
+          "state": "candidate_pilot_result_attached",
+          "target_path_ref": "repository:github:choreoatlas/Expense-Approval:function:FL-general-manager-final-approval"
+        }
+      },
+      "provenance": {
+        "bytes_base64": "ewogICJzdGF0ZW1lbnQiOiB7CiAgICAiYXNzZXNzb3IiOiAiYWdlbnQ6Y29kZXg6ZXhwZW5zZTM6Y29udHJvbGxlci1mdW5jdGlvbi1hc3Nlc3NvciIsCiAgICAiYmFzaXMiOiB7CiAgICAgICJjYW5kaWRhdGVfc2hhMjU2IjogIjE3YjVmN2M5ZTU2MTU0Zjk1MjRmMzFiZTAyOTVjZDNmYTFkYzhiNTBjZmE0Zjk2NzNkYjUyZjQ4OGRjNjYzZmQiLAogICAgICAiZXZpZGVuY2VfcmVmcyI6IFsKICAgICAgICAib2JzZXJ2YXRpb25zLUIuanNvbiNzaGEyNTY9ZTEzNDcxNTg1NGNiOTBlMTdjMzQwNzVkZGIzYTRhNzU0ZjQ2NDQ5NWYyY2Q4MWUzN2I1OTMzOTgxMDY0M2QzMiIsCiAgICAgICAgImh0dHBzOi8vZ2l0aHViLmNvbS9jaG9yZW9hdGxhcy9FeHBlbnNlLUFwcHJvdmFsL2FjdGlvbnMvcnVucy80MTY0MDY3MjI2NCIKICAgICAgXSwKICAgICAgImV4ZWN1dGlvbl9yZWNvcmRzIjogWwogICAgICAgIHsKICAgICAgICAgICJyZWYiOiAiY2ktNDE2NDA2NzIyNjQtMS9FTC1kb21haW4tcnVsZXMiLAogICAgICAgICAgInJldmlzaW9uIjogInNoYTI1Njo4MjA3ZjFmOTJlZTYzN2JjMWU5Y2Q3NWM5MjFiNjE5NzUyZWQwODFhYjhiMTAyMDQ1ZGZiOWFkMjcwZWM4Y2QzIgogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgInJlZiI6ICJjaS00MTY0MDY3MjI2NC0xL0VMLWxlZGdlci1zdG9yZSIsCiAgICAgICAgICAicmV2aXNpb24iOiAic2hhMjU2OjczNzRiNTE0NmQwZjYyMTllNTE4OWQ5OTBjZDI1ZTcyNDdjYjI3NDM2MGE0MzQ2ZTljODViNWQ4NjBiOTEyNjgiCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAicmVmIjogImNpLTQxNjQwNjcyMjY0LTEvRUwtaHR0cCIsCiAgICAgICAgICAicmV2aXNpb24iOiAic2hhMjU2OjJlYzNhM2RiOGVjNWE0ZTdjNDZjOGQ2ZGNkMjRhYjhkZDA4YWU3YWY3MGJhZGIwMmUxNjliZGYyMTgyMTg4MjkiCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAicmVmIjogImNpLTQxNjQwNjcyMjY0LTEvRUwtYnJvd3Nlci11aSIsCiAgICAgICAgICAicmV2aXNpb24iOiAic2hhMjU2OjdiYzM4ZGIzNDdiNGJlM2IxZjJhNzNkZGU4ZDA1ZWJiNjc5MDlhNDFlZWE4NzRkOTU0ZGYyYWRmZDI1OWIyMDUiCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAicmVmIjogImNpLTQxNjQwNjcyMjY0LTEvRUwtdmVyaWZpY2F0aW9uLWVudmlyb25tZW50IiwKICAgICAgICAgICJyZXZpc2lvbiI6ICJzaGEyNTY6YzM2Mjc4MGIyYTVjMTBiMGZkNzIzZGJiM2Y4NWIzZjNiZjcwOTdjMDU2OWNhZDgxMzlhY2ViMTZhMjQ0MTA3NCIKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJtYXRlcmlhbF9zaGEyNTYiOiAiYjQ5NzU0MGI0YTcxNjEwNGRkMzA4YjgzNjFiNzNhZDA1OTc4YTZmMjZmMDk0OTRkYjM0ZWZlNWVhN2ZmM2RhOCIsCiAgICAgICJwcm9kdWN0X2NvbW1pdCI6ICI1N2ZhMmIzNTUxYTBlOGY5MjQzMjQxY2IyNjA0ZDAzY2EwOWIxOWQ4IiwKICAgICAgInByb2ZpbGVfc2hhMjU2IjogImRjMDE3Y2RlNGM1MTM0ZmM0ZWFkY2JmZjRmYjMwMTBiOGE4NGI4M2I1Y2ZmNDVlNDk5ZTY1MmE5MWYyNDY2ZjIiLAogICAgICAic2xpY2VfaWRzIjogWwogICAgICAgICJtb2RlbCIsCiAgICAgICAgImZ1bmN0aW9uLW1vZGVsIiwKICAgICAgICAiZXhlY3V0aW9uLWRlc2lnbiIsCiAgICAgICAgImV2aWRlbmNlLXJlcXVpcmVtZW50cyIsCiAgICAgICAgIndvcmtmbG93IiwKICAgICAgICAicmVxdWlyZW1lbnRzIiwKICAgICAgICAib2JqZWN0cyIsCiAgICAgICAgImRvbWFpbi1zb3VyY2UiLAogICAgICAgICJzdG9yZS1zb3VyY2UiLAogICAgICAgICJodHRwLXNvdXJjZSIsCiAgICAgICAgImFwcGxpY2F0aW9uLWVudHJ5IiwKICAgICAgICAiYnJvd3Nlci1zb3VyY2UiLAogICAgICAgICJicm93c2VyLWh0bWwiLAogICAgICAgICJicm93c2VyLXN0eWxlcyIsCiAgICAgICAgImRvbWFpbi1zdG9yZS10ZXN0cyIsCiAgICAgICAgImh0dHAtdGVzdHMiLAogICAgICAgICJicm93c2VyLXRlc3RzIiwKICAgICAgICAicmVzdGFydC10ZXN0cyIsCiAgICAgICAgImNvbmRpdGlvbnMiLAogICAgICAgICJjb21wb3NpdGlvbiIsCiAgICAgICAgIm9ic2VydmVyIgogICAgICBdCiAgICB9LAogICAgImZ1bmN0aW9uX2lkIjogIkZMLWdlbmVyYWwtbWFuYWdlci1maW5hbC1hcHByb3ZhbCIsCiAgICAiaGlzdG9yaWNhbF9hY2NlcHRhbmNlX3JlZiI6ICJodHRwczovL2dpdGh1Yi5jb20vY2hvcmVvYXRsYXMvRXhwZW5zZS1BcHByb3ZhbC9pc3N1ZXMvMSNpc3N1ZWNvbW1lbnQtNTU3MTM3NTg2NCIsCiAgICAianVkZ21lbnRfaWQiOiAiaW5zcGVjdGlvbi1zdGF0ZW1lbnQ6ZXhwZW5zZTM6RkwtZ2VuZXJhbC1tYW5hZ2VyLWZpbmFsLWFwcHJvdmFsIiwKICAgICJsaW1pdHMiOiBbCiAgICAgICJHZW5lcmFsIG1hbmFnZXIgYXV0aG9yaXR5IGlzIGxvY2FsIHNhbXBsZSBjb25maWd1cmF0aW9uLCBub3Qgb3JnYW5pemF0aW9uYWwgSUFNLiIsCiAgICAgICJDdXJyZW50IG91dGVyIHNjb3BlIGlzIGFzc2VtYmx5IGluc3BlY3Rpb24sIG5vdCByZXBsYWNlbWVudCBvZiB0aGUgb3JpZ2luYWwgRnVuY3Rpb24gc2NvcGUiLAogICAgICAiTm8gbmV3IEdvdmVybmFuY2UvYWRtaXNzaW9uL2VmZmVjdGl2ZS1zdGF0ZS9kb3duc3RyZWFtIHBlcm1pc3Npb24iLAogICAgICAiT25seSB0aGUgc2VsZWN0ZWQgZmluYWwtcmV2aWV3IEZ1bmN0aW9uIGhhcyBhIG5ldyBjYW5kaWRhdGUgYXNzZXNzbWVudCBzZXQiCiAgICBdLAogICAgIm9yaWdpbmFsX3BhdGhfZGVmaW5pdGlvbiI6IHsKICAgICAgImNhcGFiaWxpdHlfZ2FwIjogIk5lZWQgZXZpZGVuY2UgdGhhdCBmaW5hbCBhcHByb3ZhbCBjYW5ub3Qgb2NjdXIgYmVmb3JlIGZpcnN0LXN0YWdlIGFwcHJvdmFsLCBjYW5ub3QgYmUgcGVyZm9ybWVkIGJ5IHdyb25nLXJvbGUgYWN0b3JzLCBhbmQgYmluZHMgdG8gdGhlIHNhbWUgZXhhY3QgcmV2aXNpb24gcmV2aWV3ZWQgYXQgc3RhZ2Ugb25lLiIsCiAgICAgICJjdXJyZW50X2NhcGFiaWxpdHlfc3RhdGUiOiAiQSBtYW5hZ2VyX3BlbmRpbmcgc3RhdGUgYW5kIGdlbmVyYWxfbWFuYWdlciByb2xlIHBhdGggaGF2ZSBiZWVuIGltcGxlbWVudGVkIGFmdGVyIHRoZSBPd25lciBjaGFuZ2UuIiwKICAgICAgImlkIjogIkZMLWdlbmVyYWwtbWFuYWdlci1maW5hbC1hcHByb3ZhbCIsCiAgICAgICJsaW1pdHMiOiAiR2VuZXJhbCBtYW5hZ2VyIGF1dGhvcml0eSBpcyBsb2NhbCBzYW1wbGUgY29uZmlndXJhdGlvbiwgbm90IG9yZ2FuaXphdGlvbmFsIElBTS4iLAogICAgICAicmVxdWlyZWRfZXZpZGVuY2UiOiBbCiAgICAgICAgImZpcnN0LXN0YWdlIGFwcHJvdmFsIHlpZWxkcyBtYW5hZ2VyX3BlbmRpbmcgbm90IGFwcHJvdmVkIiwKICAgICAgICAiZ2VuZXJhbCBtYW5hZ2VyIGZpbmFsIGFwcHJvdmFsIHN1Y2Nlc3MiLAogICAgICAgICJHTSBjYW5ub3Qgc2tpcCBmaXJzdCBzdGFnZSIsCiAgICAgICAgImFwcHJvdmVyIGNhbm5vdCBwZXJmb3JtIGZpbmFsIGRlY2lzaW9uIiwKICAgICAgICAiZmluYWwgZGVjaXNpb24gZXhhY3QtcmV2aXNpb24gYmluZGluZyIKICAgICAgXSwKICAgICAgInJlcXVpcmVkX2V4ZWN1dGlvbl9zdXBwb3J0IjogWwogICAgICAgICJFTC1kb21haW4tcnVsZXMiLAogICAgICAgICJFTC1sZWRnZXItc3RvcmUiLAogICAgICAgICJFTC1odHRwIiwKICAgICAgICAiRUwtYnJvd3Nlci11aSIsCiAgICAgICAgIkVMLXZlcmlmaWNhdGlvbi1lbnZpcm9ubWVudCIKICAgICAgXSwKICAgICAgInNjb3BlIjogImZpbmFsIHJldmlldyBhZnRlciBmaXJzdC1zdGFnZSBhcHByb3ZhbCIsCiAgICAgICJzdGFsZV9iYXNpcyI6ICJOZXcgRnVuY3Rpb24gaW50cm9kdWNlZCBieSBPd25lciBnb3Zlcm5hbmNlIGNoYW5nZS4iLAogICAgICAidGFyZ2V0X3BhdGhfdHlwZSI6ICJmaW5hbCBhcHByb3ZhbCIsCiAgICAgICJ1cHN0cmVhbV9nb3Zlcm5hbmNlX25lZWQiOiAiR04xIgogICAgfSwKICAgICJyZWFzb24iOiAiVGhlIHNlcGFyYXRlbHkgYXV0aG9yZWQgc2V2ZW4tY29uZGl0aW9uIGNhbmRpZGF0ZSByZXN1bHQgaXMgYXR0YWNoZWQgdmVyYmF0aW0gd2l0aCBpdHMgb3duIGZpbmFsLXJldmlldyBzY29wZSwgbGltaXRhdGlvbnMgYW5kIGJhc2lzLiBUaGUgb3V0ZXIgc3RhdGUgZGVub3RlcyBhbiBhdmFpbGFibGUgcmVmZXJlbmNlZCBwaWxvdCByZXN1bHQsIG5vdCBhIG5ldyBjYW5vbmljYWwgcGF0aF9zdGF0ZSBvciB0aGUgYXNzZW1ibGVyJ3MganVkZ21lbnQuIiwKICAgICJyZWZlcmVuY2VkX3BpbG90X3Jlc3VsdCI6IHsKICAgICAgImFjdG9yIjogImFnZW50OmNvZGV4OmV4cGVuc2UzOmNvbnRyb2xsZXItZnVuY3Rpb24tYXNzZXNzb3IiLAogICAgICAiYWxsb3dlZCI6IGZhbHNlLAogICAgICAiYXNzZXNzbWVudF9yZWZzIjogWwogICAgICAgIHsKICAgICAgICAgICJpZCI6ICJhc3Nlc3NtZW50OmV4cGVuc2UzOkZDLWZpbmFsLXNlcXVlbmNlIiwKICAgICAgICAgICJyZXZpc2lvbiI6ICJzaGEyNTY6ODY4Yzc3ZTRkNjQ4NmNiNTA1NWJkMGQyNzhkODBmMDU4YjMyZmM3YjNiMmZkOTY0MDZjMGYwMGNkOTgwMzYyYyIKICAgICAgICB9LAogICAgICAgIHsKICAgICAgICAgICJpZCI6ICJhc3Nlc3NtZW50OmV4cGVuc2UzOkZDLWZpbmFsLWF1dGhvcml0eSIsCiAgICAgICAgICAicmV2aXNpb24iOiAic2hhMjU2OmNhMGFjOTQ2ZTZiNjgzODhiNTMzYWJlZDRhN2IxZDc4NTMzYzg3ZDA5MjhlYjM5OTYxNGQ1ODg5YzcwNWFiZjciCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAiaWQiOiAiYXNzZXNzbWVudDpleHBlbnNlMzpGQy1maW5hbC1yZXZpc2lvbiIsCiAgICAgICAgICAicmV2aXNpb24iOiAic2hhMjU2OmI1MTY3OWM3YWUyZmIwNDZlMDY5ZDU2NmYyY2EyOTQ1ZTI5OGViZjliMTcxMjA0MjM4MzRiYWYyNzYwNWVmYWEiCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAiaWQiOiAiYXNzZXNzbWVudDpleHBlbnNlMzpGQy1maW5hbC1yZXdvcmstaGlzdG9yeSIsCiAgICAgICAgICAicmV2aXNpb24iOiAic2hhMjU2OmQ1NWZiYTBmMzhiM2E3YTIwOTM0YWIxMjY2ZGZjMDJmYzI0YjY1MzljYjIxZWQzODM5ZTMyYWMxMmQ0N2E0NzYiCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAiaWQiOiAiYXNzZXNzbWVudDpleHBlbnNlMzpGQy1maW5hbC1pbnZhbGlkLW5vbm11dGF0aW9uIiwKICAgICAgICAgICJyZXZpc2lvbiI6ICJzaGEyNTY6NTUxMTFkNGY0YWYzY2QzMmJhMDA3OTliYTNjMjA3MDMwZjEyMjMwNzY5NWE4OGIzZjY0OWQ0M2ZiMTYyZmIwNyIKICAgICAgICB9LAogICAgICAgIHsKICAgICAgICAgICJpZCI6ICJhc3Nlc3NtZW50OmV4cGVuc2UzOkZDLWZpbmFsLWJyb3dzZXIiLAogICAgICAgICAgInJldmlzaW9uIjogInNoYTI1NjpiZmJjZTU4Njk0ODA0MWYxZTYwZTU1N2MyMzRkY2IwZDMxMTQxNWM4MjAwNjhiMTlhNzc2ODVkNWI3NGU0ZTliIgogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgImlkIjogImFzc2Vzc21lbnQ6ZXhwZW5zZTM6RkMtZmluYWwtcmVzdGFydCIsCiAgICAgICAgICAicmV2aXNpb24iOiAic2hhMjU2OmJhYTA5ZTkzYzI4MzkwOGU5MTA2YjVkYmQwYjNhZDJjMDEzNDc1ZGY3ZWQwNDAxYzIwMjVkNzAwZTMzOWQwNmIiCiAgICAgICAgfQogICAgICBdLAogICAgICAiYXV0aG9yaXR5X2VmZmVjdCI6ICJub25lIiwKICAgICAgImJhc2lzX3NuYXBzaG90IjogIkIiLAogICAgICAiY29tcGxldGVfY29uZGl0aW9uX3NldF9yZXZpZXdlZCI6IHRydWUsCiAgICAgICJjb21wb3NpdGlvbl9kZWNsYXJhdGlvbl9zaGEyNTYiOiAiMzQxYmQ0MThmYjBkNGMyZGJiZjJkODRiZTcxNDdlMmU1YzNmMWFjZWMzNmVkMzZkNTUyYzMxMGU2YTI0MjMwMiIsCiAgICAgICJjb21wb3NpdGlvbl9pbnB1dCI6ICJjb21wb3NpdGlvbi1pbnB1dC1CLmpzb24iLAogICAgICAiY29tcG9zaXRpb25fb3duZXJfb3V0cHV0IjogImNvbXBvc2l0aW9uLW93bmVyLUIuanNvbiIsCiAgICAgICJjdXJyZW50bmVzcyI6ICJub3RfY2hlY2tlZCIsCiAgICAgICJmdW5jdGlvbl9pZCI6ICJGTC1nZW5lcmFsLW1hbmFnZXItZmluYWwtYXBwcm92YWwiLAogICAgICAibGltaXRzIjogWwogICAgICAgICJTZWVkZWQgbG9jYWwgcm9sZXM7IG5vIGVudGVycHJpc2UgSUFNL3NlY3VyaXR5IGNsYWltIiwKICAgICAgICAiU2VxdWVudGlhbCByZWZlcmVuY2UgYmVoYXZpb3I7IG5vIGNvbmN1cnJlbnQvY3Jhc2ggY29uc2lzdGVuY3kgY2xhaW0iLAogICAgICAgICJMb2NhbCBTUUxpdGUgcmVzdGFydCBvbmx5OyBubyByZXBsaWNhdGlvbiBvciBiYWNrdXAgcmVjb3ZlcnkgY2xhaW0iLAogICAgICAgICJDaHJvbWl1bSBvbmx5OyBubyBjcm9zcy1icm93c2VyL2FjY2Vzc2liaWxpdHkgY2xhaW0iLAogICAgICAgICJDYW5kaWRhdGUgRnVuY3Rpb24ganVkZ21lbnQgb25seTsgbm8gbmV3IEdvdmVybmFuY2UgYWNjZXB0YW5jZSBvciBjb25zdW1wdGlvbiBwZXJtaXNzaW9uIgogICAgICBdLAogICAgICAib25lX2Fzc2Vzc21lbnRfcGVyX2NvbmRpdGlvbl9mb3JfdGhpc19iYXNpcyI6IHRydWUsCiAgICAgICJwYXRoX3N0YXRlIjogInNjb3BlX2xpbWl0ZWQiLAogICAgICAicGlsb3RfbW9kZV9jaGFuZ2UiOiBmYWxzZSwKICAgICAgInJlY29yZF9raW5kIjogImV4cGxpY2l0IGNhbmRpZGF0ZSBGdW5jdGlvbiByZXN1bHQ7IGRvY3VtZW50YXRpb24gcGlsb3Qgb25seSIsCiAgICAgICJyZXN1bHRfaWQiOiAiZnVuY3Rpb24tcmVzdWx0OmV4cGVuc2UzOkZMLWdlbmVyYWwtbWFuYWdlci1maW5hbC1hcHByb3ZhbCIsCiAgICAgICJyZXN1bHRfcmV2aXNpb24iOiAic2hhMjU2OjQ4ZDhmNTlhMDZlNWM3YjEyZmNlMjdhNTljZmM1NGZmYmJmMDM1YmE5OTVkY2U5YjA0Zjg1ZDU5ZGFjNjY0ZDMiLAogICAgICAic2NvcGUiOiAiZmluYWwgcmV2aWV3IGFmdGVyIGZpcnN0LXN0YWdlIGFwcHJvdmFsIGluIHRoZSBsb2NhbCBzaW5nbGUtb3JnYW5pemF0aW9uIHJlZmVyZW5jZSBzYW1wbGUiLAogICAgICAic291cmNlX2NvbW1pdCI6ICI1N2ZhMmIzNTUxYTBlOGY5MjQzMjQxY2IyNjA0ZDAzY2EwOWIxOWQ4IiwKICAgICAgInVwc3RyZWFtX2dvdmVybmFuY2VfbmVlZCI6ICJHTjEiCiAgICB9LAogICAgInJldmlzaW9uIjogImF1dGhvcmVkLWV4cGVuc2UzLWluc3BlY3Rpb24tdjAuMSIsCiAgICAic2NvcGUiOiAiRXhwZW5zZSBzb3VyY2UgYW5kIGV4cGxpY2l0IGp1ZGdtZW50IGluc3BlY3Rpb247IGZpbmFsLXJldmlldyBwaWxvdCByZXN1bHQgYXR0YWNoZWQgd2l0aGluIGl0cyBvcmlnaW5hbCBzY29wZSIsCiAgICAic2NvcGVfaW50ZXJwcmV0YXRpb24iOiAiVGhlIG91dGVyIHNjb3BlIGRlc2NyaWJlcyBvbmx5IHRoaXMgY29tbW9uIGFzc2VtYmx5L2luc3BlY3Rpb247IG9yaWdpbmFsX3BhdGhfZGVmaW5pdGlvbi5zY29wZSBpcyB1bmNoYW5nZWQiLAogICAgInN0YXRlIjogImNhbmRpZGF0ZV9waWxvdF9yZXN1bHRfYXR0YWNoZWQiLAogICAgInRhcmdldF9wYXRoX3JlZiI6ICJyZXBvc2l0b3J5OmdpdGh1YjpjaG9yZW9hdGxhcy9FeHBlbnNlLUFwcHJvdmFsOmZ1bmN0aW9uOkZMLWdlbmVyYWwtbWFuYWdlci1maW5hbC1hcHByb3ZhbCIKICB9Cn0K",
+        "kind": "authored",
+        "pointer": "/statement",
+        "ref": "authoring/FL-general-manager-final-approval.json",
+        "revision": "authored-expense3-inspection-v0.1",
+        "sha256": "75c038dfa3763887d5514cf41d2759aac68a395b92da6e77fb1335d61912bdf1"
+      },
+      "reason": "The separately authored seven-condition candidate result is attached verbatim with its own final-review scope, limitations and basis. The outer state denotes an available referenced pilot result, not a new canonical path_state or the assembler's judgment.",
+      "revision": "authored-expense3-inspection-v0.1",
+      "scope": "Expense source and explicit judgment inspection; final-review pilot result attached within its original scope",
+      "state": "candidate_pilot_result_attached",
+      "target_path_ref": "repository:github:choreoatlas/Expense-Approval:function:FL-general-manager-final-approval"
+    },
+    {
+      "assessor": "agent:codex:expense3:controller-function-assessor",
+      "basis": {
+        "candidate_sha256": "17b5f7c9e56154f9524f31be0295cd3fa1dc8b50cfa4f9673db52f488dc663fd",
+        "evidence_refs": [
+          "observations-B.json#sha256=e134715854cb90e17c34075ddb3a4a754f464495f2cd81e37b59339810643d32",
+          "https://github.com/choreoatlas/Expense-Approval/actions/runs/41640672264"
+        ],
+        "execution_records": [
+          {
+            "ref": "ci-41640672264-1/EL-domain-rules",
+            "revision": "sha256:8207f1f92ee637bc1e9cd75c921b619752ed081ab8b102045dfb9ad270ec8cd3"
+          },
+          {
+            "ref": "ci-41640672264-1/EL-ledger-store",
+            "revision": "sha256:7374b5146d0f6219e5189d990cd25e7247cb274360a4346e9c85b5d860b91268"
+          },
+          {
+            "ref": "ci-41640672264-1/EL-http",
+            "revision": "sha256:2ec3a3db8ec5a4e7c46c8d6dcd24ab8dd08ae7af70badb02e169bdf218218829"
+          },
+          {
+            "ref": "ci-41640672264-1/EL-browser-ui",
+            "revision": "sha256:7bc38db347b4be3b1f2a73dde8d05ebb67909a41eea874d954df2adfd259b205"
+          },
+          {
+            "ref": "ci-41640672264-1/EL-verification-environment",
+            "revision": "sha256:c362780b2a5c10b0fd723dbb3f85b3f3bf7097c0569cad8139aceb16a2441074"
+          }
+        ],
+        "material_sha256": "b497540b4a716104dd308b8361b73ad05978a6f26f09494db34efe5ea7ff3da8",
+        "product_commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+        "profile_sha256": "dc017cde4c5134fc4eadcbff4fb3010b8a84b83b5cff45e499e652a91f2466f2",
+        "slice_ids": [
+          "model",
+          "function-model",
+          "execution-design",
+          "evidence-requirements",
+          "workflow",
+          "requirements",
+          "objects",
+          "domain-source",
+          "store-source",
+          "http-source",
+          "domain-store-tests",
+          "http-tests",
+          "browser-tests"
+        ]
+      },
+      "function_id": "FL-reject-revise-resubmit",
+      "judgment_id": "inspection-statement:expense3:FL-reject-revise-resubmit",
+      "limits": [
+        "No workflow delegation or escalation rules.",
+        "Current outer scope is assembly inspection, not replacement of the original Function scope",
+        "No new Governance/admission/effective-state/downstream permission",
+        "Only the selected final-review Function has a new candidate assessment set"
+      ],
+      "original": {
+        "statement": {
+          "assessor": "agent:codex:expense3:controller-function-assessor",
+          "basis": {
+            "candidate_sha256": "17b5f7c9e56154f9524f31be0295cd3fa1dc8b50cfa4f9673db52f488dc663fd",
+            "evidence_refs": [
+              "observations-B.json#sha256=e134715854cb90e17c34075ddb3a4a754f464495f2cd81e37b59339810643d32",
+              "https://github.com/choreoatlas/Expense-Approval/actions/runs/41640672264"
+            ],
+            "execution_records": [
+              {
+                "ref": "ci-41640672264-1/EL-domain-rules",
+                "revision": "sha256:8207f1f92ee637bc1e9cd75c921b619752ed081ab8b102045dfb9ad270ec8cd3"
+              },
+              {
+                "ref": "ci-41640672264-1/EL-ledger-store",
+                "revision": "sha256:7374b5146d0f6219e5189d990cd25e7247cb274360a4346e9c85b5d860b91268"
+              },
+              {
+                "ref": "ci-41640672264-1/EL-http",
+                "revision": "sha256:2ec3a3db8ec5a4e7c46c8d6dcd24ab8dd08ae7af70badb02e169bdf218218829"
+              },
+              {
+                "ref": "ci-41640672264-1/EL-browser-ui",
+                "revision": "sha256:7bc38db347b4be3b1f2a73dde8d05ebb67909a41eea874d954df2adfd259b205"
+              },
+              {
+                "ref": "ci-41640672264-1/EL-verification-environment",
+                "revision": "sha256:c362780b2a5c10b0fd723dbb3f85b3f3bf7097c0569cad8139aceb16a2441074"
+              }
+            ],
+            "material_sha256": "b497540b4a716104dd308b8361b73ad05978a6f26f09494db34efe5ea7ff3da8",
+            "product_commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+            "profile_sha256": "dc017cde4c5134fc4eadcbff4fb3010b8a84b83b5cff45e499e652a91f2466f2",
+            "slice_ids": [
+              "model",
+              "function-model",
+              "execution-design",
+              "evidence-requirements",
+              "workflow",
+              "requirements",
+              "objects",
+              "domain-source",
+              "store-source",
+              "http-source",
+              "domain-store-tests",
+              "http-tests",
+              "browser-tests"
+            ]
+          },
+          "function_id": "FL-reject-revise-resubmit",
+          "historical_acceptance_ref": "https://github.com/choreoatlas/Expense-Approval/issues/1#issuecomment-5571375864",
+          "judgment_id": "inspection-statement:expense3:FL-reject-revise-resubmit",
+          "limits": [
+            "No workflow delegation or escalation rules.",
+            "Current outer scope is assembly inspection, not replacement of the original Function scope",
+            "No new Governance/admission/effective-state/downstream permission",
+            "Only the selected final-review Function has a new candidate assessment set"
+          ],
+          "original_path_definition": {
+            "capability_gap": "Need evidence for rejection at both stages, preservation of prior decisions, creation of a new revision, and resubmission from the new revision only.",
+            "current_capability_state": "Rejection, new revision creation and resubmission already exist; implementation was extended so either review stage may reject.",
+            "id": "FL-reject-revise-resubmit",
+            "limits": "No workflow delegation or escalation rules.",
+            "required_evidence": [
+              "stage-one reject-revise-resubmit",
+              "GM-stage reject-revise-resubmit",
+              "old revision and decisions retained"
+            ],
+            "required_execution_support": [
+              "EL-domain-rules",
+              "EL-ledger-store",
+              "EL-http",
+              "EL-browser-ui",
+              "EL-verification-environment"
+            ],
+            "scope": "rejected current revision",
+            "target_path_type": "rejection and rework lifecycle",
+            "upstream_governance_need": "GN1"
+          },
+          "reason": "This original Function definition and historical scope are preserved. The new source/CI material is available, but this Function is explicitly not rejudged by this inspection.",
+          "revision": "authored-expense3-inspection-v0.1",
+          "scope": "Expense source and explicit judgment inspection; final-review pilot result attached within its original scope",
+          "scope_interpretation": "The outer scope describes only this common assembly/inspection; original_path_definition.scope is unchanged",
+          "state": "not_rejudged",
+          "target_path_ref": "repository:github:choreoatlas/Expense-Approval:function:FL-reject-revise-resubmit"
+        }
+      },
+      "provenance": {
+        "bytes_base64": "ewogICJzdGF0ZW1lbnQiOiB7CiAgICAiYXNzZXNzb3IiOiAiYWdlbnQ6Y29kZXg6ZXhwZW5zZTM6Y29udHJvbGxlci1mdW5jdGlvbi1hc3Nlc3NvciIsCiAgICAiYmFzaXMiOiB7CiAgICAgICJjYW5kaWRhdGVfc2hhMjU2IjogIjE3YjVmN2M5ZTU2MTU0Zjk1MjRmMzFiZTAyOTVjZDNmYTFkYzhiNTBjZmE0Zjk2NzNkYjUyZjQ4OGRjNjYzZmQiLAogICAgICAiZXZpZGVuY2VfcmVmcyI6IFsKICAgICAgICAib2JzZXJ2YXRpb25zLUIuanNvbiNzaGEyNTY9ZTEzNDcxNTg1NGNiOTBlMTdjMzQwNzVkZGIzYTRhNzU0ZjQ2NDQ5NWYyY2Q4MWUzN2I1OTMzOTgxMDY0M2QzMiIsCiAgICAgICAgImh0dHBzOi8vZ2l0aHViLmNvbS9jaG9yZW9hdGxhcy9FeHBlbnNlLUFwcHJvdmFsL2FjdGlvbnMvcnVucy80MTY0MDY3MjI2NCIKICAgICAgXSwKICAgICAgImV4ZWN1dGlvbl9yZWNvcmRzIjogWwogICAgICAgIHsKICAgICAgICAgICJyZWYiOiAiY2ktNDE2NDA2NzIyNjQtMS9FTC1kb21haW4tcnVsZXMiLAogICAgICAgICAgInJldmlzaW9uIjogInNoYTI1Njo4MjA3ZjFmOTJlZTYzN2JjMWU5Y2Q3NWM5MjFiNjE5NzUyZWQwODFhYjhiMTAyMDQ1ZGZiOWFkMjcwZWM4Y2QzIgogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgInJlZiI6ICJjaS00MTY0MDY3MjI2NC0xL0VMLWxlZGdlci1zdG9yZSIsCiAgICAgICAgICAicmV2aXNpb24iOiAic2hhMjU2OjczNzRiNTE0NmQwZjYyMTllNTE4OWQ5OTBjZDI1ZTcyNDdjYjI3NDM2MGE0MzQ2ZTljODViNWQ4NjBiOTEyNjgiCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAicmVmIjogImNpLTQxNjQwNjcyMjY0LTEvRUwtaHR0cCIsCiAgICAgICAgICAicmV2aXNpb24iOiAic2hhMjU2OjJlYzNhM2RiOGVjNWE0ZTdjNDZjOGQ2ZGNkMjRhYjhkZDA4YWU3YWY3MGJhZGIwMmUxNjliZGYyMTgyMTg4MjkiCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAicmVmIjogImNpLTQxNjQwNjcyMjY0LTEvRUwtYnJvd3Nlci11aSIsCiAgICAgICAgICAicmV2aXNpb24iOiAic2hhMjU2OjdiYzM4ZGIzNDdiNGJlM2IxZjJhNzNkZGU4ZDA1ZWJiNjc5MDlhNDFlZWE4NzRkOTU0ZGYyYWRmZDI1OWIyMDUiCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAicmVmIjogImNpLTQxNjQwNjcyMjY0LTEvRUwtdmVyaWZpY2F0aW9uLWVudmlyb25tZW50IiwKICAgICAgICAgICJyZXZpc2lvbiI6ICJzaGEyNTY6YzM2Mjc4MGIyYTVjMTBiMGZkNzIzZGJiM2Y4NWIzZjNiZjcwOTdjMDU2OWNhZDgxMzlhY2ViMTZhMjQ0MTA3NCIKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJtYXRlcmlhbF9zaGEyNTYiOiAiYjQ5NzU0MGI0YTcxNjEwNGRkMzA4YjgzNjFiNzNhZDA1OTc4YTZmMjZmMDk0OTRkYjM0ZWZlNWVhN2ZmM2RhOCIsCiAgICAgICJwcm9kdWN0X2NvbW1pdCI6ICI1N2ZhMmIzNTUxYTBlOGY5MjQzMjQxY2IyNjA0ZDAzY2EwOWIxOWQ4IiwKICAgICAgInByb2ZpbGVfc2hhMjU2IjogImRjMDE3Y2RlNGM1MTM0ZmM0ZWFkY2JmZjRmYjMwMTBiOGE4NGI4M2I1Y2ZmNDVlNDk5ZTY1MmE5MWYyNDY2ZjIiLAogICAgICAic2xpY2VfaWRzIjogWwogICAgICAgICJtb2RlbCIsCiAgICAgICAgImZ1bmN0aW9uLW1vZGVsIiwKICAgICAgICAiZXhlY3V0aW9uLWRlc2lnbiIsCiAgICAgICAgImV2aWRlbmNlLXJlcXVpcmVtZW50cyIsCiAgICAgICAgIndvcmtmbG93IiwKICAgICAgICAicmVxdWlyZW1lbnRzIiwKICAgICAgICAib2JqZWN0cyIsCiAgICAgICAgImRvbWFpbi1zb3VyY2UiLAogICAgICAgICJzdG9yZS1zb3VyY2UiLAogICAgICAgICJodHRwLXNvdXJjZSIsCiAgICAgICAgImRvbWFpbi1zdG9yZS10ZXN0cyIsCiAgICAgICAgImh0dHAtdGVzdHMiLAogICAgICAgICJicm93c2VyLXRlc3RzIgogICAgICBdCiAgICB9LAogICAgImZ1bmN0aW9uX2lkIjogIkZMLXJlamVjdC1yZXZpc2UtcmVzdWJtaXQiLAogICAgImhpc3RvcmljYWxfYWNjZXB0YW5jZV9yZWYiOiAiaHR0cHM6Ly9naXRodWIuY29tL2Nob3Jlb2F0bGFzL0V4cGVuc2UtQXBwcm92YWwvaXNzdWVzLzEjaXNzdWVjb21tZW50LTU1NzEzNzU4NjQiLAogICAgImp1ZGdtZW50X2lkIjogImluc3BlY3Rpb24tc3RhdGVtZW50OmV4cGVuc2UzOkZMLXJlamVjdC1yZXZpc2UtcmVzdWJtaXQiLAogICAgImxpbWl0cyI6IFsKICAgICAgIk5vIHdvcmtmbG93IGRlbGVnYXRpb24gb3IgZXNjYWxhdGlvbiBydWxlcy4iLAogICAgICAiQ3VycmVudCBvdXRlciBzY29wZSBpcyBhc3NlbWJseSBpbnNwZWN0aW9uLCBub3QgcmVwbGFjZW1lbnQgb2YgdGhlIG9yaWdpbmFsIEZ1bmN0aW9uIHNjb3BlIiwKICAgICAgIk5vIG5ldyBHb3Zlcm5hbmNlL2FkbWlzc2lvbi9lZmZlY3RpdmUtc3RhdGUvZG93bnN0cmVhbSBwZXJtaXNzaW9uIiwKICAgICAgIk9ubHkgdGhlIHNlbGVjdGVkIGZpbmFsLXJldmlldyBGdW5jdGlvbiBoYXMgYSBuZXcgY2FuZGlkYXRlIGFzc2Vzc21lbnQgc2V0IgogICAgXSwKICAgICJvcmlnaW5hbF9wYXRoX2RlZmluaXRpb24iOiB7CiAgICAgICJjYXBhYmlsaXR5X2dhcCI6ICJOZWVkIGV2aWRlbmNlIGZvciByZWplY3Rpb24gYXQgYm90aCBzdGFnZXMsIHByZXNlcnZhdGlvbiBvZiBwcmlvciBkZWNpc2lvbnMsIGNyZWF0aW9uIG9mIGEgbmV3IHJldmlzaW9uLCBhbmQgcmVzdWJtaXNzaW9uIGZyb20gdGhlIG5ldyByZXZpc2lvbiBvbmx5LiIsCiAgICAgICJjdXJyZW50X2NhcGFiaWxpdHlfc3RhdGUiOiAiUmVqZWN0aW9uLCBuZXcgcmV2aXNpb24gY3JlYXRpb24gYW5kIHJlc3VibWlzc2lvbiBhbHJlYWR5IGV4aXN0OyBpbXBsZW1lbnRhdGlvbiB3YXMgZXh0ZW5kZWQgc28gZWl0aGVyIHJldmlldyBzdGFnZSBtYXkgcmVqZWN0LiIsCiAgICAgICJpZCI6ICJGTC1yZWplY3QtcmV2aXNlLXJlc3VibWl0IiwKICAgICAgImxpbWl0cyI6ICJObyB3b3JrZmxvdyBkZWxlZ2F0aW9uIG9yIGVzY2FsYXRpb24gcnVsZXMuIiwKICAgICAgInJlcXVpcmVkX2V2aWRlbmNlIjogWwogICAgICAgICJzdGFnZS1vbmUgcmVqZWN0LXJldmlzZS1yZXN1Ym1pdCIsCiAgICAgICAgIkdNLXN0YWdlIHJlamVjdC1yZXZpc2UtcmVzdWJtaXQiLAogICAgICAgICJvbGQgcmV2aXNpb24gYW5kIGRlY2lzaW9ucyByZXRhaW5lZCIKICAgICAgXSwKICAgICAgInJlcXVpcmVkX2V4ZWN1dGlvbl9zdXBwb3J0IjogWwogICAgICAgICJFTC1kb21haW4tcnVsZXMiLAogICAgICAgICJFTC1sZWRnZXItc3RvcmUiLAogICAgICAgICJFTC1odHRwIiwKICAgICAgICAiRUwtYnJvd3Nlci11aSIsCiAgICAgICAgIkVMLXZlcmlmaWNhdGlvbi1lbnZpcm9ubWVudCIKICAgICAgXSwKICAgICAgInNjb3BlIjogInJlamVjdGVkIGN1cnJlbnQgcmV2aXNpb24iLAogICAgICAidGFyZ2V0X3BhdGhfdHlwZSI6ICJyZWplY3Rpb24gYW5kIHJld29yayBsaWZlY3ljbGUiLAogICAgICAidXBzdHJlYW1fZ292ZXJuYW5jZV9uZWVkIjogIkdOMSIKICAgIH0sCiAgICAicmVhc29uIjogIlRoaXMgb3JpZ2luYWwgRnVuY3Rpb24gZGVmaW5pdGlvbiBhbmQgaGlzdG9yaWNhbCBzY29wZSBhcmUgcHJlc2VydmVkLiBUaGUgbmV3IHNvdXJjZS9DSSBtYXRlcmlhbCBpcyBhdmFpbGFibGUsIGJ1dCB0aGlzIEZ1bmN0aW9uIGlzIGV4cGxpY2l0bHkgbm90IHJlanVkZ2VkIGJ5IHRoaXMgaW5zcGVjdGlvbi4iLAogICAgInJldmlzaW9uIjogImF1dGhvcmVkLWV4cGVuc2UzLWluc3BlY3Rpb24tdjAuMSIsCiAgICAic2NvcGUiOiAiRXhwZW5zZSBzb3VyY2UgYW5kIGV4cGxpY2l0IGp1ZGdtZW50IGluc3BlY3Rpb247IGZpbmFsLXJldmlldyBwaWxvdCByZXN1bHQgYXR0YWNoZWQgd2l0aGluIGl0cyBvcmlnaW5hbCBzY29wZSIsCiAgICAic2NvcGVfaW50ZXJwcmV0YXRpb24iOiAiVGhlIG91dGVyIHNjb3BlIGRlc2NyaWJlcyBvbmx5IHRoaXMgY29tbW9uIGFzc2VtYmx5L2luc3BlY3Rpb247IG9yaWdpbmFsX3BhdGhfZGVmaW5pdGlvbi5zY29wZSBpcyB1bmNoYW5nZWQiLAogICAgInN0YXRlIjogIm5vdF9yZWp1ZGdlZCIsCiAgICAidGFyZ2V0X3BhdGhfcmVmIjogInJlcG9zaXRvcnk6Z2l0aHViOmNob3Jlb2F0bGFzL0V4cGVuc2UtQXBwcm92YWw6ZnVuY3Rpb246RkwtcmVqZWN0LXJldmlzZS1yZXN1Ym1pdCIKICB9Cn0K",
+        "kind": "authored",
+        "pointer": "/statement",
+        "ref": "authoring/FL-reject-revise-resubmit.json",
+        "revision": "authored-expense3-inspection-v0.1",
+        "sha256": "c58eee04d6311d11f62c3ee67aa2c0429522f84cca93cac6b6927066b69947a7"
+      },
+      "reason": "This original Function definition and historical scope are preserved. The new source/CI material is available, but this Function is explicitly not rejudged by this inspection.",
+      "revision": "authored-expense3-inspection-v0.1",
+      "scope": "Expense source and explicit judgment inspection; final-review pilot result attached within its original scope",
+      "state": "not_rejudged",
+      "target_path_ref": "repository:github:choreoatlas/Expense-Approval:function:FL-reject-revise-resubmit"
+    },
+    {
+      "assessor": "agent:codex:expense3:controller-function-assessor",
+      "basis": {
+        "candidate_sha256": "17b5f7c9e56154f9524f31be0295cd3fa1dc8b50cfa4f9673db52f488dc663fd",
+        "evidence_refs": [
+          "observations-B.json#sha256=e134715854cb90e17c34075ddb3a4a754f464495f2cd81e37b59339810643d32",
+          "https://github.com/choreoatlas/Expense-Approval/actions/runs/41640672264"
+        ],
+        "execution_records": [
+          {
+            "ref": "ci-41640672264-1/EL-domain-rules",
+            "revision": "sha256:8207f1f92ee637bc1e9cd75c921b619752ed081ab8b102045dfb9ad270ec8cd3"
+          },
+          {
+            "ref": "ci-41640672264-1/EL-ledger-store",
+            "revision": "sha256:7374b5146d0f6219e5189d990cd25e7247cb274360a4346e9c85b5d860b91268"
+          },
+          {
+            "ref": "ci-41640672264-1/EL-http",
+            "revision": "sha256:2ec3a3db8ec5a4e7c46c8d6dcd24ab8dd08ae7af70badb02e169bdf218218829"
+          },
+          {
+            "ref": "ci-41640672264-1/EL-verification-environment",
+            "revision": "sha256:c362780b2a5c10b0fd723dbb3f85b3f3bf7097c0569cad8139aceb16a2441074"
+          }
+        ],
+        "material_sha256": "b497540b4a716104dd308b8361b73ad05978a6f26f09494db34efe5ea7ff3da8",
+        "product_commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+        "profile_sha256": "dc017cde4c5134fc4eadcbff4fb3010b8a84b83b5cff45e499e652a91f2466f2",
+        "slice_ids": [
+          "model",
+          "function-model",
+          "execution-design",
+          "evidence-requirements",
+          "workflow",
+          "requirements",
+          "objects",
+          "domain-source",
+          "store-source",
+          "http-source",
+          "domain-store-tests",
+          "http-tests"
+        ]
+      },
+      "function_id": "FL-approval-revision-binding",
+      "judgment_id": "inspection-statement:expense3:FL-approval-revision-binding",
+      "limits": [
+        "Only amount, purpose and receipt_ref are approval-relevant in this sample.",
+        "Current outer scope is assembly inspection, not replacement of the original Function scope",
+        "No new Governance/admission/effective-state/downstream permission",
+        "Only the selected final-review Function has a new candidate assessment set"
+      ],
+      "original": {
+        "statement": {
+          "assessor": "agent:codex:expense3:controller-function-assessor",
+          "basis": {
+            "candidate_sha256": "17b5f7c9e56154f9524f31be0295cd3fa1dc8b50cfa4f9673db52f488dc663fd",
+            "evidence_refs": [
+              "observations-B.json#sha256=e134715854cb90e17c34075ddb3a4a754f464495f2cd81e37b59339810643d32",
+              "https://github.com/choreoatlas/Expense-Approval/actions/runs/41640672264"
+            ],
+            "execution_records": [
+              {
+                "ref": "ci-41640672264-1/EL-domain-rules",
+                "revision": "sha256:8207f1f92ee637bc1e9cd75c921b619752ed081ab8b102045dfb9ad270ec8cd3"
+              },
+              {
+                "ref": "ci-41640672264-1/EL-ledger-store",
+                "revision": "sha256:7374b5146d0f6219e5189d990cd25e7247cb274360a4346e9c85b5d860b91268"
+              },
+              {
+                "ref": "ci-41640672264-1/EL-http",
+                "revision": "sha256:2ec3a3db8ec5a4e7c46c8d6dcd24ab8dd08ae7af70badb02e169bdf218218829"
+              },
+              {
+                "ref": "ci-41640672264-1/EL-verification-environment",
+                "revision": "sha256:c362780b2a5c10b0fd723dbb3f85b3f3bf7097c0569cad8139aceb16a2441074"
+              }
+            ],
+            "material_sha256": "b497540b4a716104dd308b8361b73ad05978a6f26f09494db34efe5ea7ff3da8",
+            "product_commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+            "profile_sha256": "dc017cde4c5134fc4eadcbff4fb3010b8a84b83b5cff45e499e652a91f2466f2",
+            "slice_ids": [
+              "model",
+              "function-model",
+              "execution-design",
+              "evidence-requirements",
+              "workflow",
+              "requirements",
+              "objects",
+              "domain-source",
+              "store-source",
+              "http-source",
+              "domain-store-tests",
+              "http-tests"
+            ]
+          },
+          "function_id": "FL-approval-revision-binding",
+          "historical_acceptance_ref": "https://github.com/choreoatlas/Expense-Approval/issues/1#issuecomment-5571375864",
+          "judgment_id": "inspection-statement:expense3:FL-approval-revision-binding",
+          "limits": [
+            "Only amount, purpose and receipt_ref are approval-relevant in this sample.",
+            "Current outer scope is assembly inspection, not replacement of the original Function scope",
+            "No new Governance/admission/effective-state/downstream permission",
+            "Only the selected final-review Function has a new candidate assessment set"
+          ],
+          "original_path_definition": {
+            "capability_gap": "Need evidence that neither first-stage nor final approval can target a stale revision and that changed content requires a new revision and fresh approvals.",
+            "current_capability_state": "Store requires decision target to equal latest revision; both stage transitions operate on that revision.",
+            "id": "FL-approval-revision-binding",
+            "limits": "Only amount, purpose and receipt_ref are approval-relevant in this sample.",
+            "required_evidence": [
+              "old revision decision denied",
+              "revised content has new revision",
+              "prior approval does not float to new revision"
+            ],
+            "required_execution_support": [
+              "EL-domain-rules",
+              "EL-ledger-store",
+              "EL-http",
+              "EL-verification-environment"
+            ],
+            "scope": "approval-relevant expense content",
+            "target_path_type": "decision/revision binding",
+            "upstream_governance_need": "GN1"
+          },
+          "reason": "This original Function definition and historical scope are preserved. The new source/CI material is available, but this Function is explicitly not rejudged by this inspection.",
+          "revision": "authored-expense3-inspection-v0.1",
+          "scope": "Expense source and explicit judgment inspection; final-review pilot result attached within its original scope",
+          "scope_interpretation": "The outer scope describes only this common assembly/inspection; original_path_definition.scope is unchanged",
+          "state": "not_rejudged",
+          "target_path_ref": "repository:github:choreoatlas/Expense-Approval:function:FL-approval-revision-binding"
+        }
+      },
+      "provenance": {
+        "bytes_base64": "ewogICJzdGF0ZW1lbnQiOiB7CiAgICAiYXNzZXNzb3IiOiAiYWdlbnQ6Y29kZXg6ZXhwZW5zZTM6Y29udHJvbGxlci1mdW5jdGlvbi1hc3Nlc3NvciIsCiAgICAiYmFzaXMiOiB7CiAgICAgICJjYW5kaWRhdGVfc2hhMjU2IjogIjE3YjVmN2M5ZTU2MTU0Zjk1MjRmMzFiZTAyOTVjZDNmYTFkYzhiNTBjZmE0Zjk2NzNkYjUyZjQ4OGRjNjYzZmQiLAogICAgICAiZXZpZGVuY2VfcmVmcyI6IFsKICAgICAgICAib2JzZXJ2YXRpb25zLUIuanNvbiNzaGEyNTY9ZTEzNDcxNTg1NGNiOTBlMTdjMzQwNzVkZGIzYTRhNzU0ZjQ2NDQ5NWYyY2Q4MWUzN2I1OTMzOTgxMDY0M2QzMiIsCiAgICAgICAgImh0dHBzOi8vZ2l0aHViLmNvbS9jaG9yZW9hdGxhcy9FeHBlbnNlLUFwcHJvdmFsL2FjdGlvbnMvcnVucy80MTY0MDY3MjI2NCIKICAgICAgXSwKICAgICAgImV4ZWN1dGlvbl9yZWNvcmRzIjogWwogICAgICAgIHsKICAgICAgICAgICJyZWYiOiAiY2ktNDE2NDA2NzIyNjQtMS9FTC1kb21haW4tcnVsZXMiLAogICAgICAgICAgInJldmlzaW9uIjogInNoYTI1Njo4MjA3ZjFmOTJlZTYzN2JjMWU5Y2Q3NWM5MjFiNjE5NzUyZWQwODFhYjhiMTAyMDQ1ZGZiOWFkMjcwZWM4Y2QzIgogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgInJlZiI6ICJjaS00MTY0MDY3MjI2NC0xL0VMLWxlZGdlci1zdG9yZSIsCiAgICAgICAgICAicmV2aXNpb24iOiAic2hhMjU2OjczNzRiNTE0NmQwZjYyMTllNTE4OWQ5OTBjZDI1ZTcyNDdjYjI3NDM2MGE0MzQ2ZTljODViNWQ4NjBiOTEyNjgiCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAicmVmIjogImNpLTQxNjQwNjcyMjY0LTEvRUwtaHR0cCIsCiAgICAgICAgICAicmV2aXNpb24iOiAic2hhMjU2OjJlYzNhM2RiOGVjNWE0ZTdjNDZjOGQ2ZGNkMjRhYjhkZDA4YWU3YWY3MGJhZGIwMmUxNjliZGYyMTgyMTg4MjkiCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAicmVmIjogImNpLTQxNjQwNjcyMjY0LTEvRUwtdmVyaWZpY2F0aW9uLWVudmlyb25tZW50IiwKICAgICAgICAgICJyZXZpc2lvbiI6ICJzaGEyNTY6YzM2Mjc4MGIyYTVjMTBiMGZkNzIzZGJiM2Y4NWIzZjNiZjcwOTdjMDU2OWNhZDgxMzlhY2ViMTZhMjQ0MTA3NCIKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJtYXRlcmlhbF9zaGEyNTYiOiAiYjQ5NzU0MGI0YTcxNjEwNGRkMzA4YjgzNjFiNzNhZDA1OTc4YTZmMjZmMDk0OTRkYjM0ZWZlNWVhN2ZmM2RhOCIsCiAgICAgICJwcm9kdWN0X2NvbW1pdCI6ICI1N2ZhMmIzNTUxYTBlOGY5MjQzMjQxY2IyNjA0ZDAzY2EwOWIxOWQ4IiwKICAgICAgInByb2ZpbGVfc2hhMjU2IjogImRjMDE3Y2RlNGM1MTM0ZmM0ZWFkY2JmZjRmYjMwMTBiOGE4NGI4M2I1Y2ZmNDVlNDk5ZTY1MmE5MWYyNDY2ZjIiLAogICAgICAic2xpY2VfaWRzIjogWwogICAgICAgICJtb2RlbCIsCiAgICAgICAgImZ1bmN0aW9uLW1vZGVsIiwKICAgICAgICAiZXhlY3V0aW9uLWRlc2lnbiIsCiAgICAgICAgImV2aWRlbmNlLXJlcXVpcmVtZW50cyIsCiAgICAgICAgIndvcmtmbG93IiwKICAgICAgICAicmVxdWlyZW1lbnRzIiwKICAgICAgICAib2JqZWN0cyIsCiAgICAgICAgImRvbWFpbi1zb3VyY2UiLAogICAgICAgICJzdG9yZS1zb3VyY2UiLAogICAgICAgICJodHRwLXNvdXJjZSIsCiAgICAgICAgImRvbWFpbi1zdG9yZS10ZXN0cyIsCiAgICAgICAgImh0dHAtdGVzdHMiCiAgICAgIF0KICAgIH0sCiAgICAiZnVuY3Rpb25faWQiOiAiRkwtYXBwcm92YWwtcmV2aXNpb24tYmluZGluZyIsCiAgICAiaGlzdG9yaWNhbF9hY2NlcHRhbmNlX3JlZiI6ICJodHRwczovL2dpdGh1Yi5jb20vY2hvcmVvYXRsYXMvRXhwZW5zZS1BcHByb3ZhbC9pc3N1ZXMvMSNpc3N1ZWNvbW1lbnQtNTU3MTM3NTg2NCIsCiAgICAianVkZ21lbnRfaWQiOiAiaW5zcGVjdGlvbi1zdGF0ZW1lbnQ6ZXhwZW5zZTM6RkwtYXBwcm92YWwtcmV2aXNpb24tYmluZGluZyIsCiAgICAibGltaXRzIjogWwogICAgICAiT25seSBhbW91bnQsIHB1cnBvc2UgYW5kIHJlY2VpcHRfcmVmIGFyZSBhcHByb3ZhbC1yZWxldmFudCBpbiB0aGlzIHNhbXBsZS4iLAogICAgICAiQ3VycmVudCBvdXRlciBzY29wZSBpcyBhc3NlbWJseSBpbnNwZWN0aW9uLCBub3QgcmVwbGFjZW1lbnQgb2YgdGhlIG9yaWdpbmFsIEZ1bmN0aW9uIHNjb3BlIiwKICAgICAgIk5vIG5ldyBHb3Zlcm5hbmNlL2FkbWlzc2lvbi9lZmZlY3RpdmUtc3RhdGUvZG93bnN0cmVhbSBwZXJtaXNzaW9uIiwKICAgICAgIk9ubHkgdGhlIHNlbGVjdGVkIGZpbmFsLXJldmlldyBGdW5jdGlvbiBoYXMgYSBuZXcgY2FuZGlkYXRlIGFzc2Vzc21lbnQgc2V0IgogICAgXSwKICAgICJvcmlnaW5hbF9wYXRoX2RlZmluaXRpb24iOiB7CiAgICAgICJjYXBhYmlsaXR5X2dhcCI6ICJOZWVkIGV2aWRlbmNlIHRoYXQgbmVpdGhlciBmaXJzdC1zdGFnZSBub3IgZmluYWwgYXBwcm92YWwgY2FuIHRhcmdldCBhIHN0YWxlIHJldmlzaW9uIGFuZCB0aGF0IGNoYW5nZWQgY29udGVudCByZXF1aXJlcyBhIG5ldyByZXZpc2lvbiBhbmQgZnJlc2ggYXBwcm92YWxzLiIsCiAgICAgICJjdXJyZW50X2NhcGFiaWxpdHlfc3RhdGUiOiAiU3RvcmUgcmVxdWlyZXMgZGVjaXNpb24gdGFyZ2V0IHRvIGVxdWFsIGxhdGVzdCByZXZpc2lvbjsgYm90aCBzdGFnZSB0cmFuc2l0aW9ucyBvcGVyYXRlIG9uIHRoYXQgcmV2aXNpb24uIiwKICAgICAgImlkIjogIkZMLWFwcHJvdmFsLXJldmlzaW9uLWJpbmRpbmciLAogICAgICAibGltaXRzIjogIk9ubHkgYW1vdW50LCBwdXJwb3NlIGFuZCByZWNlaXB0X3JlZiBhcmUgYXBwcm92YWwtcmVsZXZhbnQgaW4gdGhpcyBzYW1wbGUuIiwKICAgICAgInJlcXVpcmVkX2V2aWRlbmNlIjogWwogICAgICAgICJvbGQgcmV2aXNpb24gZGVjaXNpb24gZGVuaWVkIiwKICAgICAgICAicmV2aXNlZCBjb250ZW50IGhhcyBuZXcgcmV2aXNpb24iLAogICAgICAgICJwcmlvciBhcHByb3ZhbCBkb2VzIG5vdCBmbG9hdCB0byBuZXcgcmV2aXNpb24iCiAgICAgIF0sCiAgICAgICJyZXF1aXJlZF9leGVjdXRpb25fc3VwcG9ydCI6IFsKICAgICAgICAiRUwtZG9tYWluLXJ1bGVzIiwKICAgICAgICAiRUwtbGVkZ2VyLXN0b3JlIiwKICAgICAgICAiRUwtaHR0cCIsCiAgICAgICAgIkVMLXZlcmlmaWNhdGlvbi1lbnZpcm9ubWVudCIKICAgICAgXSwKICAgICAgInNjb3BlIjogImFwcHJvdmFsLXJlbGV2YW50IGV4cGVuc2UgY29udGVudCIsCiAgICAgICJ0YXJnZXRfcGF0aF90eXBlIjogImRlY2lzaW9uL3JldmlzaW9uIGJpbmRpbmciLAogICAgICAidXBzdHJlYW1fZ292ZXJuYW5jZV9uZWVkIjogIkdOMSIKICAgIH0sCiAgICAicmVhc29uIjogIlRoaXMgb3JpZ2luYWwgRnVuY3Rpb24gZGVmaW5pdGlvbiBhbmQgaGlzdG9yaWNhbCBzY29wZSBhcmUgcHJlc2VydmVkLiBUaGUgbmV3IHNvdXJjZS9DSSBtYXRlcmlhbCBpcyBhdmFpbGFibGUsIGJ1dCB0aGlzIEZ1bmN0aW9uIGlzIGV4cGxpY2l0bHkgbm90IHJlanVkZ2VkIGJ5IHRoaXMgaW5zcGVjdGlvbi4iLAogICAgInJldmlzaW9uIjogImF1dGhvcmVkLWV4cGVuc2UzLWluc3BlY3Rpb24tdjAuMSIsCiAgICAic2NvcGUiOiAiRXhwZW5zZSBzb3VyY2UgYW5kIGV4cGxpY2l0IGp1ZGdtZW50IGluc3BlY3Rpb247IGZpbmFsLXJldmlldyBwaWxvdCByZXN1bHQgYXR0YWNoZWQgd2l0aGluIGl0cyBvcmlnaW5hbCBzY29wZSIsCiAgICAic2NvcGVfaW50ZXJwcmV0YXRpb24iOiAiVGhlIG91dGVyIHNjb3BlIGRlc2NyaWJlcyBvbmx5IHRoaXMgY29tbW9uIGFzc2VtYmx5L2luc3BlY3Rpb247IG9yaWdpbmFsX3BhdGhfZGVmaW5pdGlvbi5zY29wZSBpcyB1bmNoYW5nZWQiLAogICAgInN0YXRlIjogIm5vdF9yZWp1ZGdlZCIsCiAgICAidGFyZ2V0X3BhdGhfcmVmIjogInJlcG9zaXRvcnk6Z2l0aHViOmNob3Jlb2F0bGFzL0V4cGVuc2UtQXBwcm92YWw6ZnVuY3Rpb246RkwtYXBwcm92YWwtcmV2aXNpb24tYmluZGluZyIKICB9Cn0K",
+        "kind": "authored",
+        "pointer": "/statement",
+        "ref": "authoring/FL-approval-revision-binding.json",
+        "revision": "authored-expense3-inspection-v0.1",
+        "sha256": "a36ca02a30b88b50905fbe6996d500e2da991082be606439675ed2e219f0c090"
+      },
+      "reason": "This original Function definition and historical scope are preserved. The new source/CI material is available, but this Function is explicitly not rejudged by this inspection.",
+      "revision": "authored-expense3-inspection-v0.1",
+      "scope": "Expense source and explicit judgment inspection; final-review pilot result attached within its original scope",
+      "state": "not_rejudged",
+      "target_path_ref": "repository:github:choreoatlas/Expense-Approval:function:FL-approval-revision-binding"
+    },
+    {
+      "assessor": "agent:codex:expense3:controller-function-assessor",
+      "basis": {
+        "candidate_sha256": "17b5f7c9e56154f9524f31be0295cd3fa1dc8b50cfa4f9673db52f488dc663fd",
+        "evidence_refs": [
+          "observations-B.json#sha256=e134715854cb90e17c34075ddb3a4a754f464495f2cd81e37b59339810643d32",
+          "https://github.com/choreoatlas/Expense-Approval/actions/runs/41640672264"
+        ],
+        "execution_records": [
+          {
+            "ref": "ci-41640672264-1/EL-ledger-store",
+            "revision": "sha256:7374b5146d0f6219e5189d990cd25e7247cb274360a4346e9c85b5d860b91268"
+          },
+          {
+            "ref": "ci-41640672264-1/EL-http",
+            "revision": "sha256:2ec3a3db8ec5a4e7c46c8d6dcd24ab8dd08ae7af70badb02e169bdf218218829"
+          },
+          {
+            "ref": "ci-41640672264-1/EL-browser-ui",
+            "revision": "sha256:7bc38db347b4be3b1f2a73dde8d05ebb67909a41eea874d954df2adfd259b205"
+          },
+          {
+            "ref": "ci-41640672264-1/EL-verification-environment",
+            "revision": "sha256:c362780b2a5c10b0fd723dbb3f85b3f3bf7097c0569cad8139aceb16a2441074"
+          }
+        ],
+        "material_sha256": "b497540b4a716104dd308b8361b73ad05978a6f26f09494db34efe5ea7ff3da8",
+        "product_commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+        "profile_sha256": "dc017cde4c5134fc4eadcbff4fb3010b8a84b83b5cff45e499e652a91f2466f2",
+        "slice_ids": [
+          "model",
+          "function-model",
+          "execution-design",
+          "evidence-requirements",
+          "workflow",
+          "requirements",
+          "objects",
+          "store-source",
+          "http-source",
+          "browser-source",
+          "domain-store-tests",
+          "http-tests",
+          "browser-tests"
+        ]
+      },
+      "function_id": "FL-history",
+      "judgment_id": "inspection-statement:expense3:FL-history",
+      "limits": [
+        "No cross-expense audit dashboard.",
+        "Current outer scope is assembly inspection, not replacement of the original Function scope",
+        "No new Governance/admission/effective-state/downstream permission",
+        "Only the selected final-review Function has a new candidate assessment set"
+      ],
+      "original": {
+        "statement": {
+          "assessor": "agent:codex:expense3:controller-function-assessor",
+          "basis": {
+            "candidate_sha256": "17b5f7c9e56154f9524f31be0295cd3fa1dc8b50cfa4f9673db52f488dc663fd",
+            "evidence_refs": [
+              "observations-B.json#sha256=e134715854cb90e17c34075ddb3a4a754f464495f2cd81e37b59339810643d32",
+              "https://github.com/choreoatlas/Expense-Approval/actions/runs/41640672264"
+            ],
+            "execution_records": [
+              {
+                "ref": "ci-41640672264-1/EL-ledger-store",
+                "revision": "sha256:7374b5146d0f6219e5189d990cd25e7247cb274360a4346e9c85b5d860b91268"
+              },
+              {
+                "ref": "ci-41640672264-1/EL-http",
+                "revision": "sha256:2ec3a3db8ec5a4e7c46c8d6dcd24ab8dd08ae7af70badb02e169bdf218218829"
+              },
+              {
+                "ref": "ci-41640672264-1/EL-browser-ui",
+                "revision": "sha256:7bc38db347b4be3b1f2a73dde8d05ebb67909a41eea874d954df2adfd259b205"
+              },
+              {
+                "ref": "ci-41640672264-1/EL-verification-environment",
+                "revision": "sha256:c362780b2a5c10b0fd723dbb3f85b3f3bf7097c0569cad8139aceb16a2441074"
+              }
+            ],
+            "material_sha256": "b497540b4a716104dd308b8361b73ad05978a6f26f09494db34efe5ea7ff3da8",
+            "product_commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+            "profile_sha256": "dc017cde4c5134fc4eadcbff4fb3010b8a84b83b5cff45e499e652a91f2466f2",
+            "slice_ids": [
+              "model",
+              "function-model",
+              "execution-design",
+              "evidence-requirements",
+              "workflow",
+              "requirements",
+              "objects",
+              "store-source",
+              "http-source",
+              "browser-source",
+              "domain-store-tests",
+              "http-tests",
+              "browser-tests"
+            ]
+          },
+          "function_id": "FL-history",
+          "historical_acceptance_ref": "https://github.com/choreoatlas/Expense-Approval/issues/1#issuecomment-5571375864",
+          "judgment_id": "inspection-statement:expense3:FL-history",
+          "limits": [
+            "No cross-expense audit dashboard.",
+            "Current outer scope is assembly inspection, not replacement of the original Function scope",
+            "No new Governance/admission/effective-state/downstream permission",
+            "Only the selected final-review Function has a new candidate assessment set"
+          ],
+          "original_path_definition": {
+            "capability_gap": "Need evidence showing ordered history across two-stage decisions, rejection, revision and resubmission.",
+            "current_capability_state": "Revision and decision history exist; decisions now include actor and actor_role.",
+            "id": "FL-history",
+            "limits": "No cross-expense audit dashboard.",
+            "required_evidence": [
+              "ordered revisions",
+              "ordered stage-one and GM decisions",
+              "actor_role retained",
+              "browser history visibility"
+            ],
+            "required_execution_support": [
+              "EL-ledger-store",
+              "EL-http",
+              "EL-browser-ui",
+              "EL-verification-environment"
+            ],
+            "scope": "single expense history",
+            "target_path_type": "inspectable ordered history",
+            "upstream_governance_need": "GN1"
+          },
+          "reason": "This original Function definition and historical scope are preserved. The new source/CI material is available, but this Function is explicitly not rejudged by this inspection.",
+          "revision": "authored-expense3-inspection-v0.1",
+          "scope": "Expense source and explicit judgment inspection; final-review pilot result attached within its original scope",
+          "scope_interpretation": "The outer scope describes only this common assembly/inspection; original_path_definition.scope is unchanged",
+          "state": "not_rejudged",
+          "target_path_ref": "repository:github:choreoatlas/Expense-Approval:function:FL-history"
+        }
+      },
+      "provenance": {
+        "bytes_base64": "ewogICJzdGF0ZW1lbnQiOiB7CiAgICAiYXNzZXNzb3IiOiAiYWdlbnQ6Y29kZXg6ZXhwZW5zZTM6Y29udHJvbGxlci1mdW5jdGlvbi1hc3Nlc3NvciIsCiAgICAiYmFzaXMiOiB7CiAgICAgICJjYW5kaWRhdGVfc2hhMjU2IjogIjE3YjVmN2M5ZTU2MTU0Zjk1MjRmMzFiZTAyOTVjZDNmYTFkYzhiNTBjZmE0Zjk2NzNkYjUyZjQ4OGRjNjYzZmQiLAogICAgICAiZXZpZGVuY2VfcmVmcyI6IFsKICAgICAgICAib2JzZXJ2YXRpb25zLUIuanNvbiNzaGEyNTY9ZTEzNDcxNTg1NGNiOTBlMTdjMzQwNzVkZGIzYTRhNzU0ZjQ2NDQ5NWYyY2Q4MWUzN2I1OTMzOTgxMDY0M2QzMiIsCiAgICAgICAgImh0dHBzOi8vZ2l0aHViLmNvbS9jaG9yZW9hdGxhcy9FeHBlbnNlLUFwcHJvdmFsL2FjdGlvbnMvcnVucy80MTY0MDY3MjI2NCIKICAgICAgXSwKICAgICAgImV4ZWN1dGlvbl9yZWNvcmRzIjogWwogICAgICAgIHsKICAgICAgICAgICJyZWYiOiAiY2ktNDE2NDA2NzIyNjQtMS9FTC1sZWRnZXItc3RvcmUiLAogICAgICAgICAgInJldmlzaW9uIjogInNoYTI1Njo3Mzc0YjUxNDZkMGY2MjE5ZTUxODlkOTkwY2QyNWU3MjQ3Y2IyNzQzNjBhNDM0NmU5Yzg1YjVkODYwYjkxMjY4IgogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgInJlZiI6ICJjaS00MTY0MDY3MjI2NC0xL0VMLWh0dHAiLAogICAgICAgICAgInJldmlzaW9uIjogInNoYTI1NjoyZWMzYTNkYjhlYzVhNGU3YzQ2YzhkNmRjZDI0YWI4ZGQwOGFlN2FmNzBiYWRiMDJlMTY5YmRmMjE4MjE4ODI5IgogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgInJlZiI6ICJjaS00MTY0MDY3MjI2NC0xL0VMLWJyb3dzZXItdWkiLAogICAgICAgICAgInJldmlzaW9uIjogInNoYTI1Njo3YmMzOGRiMzQ3YjRiZTNiMWYyYTczZGRlOGQwNWViYjY3OTA5YTQxZWVhODc0ZDk1NGRmMmFkZmQyNTliMjA1IgogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgInJlZiI6ICJjaS00MTY0MDY3MjI2NC0xL0VMLXZlcmlmaWNhdGlvbi1lbnZpcm9ubWVudCIsCiAgICAgICAgICAicmV2aXNpb24iOiAic2hhMjU2OmMzNjI3ODBiMmE1YzEwYjBmZDcyM2RiYjNmODViM2YzYmY3MDk3YzA1NjljYWQ4MTM5YWNlYjE2YTI0NDEwNzQiCiAgICAgICAgfQogICAgICBdLAogICAgICAibWF0ZXJpYWxfc2hhMjU2IjogImI0OTc1NDBiNGE3MTYxMDRkZDMwOGI4MzYxYjczYWQwNTk3OGE2ZjI2ZjA5NDk0ZGIzNGVmZTVlYTdmZjNkYTgiLAogICAgICAicHJvZHVjdF9jb21taXQiOiAiNTdmYTJiMzU1MWEwZThmOTI0MzI0MWNiMjYwNGQwM2NhMDliMTlkOCIsCiAgICAgICJwcm9maWxlX3NoYTI1NiI6ICJkYzAxN2NkZTRjNTEzNGZjNGVhZGNiZmY0ZmIzMDEwYjhhODRiODNiNWNmZjQ1ZTQ5OWU2NTJhOTFmMjQ2NmYyIiwKICAgICAgInNsaWNlX2lkcyI6IFsKICAgICAgICAibW9kZWwiLAogICAgICAgICJmdW5jdGlvbi1tb2RlbCIsCiAgICAgICAgImV4ZWN1dGlvbi1kZXNpZ24iLAogICAgICAgICJldmlkZW5jZS1yZXF1aXJlbWVudHMiLAogICAgICAgICJ3b3JrZmxvdyIsCiAgICAgICAgInJlcXVpcmVtZW50cyIsCiAgICAgICAgIm9iamVjdHMiLAogICAgICAgICJzdG9yZS1zb3VyY2UiLAogICAgICAgICJodHRwLXNvdXJjZSIsCiAgICAgICAgImJyb3dzZXItc291cmNlIiwKICAgICAgICAiZG9tYWluLXN0b3JlLXRlc3RzIiwKICAgICAgICAiaHR0cC10ZXN0cyIsCiAgICAgICAgImJyb3dzZXItdGVzdHMiCiAgICAgIF0KICAgIH0sCiAgICAiZnVuY3Rpb25faWQiOiAiRkwtaGlzdG9yeSIsCiAgICAiaGlzdG9yaWNhbF9hY2NlcHRhbmNlX3JlZiI6ICJodHRwczovL2dpdGh1Yi5jb20vY2hvcmVvYXRsYXMvRXhwZW5zZS1BcHByb3ZhbC9pc3N1ZXMvMSNpc3N1ZWNvbW1lbnQtNTU3MTM3NTg2NCIsCiAgICAianVkZ21lbnRfaWQiOiAiaW5zcGVjdGlvbi1zdGF0ZW1lbnQ6ZXhwZW5zZTM6RkwtaGlzdG9yeSIsCiAgICAibGltaXRzIjogWwogICAgICAiTm8gY3Jvc3MtZXhwZW5zZSBhdWRpdCBkYXNoYm9hcmQuIiwKICAgICAgIkN1cnJlbnQgb3V0ZXIgc2NvcGUgaXMgYXNzZW1ibHkgaW5zcGVjdGlvbiwgbm90IHJlcGxhY2VtZW50IG9mIHRoZSBvcmlnaW5hbCBGdW5jdGlvbiBzY29wZSIsCiAgICAgICJObyBuZXcgR292ZXJuYW5jZS9hZG1pc3Npb24vZWZmZWN0aXZlLXN0YXRlL2Rvd25zdHJlYW0gcGVybWlzc2lvbiIsCiAgICAgICJPbmx5IHRoZSBzZWxlY3RlZCBmaW5hbC1yZXZpZXcgRnVuY3Rpb24gaGFzIGEgbmV3IGNhbmRpZGF0ZSBhc3Nlc3NtZW50IHNldCIKICAgIF0sCiAgICAib3JpZ2luYWxfcGF0aF9kZWZpbml0aW9uIjogewogICAgICAiY2FwYWJpbGl0eV9nYXAiOiAiTmVlZCBldmlkZW5jZSBzaG93aW5nIG9yZGVyZWQgaGlzdG9yeSBhY3Jvc3MgdHdvLXN0YWdlIGRlY2lzaW9ucywgcmVqZWN0aW9uLCByZXZpc2lvbiBhbmQgcmVzdWJtaXNzaW9uLiIsCiAgICAgICJjdXJyZW50X2NhcGFiaWxpdHlfc3RhdGUiOiAiUmV2aXNpb24gYW5kIGRlY2lzaW9uIGhpc3RvcnkgZXhpc3Q7IGRlY2lzaW9ucyBub3cgaW5jbHVkZSBhY3RvciBhbmQgYWN0b3Jfcm9sZS4iLAogICAgICAiaWQiOiAiRkwtaGlzdG9yeSIsCiAgICAgICJsaW1pdHMiOiAiTm8gY3Jvc3MtZXhwZW5zZSBhdWRpdCBkYXNoYm9hcmQuIiwKICAgICAgInJlcXVpcmVkX2V2aWRlbmNlIjogWwogICAgICAgICJvcmRlcmVkIHJldmlzaW9ucyIsCiAgICAgICAgIm9yZGVyZWQgc3RhZ2Utb25lIGFuZCBHTSBkZWNpc2lvbnMiLAogICAgICAgICJhY3Rvcl9yb2xlIHJldGFpbmVkIiwKICAgICAgICAiYnJvd3NlciBoaXN0b3J5IHZpc2liaWxpdHkiCiAgICAgIF0sCiAgICAgICJyZXF1aXJlZF9leGVjdXRpb25fc3VwcG9ydCI6IFsKICAgICAgICAiRUwtbGVkZ2VyLXN0b3JlIiwKICAgICAgICAiRUwtaHR0cCIsCiAgICAgICAgIkVMLWJyb3dzZXItdWkiLAogICAgICAgICJFTC12ZXJpZmljYXRpb24tZW52aXJvbm1lbnQiCiAgICAgIF0sCiAgICAgICJzY29wZSI6ICJzaW5nbGUgZXhwZW5zZSBoaXN0b3J5IiwKICAgICAgInRhcmdldF9wYXRoX3R5cGUiOiAiaW5zcGVjdGFibGUgb3JkZXJlZCBoaXN0b3J5IiwKICAgICAgInVwc3RyZWFtX2dvdmVybmFuY2VfbmVlZCI6ICJHTjEiCiAgICB9LAogICAgInJlYXNvbiI6ICJUaGlzIG9yaWdpbmFsIEZ1bmN0aW9uIGRlZmluaXRpb24gYW5kIGhpc3RvcmljYWwgc2NvcGUgYXJlIHByZXNlcnZlZC4gVGhlIG5ldyBzb3VyY2UvQ0kgbWF0ZXJpYWwgaXMgYXZhaWxhYmxlLCBidXQgdGhpcyBGdW5jdGlvbiBpcyBleHBsaWNpdGx5IG5vdCByZWp1ZGdlZCBieSB0aGlzIGluc3BlY3Rpb24uIiwKICAgICJyZXZpc2lvbiI6ICJhdXRob3JlZC1leHBlbnNlMy1pbnNwZWN0aW9uLXYwLjEiLAogICAgInNjb3BlIjogIkV4cGVuc2Ugc291cmNlIGFuZCBleHBsaWNpdCBqdWRnbWVudCBpbnNwZWN0aW9uOyBmaW5hbC1yZXZpZXcgcGlsb3QgcmVzdWx0IGF0dGFjaGVkIHdpdGhpbiBpdHMgb3JpZ2luYWwgc2NvcGUiLAogICAgInNjb3BlX2ludGVycHJldGF0aW9uIjogIlRoZSBvdXRlciBzY29wZSBkZXNjcmliZXMgb25seSB0aGlzIGNvbW1vbiBhc3NlbWJseS9pbnNwZWN0aW9uOyBvcmlnaW5hbF9wYXRoX2RlZmluaXRpb24uc2NvcGUgaXMgdW5jaGFuZ2VkIiwKICAgICJzdGF0ZSI6ICJub3RfcmVqdWRnZWQiLAogICAgInRhcmdldF9wYXRoX3JlZiI6ICJyZXBvc2l0b3J5OmdpdGh1YjpjaG9yZW9hdGxhcy9FeHBlbnNlLUFwcHJvdmFsOmZ1bmN0aW9uOkZMLWhpc3RvcnkiCiAgfQp9Cg==",
+        "kind": "authored",
+        "pointer": "/statement",
+        "ref": "authoring/FL-history.json",
+        "revision": "authored-expense3-inspection-v0.1",
+        "sha256": "3cee439fe068fba72e7fea174a1423ce2445c4bb3ebecd1d6637b2bcd59ce136"
+      },
+      "reason": "This original Function definition and historical scope are preserved. The new source/CI material is available, but this Function is explicitly not rejudged by this inspection.",
+      "revision": "authored-expense3-inspection-v0.1",
+      "scope": "Expense source and explicit judgment inspection; final-review pilot result attached within its original scope",
+      "state": "not_rejudged",
+      "target_path_ref": "repository:github:choreoatlas/Expense-Approval:function:FL-history"
+    },
+    {
+      "assessor": "agent:codex:expense3:controller-function-assessor",
+      "basis": {
+        "candidate_sha256": "17b5f7c9e56154f9524f31be0295cd3fa1dc8b50cfa4f9673db52f488dc663fd",
+        "evidence_refs": [
+          "observations-B.json#sha256=e134715854cb90e17c34075ddb3a4a754f464495f2cd81e37b59339810643d32",
+          "https://github.com/choreoatlas/Expense-Approval/actions/runs/41640672264"
+        ],
+        "execution_records": [
+          {
+            "ref": "ci-41640672264-1/EL-ledger-store",
+            "revision": "sha256:7374b5146d0f6219e5189d990cd25e7247cb274360a4346e9c85b5d860b91268"
+          },
+          {
+            "ref": "ci-41640672264-1/EL-verification-environment",
+            "revision": "sha256:c362780b2a5c10b0fd723dbb3f85b3f3bf7097c0569cad8139aceb16a2441074"
+          }
+        ],
+        "material_sha256": "b497540b4a716104dd308b8361b73ad05978a6f26f09494db34efe5ea7ff3da8",
+        "product_commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+        "profile_sha256": "dc017cde4c5134fc4eadcbff4fb3010b8a84b83b5cff45e499e652a91f2466f2",
+        "slice_ids": [
+          "model",
+          "function-model",
+          "execution-design",
+          "evidence-requirements",
+          "workflow",
+          "requirements",
+          "objects",
+          "store-source",
+          "application-entry",
+          "domain-store-tests",
+          "restart-tests"
+        ]
+      },
+      "function_id": "FL-durable",
+      "judgment_id": "inspection-statement:expense3:FL-durable",
+      "limits": [
+        "No crash consistency, replication or remote durability claim.",
+        "Current outer scope is assembly inspection, not replacement of the original Function scope",
+        "No new Governance/admission/effective-state/downstream permission",
+        "Only the selected final-review Function has a new candidate assessment set"
+      ],
+      "original": {
+        "statement": {
+          "assessor": "agent:codex:expense3:controller-function-assessor",
+          "basis": {
+            "candidate_sha256": "17b5f7c9e56154f9524f31be0295cd3fa1dc8b50cfa4f9673db52f488dc663fd",
+            "evidence_refs": [
+              "observations-B.json#sha256=e134715854cb90e17c34075ddb3a4a754f464495f2cd81e37b59339810643d32",
+              "https://github.com/choreoatlas/Expense-Approval/actions/runs/41640672264"
+            ],
+            "execution_records": [
+              {
+                "ref": "ci-41640672264-1/EL-ledger-store",
+                "revision": "sha256:7374b5146d0f6219e5189d990cd25e7247cb274360a4346e9c85b5d860b91268"
+              },
+              {
+                "ref": "ci-41640672264-1/EL-verification-environment",
+                "revision": "sha256:c362780b2a5c10b0fd723dbb3f85b3f3bf7097c0569cad8139aceb16a2441074"
+              }
+            ],
+            "material_sha256": "b497540b4a716104dd308b8361b73ad05978a6f26f09494db34efe5ea7ff3da8",
+            "product_commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+            "profile_sha256": "dc017cde4c5134fc4eadcbff4fb3010b8a84b83b5cff45e499e652a91f2466f2",
+            "slice_ids": [
+              "model",
+              "function-model",
+              "execution-design",
+              "evidence-requirements",
+              "workflow",
+              "requirements",
+              "objects",
+              "store-source",
+              "application-entry",
+              "domain-store-tests",
+              "restart-tests"
+            ]
+          },
+          "function_id": "FL-durable",
+          "historical_acceptance_ref": "https://github.com/choreoatlas/Expense-Approval/issues/1#issuecomment-5571375864",
+          "judgment_id": "inspection-statement:expense3:FL-durable",
+          "limits": [
+            "No crash consistency, replication or remote durability claim.",
+            "Current outer scope is assembly inspection, not replacement of the original Function scope",
+            "No new Governance/admission/effective-state/downstream permission",
+            "Only the selected final-review Function has a new candidate assessment set"
+          ],
+          "original_path_definition": {
+            "capability_gap": "Need re-evidence that two-stage decisions, roles and history survive store/application restart.",
+            "current_capability_state": "SQLite persistence exists for actors, revisions and decisions.",
+            "id": "FL-durable",
+            "limits": "No crash consistency, replication or remote durability claim.",
+            "required_evidence": [
+              "restart and recover actor roles",
+              "restart and recover both decision stages",
+              "restart and recover revisions/history"
+            ],
+            "required_execution_support": [
+              "EL-ledger-store",
+              "EL-verification-environment"
+            ],
+            "scope": "local SQLite file persistence",
+            "target_path_type": "local persistence",
+            "upstream_governance_need": "GN1"
+          },
+          "reason": "This original Function definition and historical scope are preserved. The new source/CI material is available, but this Function is explicitly not rejudged by this inspection.",
+          "revision": "authored-expense3-inspection-v0.1",
+          "scope": "Expense source and explicit judgment inspection; final-review pilot result attached within its original scope",
+          "scope_interpretation": "The outer scope describes only this common assembly/inspection; original_path_definition.scope is unchanged",
+          "state": "not_rejudged",
+          "target_path_ref": "repository:github:choreoatlas/Expense-Approval:function:FL-durable"
+        }
+      },
+      "provenance": {
+        "bytes_base64": "ewogICJzdGF0ZW1lbnQiOiB7CiAgICAiYXNzZXNzb3IiOiAiYWdlbnQ6Y29kZXg6ZXhwZW5zZTM6Y29udHJvbGxlci1mdW5jdGlvbi1hc3Nlc3NvciIsCiAgICAiYmFzaXMiOiB7CiAgICAgICJjYW5kaWRhdGVfc2hhMjU2IjogIjE3YjVmN2M5ZTU2MTU0Zjk1MjRmMzFiZTAyOTVjZDNmYTFkYzhiNTBjZmE0Zjk2NzNkYjUyZjQ4OGRjNjYzZmQiLAogICAgICAiZXZpZGVuY2VfcmVmcyI6IFsKICAgICAgICAib2JzZXJ2YXRpb25zLUIuanNvbiNzaGEyNTY9ZTEzNDcxNTg1NGNiOTBlMTdjMzQwNzVkZGIzYTRhNzU0ZjQ2NDQ5NWYyY2Q4MWUzN2I1OTMzOTgxMDY0M2QzMiIsCiAgICAgICAgImh0dHBzOi8vZ2l0aHViLmNvbS9jaG9yZW9hdGxhcy9FeHBlbnNlLUFwcHJvdmFsL2FjdGlvbnMvcnVucy80MTY0MDY3MjI2NCIKICAgICAgXSwKICAgICAgImV4ZWN1dGlvbl9yZWNvcmRzIjogWwogICAgICAgIHsKICAgICAgICAgICJyZWYiOiAiY2ktNDE2NDA2NzIyNjQtMS9FTC1sZWRnZXItc3RvcmUiLAogICAgICAgICAgInJldmlzaW9uIjogInNoYTI1Njo3Mzc0YjUxNDZkMGY2MjE5ZTUxODlkOTkwY2QyNWU3MjQ3Y2IyNzQzNjBhNDM0NmU5Yzg1YjVkODYwYjkxMjY4IgogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgInJlZiI6ICJjaS00MTY0MDY3MjI2NC0xL0VMLXZlcmlmaWNhdGlvbi1lbnZpcm9ubWVudCIsCiAgICAgICAgICAicmV2aXNpb24iOiAic2hhMjU2OmMzNjI3ODBiMmE1YzEwYjBmZDcyM2RiYjNmODViM2YzYmY3MDk3YzA1NjljYWQ4MTM5YWNlYjE2YTI0NDEwNzQiCiAgICAgICAgfQogICAgICBdLAogICAgICAibWF0ZXJpYWxfc2hhMjU2IjogImI0OTc1NDBiNGE3MTYxMDRkZDMwOGI4MzYxYjczYWQwNTk3OGE2ZjI2ZjA5NDk0ZGIzNGVmZTVlYTdmZjNkYTgiLAogICAgICAicHJvZHVjdF9jb21taXQiOiAiNTdmYTJiMzU1MWEwZThmOTI0MzI0MWNiMjYwNGQwM2NhMDliMTlkOCIsCiAgICAgICJwcm9maWxlX3NoYTI1NiI6ICJkYzAxN2NkZTRjNTEzNGZjNGVhZGNiZmY0ZmIzMDEwYjhhODRiODNiNWNmZjQ1ZTQ5OWU2NTJhOTFmMjQ2NmYyIiwKICAgICAgInNsaWNlX2lkcyI6IFsKICAgICAgICAibW9kZWwiLAogICAgICAgICJmdW5jdGlvbi1tb2RlbCIsCiAgICAgICAgImV4ZWN1dGlvbi1kZXNpZ24iLAogICAgICAgICJldmlkZW5jZS1yZXF1aXJlbWVudHMiLAogICAgICAgICJ3b3JrZmxvdyIsCiAgICAgICAgInJlcXVpcmVtZW50cyIsCiAgICAgICAgIm9iamVjdHMiLAogICAgICAgICJzdG9yZS1zb3VyY2UiLAogICAgICAgICJhcHBsaWNhdGlvbi1lbnRyeSIsCiAgICAgICAgImRvbWFpbi1zdG9yZS10ZXN0cyIsCiAgICAgICAgInJlc3RhcnQtdGVzdHMiCiAgICAgIF0KICAgIH0sCiAgICAiZnVuY3Rpb25faWQiOiAiRkwtZHVyYWJsZSIsCiAgICAiaGlzdG9yaWNhbF9hY2NlcHRhbmNlX3JlZiI6ICJodHRwczovL2dpdGh1Yi5jb20vY2hvcmVvYXRsYXMvRXhwZW5zZS1BcHByb3ZhbC9pc3N1ZXMvMSNpc3N1ZWNvbW1lbnQtNTU3MTM3NTg2NCIsCiAgICAianVkZ21lbnRfaWQiOiAiaW5zcGVjdGlvbi1zdGF0ZW1lbnQ6ZXhwZW5zZTM6RkwtZHVyYWJsZSIsCiAgICAibGltaXRzIjogWwogICAgICAiTm8gY3Jhc2ggY29uc2lzdGVuY3ksIHJlcGxpY2F0aW9uIG9yIHJlbW90ZSBkdXJhYmlsaXR5IGNsYWltLiIsCiAgICAgICJDdXJyZW50IG91dGVyIHNjb3BlIGlzIGFzc2VtYmx5IGluc3BlY3Rpb24sIG5vdCByZXBsYWNlbWVudCBvZiB0aGUgb3JpZ2luYWwgRnVuY3Rpb24gc2NvcGUiLAogICAgICAiTm8gbmV3IEdvdmVybmFuY2UvYWRtaXNzaW9uL2VmZmVjdGl2ZS1zdGF0ZS9kb3duc3RyZWFtIHBlcm1pc3Npb24iLAogICAgICAiT25seSB0aGUgc2VsZWN0ZWQgZmluYWwtcmV2aWV3IEZ1bmN0aW9uIGhhcyBhIG5ldyBjYW5kaWRhdGUgYXNzZXNzbWVudCBzZXQiCiAgICBdLAogICAgIm9yaWdpbmFsX3BhdGhfZGVmaW5pdGlvbiI6IHsKICAgICAgImNhcGFiaWxpdHlfZ2FwIjogIk5lZWQgcmUtZXZpZGVuY2UgdGhhdCB0d28tc3RhZ2UgZGVjaXNpb25zLCByb2xlcyBhbmQgaGlzdG9yeSBzdXJ2aXZlIHN0b3JlL2FwcGxpY2F0aW9uIHJlc3RhcnQuIiwKICAgICAgImN1cnJlbnRfY2FwYWJpbGl0eV9zdGF0ZSI6ICJTUUxpdGUgcGVyc2lzdGVuY2UgZXhpc3RzIGZvciBhY3RvcnMsIHJldmlzaW9ucyBhbmQgZGVjaXNpb25zLiIsCiAgICAgICJpZCI6ICJGTC1kdXJhYmxlIiwKICAgICAgImxpbWl0cyI6ICJObyBjcmFzaCBjb25zaXN0ZW5jeSwgcmVwbGljYXRpb24gb3IgcmVtb3RlIGR1cmFiaWxpdHkgY2xhaW0uIiwKICAgICAgInJlcXVpcmVkX2V2aWRlbmNlIjogWwogICAgICAgICJyZXN0YXJ0IGFuZCByZWNvdmVyIGFjdG9yIHJvbGVzIiwKICAgICAgICAicmVzdGFydCBhbmQgcmVjb3ZlciBib3RoIGRlY2lzaW9uIHN0YWdlcyIsCiAgICAgICAgInJlc3RhcnQgYW5kIHJlY292ZXIgcmV2aXNpb25zL2hpc3RvcnkiCiAgICAgIF0sCiAgICAgICJyZXF1aXJlZF9leGVjdXRpb25fc3VwcG9ydCI6IFsKICAgICAgICAiRUwtbGVkZ2VyLXN0b3JlIiwKICAgICAgICAiRUwtdmVyaWZpY2F0aW9uLWVudmlyb25tZW50IgogICAgICBdLAogICAgICAic2NvcGUiOiAibG9jYWwgU1FMaXRlIGZpbGUgcGVyc2lzdGVuY2UiLAogICAgICAidGFyZ2V0X3BhdGhfdHlwZSI6ICJsb2NhbCBwZXJzaXN0ZW5jZSIsCiAgICAgICJ1cHN0cmVhbV9nb3Zlcm5hbmNlX25lZWQiOiAiR04xIgogICAgfSwKICAgICJyZWFzb24iOiAiVGhpcyBvcmlnaW5hbCBGdW5jdGlvbiBkZWZpbml0aW9uIGFuZCBoaXN0b3JpY2FsIHNjb3BlIGFyZSBwcmVzZXJ2ZWQuIFRoZSBuZXcgc291cmNlL0NJIG1hdGVyaWFsIGlzIGF2YWlsYWJsZSwgYnV0IHRoaXMgRnVuY3Rpb24gaXMgZXhwbGljaXRseSBub3QgcmVqdWRnZWQgYnkgdGhpcyBpbnNwZWN0aW9uLiIsCiAgICAicmV2aXNpb24iOiAiYXV0aG9yZWQtZXhwZW5zZTMtaW5zcGVjdGlvbi12MC4xIiwKICAgICJzY29wZSI6ICJFeHBlbnNlIHNvdXJjZSBhbmQgZXhwbGljaXQganVkZ21lbnQgaW5zcGVjdGlvbjsgZmluYWwtcmV2aWV3IHBpbG90IHJlc3VsdCBhdHRhY2hlZCB3aXRoaW4gaXRzIG9yaWdpbmFsIHNjb3BlIiwKICAgICJzY29wZV9pbnRlcnByZXRhdGlvbiI6ICJUaGUgb3V0ZXIgc2NvcGUgZGVzY3JpYmVzIG9ubHkgdGhpcyBjb21tb24gYXNzZW1ibHkvaW5zcGVjdGlvbjsgb3JpZ2luYWxfcGF0aF9kZWZpbml0aW9uLnNjb3BlIGlzIHVuY2hhbmdlZCIsCiAgICAic3RhdGUiOiAibm90X3JlanVkZ2VkIiwKICAgICJ0YXJnZXRfcGF0aF9yZWYiOiAicmVwb3NpdG9yeTpnaXRodWI6Y2hvcmVvYXRsYXMvRXhwZW5zZS1BcHByb3ZhbDpmdW5jdGlvbjpGTC1kdXJhYmxlIgogIH0KfQo=",
+        "kind": "authored",
+        "pointer": "/statement",
+        "ref": "authoring/FL-durable.json",
+        "revision": "authored-expense3-inspection-v0.1",
+        "sha256": "8eb8b3c5c25328428663351f70cf81b3ac43e95d10eb1fc254dca9ada0dd9811"
+      },
+      "reason": "This original Function definition and historical scope are preserved. The new source/CI material is available, but this Function is explicitly not rejudged by this inspection.",
+      "revision": "authored-expense3-inspection-v0.1",
+      "scope": "Expense source and explicit judgment inspection; final-review pilot result attached within its original scope",
+      "state": "not_rejudged",
+      "target_path_ref": "repository:github:choreoatlas/Expense-Approval:function:FL-durable"
+    },
+    {
+      "assessor": "agent:codex:expense3:controller-function-assessor",
+      "basis": {
+        "candidate_sha256": "17b5f7c9e56154f9524f31be0295cd3fa1dc8b50cfa4f9673db52f488dc663fd",
+        "evidence_refs": [
+          "observations-B.json#sha256=e134715854cb90e17c34075ddb3a4a754f464495f2cd81e37b59339810643d32",
+          "https://github.com/choreoatlas/Expense-Approval/actions/runs/41640672264"
+        ],
+        "execution_records": [
+          {
+            "ref": "ci-41640672264-1/EL-http",
+            "revision": "sha256:2ec3a3db8ec5a4e7c46c8d6dcd24ab8dd08ae7af70badb02e169bdf218218829"
+          },
+          {
+            "ref": "ci-41640672264-1/EL-browser-ui",
+            "revision": "sha256:7bc38db347b4be3b1f2a73dde8d05ebb67909a41eea874d954df2adfd259b205"
+          },
+          {
+            "ref": "ci-41640672264-1/EL-verification-environment",
+            "revision": "sha256:c362780b2a5c10b0fd723dbb3f85b3f3bf7097c0569cad8139aceb16a2441074"
+          }
+        ],
+        "material_sha256": "b497540b4a716104dd308b8361b73ad05978a6f26f09494db34efe5ea7ff3da8",
+        "product_commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+        "profile_sha256": "dc017cde4c5134fc4eadcbff4fb3010b8a84b83b5cff45e499e652a91f2466f2",
+        "slice_ids": [
+          "model",
+          "function-model",
+          "execution-design",
+          "evidence-requirements",
+          "workflow",
+          "requirements",
+          "objects",
+          "http-source",
+          "application-entry",
+          "browser-source",
+          "browser-html",
+          "browser-styles",
+          "browser-tests"
+        ]
+      },
+      "function_id": "FL-browser",
+      "judgment_id": "inspection-statement:expense3:FL-browser",
+      "limits": [
+        "No cross-browser or accessibility certification.",
+        "Current outer scope is assembly inspection, not replacement of the original Function scope",
+        "No new Governance/admission/effective-state/downstream permission",
+        "Only the selected final-review Function has a new candidate assessment set"
+      ],
+      "original": {
+        "statement": {
+          "assessor": "agent:codex:expense3:controller-function-assessor",
+          "basis": {
+            "candidate_sha256": "17b5f7c9e56154f9524f31be0295cd3fa1dc8b50cfa4f9673db52f488dc663fd",
+            "evidence_refs": [
+              "observations-B.json#sha256=e134715854cb90e17c34075ddb3a4a754f464495f2cd81e37b59339810643d32",
+              "https://github.com/choreoatlas/Expense-Approval/actions/runs/41640672264"
+            ],
+            "execution_records": [
+              {
+                "ref": "ci-41640672264-1/EL-http",
+                "revision": "sha256:2ec3a3db8ec5a4e7c46c8d6dcd24ab8dd08ae7af70badb02e169bdf218218829"
+              },
+              {
+                "ref": "ci-41640672264-1/EL-browser-ui",
+                "revision": "sha256:7bc38db347b4be3b1f2a73dde8d05ebb67909a41eea874d954df2adfd259b205"
+              },
+              {
+                "ref": "ci-41640672264-1/EL-verification-environment",
+                "revision": "sha256:c362780b2a5c10b0fd723dbb3f85b3f3bf7097c0569cad8139aceb16a2441074"
+              }
+            ],
+            "material_sha256": "b497540b4a716104dd308b8361b73ad05978a6f26f09494db34efe5ea7ff3da8",
+            "product_commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+            "profile_sha256": "dc017cde4c5134fc4eadcbff4fb3010b8a84b83b5cff45e499e652a91f2466f2",
+            "slice_ids": [
+              "model",
+              "function-model",
+              "execution-design",
+              "evidence-requirements",
+              "workflow",
+              "requirements",
+              "objects",
+              "http-source",
+              "application-entry",
+              "browser-source",
+              "browser-html",
+              "browser-styles",
+              "browser-tests"
+            ]
+          },
+          "function_id": "FL-browser",
+          "historical_acceptance_ref": "https://github.com/choreoatlas/Expense-Approval/issues/1#issuecomment-5571375864",
+          "judgment_id": "inspection-statement:expense3:FL-browser",
+          "limits": [
+            "No cross-browser or accessibility certification.",
+            "Current outer scope is assembly inspection, not replacement of the original Function scope",
+            "No new Governance/admission/effective-state/downstream permission",
+            "Only the selected final-review Function has a new candidate assessment set"
+          ],
+          "original_path_definition": {
+            "capability_gap": "Need real Chromium evidence covering employee edit/submit, first-stage approve/reject, general-manager final approve/reject, and visible history.",
+            "current_capability_state": "Browser UI has been modified to expose draft edit, first-stage review and general-manager final review.",
+            "id": "FL-browser",
+            "limits": "No cross-browser or accessibility certification.",
+            "required_evidence": [
+              "real browser draft edit",
+              "real browser first-stage decision",
+              "real browser GM final decision",
+              "real browser history"
+            ],
+            "required_execution_support": [
+              "EL-http",
+              "EL-browser-ui",
+              "EL-verification-environment"
+            ],
+            "scope": "Chromium reference path",
+            "target_path_type": "browser user path",
+            "upstream_governance_need": "GN1"
+          },
+          "reason": "This original Function definition and historical scope are preserved. The new source/CI material is available, but this Function is explicitly not rejudged by this inspection.",
+          "revision": "authored-expense3-inspection-v0.1",
+          "scope": "Expense source and explicit judgment inspection; final-review pilot result attached within its original scope",
+          "scope_interpretation": "The outer scope describes only this common assembly/inspection; original_path_definition.scope is unchanged",
+          "state": "not_rejudged",
+          "target_path_ref": "repository:github:choreoatlas/Expense-Approval:function:FL-browser"
+        }
+      },
+      "provenance": {
+        "bytes_base64": "ewogICJzdGF0ZW1lbnQiOiB7CiAgICAiYXNzZXNzb3IiOiAiYWdlbnQ6Y29kZXg6ZXhwZW5zZTM6Y29udHJvbGxlci1mdW5jdGlvbi1hc3Nlc3NvciIsCiAgICAiYmFzaXMiOiB7CiAgICAgICJjYW5kaWRhdGVfc2hhMjU2IjogIjE3YjVmN2M5ZTU2MTU0Zjk1MjRmMzFiZTAyOTVjZDNmYTFkYzhiNTBjZmE0Zjk2NzNkYjUyZjQ4OGRjNjYzZmQiLAogICAgICAiZXZpZGVuY2VfcmVmcyI6IFsKICAgICAgICAib2JzZXJ2YXRpb25zLUIuanNvbiNzaGEyNTY9ZTEzNDcxNTg1NGNiOTBlMTdjMzQwNzVkZGIzYTRhNzU0ZjQ2NDQ5NWYyY2Q4MWUzN2I1OTMzOTgxMDY0M2QzMiIsCiAgICAgICAgImh0dHBzOi8vZ2l0aHViLmNvbS9jaG9yZW9hdGxhcy9FeHBlbnNlLUFwcHJvdmFsL2FjdGlvbnMvcnVucy80MTY0MDY3MjI2NCIKICAgICAgXSwKICAgICAgImV4ZWN1dGlvbl9yZWNvcmRzIjogWwogICAgICAgIHsKICAgICAgICAgICJyZWYiOiAiY2ktNDE2NDA2NzIyNjQtMS9FTC1odHRwIiwKICAgICAgICAgICJyZXZpc2lvbiI6ICJzaGEyNTY6MmVjM2EzZGI4ZWM1YTRlN2M0NmM4ZDZkY2QyNGFiOGRkMDhhZTdhZjcwYmFkYjAyZTE2OWJkZjIxODIxODgyOSIKICAgICAgICB9LAogICAgICAgIHsKICAgICAgICAgICJyZWYiOiAiY2ktNDE2NDA2NzIyNjQtMS9FTC1icm93c2VyLXVpIiwKICAgICAgICAgICJyZXZpc2lvbiI6ICJzaGEyNTY6N2JjMzhkYjM0N2I0YmUzYjFmMmE3M2RkZThkMDVlYmI2NzkwOWE0MWVlYTg3NGQ5NTRkZjJhZGZkMjU5YjIwNSIKICAgICAgICB9LAogICAgICAgIHsKICAgICAgICAgICJyZWYiOiAiY2ktNDE2NDA2NzIyNjQtMS9FTC12ZXJpZmljYXRpb24tZW52aXJvbm1lbnQiLAogICAgICAgICAgInJldmlzaW9uIjogInNoYTI1NjpjMzYyNzgwYjJhNWMxMGIwZmQ3MjNkYmIzZjg1YjNmM2JmNzA5N2MwNTY5Y2FkODEzOWFjZWIxNmEyNDQxMDc0IgogICAgICAgIH0KICAgICAgXSwKICAgICAgIm1hdGVyaWFsX3NoYTI1NiI6ICJiNDk3NTQwYjRhNzE2MTA0ZGQzMDhiODM2MWI3M2FkMDU5NzhhNmYyNmYwOTQ5NGRiMzRlZmU1ZWE3ZmYzZGE4IiwKICAgICAgInByb2R1Y3RfY29tbWl0IjogIjU3ZmEyYjM1NTFhMGU4ZjkyNDMyNDFjYjI2MDRkMDNjYTA5YjE5ZDgiLAogICAgICAicHJvZmlsZV9zaGEyNTYiOiAiZGMwMTdjZGU0YzUxMzRmYzRlYWRjYmZmNGZiMzAxMGI4YTg0YjgzYjVjZmY0NWU0OTllNjUyYTkxZjI0NjZmMiIsCiAgICAgICJzbGljZV9pZHMiOiBbCiAgICAgICAgIm1vZGVsIiwKICAgICAgICAiZnVuY3Rpb24tbW9kZWwiLAogICAgICAgICJleGVjdXRpb24tZGVzaWduIiwKICAgICAgICAiZXZpZGVuY2UtcmVxdWlyZW1lbnRzIiwKICAgICAgICAid29ya2Zsb3ciLAogICAgICAgICJyZXF1aXJlbWVudHMiLAogICAgICAgICJvYmplY3RzIiwKICAgICAgICAiaHR0cC1zb3VyY2UiLAogICAgICAgICJhcHBsaWNhdGlvbi1lbnRyeSIsCiAgICAgICAgImJyb3dzZXItc291cmNlIiwKICAgICAgICAiYnJvd3Nlci1odG1sIiwKICAgICAgICAiYnJvd3Nlci1zdHlsZXMiLAogICAgICAgICJicm93c2VyLXRlc3RzIgogICAgICBdCiAgICB9LAogICAgImZ1bmN0aW9uX2lkIjogIkZMLWJyb3dzZXIiLAogICAgImhpc3RvcmljYWxfYWNjZXB0YW5jZV9yZWYiOiAiaHR0cHM6Ly9naXRodWIuY29tL2Nob3Jlb2F0bGFzL0V4cGVuc2UtQXBwcm92YWwvaXNzdWVzLzEjaXNzdWVjb21tZW50LTU1NzEzNzU4NjQiLAogICAgImp1ZGdtZW50X2lkIjogImluc3BlY3Rpb24tc3RhdGVtZW50OmV4cGVuc2UzOkZMLWJyb3dzZXIiLAogICAgImxpbWl0cyI6IFsKICAgICAgIk5vIGNyb3NzLWJyb3dzZXIgb3IgYWNjZXNzaWJpbGl0eSBjZXJ0aWZpY2F0aW9uLiIsCiAgICAgICJDdXJyZW50IG91dGVyIHNjb3BlIGlzIGFzc2VtYmx5IGluc3BlY3Rpb24sIG5vdCByZXBsYWNlbWVudCBvZiB0aGUgb3JpZ2luYWwgRnVuY3Rpb24gc2NvcGUiLAogICAgICAiTm8gbmV3IEdvdmVybmFuY2UvYWRtaXNzaW9uL2VmZmVjdGl2ZS1zdGF0ZS9kb3duc3RyZWFtIHBlcm1pc3Npb24iLAogICAgICAiT25seSB0aGUgc2VsZWN0ZWQgZmluYWwtcmV2aWV3IEZ1bmN0aW9uIGhhcyBhIG5ldyBjYW5kaWRhdGUgYXNzZXNzbWVudCBzZXQiCiAgICBdLAogICAgIm9yaWdpbmFsX3BhdGhfZGVmaW5pdGlvbiI6IHsKICAgICAgImNhcGFiaWxpdHlfZ2FwIjogIk5lZWQgcmVhbCBDaHJvbWl1bSBldmlkZW5jZSBjb3ZlcmluZyBlbXBsb3llZSBlZGl0L3N1Ym1pdCwgZmlyc3Qtc3RhZ2UgYXBwcm92ZS9yZWplY3QsIGdlbmVyYWwtbWFuYWdlciBmaW5hbCBhcHByb3ZlL3JlamVjdCwgYW5kIHZpc2libGUgaGlzdG9yeS4iLAogICAgICAiY3VycmVudF9jYXBhYmlsaXR5X3N0YXRlIjogIkJyb3dzZXIgVUkgaGFzIGJlZW4gbW9kaWZpZWQgdG8gZXhwb3NlIGRyYWZ0IGVkaXQsIGZpcnN0LXN0YWdlIHJldmlldyBhbmQgZ2VuZXJhbC1tYW5hZ2VyIGZpbmFsIHJldmlldy4iLAogICAgICAiaWQiOiAiRkwtYnJvd3NlciIsCiAgICAgICJsaW1pdHMiOiAiTm8gY3Jvc3MtYnJvd3NlciBvciBhY2Nlc3NpYmlsaXR5IGNlcnRpZmljYXRpb24uIiwKICAgICAgInJlcXVpcmVkX2V2aWRlbmNlIjogWwogICAgICAgICJyZWFsIGJyb3dzZXIgZHJhZnQgZWRpdCIsCiAgICAgICAgInJlYWwgYnJvd3NlciBmaXJzdC1zdGFnZSBkZWNpc2lvbiIsCiAgICAgICAgInJlYWwgYnJvd3NlciBHTSBmaW5hbCBkZWNpc2lvbiIsCiAgICAgICAgInJlYWwgYnJvd3NlciBoaXN0b3J5IgogICAgICBdLAogICAgICAicmVxdWlyZWRfZXhlY3V0aW9uX3N1cHBvcnQiOiBbCiAgICAgICAgIkVMLWh0dHAiLAogICAgICAgICJFTC1icm93c2VyLXVpIiwKICAgICAgICAiRUwtdmVyaWZpY2F0aW9uLWVudmlyb25tZW50IgogICAgICBdLAogICAgICAic2NvcGUiOiAiQ2hyb21pdW0gcmVmZXJlbmNlIHBhdGgiLAogICAgICAidGFyZ2V0X3BhdGhfdHlwZSI6ICJicm93c2VyIHVzZXIgcGF0aCIsCiAgICAgICJ1cHN0cmVhbV9nb3Zlcm5hbmNlX25lZWQiOiAiR04xIgogICAgfSwKICAgICJyZWFzb24iOiAiVGhpcyBvcmlnaW5hbCBGdW5jdGlvbiBkZWZpbml0aW9uIGFuZCBoaXN0b3JpY2FsIHNjb3BlIGFyZSBwcmVzZXJ2ZWQuIFRoZSBuZXcgc291cmNlL0NJIG1hdGVyaWFsIGlzIGF2YWlsYWJsZSwgYnV0IHRoaXMgRnVuY3Rpb24gaXMgZXhwbGljaXRseSBub3QgcmVqdWRnZWQgYnkgdGhpcyBpbnNwZWN0aW9uLiIsCiAgICAicmV2aXNpb24iOiAiYXV0aG9yZWQtZXhwZW5zZTMtaW5zcGVjdGlvbi12MC4xIiwKICAgICJzY29wZSI6ICJFeHBlbnNlIHNvdXJjZSBhbmQgZXhwbGljaXQganVkZ21lbnQgaW5zcGVjdGlvbjsgZmluYWwtcmV2aWV3IHBpbG90IHJlc3VsdCBhdHRhY2hlZCB3aXRoaW4gaXRzIG9yaWdpbmFsIHNjb3BlIiwKICAgICJzY29wZV9pbnRlcnByZXRhdGlvbiI6ICJUaGUgb3V0ZXIgc2NvcGUgZGVzY3JpYmVzIG9ubHkgdGhpcyBjb21tb24gYXNzZW1ibHkvaW5zcGVjdGlvbjsgb3JpZ2luYWxfcGF0aF9kZWZpbml0aW9uLnNjb3BlIGlzIHVuY2hhbmdlZCIsCiAgICAic3RhdGUiOiAibm90X3JlanVkZ2VkIiwKICAgICJ0YXJnZXRfcGF0aF9yZWYiOiAicmVwb3NpdG9yeTpnaXRodWI6Y2hvcmVvYXRsYXMvRXhwZW5zZS1BcHByb3ZhbDpmdW5jdGlvbjpGTC1icm93c2VyIgogIH0KfQo=",
+        "kind": "authored",
+        "pointer": "/statement",
+        "ref": "authoring/FL-browser.json",
+        "revision": "authored-expense3-inspection-v0.1",
+        "sha256": "17d7f20e33f3ffc8f468d6146a44939bc672480c7ec358362b792e5a7cabb4d2"
+      },
+      "reason": "This original Function definition and historical scope are preserved. The new source/CI material is available, but this Function is explicitly not rejudged by this inspection.",
+      "revision": "authored-expense3-inspection-v0.1",
+      "scope": "Expense source and explicit judgment inspection; final-review pilot result attached within its original scope",
+      "state": "not_rejudged",
+      "target_path_ref": "repository:github:choreoatlas/Expense-Approval:function:FL-browser"
+    }
+  ],
+  "schema": "commercial.explicit-function-judgments.v0.1"
+}

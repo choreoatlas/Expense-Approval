@@ -1,0 +1,119 @@
+{
+  "scope": "execution integrity only; no condition judgment",
+  "source_sha": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+  "source_tree": "a08a4629a990a708af56a11efa292a41c2b6cf14",
+  "raw_bytes": 220251,
+  "raw_sha256": "a4a4b24a2825c39df4bd93119c98ff843adddbc2bb87ab3904e0fa4a3a58bab3",
+  "completed": true,
+  "observations": 39,
+  "required_observations_present": true,
+  "required_condition_count": 7,
+  "five_execution_records": true,
+  "all_owned_resources_closed": true,
+  "temporary_resource_directory_removed": true,
+  "negative_observations": {
+    "api-main.gm-before-first": {
+      "status": 403,
+      "error": {
+        "error": "first-stage review requires approver authority"
+      },
+      "raw_before_after_equal": true
+    },
+    "api-main.unknown-final": {
+      "status": 403,
+      "error": {
+        "error": "actor has no assigned approval authority"
+      },
+      "raw_before_after_equal": true
+    },
+    "api-main.employee-final": {
+      "status": 403,
+      "error": {
+        "error": "employee cannot approve or reject their own expense"
+      },
+      "raw_before_after_equal": true
+    },
+    "api-main.approver-final": {
+      "status": 403,
+      "error": {
+        "error": "final review requires general manager authority"
+      },
+      "raw_before_after_equal": true
+    },
+    "api-main.bad-outcome": {
+      "status": 400,
+      "error": {
+        "error": "outcome must be approved or rejected"
+      },
+      "raw_before_after_equal": true
+    },
+    "api-main.empty-reason": {
+      "status": 400,
+      "error": {
+        "error": "decision reason is required"
+      },
+      "raw_before_after_equal": true
+    },
+    "api-main.repeated-final": {
+      "status": 400,
+      "error": {
+        "error": "expense is not awaiting a review decision"
+      },
+      "raw_before_after_equal": true
+    },
+    "api-main.edit-approved": {
+      "status": 400,
+      "error": {
+        "error": "only a draft can be edited"
+      },
+      "raw_before_after_equal": true
+    },
+    "api-main.revise-approved": {
+      "status": 400,
+      "error": {
+        "error": "only a rejected expense can be revised"
+      },
+      "raw_before_after_equal": true
+    },
+    "api-gm-rework.stale-final": {
+      "status": 400,
+      "error": {
+        "error": "decision must target the current expense revision"
+      },
+      "raw_before_after_equal": true
+    },
+    "api-gm-rework.gm-before-new-first": {
+      "status": 403,
+      "error": {
+        "error": "first-stage review requires approver authority"
+      },
+      "raw_before_after_equal": true
+    },
+    "api-first-rework.stale-final": {
+      "status": 400,
+      "error": {
+        "error": "decision must target the current expense revision"
+      },
+      "raw_before_after_equal": true
+    },
+    "api-first-rework.gm-before-new-first": {
+      "status": 403,
+      "error": {
+        "error": "first-stage review requires approver authority"
+      },
+      "raw_before_after_equal": true
+    }
+  },
+  "browser_version": "140.0.7339.16",
+  "browser_step_count": 12,
+  "processes": [
+    {
+      "pid": 57444,
+      "returncode": -15
+    },
+    {
+      "pid": 57445,
+      "returncode": -15
+    }
+  ]
+}

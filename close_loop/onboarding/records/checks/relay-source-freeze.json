@@ -1,0 +1,48 @@
+{
+  "repository": "choreoatlas/Expense-Approval",
+  "base": "6100d4538d0d5210a1fc9d97d24d2112be2b164f",
+  "source_sha": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+  "source_tree": "a08a4629a990a708af56a11efa292a41c2b6cf14",
+  "parent": "6100d4538d0d5210a1fc9d97d24d2112be2b164f",
+  "changed_paths": [
+    ".github/workflows/ci.yml",
+    ".gitignore",
+    "README.md",
+    "close_loop/onboarding/README.md",
+    "close_loop/onboarding/composition.json",
+    "close_loop/onboarding/conditions.json",
+    "close_loop/onboarding/objects.json",
+    "close_loop/onboarding/observe.py",
+    "close_loop/onboarding/owners.json",
+    "close_loop/onboarding/profile.json",
+    "tests/test_onboarding_observer.py"
+  ],
+  "declarations_frozen_before_observation": [
+    {
+      "path": "close_loop/onboarding/objects.json",
+      "bytes": 6138,
+      "sha256": "dc839796fd70359173b196141fc299fc3f51490e6a19b2204326b55b983382e7"
+    },
+    {
+      "path": "close_loop/onboarding/conditions.json",
+      "bytes": 8735,
+      "sha256": "2580544971cd48a32fdd1a081d9ad8a462a5269baaf97774109876bb3f5ed3ba"
+    },
+    {
+      "path": "close_loop/onboarding/composition.json",
+      "bytes": 2818,
+      "sha256": "341bd418fb0d4c2dbbf2d84be7147e2e5c3f1acec36ed36d552c310e6a242302"
+    },
+    {
+      "path": "close_loop/onboarding/owners.json",
+      "bytes": 1080,
+      "sha256": "4d21fb25ad61ea115434b145390e7ea87a77a208d1233dbb3c8149d4b7c75f95"
+    },
+    {
+      "path": "close_loop/onboarding/profile.json",
+      "bytes": 19000,
+      "sha256": "dc017cde4c5134fc4eadcbff4fb3010b8a84b83b5cff45e499e652a91f2466f2"
+    }
+  ],
+  "worktree": "clean"
+}

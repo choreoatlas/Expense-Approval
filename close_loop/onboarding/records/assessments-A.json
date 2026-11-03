@@ -1,0 +1,563 @@
+{
+  "assessment_cardinality": "one per required condition for this basis snapshot; prior snapshots retained",
+  "assessments": [
+    {
+      "actor": "agent:codex:expense3:controller-function-assessor",
+      "assessment_id": "assessment:expense3:FC-final-sequence",
+      "assessment_revision": "sha256:bba00c7a27edde9ace6a31cbf2b45350c4bcaab389b8761e133f8fe186ce9b92",
+      "authority_effect": "none",
+      "basis_evidence": {
+        "locator": "observations-A.json",
+        "observation_pointers": [
+          "#/observations/0",
+          "#/observations/1",
+          "#/observations/2",
+          "#/observations/3",
+          "#/observations/9"
+        ],
+        "run_id": "expense-issue3-relay-A-57fa2b3",
+        "sha256": "a4a4b24a2825c39df4bd93119c98ff843adddbc2bb87ab3904e0fa4a3a58bab3",
+        "source_origin": "Local exact-source invocation; command and original raw output retained"
+      },
+      "basis_execution_records": [
+        {
+          "pointer": "#/execution_records/0",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-domain-rules",
+          "revision": "sha256:1d19739a6b1bddfe70dad6600aba477d1beca801ae57c545f7427196f6ee8572"
+        },
+        {
+          "pointer": "#/execution_records/1",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-ledger-store",
+          "revision": "sha256:88b852c01b009650e91935422f485aba00647da513563d9cb1d3baf61d2c86db"
+        },
+        {
+          "pointer": "#/execution_records/2",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-http",
+          "revision": "sha256:b24b9ac9328023b337a7034b50a76a9a2de34867c6be1741654d1bacba254251"
+        },
+        {
+          "pointer": "#/execution_records/4",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-verification-environment",
+          "revision": "sha256:1e2eb97d9e6e8602f6b53b509b8d8182590c319481092ffb57e3a02eb9be6e96"
+        }
+      ],
+      "basis_snapshot": "A",
+      "condition_id": "FC-final-sequence",
+      "condition_revision": "sha256:0c2897408ababf5ca637931da4f538fc60395bd474c8639202aa05848580e76d",
+      "function_id": "FL-general-manager-final-approval",
+      "judgment_kind": "explicit candidate Function-condition assessment; documentation pilot only",
+      "limits": [
+        "Seeded local roles; no enterprise IAM/security claim",
+        "Sequential reference behavior; no concurrent/crash consistency claim",
+        "Local SQLite restart only; no replication or backup recovery claim",
+        "Chromium only; no cross-browser/accessibility claim",
+        "Candidate Function judgment only; no new Governance acceptance or consumption permission"
+      ],
+      "pilot_mode_change": false,
+      "product_source": {
+        "commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+        "repository": "choreoatlas/Expense-Approval",
+        "tree": "a08a4629a990a708af56a11efa292a41c2b6cf14"
+      },
+      "reason": "The submitted-revision GM attempt is rejected before any decision is inserted. Bob's first-stage decision records revision1 and leaves manager_pending; only Carol's later decision on revision1 records the GM role and changes that revision to approved. Both runs expose the actual HTTP bodies and complete table transitions. Domain ensure_can_review and store.decide place role/state checks before the transaction and derive the intermediate/final states by the actual actor role.",
+      "requirement_sources": [
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/4",
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/3",
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/5",
+        "close_loop/attempt-1/function-model.v0.2.json#/functions/2"
+      ],
+      "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+      "source_review": [
+        "expense/domain.py#L69-L80",
+        "expense/store.py#L132-L176",
+        "expense/store.py#L178-L193"
+      ],
+      "status": "valid"
+    },
+    {
+      "actor": "agent:codex:expense3:controller-function-assessor",
+      "assessment_id": "assessment:expense3:FC-final-authority",
+      "assessment_revision": "sha256:605c9248166c931fac7e493542d43c05600da0126d98be7e06a2180b40d50333",
+      "authority_effect": "none",
+      "basis_evidence": {
+        "locator": "observations-A.json",
+        "observation_pointers": [
+          "#/observations/4",
+          "#/observations/5",
+          "#/observations/6",
+          "#/observations/9"
+        ],
+        "run_id": "expense-issue3-relay-A-57fa2b3",
+        "sha256": "a4a4b24a2825c39df4bd93119c98ff843adddbc2bb87ab3904e0fa4a3a58bab3",
+        "source_origin": "Local exact-source invocation; command and original raw output retained"
+      },
+      "basis_execution_records": [
+        {
+          "pointer": "#/execution_records/0",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-domain-rules",
+          "revision": "sha256:1d19739a6b1bddfe70dad6600aba477d1beca801ae57c545f7427196f6ee8572"
+        },
+        {
+          "pointer": "#/execution_records/1",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-ledger-store",
+          "revision": "sha256:88b852c01b009650e91935422f485aba00647da513563d9cb1d3baf61d2c86db"
+        },
+        {
+          "pointer": "#/execution_records/2",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-http",
+          "revision": "sha256:b24b9ac9328023b337a7034b50a76a9a2de34867c6be1741654d1bacba254251"
+        },
+        {
+          "pointer": "#/execution_records/4",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-verification-environment",
+          "revision": "sha256:1e2eb97d9e6e8602f6b53b509b8d8182590c319481092ffb57e3a02eb9be6e96"
+        }
+      ],
+      "basis_snapshot": "A",
+      "condition_id": "FC-final-authority",
+      "condition_revision": "sha256:96bcd00bac6671ae98d47fb50ed3546c6e15610b20fdb1ea201092643f37ae66",
+      "function_id": "FL-general-manager-final-approval",
+      "judgment_kind": "explicit candidate Function-condition assessment; documentation pilot only",
+      "limits": [
+        "Seeded local roles; no enterprise IAM/security claim",
+        "Sequential reference behavior; no concurrent/crash consistency claim",
+        "Local SQLite restart only; no replication or backup recovery claim",
+        "Chromium only; no cross-browser/accessibility claim",
+        "Candidate Function judgment only; no new Governance acceptance or consumption permission"
+      ],
+      "pilot_mode_change": false,
+      "product_source": {
+        "commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+        "repository": "choreoatlas/Expense-Approval",
+        "tree": "a08a4629a990a708af56a11efa292a41c2b6cf14"
+      },
+      "reason": "All three final-role denials occur while the same expense is manager_pending, so they reach the intended authority rules. Unknown Mallory lacks assigned authority, employee Alice hits the own-expense prohibition, and approver Bob hits the GM-role requirement. Full before/after actors/expenses/revisions/decisions are unchanged. The authorized Carol succeeds. The source role lookup and ensure_can_review ordering explain these observations within seeded-local-role limits.",
+      "requirement_sources": [
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/1",
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/2",
+        "close_loop/attempt-1/function-model.v0.2.json#/functions/2"
+      ],
+      "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+      "source_review": [
+        "expense/domain.py#L69-L80",
+        "expense/store.py#L132-L176",
+        "expense/store.py#L178-L193"
+      ],
+      "status": "valid"
+    },
+    {
+      "actor": "agent:codex:expense3:controller-function-assessor",
+      "assessment_id": "assessment:expense3:FC-final-revision",
+      "assessment_revision": "sha256:be261c7eaed9dd83e36a0f504d3fd941cc5a5fd35ec4a8ee656cae2de082679e",
+      "authority_effect": "none",
+      "basis_evidence": {
+        "locator": "observations-A.json",
+        "observation_pointers": [
+          "#/observations/16",
+          "#/observations/17",
+          "#/observations/18",
+          "#/observations/19",
+          "#/observations/20",
+          "#/observations/21",
+          "#/observations/22",
+          "#/observations/25",
+          "#/observations/26",
+          "#/observations/27",
+          "#/observations/28",
+          "#/observations/29",
+          "#/observations/30",
+          "#/observations/31"
+        ],
+        "run_id": "expense-issue3-relay-A-57fa2b3",
+        "sha256": "a4a4b24a2825c39df4bd93119c98ff843adddbc2bb87ab3904e0fa4a3a58bab3",
+        "source_origin": "Local exact-source invocation; command and original raw output retained"
+      },
+      "basis_execution_records": [
+        {
+          "pointer": "#/execution_records/0",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-domain-rules",
+          "revision": "sha256:1d19739a6b1bddfe70dad6600aba477d1beca801ae57c545f7427196f6ee8572"
+        },
+        {
+          "pointer": "#/execution_records/1",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-ledger-store",
+          "revision": "sha256:88b852c01b009650e91935422f485aba00647da513563d9cb1d3baf61d2c86db"
+        },
+        {
+          "pointer": "#/execution_records/2",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-http",
+          "revision": "sha256:b24b9ac9328023b337a7034b50a76a9a2de34867c6be1741654d1bacba254251"
+        },
+        {
+          "pointer": "#/execution_records/4",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-verification-environment",
+          "revision": "sha256:1e2eb97d9e6e8602f6b53b509b8d8182590c319481092ffb57e3a02eb9be6e96"
+        }
+      ],
+      "basis_snapshot": "A",
+      "condition_id": "FC-final-revision",
+      "condition_revision": "sha256:5367dca7d54a3286c25887cfb277205625d9e4a47823275cb1789d7f3bd50b14",
+      "function_id": "FL-general-manager-final-approval",
+      "judgment_kind": "explicit candidate Function-condition assessment; documentation pilot only",
+      "limits": [
+        "Seeded local roles; no enterprise IAM/security claim",
+        "Sequential reference behavior; no concurrent/crash consistency claim",
+        "Local SQLite restart only; no replication or backup recovery claim",
+        "Chromium only; no cross-browser/accessibility claim",
+        "Candidate Function judgment only; no new Governance acceptance or consumption permission"
+      ],
+      "pilot_mode_change": false,
+      "product_source": {
+        "commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+        "repository": "choreoatlas/Expense-Approval",
+        "tree": "a08a4629a990a708af56a11efa292a41c2b6cf14"
+      },
+      "reason": "Both the first-stage-reject and GM-reject branches preserve revision1, create revision2 as draft and resubmit it. A final decision on revision1 is rejected by the exact-current-revision check; a GM attempt on newly submitted revision2 is separately denied until Bob performs a new first-stage approval. Carol then approves revision2. This shows prior approvals do not float across either observed rework branch; store.decide compares latest revision before review/write and revise_rejected inserts a new row rather than altering the old content.",
+      "requirement_sources": [
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/0",
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/7",
+        "close_loop/attempt-1/function-model.v0.2.json#/functions/2",
+        "close_loop/attempt-1/function-model.v0.2.json#/functions/4"
+      ],
+      "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+      "source_review": [
+        "expense/domain.py#L69-L80",
+        "expense/store.py#L132-L176",
+        "expense/store.py#L178-L193"
+      ],
+      "status": "valid"
+    },
+    {
+      "actor": "agent:codex:expense3:controller-function-assessor",
+      "assessment_id": "assessment:expense3:FC-final-rework-history",
+      "assessment_revision": "sha256:4aff7e4cc9c337271ad6e55a7b807584554b7b6e001226d0069fc8a05217296d",
+      "authority_effect": "none",
+      "basis_evidence": {
+        "locator": "observations-A.json",
+        "observation_pointers": [
+          "#/observations/16",
+          "#/observations/17",
+          "#/observations/22",
+          "#/observations/25",
+          "#/observations/26",
+          "#/observations/31"
+        ],
+        "run_id": "expense-issue3-relay-A-57fa2b3",
+        "sha256": "a4a4b24a2825c39df4bd93119c98ff843adddbc2bb87ab3904e0fa4a3a58bab3",
+        "source_origin": "Local exact-source invocation; command and original raw output retained"
+      },
+      "basis_execution_records": [
+        {
+          "pointer": "#/execution_records/0",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-domain-rules",
+          "revision": "sha256:1d19739a6b1bddfe70dad6600aba477d1beca801ae57c545f7427196f6ee8572"
+        },
+        {
+          "pointer": "#/execution_records/1",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-ledger-store",
+          "revision": "sha256:88b852c01b009650e91935422f485aba00647da513563d9cb1d3baf61d2c86db"
+        },
+        {
+          "pointer": "#/execution_records/2",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-http",
+          "revision": "sha256:b24b9ac9328023b337a7034b50a76a9a2de34867c6be1741654d1bacba254251"
+        },
+        {
+          "pointer": "#/execution_records/4",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-verification-environment",
+          "revision": "sha256:1e2eb97d9e6e8602f6b53b509b8d8182590c319481092ffb57e3a02eb9be6e96"
+        }
+      ],
+      "basis_snapshot": "A",
+      "condition_id": "FC-final-rework-history",
+      "condition_revision": "sha256:7b2dec7e48dfbdb310fc565ad49a0994d703f8e7e82a76277aff67647d7c555b",
+      "function_id": "FL-general-manager-final-approval",
+      "judgment_kind": "explicit candidate Function-condition assessment; documentation pilot only",
+      "limits": [
+        "Seeded local roles; no enterprise IAM/security claim",
+        "Sequential reference behavior; no concurrent/crash consistency claim",
+        "Local SQLite restart only; no replication or backup recovery claim",
+        "Chromium only; no cross-browser/accessibility claim",
+        "Candidate Function judgment only; no new Governance acceptance or consumption permission"
+      ],
+      "pilot_mode_change": false,
+      "product_source": {
+        "commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+        "repository": "choreoatlas/Expense-Approval",
+        "tree": "a08a4629a990a708af56a11efa292a41c2b6cf14"
+      },
+      "reason": "The observed first-stage and GM rejection histories retain original revision, actor, actor_role, outcome and reason, followed by new revision2 and its fresh two-stage decisions. The browser sequence additionally retains rejected revisions1 and2 and the final approved revision3 with five ordered decisions. Revision insertion and ordered history queries in store.py account for preservation within this bounded selected path; no complete new judgment of the separate history/rework Functions is made.",
+      "requirement_sources": [
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/6",
+        "close_loop/attempt-1/function-model.v0.2.json#/functions/2",
+        "close_loop/attempt-1/function-model.v0.2.json#/functions/5"
+      ],
+      "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+      "source_review": [
+        "expense/domain.py#L69-L80",
+        "expense/store.py#L132-L176",
+        "expense/store.py#L178-L193"
+      ],
+      "status": "valid"
+    },
+    {
+      "actor": "agent:codex:expense3:controller-function-assessor",
+      "assessment_id": "assessment:expense3:FC-final-invalid-nonmutation",
+      "assessment_revision": "sha256:683d3b9acf82179fd822c53054ece97b4c313cc022f33df31d97ff90abc3d33c",
+      "authority_effect": "none",
+      "basis_evidence": {
+        "locator": "observations-A.json",
+        "observation_pointers": [
+          "#/observations/2",
+          "#/observations/4",
+          "#/observations/5",
+          "#/observations/6",
+          "#/observations/7",
+          "#/observations/8",
+          "#/observations/10",
+          "#/observations/11",
+          "#/observations/12",
+          "#/observations/19",
+          "#/observations/20",
+          "#/observations/28",
+          "#/observations/29"
+        ],
+        "run_id": "expense-issue3-relay-A-57fa2b3",
+        "sha256": "a4a4b24a2825c39df4bd93119c98ff843adddbc2bb87ab3904e0fa4a3a58bab3",
+        "source_origin": "Local exact-source invocation; command and original raw output retained"
+      },
+      "basis_execution_records": [
+        {
+          "pointer": "#/execution_records/0",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-domain-rules",
+          "revision": "sha256:1d19739a6b1bddfe70dad6600aba477d1beca801ae57c545f7427196f6ee8572"
+        },
+        {
+          "pointer": "#/execution_records/1",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-ledger-store",
+          "revision": "sha256:88b852c01b009650e91935422f485aba00647da513563d9cb1d3baf61d2c86db"
+        },
+        {
+          "pointer": "#/execution_records/2",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-http",
+          "revision": "sha256:b24b9ac9328023b337a7034b50a76a9a2de34867c6be1741654d1bacba254251"
+        },
+        {
+          "pointer": "#/execution_records/4",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-verification-environment",
+          "revision": "sha256:1e2eb97d9e6e8602f6b53b509b8d8182590c319481092ffb57e3a02eb9be6e96"
+        }
+      ],
+      "basis_snapshot": "A",
+      "condition_id": "FC-final-invalid-nonmutation",
+      "condition_revision": "sha256:b2b38fa2aa8bab8b10ddfa00c5a6a3179aa97b08fd94a67fd4bce41674731f51",
+      "function_id": "FL-general-manager-final-approval",
+      "judgment_kind": "explicit candidate Function-condition assessment; documentation pilot only",
+      "limits": [
+        "Seeded local roles; no enterprise IAM/security claim",
+        "Sequential reference behavior; no concurrent/crash consistency claim",
+        "Local SQLite restart only; no replication or backup recovery claim",
+        "Chromium only; no cross-browser/accessibility claim",
+        "Candidate Function judgment only; no new Governance acceptance or consumption permission"
+      ],
+      "pilot_mode_change": false,
+      "product_source": {
+        "commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+        "repository": "choreoatlas/Expense-Approval",
+        "tree": "a08a4629a990a708af56a11efa292a41c2b6cf14"
+      },
+      "reason": "All13 declared invalid actions return their actual400/403 errors with exact equality of complete actors/expenses/revisions/decisions snapshots: skipped stages, unknown/self/wrong-role final decisions, invalid outcome/reason, repeated final decision, edits/revisions of approved content, and stale/current-revision skip cases in both rework branches. The selected store/domain branches reject before INSERT/UPDATE. These bounded sequential observations do not claim concurrency/crash safety or all possible invalid inputs.",
+      "requirement_sources": [
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/8",
+        "close_loop/attempt-1/function-model.v0.2.json#/functions/2"
+      ],
+      "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+      "source_review": [
+        "expense/domain.py#L69-L80",
+        "expense/store.py#L132-L176",
+        "expense/store.py#L178-L193"
+      ],
+      "status": "valid"
+    },
+    {
+      "actor": "agent:codex:expense3:controller-function-assessor",
+      "assessment_id": "assessment:expense3:FC-final-browser",
+      "assessment_revision": "sha256:96acc9224e83108965cad8aee574d435cf6126027b1cf38b97d5d7c56a9b109a",
+      "authority_effect": "none",
+      "basis_evidence": {
+        "locator": "observations-A.json",
+        "observation_pointers": [
+          "#/observations/32"
+        ],
+        "run_id": "expense-issue3-relay-A-57fa2b3",
+        "sha256": "a4a4b24a2825c39df4bd93119c98ff843adddbc2bb87ab3904e0fa4a3a58bab3",
+        "source_origin": "Local exact-source invocation; command and original raw output retained"
+      },
+      "basis_execution_records": [
+        {
+          "pointer": "#/execution_records/0",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-domain-rules",
+          "revision": "sha256:1d19739a6b1bddfe70dad6600aba477d1beca801ae57c545f7427196f6ee8572"
+        },
+        {
+          "pointer": "#/execution_records/1",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-ledger-store",
+          "revision": "sha256:88b852c01b009650e91935422f485aba00647da513563d9cb1d3baf61d2c86db"
+        },
+        {
+          "pointer": "#/execution_records/2",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-http",
+          "revision": "sha256:b24b9ac9328023b337a7034b50a76a9a2de34867c6be1741654d1bacba254251"
+        },
+        {
+          "pointer": "#/execution_records/3",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-browser-ui",
+          "revision": "sha256:0603fe8acfb73db99b4cd6e9b430be1b5455df306b146272cb7c84ac6f62fb41"
+        },
+        {
+          "pointer": "#/execution_records/4",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-verification-environment",
+          "revision": "sha256:1e2eb97d9e6e8602f6b53b509b8d8182590c319481092ffb57e3a02eb9be6e96"
+        }
+      ],
+      "basis_snapshot": "A",
+      "condition_id": "FC-final-browser",
+      "condition_revision": "sha256:2f2c4a2c1ba43b531da9ac0976bd0aaf81a05a850066e7d297227c568fd752e2",
+      "function_id": "FL-general-manager-final-approval",
+      "judgment_kind": "explicit candidate Function-condition assessment; documentation pilot only",
+      "limits": [
+        "Seeded local roles; no enterprise IAM/security claim",
+        "Sequential reference behavior; no concurrent/crash consistency claim",
+        "Local SQLite restart only; no replication or backup recovery claim",
+        "Chromium only; no cross-browser/accessibility claim",
+        "Candidate Function judgment only; no new Governance acceptance or consumption permission"
+      ],
+      "pilot_mode_change": false,
+      "product_source": {
+        "commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+        "repository": "choreoatlas/Expense-Approval",
+        "tree": "a08a4629a990a708af56a11efa292a41c2b6cf14"
+      },
+      "reason": "Real Chromium executes draft edit/submit, first-stage rejection and revision2, GM rejection and revision3, then first-stage manager_pending and GM approved on revision3. Captured UI JSON, actual API responses and raw store snapshots agree, and visible history retains both rejected versions and role-labelled ordered decisions. This supplies the selected terminal-review path's UI support without asserting a full fresh FL-browser judgment or other browsers/accessibility.",
+      "requirement_sources": [
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/3",
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/6",
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/4",
+        "close_loop/attempt-1/function-model.v0.2.json#/functions/2",
+        "close_loop/attempt-1/function-model.v0.2.json#/functions/7"
+      ],
+      "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+      "source_review": [
+        "expense/domain.py#L69-L80",
+        "expense/store.py#L132-L176",
+        "expense/store.py#L178-L193"
+      ],
+      "status": "valid"
+    },
+    {
+      "actor": "agent:codex:expense3:controller-function-assessor",
+      "assessment_id": "assessment:expense3:FC-final-restart",
+      "assessment_revision": "sha256:3a4a15730ccee024153ab794ac08e6e330d6264ff4ef8f369e67b6b19e039d87",
+      "authority_effect": "none",
+      "basis_evidence": {
+        "locator": "observations-A.json",
+        "observation_pointers": [
+          "#/observations/37",
+          "#/observations/38"
+        ],
+        "run_id": "expense-issue3-relay-A-57fa2b3",
+        "sha256": "a4a4b24a2825c39df4bd93119c98ff843adddbc2bb87ab3904e0fa4a3a58bab3",
+        "source_origin": "Local exact-source invocation; command and original raw output retained"
+      },
+      "basis_execution_records": [
+        {
+          "pointer": "#/execution_records/0",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-domain-rules",
+          "revision": "sha256:1d19739a6b1bddfe70dad6600aba477d1beca801ae57c545f7427196f6ee8572"
+        },
+        {
+          "pointer": "#/execution_records/1",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-ledger-store",
+          "revision": "sha256:88b852c01b009650e91935422f485aba00647da513563d9cb1d3baf61d2c86db"
+        },
+        {
+          "pointer": "#/execution_records/2",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-http",
+          "revision": "sha256:b24b9ac9328023b337a7034b50a76a9a2de34867c6be1741654d1bacba254251"
+        },
+        {
+          "pointer": "#/execution_records/4",
+          "ref": "expense-issue3-relay-A-57fa2b3/EL-verification-environment",
+          "revision": "sha256:1e2eb97d9e6e8602f6b53b509b8d8182590c319481092ffb57e3a02eb9be6e96"
+        }
+      ],
+      "basis_snapshot": "A",
+      "condition_id": "FC-final-restart",
+      "condition_revision": "sha256:38c9e3461266d138d1b65aec400d458a96d538e902b86c6d11d1dcdedcfda12f",
+      "function_id": "FL-general-manager-final-approval",
+      "judgment_kind": "explicit candidate Function-condition assessment; documentation pilot only",
+      "limits": [
+        "Seeded local roles; no enterprise IAM/security claim",
+        "Sequential reference behavior; no concurrent/crash consistency claim",
+        "Local SQLite restart only; no replication or backup recovery claim",
+        "Chromium only; no cross-browser/accessibility claim",
+        "Candidate Function judgment only; no new Governance acceptance or consumption permission"
+      ],
+      "pilot_mode_change": false,
+      "product_source": {
+        "commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+        "repository": "choreoatlas/Expense-Approval",
+        "tree": "a08a4629a990a708af56a11efa292a41c2b6cf14"
+      },
+      "reason": "The first actual application process records an approved current revision with Bob/Carol ordered decisions and seeded actor roles, then is stopped/reaped. A different application PID starts on the same invocation-owned SQLite file; current response, history response and all business tables are byte-value equal before/after. Both processes are reaped and the temporary directory removed. This is normal local restart support for the selected path, not crash consistency, replication, backup recovery or a full new FL-durable judgment.",
+      "requirement_sources": [
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/1",
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/0",
+        "close_loop/attempt-1/function-model.v0.2.json#/functions/2",
+        "close_loop/attempt-1/function-model.v0.2.json#/functions/6"
+      ],
+      "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+      "source_review": [
+        "expense/domain.py#L69-L80",
+        "expense/store.py#L132-L176",
+        "expense/store.py#L178-L193"
+      ],
+      "status": "valid"
+    }
+  ],
+  "authored_at": "2026-11-03T13:05:37.695169+00:00",
+  "authority_effect": "none",
+  "basis_limits": {
+    "application_module": "/private/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/repos/expense/expense/http.py",
+    "context_environment": {},
+    "context_limits": "Provider context is recorded, not authenticated by this program.",
+    "observer_module": "/private/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/repos/expense/close_loop/onboarding/observe.py",
+    "platform": "darwin",
+    "playwright": "1.55.0",
+    "python": "3.11.15 (main, Mar  3 2026, 00:52:57) [Clang 21.0.0 (clang-2100.0.123.102)]"
+  },
+  "basis_snapshot": "A",
+  "conditions_sha256": "2580544971cd48a32fdd1a081d9ad8a462a5269baaf97774109876bb3f5ed3ba",
+  "format": "expense.explicit-condition-assessment-set.v0.1",
+  "function_id": "FL-general-manager-final-approval",
+  "limits": [
+    "Seeded local roles; no enterprise IAM/security claim",
+    "Sequential reference behavior; no concurrent/crash consistency claim",
+    "Local SQLite restart only; no replication or backup recovery claim",
+    "Chromium only; no cross-browser/accessibility claim",
+    "Candidate Function judgment only; no new Governance acceptance or consumption permission"
+  ],
+  "predeclared_composition_sha256": "341bd418fb0d4c2dbbf2d84be7147e2e5c3f1acec36ed36d552c310e6a242302",
+  "required_condition_ids": [
+    "FC-final-sequence",
+    "FC-final-authority",
+    "FC-final-revision",
+    "FC-final-rework-history",
+    "FC-final-invalid-nonmutation",
+    "FC-final-browser",
+    "FC-final-restart"
+  ],
+  "run_id": "expense-issue3-relay-A-57fa2b3",
+  "scope": "final review after first-stage approval in the local single-organization reference sample",
+  "task_semantics": "condition-assessment pilot"
+}

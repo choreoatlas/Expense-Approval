@@ -1,0 +1,91 @@
+[
+  {
+    "name": "ceb-independent-validate-canonical-path",
+    "argv": [
+      "/private/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/envs/platform/bin/python",
+      "-I",
+      "-B",
+      "-c",
+      "import runpy,sys;sys.path.insert(0,sys.argv[1]);sys.argv=['workload_candidate']+sys.argv[2:];runpy.run_module('close_loop_evidence_builder.workload_candidate',run_name='__main__')",
+      "/private/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/repos/ceb",
+      "validate-delivery",
+      "--profile",
+      "/private/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/inputs/profile.json",
+      "--request",
+      "/private/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/inputs/acquisition-request.json",
+      "--delivery",
+      "/private/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/outputs/source-delivery.json"
+    ],
+    "cwd": "/private/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0",
+    "environment_keys": [
+      "HOME",
+      "PATH",
+      "PYTHONDONTWRITEBYTECODE",
+      "PYTHONNOUSERSITE",
+      "TMPDIR"
+    ],
+    "started_at": "2026-11-03T13:12:14.936869+00:00",
+    "ended_at": "2026-11-03T13:12:15.026887+00:00",
+    "seconds": 0.08993266592733562,
+    "exit_code": 0
+  },
+  {
+    "name": "ceb-frozen-original-export-replay",
+    "argv": [
+      "/private/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/envs/platform/bin/python",
+      "-I",
+      "-B",
+      "-c",
+      "import runpy,sys;sys.path.insert(0,sys.argv[1]);sys.argv=['workload_candidate']+sys.argv[2:];runpy.run_module('close_loop_evidence_builder.workload_candidate',run_name='__main__')",
+      "/private/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/repos/ceb",
+      "export",
+      "--profile",
+      "/private/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/inputs/profile.json",
+      "--request",
+      "/private/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/inputs/acquisition-request.json",
+      "--material",
+      "/private/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/inputs/acquired.json",
+      "--delivery",
+      "/private/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/outputs/source-delivery-replay.json"
+    ],
+    "cwd": "/private/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0",
+    "environment_keys": [
+      "HOME",
+      "PATH",
+      "PYTHONDONTWRITEBYTECODE",
+      "PYTHONNOUSERSITE",
+      "TMPDIR"
+    ],
+    "started_at": "2026-11-03T13:12:15.028472+00:00",
+    "ended_at": "2026-11-03T13:12:15.168984+00:00",
+    "seconds": 0.14052804210223258,
+    "exit_code": 0
+  },
+  {
+    "name": "owner-change-effects-replay",
+    "argv": [
+      "/private/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/envs/platform/bin/python",
+      "-I",
+      "-B",
+      "/private/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/invoke_management_owner.py",
+      "--source",
+      "/private/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/management-owner-snapshot",
+      "--input",
+      "/private/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/inputs/change-effects-input.json",
+      "--output",
+      "/private/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0/outputs/change-effects-owner-replay.json"
+    ],
+    "cwd": "/private/var/folders/sm/3q6q6kqn3h140_55mxvfs3lm0000gn/T/expense-closeloop-sx0kdnv0",
+    "environment_keys": [
+      "HOME",
+      "PATH",
+      "PYTHONDONTWRITEBYTECODE",
+      "PYTHONNOUSERSITE",
+      "TMPDIR"
+    ],
+    "started_at": "2026-11-03T13:12:15.169643+00:00",
+    "ended_at": "2026-11-03T13:12:15.318120+00:00",
+    "seconds": 0.14850808307528496,
+    "exit_code": 0
+  }
+]

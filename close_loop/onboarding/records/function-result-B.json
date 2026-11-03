@@ -1,0 +1,58 @@
+{
+  "actor": "agent:codex:expense3:controller-function-assessor",
+  "allowed": false,
+  "assessment_refs": [
+    {
+      "id": "assessment:expense3:FC-final-sequence",
+      "revision": "sha256:868c77e4d6486cb5055bd0d278d80f058b32fc7b3b2fd96406c0f00cd980362c"
+    },
+    {
+      "id": "assessment:expense3:FC-final-authority",
+      "revision": "sha256:ca0ac946e6b68388b533abed4a7b1d78533c87d0928eb399614d5889c705abf7"
+    },
+    {
+      "id": "assessment:expense3:FC-final-revision",
+      "revision": "sha256:b51679c7ae2fb046e069d566f2ca2945e298ebf9b17120423834baf27605efaa"
+    },
+    {
+      "id": "assessment:expense3:FC-final-rework-history",
+      "revision": "sha256:d55fba0f38b3a7a20934ab1266dfc02fc24b6539cb21ed3839e32ac12d47a476"
+    },
+    {
+      "id": "assessment:expense3:FC-final-invalid-nonmutation",
+      "revision": "sha256:55111d4f4af3cd32ba00799ba3c207030f122307695a88b3f649d43fb162fb07"
+    },
+    {
+      "id": "assessment:expense3:FC-final-browser",
+      "revision": "sha256:bfbce586948041f1e60e557c234dcb0d311415c820068b19a77685d5b74e4e9b"
+    },
+    {
+      "id": "assessment:expense3:FC-final-restart",
+      "revision": "sha256:baa09e93c283908e9106b5dbd0b3ad2c013475df7ed0401c2025d700e339d06b"
+    }
+  ],
+  "authority_effect": "none",
+  "basis_snapshot": "B",
+  "complete_condition_set_reviewed": true,
+  "composition_declaration_sha256": "341bd418fb0d4c2dbbf2d84be7147e2e5c3f1acec36ed36d552c310e6a242302",
+  "composition_input": "composition-input-B.json",
+  "composition_owner_output": "composition-owner-B.json",
+  "currentness": "not_checked",
+  "function_id": "FL-general-manager-final-approval",
+  "limits": [
+    "Seeded local roles; no enterprise IAM/security claim",
+    "Sequential reference behavior; no concurrent/crash consistency claim",
+    "Local SQLite restart only; no replication or backup recovery claim",
+    "Chromium only; no cross-browser/accessibility claim",
+    "Candidate Function judgment only; no new Governance acceptance or consumption permission"
+  ],
+  "one_assessment_per_condition_for_this_basis": true,
+  "path_state": "scope_limited",
+  "pilot_mode_change": false,
+  "record_kind": "explicit candidate Function result; documentation pilot only",
+  "result_id": "function-result:expense3:FL-general-manager-final-approval",
+  "result_revision": "sha256:48d8f59a06e5c7b12fce27a59cfc54ffbbf035ba995dce9b04f85d59dac664d3",
+  "scope": "final review after first-stage approval in the local single-organization reference sample",
+  "source_commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+  "upstream_governance_need": "GN1"
+}

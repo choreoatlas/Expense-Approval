@@ -1,0 +1,293 @@
+{
+  "acquisition_request_sha256": "e7e4e5bd1c2b9549943a97d0b087549e5a14fb066ea024b353e2d4061a0f1352",
+  "assembly": {
+    "actor": "agent:codex:expense3:assembly",
+    "revision": "expense3-new-inspection-assembly-v0.1",
+    "task_id": "Expense-Approval#3"
+  },
+  "authority_boundary": {
+    "admission_effect": "none",
+    "db_write_allowed": false,
+    "downstream_permission": false,
+    "effective_state_created": false,
+    "formal_import_allowed": false,
+    "governance_decision": false,
+    "non_authority": true,
+    "not_production_truth": true
+  },
+  "candidate_sha256": "17b5f7c9e56154f9524f31be0295cd3fa1dc8b50cfa4f9673db52f488dc663fd",
+  "ci": {
+    "job_id": "125933074273",
+    "job_name": "test",
+    "run_attempt": 1,
+    "run_id": "41640672264"
+  },
+  "delivery_sha256": "ceb78964fb9582127a19b5b092df02793e50523c882046e3e71dc9a65e377b24",
+  "functions": [
+    {
+      "function_id": "FL-draft-submit",
+      "judgment_id": "inspection-statement:expense3:FL-draft-submit",
+      "judgment_revision": "authored-expense3-inspection-v0.1",
+      "judgment_sha256": "cf309209f53af5f2d1b8303cdff977e46352e64ca73bc154fdeac94514c6d3b4",
+      "limits": [
+        "No external identity provider or production security claim.",
+        "Current outer scope is assembly inspection, not replacement of the original Function scope",
+        "No new Governance/admission/effective-state/downstream permission",
+        "Only the selected final-review Function has a new candidate assessment set"
+      ],
+      "scope": "Expense source and explicit judgment inspection; final-review pilot result attached within its original scope",
+      "slice_ids": [
+        "model",
+        "function-model",
+        "execution-design",
+        "evidence-requirements",
+        "workflow",
+        "requirements",
+        "objects",
+        "domain-source",
+        "store-source",
+        "http-source",
+        "application-entry",
+        "browser-source",
+        "browser-html",
+        "browser-styles",
+        "domain-store-tests",
+        "http-tests",
+        "browser-tests"
+      ],
+      "target_path_ref": "repository:github:choreoatlas/Expense-Approval:function:FL-draft-submit"
+    },
+    {
+      "function_id": "FL-authority-safe-review",
+      "judgment_id": "inspection-statement:expense3:FL-authority-safe-review",
+      "judgment_revision": "authored-expense3-inspection-v0.1",
+      "judgment_sha256": "67d35dcbf0a05697ee2c778dcfb521a99fbdceeae0d1557d5e9c687b54e2607d",
+      "limits": [
+        "Local seeded role assignments only; no enterprise IAM claim.",
+        "Current outer scope is assembly inspection, not replacement of the original Function scope",
+        "No new Governance/admission/effective-state/downstream permission",
+        "Only the selected final-review Function has a new candidate assessment set"
+      ],
+      "scope": "Expense source and explicit judgment inspection; final-review pilot result attached within its original scope",
+      "slice_ids": [
+        "model",
+        "function-model",
+        "execution-design",
+        "evidence-requirements",
+        "workflow",
+        "requirements",
+        "objects",
+        "domain-source",
+        "store-source",
+        "http-source",
+        "application-entry",
+        "domain-store-tests",
+        "http-tests",
+        "browser-tests"
+      ],
+      "target_path_ref": "repository:github:choreoatlas/Expense-Approval:function:FL-authority-safe-review"
+    },
+    {
+      "function_id": "FL-general-manager-final-approval",
+      "judgment_id": "inspection-statement:expense3:FL-general-manager-final-approval",
+      "judgment_revision": "authored-expense3-inspection-v0.1",
+      "judgment_sha256": "284b9fa8d719ac2944cf63f72940866b64b2b76fe2ecc28b47605dc924f47aeb",
+      "limits": [
+        "General manager authority is local sample configuration, not organizational IAM.",
+        "Current outer scope is assembly inspection, not replacement of the original Function scope",
+        "No new Governance/admission/effective-state/downstream permission",
+        "Only the selected final-review Function has a new candidate assessment set"
+      ],
+      "scope": "Expense source and explicit judgment inspection; final-review pilot result attached within its original scope",
+      "slice_ids": [
+        "model",
+        "function-model",
+        "execution-design",
+        "evidence-requirements",
+        "workflow",
+        "requirements",
+        "objects",
+        "domain-source",
+        "store-source",
+        "http-source",
+        "application-entry",
+        "browser-source",
+        "browser-html",
+        "browser-styles",
+        "domain-store-tests",
+        "http-tests",
+        "browser-tests",
+        "restart-tests",
+        "conditions",
+        "composition",
+        "observer"
+      ],
+      "target_path_ref": "repository:github:choreoatlas/Expense-Approval:function:FL-general-manager-final-approval"
+    },
+    {
+      "function_id": "FL-reject-revise-resubmit",
+      "judgment_id": "inspection-statement:expense3:FL-reject-revise-resubmit",
+      "judgment_revision": "authored-expense3-inspection-v0.1",
+      "judgment_sha256": "47862cf52fd73768e1d4e892187f6dfc8ba816c9ab8b4265970a2a5a092b33c7",
+      "limits": [
+        "No workflow delegation or escalation rules.",
+        "Current outer scope is assembly inspection, not replacement of the original Function scope",
+        "No new Governance/admission/effective-state/downstream permission",
+        "Only the selected final-review Function has a new candidate assessment set"
+      ],
+      "scope": "Expense source and explicit judgment inspection; final-review pilot result attached within its original scope",
+      "slice_ids": [
+        "model",
+        "function-model",
+        "execution-design",
+        "evidence-requirements",
+        "workflow",
+        "requirements",
+        "objects",
+        "domain-source",
+        "store-source",
+        "http-source",
+        "domain-store-tests",
+        "http-tests",
+        "browser-tests"
+      ],
+      "target_path_ref": "repository:github:choreoatlas/Expense-Approval:function:FL-reject-revise-resubmit"
+    },
+    {
+      "function_id": "FL-approval-revision-binding",
+      "judgment_id": "inspection-statement:expense3:FL-approval-revision-binding",
+      "judgment_revision": "authored-expense3-inspection-v0.1",
+      "judgment_sha256": "669b998ce0c7bdbf3e700ace726f8a87fb2f6a01c5e3a9542f3ba5f32a111f9c",
+      "limits": [
+        "Only amount, purpose and receipt_ref are approval-relevant in this sample.",
+        "Current outer scope is assembly inspection, not replacement of the original Function scope",
+        "No new Governance/admission/effective-state/downstream permission",
+        "Only the selected final-review Function has a new candidate assessment set"
+      ],
+      "scope": "Expense source and explicit judgment inspection; final-review pilot result attached within its original scope",
+      "slice_ids": [
+        "model",
+        "function-model",
+        "execution-design",
+        "evidence-requirements",
+        "workflow",
+        "requirements",
+        "objects",
+        "domain-source",
+        "store-source",
+        "http-source",
+        "domain-store-tests",
+        "http-tests"
+      ],
+      "target_path_ref": "repository:github:choreoatlas/Expense-Approval:function:FL-approval-revision-binding"
+    },
+    {
+      "function_id": "FL-history",
+      "judgment_id": "inspection-statement:expense3:FL-history",
+      "judgment_revision": "authored-expense3-inspection-v0.1",
+      "judgment_sha256": "ddf14c9c96caa472f016837462b2b240bcf5581acc6d6357a722181b556a07e4",
+      "limits": [
+        "No cross-expense audit dashboard.",
+        "Current outer scope is assembly inspection, not replacement of the original Function scope",
+        "No new Governance/admission/effective-state/downstream permission",
+        "Only the selected final-review Function has a new candidate assessment set"
+      ],
+      "scope": "Expense source and explicit judgment inspection; final-review pilot result attached within its original scope",
+      "slice_ids": [
+        "model",
+        "function-model",
+        "execution-design",
+        "evidence-requirements",
+        "workflow",
+        "requirements",
+        "objects",
+        "store-source",
+        "http-source",
+        "browser-source",
+        "domain-store-tests",
+        "http-tests",
+        "browser-tests"
+      ],
+      "target_path_ref": "repository:github:choreoatlas/Expense-Approval:function:FL-history"
+    },
+    {
+      "function_id": "FL-durable",
+      "judgment_id": "inspection-statement:expense3:FL-durable",
+      "judgment_revision": "authored-expense3-inspection-v0.1",
+      "judgment_sha256": "93b026ace986a223c34343dd33777165fdf7ae8aadff2b1e642793a98e8f9976",
+      "limits": [
+        "No crash consistency, replication or remote durability claim.",
+        "Current outer scope is assembly inspection, not replacement of the original Function scope",
+        "No new Governance/admission/effective-state/downstream permission",
+        "Only the selected final-review Function has a new candidate assessment set"
+      ],
+      "scope": "Expense source and explicit judgment inspection; final-review pilot result attached within its original scope",
+      "slice_ids": [
+        "model",
+        "function-model",
+        "execution-design",
+        "evidence-requirements",
+        "workflow",
+        "requirements",
+        "objects",
+        "store-source",
+        "application-entry",
+        "domain-store-tests",
+        "restart-tests"
+      ],
+      "target_path_ref": "repository:github:choreoatlas/Expense-Approval:function:FL-durable"
+    },
+    {
+      "function_id": "FL-browser",
+      "judgment_id": "inspection-statement:expense3:FL-browser",
+      "judgment_revision": "authored-expense3-inspection-v0.1",
+      "judgment_sha256": "dfa3d6e6c7afef5031f2c065d636563120c4aa3499201c75437ca3d93095b49f",
+      "limits": [
+        "No cross-browser or accessibility certification.",
+        "Current outer scope is assembly inspection, not replacement of the original Function scope",
+        "No new Governance/admission/effective-state/downstream permission",
+        "Only the selected final-review Function has a new candidate assessment set"
+      ],
+      "scope": "Expense source and explicit judgment inspection; final-review pilot result attached within its original scope",
+      "slice_ids": [
+        "model",
+        "function-model",
+        "execution-design",
+        "evidence-requirements",
+        "workflow",
+        "requirements",
+        "objects",
+        "http-source",
+        "application-entry",
+        "browser-source",
+        "browser-html",
+        "browser-styles",
+        "browser-tests"
+      ],
+      "target_path_ref": "repository:github:choreoatlas/Expense-Approval:function:FL-browser"
+    }
+  ],
+  "governance_domain": "reference-sample",
+  "limits": [
+    "Source/CI and explicit statements only; seven nonselected Functions not rejudged",
+    "Pilot scope_limited result is a separately authored candidate, not recomputed by this assembler",
+    "Source consistency does not establish provider authenticity/freshness or new business permission"
+  ],
+  "material_sha256": "b497540b4a716104dd308b8361b73ad05978a6f26f09494db34efe5ea7ff3da8",
+  "producer": {
+    "record_sha256": "4d4a4e5a2f82d0df6e094b6778b43130b14b53e7eb169825f577b2acab95c367",
+    "source_commit": "cf41642e0feb9acabff54eeca174d908fddc81e1"
+  },
+  "product": {
+    "commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+    "repository": "choreoatlas/Expense-Approval",
+    "tree": "a08a4629a990a708af56a11efa292a41c2b6cf14"
+  },
+  "profile_sha256": "dc017cde4c5134fc4eadcbff4fb3010b8a84b83b5cff45e499e652a91f2466f2",
+  "request_id": "expense3-frozen-source-and-pilot-inspection",
+  "request_revision": "v0.1",
+  "requested_scope": "Expense source and explicit judgment inspection; final-review pilot result attached within its original scope",
+  "schema": "commercial.source-delivery-evaluation-request.v0.1",
+  "subject": "expense-approval-reference",
+  "subject_ref": "repository:github:choreoatlas/Expense-Approval"
+}

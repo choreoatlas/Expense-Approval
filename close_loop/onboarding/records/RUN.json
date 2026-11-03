@@ -1,0 +1,87 @@
+{
+  "format": "expense.onboarding-run-index.v0.1",
+  "scope": "Frozen source/CI handoff plus selected final-review documentation pilot; index only, raw material and explicit judgments remain separate",
+  "issue": "https://github.com/choreoatlas/Expense-Approval/issues/3",
+  "result": "PASS within declared delivery/pilot scope",
+  "source_commit": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+  "source_tree": "a08a4629a990a708af56a11efa292a41c2b6cf14",
+  "base_commit": "6100d4538d0d5210a1fc9d97d24d2112be2b164f",
+  "owners": {
+    "CEB": "5a19e9af830f4f326a8000fd022994bc0b5daf96",
+    "Management": "9156f6d4bb9f26e9c6fc8db9a685d5d9b79b42e8",
+    "Commercial": "d78d138a3b0180eeec907aead73e281a58c520a1"
+  },
+  "ci": {
+    "run_id": "41640672264",
+    "job_id": "125933074273",
+    "attempt": 1,
+    "artifact_id": "13233051334"
+  },
+  "observations_per_run": 39,
+  "carriers_per_run": 5,
+  "required_conditions": 7,
+  "assessments_per_basis": 7,
+  "separate_basis_snapshots": [
+    "A",
+    "B"
+  ],
+  "path_states": {
+    "A": "scope_limited",
+    "B": "scope_limited"
+  },
+  "basis_change_replay": {
+    "requires_rejudge_dependency_effects": 29,
+    "stale_composition_effects": 7,
+    "unchanged_dependency_control": 1,
+    "semantics": "Offline causal replay with two actual event bases; explicit B selection, no live/global state query or persistent propagation"
+  },
+  "commercial_states": {
+    "not_rejudged": 7,
+    "candidate_pilot_result_attached": 1
+  },
+  "byte_identical_replays": [
+    "CEB frozen-original export",
+    "Commercial candidate/report",
+    "Management change-effect owner"
+  ],
+  "refusals": [
+    "product_binding",
+    "judgment_coverage",
+    "ceb_source_digest",
+    "authored_metadata_binding",
+    "authority"
+  ],
+  "local_tests": {
+    "testcases": 24,
+    "untracked_harness_or_declaration_subcases": 6,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0
+  },
+  "retained_execution_failures": [
+    {
+      "stage": "initial CEB deliver",
+      "cause": "provider transport_http_500",
+      "resolution": "same public input retry succeeded"
+    },
+    {
+      "stage": "first independent validation",
+      "cause": "caller passed /var symlink alias; existing shared-core bootstrap refused it",
+      "resolution": "canonical paths and owned canonical TMPDIR; same bytes passed, no owner rule weakened"
+    }
+  ],
+  "boundaries": {
+    "authority_effect": "none",
+    "allowed": false,
+    "currentness": "not_checked",
+    "target_db_observation_performed": false,
+    "canonical_or_relation_writes": false,
+    "pilot_mode_change": false
+  },
+  "limits": [
+    "No new full judgment of remaining7 Functions",
+    "No current Governance/admission/effective state/downstream permission",
+    "No A1 assessor designation or pilot activation",
+    "Raw app DBs are invocation-owned disposable SQLite only"
+  ]
+}

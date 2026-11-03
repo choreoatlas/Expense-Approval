@@ -1,0 +1,108 @@
+{
+  "check_run_url": "https://api.github.com/repos/choreoatlas/Expense-Approval/check-runs/125933074273",
+  "completed_at": "2026-11-03T13:02:19Z",
+  "conclusion": "success",
+  "created_at": "2026-11-03T13:01:37Z",
+  "head_branch": "codex/expense-final-approval-onboarding",
+  "head_sha": "57fa2b3551a0e8f9243241cb2604d03ca09b19d8",
+  "html_url": "https://github.com/choreoatlas/Expense-Approval/actions/runs/41640672264/job/125933074273",
+  "id": 125933074273,
+  "labels": [
+    "ubuntu-latest"
+  ],
+  "name": "test",
+  "node_id": "CR_kwDOUROJ0s8AAAAdUjI3YQ",
+  "run_attempt": 1,
+  "run_id": 41640672264,
+  "run_url": "https://api.github.com/repos/choreoatlas/Expense-Approval/actions/runs/41640672264",
+  "runner_group_id": 0,
+  "runner_group_name": "GitHub Actions",
+  "runner_id": 1000027092,
+  "runner_name": "GitHub Actions 1000027092",
+  "started_at": "2026-11-03T13:01:39Z",
+  "status": "completed",
+  "steps": [
+    {
+      "completed_at": "2026-11-03T13:01:41Z",
+      "conclusion": "success",
+      "name": "Set up job",
+      "number": 1,
+      "started_at": "2026-11-03T13:01:40Z",
+      "status": "completed"
+    },
+    {
+      "completed_at": "2026-11-03T13:01:42Z",
+      "conclusion": "success",
+      "name": "Run actions/checkout@v4",
+      "number": 2,
+      "started_at": "2026-11-03T13:01:41Z",
+      "status": "completed"
+    },
+    {
+      "completed_at": "2026-11-03T13:01:42Z",
+      "conclusion": "success",
+      "name": "Run actions/setup-python@v5",
+      "number": 3,
+      "started_at": "2026-11-03T13:01:42Z",
+      "status": "completed"
+    },
+    {
+      "completed_at": "2026-11-03T13:02:04Z",
+      "conclusion": "success",
+      "name": "Install browser dependency",
+      "number": 4,
+      "started_at": "2026-11-03T13:01:42Z",
+      "status": "completed"
+    },
+    {
+      "completed_at": "2026-11-03T13:02:12Z",
+      "conclusion": "success",
+      "name": "Run invariant and workflow tests",
+      "number": 5,
+      "started_at": "2026-11-03T13:02:04Z",
+      "status": "completed"
+    },
+    {
+      "completed_at": "2026-11-03T13:02:15Z",
+      "conclusion": "success",
+      "name": "Record raw final-approval observations",
+      "number": 6,
+      "started_at": "2026-11-03T13:02:12Z",
+      "status": "completed"
+    },
+    {
+      "completed_at": "2026-11-03T13:02:16Z",
+      "conclusion": "success",
+      "name": "Preserve raw final-approval observations",
+      "number": 7,
+      "started_at": "2026-11-03T13:02:15Z",
+      "status": "completed"
+    },
+    {
+      "completed_at": "2026-11-03T13:02:16Z",
+      "conclusion": "success",
+      "name": "Post Run actions/setup-python@v5",
+      "number": 13,
+      "started_at": "2026-11-03T13:02:16Z",
+      "status": "completed"
+    },
+    {
+      "completed_at": "2026-11-03T13:02:17Z",
+      "conclusion": "success",
+      "name": "Post Run actions/checkout@v4",
+      "number": 14,
+      "started_at": "2026-11-03T13:02:16Z",
+      "status": "completed"
+    },
+    {
+      "completed_at": "2026-11-03T13:02:17Z",
+      "conclusion": "success",
+      "name": "Complete job",
+      "number": 15,
+      "started_at": "2026-11-03T13:02:17Z",
+      "status": "completed"
+    }
+  ],
+  "url": "https://api.github.com/repos/choreoatlas/Expense-Approval/actions/jobs/125933074273",
+  "workflow_name": "ci"
+}

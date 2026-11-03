@@ -15,3 +15,9 @@ See GitHub issue #1 for the commissioned product goal, actors, hard invariants, 
 provide the object map, source profile, predeclared conditions/composition and
 raw observation entry. Their outputs are separate from historical acceptance
 and require explicit assessment and cross-repository verification.
+
+[Frozen source/CI handoff, two condition-assessment bases and offline replay](close_loop/onboarding/records/README.md)
+preserve the actual bounded integration evidence. The selected final-review
+path has candidate `scope_limited` results; the other seven paths remain
+explicitly not rejudged in this pilot. Current Governance/consumption authority
+is not established by these records.
