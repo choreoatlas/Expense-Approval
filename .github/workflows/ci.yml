@@ -17,4 +17,22 @@ jobs:
           python -m pip install -r requirements-dev.txt
           python -m playwright install --with-deps chromium
       - name: Run invariant and workflow tests
-        run: python -m unittest discover -s tests -v
+        run: env -i PATH="$PATH" HOME="$HOME" PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -v
+      - name: Record raw final-approval observations
+        if: always()
+        run: |
+          env -i PATH="$PATH" HOME="$HOME" PYTHONDONTWRITEBYTECODE=1 \
+            GITHUB_SHA="$GITHUB_SHA" GITHUB_RUN_ID="$GITHUB_RUN_ID" \
+            GITHUB_RUN_ATTEMPT="$GITHUB_RUN_ATTEMPT" GITHUB_JOB="$GITHUB_JOB" \
+            GITHUB_EVENT_NAME="$GITHUB_EVENT_NAME" \
+            python -m close_loop.onboarding.observe \
+              --product-revision "$GITHUB_SHA" \
+              --run-id "ci-$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT" \
+              --output "$RUNNER_TEMP/expense-onboarding/observations.json"
+      - name: Preserve raw final-approval observations
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: expense-final-approval-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/expense-onboarding/observations.json
+          if-no-files-found: error

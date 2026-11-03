@@ -1,0 +1,165 @@
+{
+  "format": "expense.final-approval-conditions.v0.1",
+  "task_semantics": "condition-assessment pilot",
+  "function_id": "FL-general-manager-final-approval",
+  "upstream_governance_need_ref": "close_loop/attempt-1/model.v0.2.json#/governance_need",
+  "original_function_ref": "close_loop/attempt-1/function-model.v0.2.json#/functions/2",
+  "scope": "final review after first-stage approval in the local single-organization reference sample",
+  "limits": [
+    "Seeded local roles; no enterprise IAM/security claim",
+    "Sequential reference behavior; no concurrent/crash consistency claim",
+    "Local SQLite restart only; no replication or backup recovery claim",
+    "Chromium only; no cross-browser/accessibility claim",
+    "Candidate Function judgment only; no new Governance acceptance or consumption permission"
+  ],
+  "required_execution_support": [
+    "EL-domain-rules",
+    "EL-ledger-store",
+    "EL-http",
+    "EL-browser-ui",
+    "EL-verification-environment"
+  ],
+  "required_conditions": [
+    {
+      "id": "FC-final-sequence",
+      "requirement": "Both decisions occur on the same submitted revision; first-stage approval yields manager_pending, and only the later authorized General Manager approval yields approved.",
+      "requirement_sources": [
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/4",
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/3",
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/5",
+        "close_loop/attempt-1/function-model.v0.2.json#/functions/2"
+      ],
+      "required_observations": [
+        "api-main.create",
+        "api-main.submit",
+        "api-main.gm-before-first",
+        "api-main.first-approve",
+        "api-main.final-approve"
+      ],
+      "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+      "limits": "Each observation covers its bounded inputs and selected revision only; an observation/completed run is not itself an assessment."
+    },
+    {
+      "id": "FC-final-authority",
+      "requirement": "Unknown, employee/self, and first-stage approver actors cannot perform a final decision; the locally assigned general_manager can. This is seeded-role behavior, not organizational IAM.",
+      "requirement_sources": [
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/1",
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/2",
+        "close_loop/attempt-1/function-model.v0.2.json#/functions/2"
+      ],
+      "required_observations": [
+        "api-main.unknown-final",
+        "api-main.employee-final",
+        "api-main.approver-final",
+        "api-main.final-approve"
+      ],
+      "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+      "limits": "Each observation covers its bounded inputs and selected revision only; an observation/completed run is not itself an assessment."
+    },
+    {
+      "id": "FC-final-revision",
+      "requirement": "Final decisions target the latest exact expense revision; after either rejection and revision, the earlier approval cannot float to the new revision and both stages must be repeated.",
+      "requirement_sources": [
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/0",
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/7",
+        "close_loop/attempt-1/function-model.v0.2.json#/functions/2",
+        "close_loop/attempt-1/function-model.v0.2.json#/functions/4"
+      ],
+      "required_observations": [
+        "api-gm-rework.final-reject",
+        "api-gm-rework.revise",
+        "api-gm-rework.resubmit",
+        "api-gm-rework.stale-final",
+        "api-gm-rework.gm-before-new-first",
+        "api-gm-rework.new-first-approve",
+        "api-gm-rework.new-final-approve",
+        "api-first-rework.first-reject",
+        "api-first-rework.revise",
+        "api-first-rework.resubmit",
+        "api-first-rework.stale-final",
+        "api-first-rework.gm-before-new-first",
+        "api-first-rework.new-first-approve",
+        "api-first-rework.final-approve"
+      ],
+      "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+      "limits": "Each observation covers its bounded inputs and selected revision only; an observation/completed run is not itself an assessment."
+    },
+    {
+      "id": "FC-final-rework-history",
+      "requirement": "Either stage may reject; revisions and ordered decisions preserve the original actor/role/outcome/reason while revised content receives a new revision.",
+      "requirement_sources": [
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/6",
+        "close_loop/attempt-1/function-model.v0.2.json#/functions/2",
+        "close_loop/attempt-1/function-model.v0.2.json#/functions/5"
+      ],
+      "required_observations": [
+        "api-gm-rework.final-reject",
+        "api-gm-rework.revise",
+        "api-gm-rework.new-final-approve",
+        "api-first-rework.first-reject",
+        "api-first-rework.revise",
+        "api-first-rework.final-approve"
+      ],
+      "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+      "limits": "Each observation covers its bounded inputs and selected revision only; an observation/completed run is not itself an assessment."
+    },
+    {
+      "id": "FC-final-invalid-nonmutation",
+      "requirement": "Invalid decisions/transitions in the bounded submitted, pending, revised and approved scenarios do not alter actors, expenses, revisions or decisions.",
+      "requirement_sources": [
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/8",
+        "close_loop/attempt-1/function-model.v0.2.json#/functions/2"
+      ],
+      "required_observations": [
+        "api-main.gm-before-first",
+        "api-main.unknown-final",
+        "api-main.employee-final",
+        "api-main.approver-final",
+        "api-main.bad-outcome",
+        "api-main.empty-reason",
+        "api-main.repeated-final",
+        "api-main.edit-approved",
+        "api-main.revise-approved",
+        "api-gm-rework.stale-final",
+        "api-gm-rework.gm-before-new-first",
+        "api-first-rework.stale-final",
+        "api-first-rework.gm-before-new-first"
+      ],
+      "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+      "limits": "Each observation covers its bounded inputs and selected revision only; an observation/completed run is not itself an assessment."
+    },
+    {
+      "id": "FC-final-browser",
+      "requirement": "The real Chromium interface can edit and submit a draft, exercise each rejection stage and revised resubmission, complete both approval stages and display the resulting revision/decision history.",
+      "requirement_sources": [
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/3",
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/6",
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/4",
+        "close_loop/attempt-1/function-model.v0.2.json#/functions/2",
+        "close_loop/attempt-1/function-model.v0.2.json#/functions/7"
+      ],
+      "required_observations": [
+        "browser-main"
+      ],
+      "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+      "limits": "Each observation covers its bounded inputs and selected revision only; an observation/completed run is not itself an assessment."
+    },
+    {
+      "id": "FC-final-restart",
+      "requirement": "After final approval the same owned local SQLite file retains actor-role assignments, current approved revision and both ordered decisions across actual application-process stop/start.",
+      "requirement_sources": [
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/1",
+        "close_loop/attempt-1/model.v0.2.json#/hard_invariants/0",
+        "close_loop/attempt-1/function-model.v0.2.json#/functions/2",
+        "close_loop/attempt-1/function-model.v0.2.json#/functions/6"
+      ],
+      "required_observations": [
+        "process-restart.before-stop",
+        "process-restart.after-start"
+      ],
+      "scope": "final review after first-stage approval; supporting rework/browser/restart scenarios as declared",
+      "limits": "Each observation covers its bounded inputs and selected revision only; an observation/completed run is not itself an assessment."
+    }
+  ],
+  "support_boundary": "Browser, persistence, history and revision-binding conditions are bounded supporting conditions of the selected final-review scenario; they do not rejudge the other seven complete Function paths."
+}
